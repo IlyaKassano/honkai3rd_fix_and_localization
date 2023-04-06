@@ -1,0 +1,820 @@
+namespace = hk648_fallen_empire
+#逐火之蛾国家event_target:hk648_fallen_empire_moth
+
+country_event = {
+	id = hk648_fallen_empire.1001
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { 
+		has_authority = auth_schicksal 
+		is_ai = no
+	}
+	
+	immediate = {
+		set_spawn_system_batch = begin
+		no_scope = {
+			spawn_system = {
+				initializer = "hk648_moth_system"
+				min_distance >= 470
+				max_distance <= 470
+				min_orientation_angle >= 90
+				max_orientation_angle <= 90
+				hyperlane = no
+			}
+			random_system = {
+				limit = {
+					has_star_flag = hk648_moth_system
+				}
+				save_global_event_target_as = hk648_moth_system
+			}
+			event_target:hk648_moth_system = {
+				spawn_system = { 
+					min_distance >= 10
+					max_distance <= 10
+					min_orientation_angle = 0
+					max_orientation_angle = 0
+					initializer = "hk648_moth_system_03"
+				}
+				spawn_system = { 
+					min_distance >= 10
+					max_distance <= 10
+					min_orientation_angle = 180
+					max_orientation_angle = 180
+					initializer = "hk648_moth_system_09"
+				}
+			}
+			#spawn_system = {
+			#	initializer = "hk648_moth_system_03"
+			#	min_distance >= 502.5
+			#	max_distance <= 502.5
+			#	min_orientation_angle >= 84.2894
+			#	max_orientation_angle <= 84.2894
+			#	hyperlane = no
+			#}
+			random_system = {
+				limit = {
+					has_star_flag = hk648_moth_system_03
+				}
+				save_global_event_target_as = hk648_moth_system_03
+			}
+			#spawn_system = {
+			#	initializer = "hk648_moth_system_09"
+			#	min_distance >= 502.5
+			#	max_distance <= 502.5
+			#	min_orientation_angle >= 95.7106
+			#	max_orientation_angle <= 95.7106
+			#	hyperlane = no
+			#}
+			random_system = {
+				limit = {
+					has_star_flag = hk648_moth_system_09
+				}
+				save_global_event_target_as = hk648_moth_system_09
+			}
+			spawn_system = {
+				initializer = "hk648_moth_system_06"
+				min_distance >= 460
+				max_distance <= 460
+				min_orientation_angle = 90
+				max_orientation_angle = 90
+				hyperlane = no
+			}
+			random_system = {
+				limit = {
+					has_star_flag = hk648_moth_system_06
+				}
+				save_global_event_target_as = hk648_moth_system_06
+			}
+			#event_target:hk648_moth_system_06 = {
+			#	random_neighbor_system = {
+			#		ignore_hyperlanes = yes
+			#		if = {
+			#			limit = { NOT = { has_hyperlane_to = PREV }}
+			#			add_hyperlane = { from = this to = PREV }
+			#		}
+			#	}
+			#}
+			spawn_system = {
+				initializer = "hk648_moth_system_13"
+				min_distance >= 490
+				max_distance <= 490
+				min_orientation_angle >= 90
+				max_orientation_angle <= 90
+				hyperlane = no
+			}
+			random_system = {
+				limit = {
+					has_star_flag = hk648_moth_system_13
+				}
+				save_global_event_target_as = hk648_moth_system_13
+			}
+			spawn_system = {
+				initializer = "hk648_moth_system_06_a"
+				min_distance >= 450
+				max_distance <= 450
+				min_orientation_angle >= 90
+				max_orientation_angle <= 90
+				hyperlane = no
+			}
+			random_system = {
+				limit = {
+					has_star_flag = hk648_moth_system_06_a
+				}
+				save_global_event_target_as = hk648_moth_system_06_a
+			}
+			spawn_system = {
+				initializer = "hk648_moth_system_06_b"
+				min_distance >= 440
+				max_distance <= 440
+				min_orientation_angle >= 90
+				max_orientation_angle <= 90
+				hyperlane = no
+			}
+			random_system = {
+				limit = {
+					has_star_flag = hk648_moth_system_06_b
+				}
+				save_global_event_target_as = hk648_moth_system_06_b
+			}
+			add_hyperlane = { from = event_target:hk648_moth_system to = event_target:hk648_moth_system_03 }
+			add_hyperlane = { from = event_target:hk648_moth_system to = event_target:hk648_moth_system_06 }
+			add_hyperlane = { from = event_target:hk648_moth_system to = event_target:hk648_moth_system_09 }
+			add_hyperlane = { from = event_target:hk648_moth_system to = event_target:hk648_moth_system_13 }
+			add_hyperlane = { from = event_target:hk648_moth_system_06_a to = event_target:hk648_moth_system_03 }
+			add_hyperlane = { from = event_target:hk648_moth_system_06_a to = event_target:hk648_moth_system_06 }
+			add_hyperlane = { from = event_target:hk648_moth_system_06_a to = event_target:hk648_moth_system_09 }
+			add_hyperlane = { from = event_target:hk648_moth_system_06_a to = event_target:hk648_moth_system_06_b }
+			
+			event_target:hk648_moth_system_06_b = {
+				while = {
+					count = 5
+					random_neighbor_system = {
+						ignore_hyperlanes = yes
+						if = {
+							limit = { 
+								NOT = { 
+									has_hyperlane_to = PREV 
+									has_star_flag = hk648_moth_system_06_a
+									has_star_flag = hk648_moth_system_06
+									has_star_flag = hk648_moth_system_09
+									has_star_flag = hk648_moth_system_03
+									has_star_flag = hk648_moth_system_13
+									has_star_flag = hk648_moth_system
+								}
+							}
+							add_hyperlane = { from = this to = PREV }
+						}
+					}
+				}
+				if = {
+					limit = { count_system = { count <= 450 } }
+					while = {
+						count = 3
+						random_system = {
+							ignore_hyperlanes = yes
+							if = {
+								limit = { 
+									NOT = { 
+										has_hyperlane_to = PREV 
+										has_star_flag = hk648_moth_system_06_a
+										has_star_flag = hk648_moth_system_06
+										has_star_flag = hk648_moth_system_09
+										has_star_flag = hk648_moth_system_03
+										has_star_flag = hk648_moth_system_13
+										has_star_flag = hk648_moth_system
+									}
+								}
+								add_hyperlane = { from = this to = PREV }
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { count_system = { count <= 850 } }
+					while = {
+						count = 5
+						random_system = {
+							ignore_hyperlanes = yes
+							if = {
+								limit = { 
+									NOT = { 
+										has_hyperlane_to = PREV 
+										has_star_flag = hk648_moth_system_06_a
+										has_star_flag = hk648_moth_system_06
+										has_star_flag = hk648_moth_system_09
+										has_star_flag = hk648_moth_system_03
+										has_star_flag = hk648_moth_system_13
+										has_star_flag = hk648_moth_system
+									}
+								}
+								add_hyperlane = { from = this to = PREV }
+							}
+						}
+					}
+				}
+				else = {
+					while = {
+						count = 8
+						random_system = {
+							ignore_hyperlanes = yes
+							if = {
+								limit = { 
+									NOT = { 
+										has_hyperlane_to = PREV 
+										has_star_flag = hk648_moth_system_06_a
+										has_star_flag = hk648_moth_system_06
+										has_star_flag = hk648_moth_system_09
+										has_star_flag = hk648_moth_system_03
+										has_star_flag = hk648_moth_system_13
+										has_star_flag = hk648_moth_system
+									}
+								}
+								add_hyperlane = { from = this to = PREV }
+							}
+						}
+					}
+				}
+			}
+			
+		}
+		set_spawn_system_batch = end
+		
+		
+		#establish_communications_no_message = event_target:hk648_fallen_empire_moth
+	}
+	
+	after = {
+		set_global_flag = honkai_ai_country_yes
+		random_country = {
+			limit = { has_origin = origin_ark_moth2 }
+			hk648_robot_t_unlock = yes
+			hk648_robot_w_unlock = yes
+			hk648_moth_human = yes
+			add_modifier = {
+				modifier = fire_moth_1
+			}
+			add_modifier = {
+				modifier = fire_moth_2
+			}
+			add_modifier = {
+				modifier = fire_moth_3
+			}
+			country_event = { id = hk648_fallen_empire.1002 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_fallen_empire.1002
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		hk648_fallen_fleet_moth1 = yes
+		hk648_fallen_fleet_moth1 = yes
+		hk648_fallen_fleet_moth2 = yes
+		hk648_fallen_fleet_moth3 = yes
+		hk648_fallen_fleet_moth4 = yes
+		hk648_fallen_fleet_moth5 = yes
+		hk648_fallen_fleet_moth6 = yes
+	}
+}
+
+country_event = {
+	id = hk648_fallen_empire.2001
+	title = "OK"
+	desc = "OK"
+	hide_window = yes
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	trigger = {
+		is_country_type = fallen_empire
+		has_origin = origin_ark_moth2
+		is_at_war = no
+		NOT = { has_country_flag = fallen_empire_lost_war }
+		NOT = { has_country_flag = hk_fallen_empire_sent_warning }
+		fleet_power > 20000
+		
+		any_country = {
+			#is_ai = no
+			is_country_type = default
+			has_communications = root
+			#resource_stockpile_compare = { resource = honkai648_energy value >= 100000 }
+			root = { 
+				opinion = { 
+					who = prev value < -99 
+				} 
+			}
+			NOT = { has_country_flag = fe_demand_made }
+		}
+	}
+	
+	immediate = {
+		set_timed_country_flag = { flag = hk_fallen_empire_sent_warning days = 360 }
+		
+		random_playable_country = {
+			limit = {
+				is_ai = no
+				is_country_type = default
+				has_communications = root
+				#resource_stockpile_compare = { resource = honkai648_energy value >= 100000 }
+				root = { opinion = { who = prev value < -99 } }
+				NOT = { has_country_flag = fe_demand_made }
+			}
+
+			root = { set_country_flag = fe_demand_made }
+			
+			# 要求 - 限制崩坏能 (超过500k)
+			if = {
+				limit = {
+					root = {
+						has_origin = origin_ark_moth2
+					}
+					resource_stockpile_compare = { resource = honkai648_energy value >= 500000 }
+					NOT = { 
+						has_country_flag = hk648_fallen_empire_honkai_unlock_500k
+						has_modifier = honkai_energy_shedding
+						has_modifier = honkai_energy_shedding250
+						has_country_flag = honkai_energy_shedding100
+						has_country_flag = honkai_energy_shedding250
+					}
+				}
+				country_event = { 
+					id = hk648_fallen_empire.2003 
+					days = 10
+				}
+				break = yes
+			}
+			
+			# 要求 - 限制崩坏能 (超过150k)
+			if = {
+				limit = {
+					root = {
+						has_origin = origin_ark_moth2
+					}
+					resource_stockpile_compare = { resource = honkai648_energy value >= 150000 }
+					NOT = { 
+						has_country_flag = hk648_fallen_empire_honkai_unlock_150k
+						has_modifier = honkai_energy_shedding
+						has_modifier = honkai_energy_shedding250
+						has_country_flag = honkai_energy_shedding100
+						has_country_flag = honkai_energy_shedding250
+					}
+				}
+				country_event = { 
+					id = hk648_fallen_empire.2002 
+					days = 10
+				}
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_fallen_empire.2002
+	title = "hk648_fallen_empire.2002.title"
+	desc = "hk648_fallen_empire.2002.desc"
+
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = mei
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = personality_fallen_empire_moth_room
+	}
+	
+	option = {
+		name = "hk648_fallen_empire.2002.aa"
+		add_resource = {
+			honkai648_energy = -100000
+		}
+		add_modifier = {
+			modifier = honkai_energy_shedding
+			days = 3600
+		}
+		
+		from = { save_event_target_as = fallen_empire_humiliator }
+		fallen_empire_humiliate_effect = yes
+		hidden_effect = { 
+			remove_country_flag = fe_demand_made 
+			set_timed_country_flag = { flag = honkai_energy_shedding100 days = 900 }
+		}
+	}
+	
+	option = {
+		name = "hk648_fallen_empire.2002.ba"
+		custom_tooltip = fallen_empire_refuse_tooltip
+		hidden_effect = {
+			from = { add_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_demand } }
+			remove_country_flag = fe_demand_made
+			set_timed_country_flag = { flag = honkai_energy_shedding100 days = 900 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_fallen_empire.2003
+	title = "hk648_fallen_empire.2002.title"
+	desc = "hk648_fallen_empire.2002.desc"
+
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = mei
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = personality_fallen_empire_moth_room
+	}
+	
+	option = {
+		name = "hk648_fallen_empire.2002.aa"
+		add_resource = {
+			honkai648_energy = -250000
+		}
+		add_modifier = {
+			modifier = honkai_energy_shedding250
+			days = 3600
+		}
+		
+		from = { save_event_target_as = fallen_empire_humiliator }
+		fallen_empire_humiliate_effect = yes
+		hidden_effect = { 
+			remove_country_flag = fe_demand_made 
+			set_timed_country_flag = { flag = honkai_energy_shedding250 days = 900 }
+		}
+	}
+	
+	option = {
+		name = "hk648_fallen_empire.2002.ba"
+		custom_tooltip = fallen_empire_refuse_tooltip
+		hidden_effect = {
+			from = { add_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_demand } }
+			remove_country_flag = fe_demand_made
+			set_timed_country_flag = { flag = honkai_energy_shedding250 days = 900 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_fallen_empire.3001
+	title = "OK"
+	desc = "OK"
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		mid_game_years_passed > 0
+		is_country_type = fallen_empire
+		has_origin = origin_ark_moth2
+		is_at_war = no
+		NOT = {
+			has_country_flag = hk648_fallen_ordeal_start
+		}
+		
+		any_country = {
+			is_ai = no
+			has_communications = root
+		}
+	}
+	
+	immediate = {
+		set_country_flag = hk648_fallen_ordeal_start
+		random_playable_country = {
+			limit = {
+				is_ai = no
+				has_authority = auth_schicksal
+			}
+			
+			country_event = { 
+				id = hk648_fallen_empire.3002 
+				days = 2500
+				random = 500
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = hk648_fallen_empire.30021
+	title = "OK"
+	desc = "OK"
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		hk648_fallen_ordeal1 = yes
+		last_created_fleet = {
+			set_fleet_flag = hk648_fallen_ordeal1_fleet
+		}
+	}
+}
+
+#逐火之蛾的考验
+country_event = {
+	id = hk648_fallen_empire.3002
+	title = "hk648_fallen_empire.3002.title"
+	desc = "hk648_fallen_empire.3002.desc"
+
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = mei
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = personality_fallen_empire_moth_room
+	}
+	
+	immediate = {
+		country_event = {
+			id = hk648_fallen_empire.30021
+			days = 10
+		}
+	}
+	
+	option = {
+		name = "hk648_fallen_empire.3002.aa"
+		custom_tooltip = hk648_fallen_empire.3002.aa.r
+		set_timed_country_flag = { hk648_fallen_ordeal_start days = 1080 }
+	}
+	
+	option = {
+		name = "hk648_fallen_empire.3002.ca"
+		custom_tooltip = hk648_fallen_empire.3002.ca.r
+		set_timed_country_flag = { hk648_fallen_ordeal_start days = 1080 }
+	}
+	
+	option = {
+		name = "hk648_fallen_empire.3002.ba"
+		custom_tooltip = hk648_fallen_empire.3002.ba.r
+	}
+}
+
+country_event = {
+	id = hk648_fallen_empire.3003
+	title = "OK"
+	desc = "OK"
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+	
+		FromFromFrom = {
+			has_fleet_flag = hk648_fallen_ordeal1_fleet
+		}
+		
+		any_country = {
+			is_country_type = fallen_empire
+			has_origin = origin_ark_moth2
+		}
+	}
+	
+	immediate = {
+		event_target:hk648_fallen_empire_moth = {
+			country_event = { 
+				id = hk648_fallen_empire.3004
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_fallen_empire.3004
+	title = "OK"
+	desc = "OK"
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = fallen_empire
+		has_origin = origin_ark_moth2
+	}
+	
+	immediate = {
+		from = {
+			if = {
+				limit = { has_country_flag = hk648_fallen_ordeal_start }
+			}
+			country_event = { 
+				id = hk648_fallen_empire.3005 
+				days = 10
+			}
+		}
+	}
+}
+
+#一阶段通过
+country_event = {
+	id = hk648_fallen_empire.3005
+	title = "hk648_fallen_empire.3005.title"
+	desc = "hk648_fallen_empire.3005.desc"
+
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = mei
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = personality_fallen_empire_moth_room
+	}
+	
+	immediate = {
+		set_country_flag = hk648_fallen_empire_honkai_unlock_150k
+		event_target:hk648_fallen_empire_moth = {
+			country_event = { 
+				id = hk648_fallen_empire.3006
+				days = 720
+				random = 360
+			}
+		}
+	}
+	
+	option = {
+		name = "hk648_fallen_empire.3005.aa"
+		
+	}
+	
+	option = {
+		name = "hk648_fallen_empire.3005.ba"
+	}
+}
+
+#第二次考验
+country_event = {
+	id = hk648_fallen_empire.3006
+	title = "OK"
+	desc = "OK"
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		
+	}
+	
+	immediate = {
+		random_playable_country = {
+			limit = {
+				has_country_flag = hk648_fallen_empire_honkai_unlock_150k
+			}
+			
+			country_event = { 
+				id = hk648_fallen_empire.3007
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_fallen_empire.3007
+	title = "hk648_fallen_empire.3007.title"
+	desc = "hk648_fallen_empire.3007.desc"
+
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = mei
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = personality_fallen_empire_moth_room
+	}
+	
+	immediate = {
+		country_event = {
+			id = hk648_fallen_empire.30071
+			days = 10
+		}
+	}
+	
+	option = {
+		name = "hk648_fallen_empire.3007.aa"
+	}
+	
+	option = {
+		name = "hk648_fallen_empire.3007.ba"
+	}
+}
+
+country_event = {
+	id = hk648_fallen_empire.30071
+	title = "OK"
+	desc = "OK"
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		hk648_fallen_ordeal2 = yes
+		last_created_fleet = {
+			set_fleet_flag = hk648_fallen_ordeal2_fleet
+		}
+	}
+}
+
+#逐火之蛾收到消息
+country_event = {
+	id = hk648_fallen_empire.3008
+	title = "OK"
+	desc = "OK"
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+	
+		FromFromFrom = {
+			has_fleet_flag = hk648_fallen_ordeal2_fleet
+		}
+		
+		any_country = {
+			is_country_type = fallen_empire
+			has_origin = origin_ark_moth2
+		}
+	}
+	
+	immediate = {
+		event_target:hk648_fallen_empire_moth = {
+			country_event = { 
+				id = hk648_fallen_empire.3009
+			}
+		}
+	}
+}
+
+#逐火之蛾发出信息
+country_event = {
+	id = hk648_fallen_empire.3009
+	title = "OK"
+	desc = "OK"
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = fallen_empire
+		has_origin = origin_ark_moth2
+	}
+	
+	immediate = {
+		from = {
+			country_event = { 
+				id = hk648_fallen_empire.3010
+				days = 10
+			}
+		}
+	}
+}
+
+#二阶段考验通过，直接接给往世乐土
+country_event = {
+	id = hk648_fallen_empire.3010
+	title = "hk648_fallen_empire.3010.title"
+	desc = "hk648_fallen_empire.3010.desc"
+
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = mei
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = personality_fallen_empire_moth_room
+	}
+	
+	immediate = {
+		set_country_flag = hk648_fallen_empire_honkai_unlock_500k
+	}
+	
+	option = {
+		name = "hk648_fallen_empire.3010.aa"
+		hidden_effect = {
+			hk648_fallent_moth_give_elysian_realm = yes
+		}
+		custom_tooltip = hk648_fallen_empire.3010.aa.r
+	}
+	
+	option = {
+		name = "hk648_fallen_empire.3010.ba"
+		custom_tooltip = hk648_fallen_empire.3010.ba.r
+	}
+}

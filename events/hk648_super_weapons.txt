@@ -1,0 +1,1101 @@
+namespace = hk648_super_wepons
+
+#超限计划#
+country_event = {
+	id = hk648_super_wepons.1001
+	title = "Overrun plan"
+	desc = "hk648_super_wepons.1001.desc"
+	picture = GFX_evt_hk648_cxjh
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Start research"
+		capital_scope = {
+			enable_special_project = {
+				name = "CXJH"
+				location = this
+				owner = root
+			}
+		}
+	}
+}
+
+#超限解放#
+country_event = {
+	id = hk648_super_wepons.1002
+	title = "Unlimited liberation"
+	desc = "hk648_super_wepons.1002.desc"
+	picture = GFX_evt_hk648_cxjh
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	
+	option = {
+		name = "Ship Armor"
+		trigger = { 
+			has_technology = tech_hk648_white
+			has_technology = tech_hk648_black
+			NOT = { has_country_flag = jcwj0 }
+		}
+		capital_scope = {
+			enable_special_project = {
+				name = "XZYZJ"
+				location = this
+				owner = root
+			}
+		}
+		custom_tooltip = hk648_super_wepons.1002.2.response
+		set_country_flag = jcwj0
+	}
+		
+	option = {
+		name = "Key to truth"
+		trigger = { 
+			has_technology = tech_hk648_zlzy 
+			NOT = { has_country_flag = zlzy0 }
+		}
+		capital_scope = {
+			enable_special_project = {
+				name = "ZLZJ"
+				location = this
+				owner = root
+			}
+		}
+		custom_tooltip = hk648_super_wepons.1002.3.response
+		set_country_flag = zlzy0
+	}
+	
+	option = {
+		name = "Honkai Vulcan Cannon"
+		trigger = { 
+			has_technology = tech_hk648_jtl
+			NOT = { has_country_flag = jtl0 }
+		}
+		capital_scope = {
+			enable_special_project = {
+				name = "CXJTL"
+				location = this
+				owner = root
+			}
+		}
+		custom_tooltip = hk648_super_wepons.1002.4.response
+		set_country_flag = jtl0
+	}
+	
+	option = {
+		name = "Quantum destroyer"
+		trigger = { 
+			has_technology = tech_hk648_lzhmz
+			NOT = { has_country_flag = lzhmz0 }
+		}
+		capital_scope = {
+			enable_special_project = {
+				name = "LZHMZ"
+				location = this
+				owner = root
+			}
+		}
+		custom_tooltip = hk648_super_wepons.1002.5.response
+		set_country_flag = lzhmz0
+	}
+	
+	option = {
+		name = "Star Destroyer 19C-X"
+		trigger = { 
+			has_technology = tech_hk648_19c
+			NOT = { has_country_flag = jxz19c0 }
+		}
+		capital_scope = {
+			enable_special_project = {
+				name = "JXZ19C-X"
+				location = this
+				owner = root
+			}
+		}
+		custom_tooltip = hk648_super_wepons.1002.6.response
+		set_country_flag = jxz19c0
+	}
+	
+	option = {
+		name = "Oath of Judah"
+		trigger = { 
+			has_technology = tech_divine_key_11th
+			NOT = { has_country_flag = divine_key_11th0 }
+		}
+		capital_scope = {
+			enable_special_project = {
+				name = "divine_key_11th_plus"
+				location = this
+				owner = root
+			}
+		}
+		custom_tooltip = hk648_super_wepons.1002.7.response
+		set_country_flag = divine_key_11th0
+	}
+	
+	option = {
+		name = "Cyclops prototype"
+		trigger = { 
+			has_technology = tech_hk648_dyjr
+			NOT = { has_country_flag = hk648_dyjr0 }
+		}
+		capital_scope = {
+			enable_special_project = {
+				name = "hk648_dyjr_z1"
+				location = this
+				owner = root
+			}
+		}
+		custom_tooltip = hk648_super_wepons.1002.8.response
+		set_country_flag = hk648_dyjr0
+	}
+	
+	option = {
+		name = "Hundred-handed giant prototype"
+		trigger = { 
+			has_technology = tech_hk648_bsjr
+			NOT = { has_country_flag = hk648_bsjr0 }
+		}
+		capital_scope = {
+			enable_special_project = {
+				name = "hk648_bsjr_z1"
+				location = this
+				owner = root
+			}
+		}
+		custom_tooltip = hk648_super_wepons.1002.9.response
+		set_country_flag = hk648_bsjr0
+	}
+		
+	option = {
+		name = "Suspend overrun plan"
+		custom_tooltip = hk648_super_wepons.1002.1.response
+		set_country_flag = cxjh0
+	}
+}
+
+#歼星者19C-X#
+country_event = {
+	id = hk648_super_wepons.1003
+	title = "Star Destroyer 19C-X"
+	desc = "hk648_super_wepons.1003.desc"
+	picture = GFX_evt_hk648_cxjh
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Very good"
+		hidden_effect = {
+			country_event = { 
+				id = hk648_super_wepons.1004
+				days = 1440
+				random = 360
+			}
+			country_event = { 
+				id = hk648_super_wepons.1002
+				days = 30
+			}
+		}
+		set_country_flag = jxz19ai0
+		add_research_option = tech_hk648_19cx
+		
+	}
+}
+country_event = {
+	id = hk648_super_wepons.10031
+	title = "Star Destroyer 19C-X"
+	desc = "hk648_super_wepons.1003.desc"
+	picture = GFX_evt_hk648_cxjh
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Very good"
+		hidden_effect = {
+			country_event = { 
+				id = hk648_super_wepons.1004
+				days = 1440
+				random = 360
+			}
+		}
+		set_country_flag = jxz19ai0
+		add_research_option = tech_hk648_19cx
+		
+	}
+}
+#歼星者19-AI#
+country_event = {
+	id = hk648_super_wepons.1004
+	title = "Star Destroyer 19-AI"
+	desc = "hk648_super_wepons.1004.desc"
+	picture = GFX_evt_hk648_aichan
+	is_triggered_only = yes
+	trigger = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = jxz19ai }
+		has_country_flag = jxz19ai0
+		OR = {
+			has_ascension_perk = ap_aichan_A1
+			has_ascension_perk = ap_AINB
+		}
+	}
+	
+	option = {
+		name = "Ai-chan is the cutest in the world"
+		set_country_flag = jxz19ai
+		add_research_option = tech_hk648_19ai
+	}
+}
+
+#真理之境——启示#
+country_event = {
+	id = hk648_super_wepons.1005
+	title = "Realm of Truth - Revelation"
+	desc = "hk648_super_wepons.1005.desc"
+	picture = GFX_evt_hk648_cxjh
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Very good"
+		hidden_effect = {
+			country_event = { 
+				id = hk648_super_wepons.1006
+				days = 1440
+				random = 360
+			}
+			country_event = { 
+				id = hk648_super_wepons.1002
+				days = 30
+			}
+		}
+		set_country_flag = zlzabc0
+		add_research_option = tech_hk648_zlzj
+	}
+}
+country_event = {
+	id = hk648_super_wepons.10051
+	title = "Realm of Truth - Revelation"
+	desc = "hk648_super_wepons.1005.desc"
+	picture = GFX_evt_hk648_cxjh
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Very good"
+		hidden_effect = {
+			country_event = { 
+				id = hk648_super_wepons.1006
+				days = 1440
+				random = 360
+			}
+		}
+		set_country_flag = zlzabc0
+		add_research_option = tech_hk648_zlzj
+	}
+}
+#Love of Truth - Cabbage#
+country_event = {
+	id = hk648_super_wepons.1006
+	title = "Love of Truth - Cabbage"
+	desc = "hk648_super_wepons.1006.desc"
+	picture = GFX_evt_hk648_aichan
+	is_triggered_only = yes
+	trigger = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = zlzabc }
+		has_country_flag = zlzabc0
+		OR = {
+			has_ascension_perk = ap_aichan_A1
+			has_ascension_perk = ap_AINB
+		}
+	}
+	
+	option = {
+		name = "Ai-chan is the cutest in the world"
+		set_country_flag = zlzabc
+		add_research_option = tech_aichan_zlzj
+	}
+}
+
+#量子毁灭者#
+country_event = {
+	id = hk648_super_wepons.1007
+	title = "Quantum destroyer ⅠⅠ type"
+	desc = "hk648_super_wepons.1007.desc"
+	picture = GFX_evt_hk648_cxjh
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Very good"
+		hidden_effect = {
+			country_event = { 
+				id = hk648_super_wepons.1002
+				days = 30
+			}
+		}
+		add_research_option = tech_hk648_lzhmz2
+	}
+}
+country_event = {
+	id = hk648_super_wepons.10071
+	title = "Quantum destroyer ⅠⅠ type"
+	desc = "hk648_super_wepons.1007.desc"
+	picture = GFX_evt_hk648_cxjh
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Very good"
+		add_research_option = tech_hk648_lzhmz2
+	}
+}
+
+#加特林#
+country_event = {
+	id = hk648_super_wepons.1008
+	title = "Unlimited Vulcan Cannon"
+	desc = "hk648_super_wepons.1008.desc"
+	picture = GFX_evt_hk648_cxjh
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Very good"
+		hidden_effect = {
+			country_event = { 
+				id = hk648_super_wepons.1002
+				days = 30
+			}
+		}
+		add_research_option = tech_hk648_cxjtl
+	}
+}
+country_event = {
+	id = hk648_super_wepons.10081
+	title = "nlimited Vulcan Cannon"
+	desc = "hk648_super_wepons.1008.desc"
+	picture = GFX_evt_hk648_cxjh
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Very good"
+		add_research_option = tech_hk648_cxjtl
+	}
+}
+
+#相转移#
+country_event = {
+	id = hk648_super_wepons.1009
+	title = "Phase shift mirror"
+	desc = "hk648_super_wepons.1009.desc"
+	picture = GFX_evt_hk648_cxjh
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Very good"
+		hidden_effect = {
+			country_event = { 
+				id = hk648_super_wepons.1002
+				days = 30
+			}
+			country_event = { 
+				id = hk648_super_wepons.1010
+				days = 1440
+				random = 360
+			}
+		}
+		set_country_flag = ajdjjsjj0
+		add_research_option = tech_hk648_xzy
+	}
+}
+country_event = {
+	id = hk648_super_wepons.10091
+	title = "Phase shift mirror"
+	desc = "hk648_super_wepons.1009.desc"
+	picture = GFX_evt_hk648_cxjh
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Very good"
+			country_event = { 
+				id = hk648_super_wepons.1010
+				days = 1800
+				random = 720
+			}
+		set_country_flag = ajdjjsjj0
+		add_research_option = tech_hk648_xzy
+	}
+}
+
+#Ai-chan的究极水晶甲#
+country_event = {
+	id = hk648_super_wepons.1010
+	title = "Ai-chan's Ultimate Crystal Armor"
+	desc = "hk648_super_wepons.1010.desc"
+	picture = GFX_evt_hk648_aichan
+	is_triggered_only = yes
+	trigger = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = ajdjjsjj }
+		has_country_flag = ajdjjsjj0
+		OR = {
+			has_ascension_perk = ap_aichan_A1
+			has_ascension_perk = ap_AINB
+		}
+	}
+	
+	option = {
+		name = "Ai-chan is the cutest in the world"
+		set_country_flag = ajdjjsjj
+		add_research_option = tech_aichan_648
+	}
+}
+
+
+country_event = {
+	id = hk648_super_wepons.1011
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	immediate = {
+		country_event = { 
+			id = hk648_super_wepons.1010 
+			days = 720
+			random = 360
+		}
+		country_event = { 
+			id = hk648_super_wepons.1004
+			days = 720
+			random = 360
+		}
+		country_event = { 
+			id = hk648_super_wepons.1006
+			days = 720
+			random = 360
+		}
+	}
+}
+
+country_event = {
+	id = hk648_super_wepons.1012
+	title = "Oath of Judah Prisoner"
+	desc = "hk648_super_wepons.1012.desc"
+	picture = GFX_evt_hk648_cxjh
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Very good"
+		hidden_effect = {
+			country_event = { 
+				id = hk648_super_wepons.1002
+				days = 30
+			}
+		}
+		add_research_option = tech_divine_key_11th_plus
+	}
+}
+
+country_event = {
+	id = hk648_super_wepons.10121
+	title = "Oath of Judah Prisoner"
+	desc = "hk648_super_wepons.1012.desc"
+	picture = GFX_evt_hk648_cxjh
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Very good"
+		add_research_option = tech_divine_key_11th_plus
+	}
+}
+
+country_event = {
+	id = hk648_super_wepons.1013
+	title = "Cyclops Final Form"
+	desc = "hk648_super_wepons.1013.desc"
+	picture = GFX_evt_hk648_cxjh
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Very good"
+		hidden_effect = {
+			country_event = { 
+				id = hk648_super_wepons.1002
+				days = 30
+			}
+		}
+		add_research_option = tech_hk648_dyjr_z
+	}
+}
+country_event = {
+	id = hk648_super_wepons.10131
+	title = "Cyclops Final Form"
+	desc = "hk648_super_wepons.1013.desc"
+	picture = GFX_evt_hk648_cxjh
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Very good"
+		add_research_option = tech_hk648_dyjr_z
+	}
+}
+country_event = {
+	id = hk648_super_wepons.1014
+	title = "Hundred-Handed Giant Final Form"
+	desc = "hk648_super_wepons.1014.desc"
+	picture = GFX_evt_hk648_cxjh
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Very good"
+		hidden_effect = {
+			country_event = { 
+				id = hk648_super_wepons.1002
+				days = 30
+			}
+		}
+		add_research_option = tech_hk648_bsjr_z
+	}
+}
+country_event = {
+	id = hk648_super_wepons.10141
+	title = "Hundred-Handed Giant Final Form"
+	desc = "hk648_super_wepons.1014.desc"
+	picture = GFX_evt_hk648_cxjh
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Very good"
+		add_research_option = tech_hk648_bsjr_z
+	}
+}
+
+#神之键系列
+country_event = {
+	id = hk648_super_wepons.2001
+	title = "Unusable core"
+	desc = "hk648_super_wepons.2001.desc"
+	picture = GFX_divine_key_11th
+	is_triggered_only = yes
+	
+	option = {
+		name = "Make Divine key"
+		remove_relic = r_11th_herrscher
+		capital_scope = {
+			enable_special_project = {
+				name = "divine_key_11th"
+				location = this
+				owner = root
+			}
+		}
+	}
+	
+	option = {
+		name = "No, that's fine"
+		add_resource = {
+			influence = 500
+			unity = 20000
+		}
+	}
+}
+
+country_event = {
+	id = hk648_super_wepons.2002
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_technology = tech_divine_key }
+			}
+			country_event = {
+				id = hk648_super_wepons.2003
+			}
+		}
+		else = {
+			add_research_option = tech_divine_key_11th
+		}
+	}
+}
+
+country_event = {
+	id = hk648_super_wepons.2003
+	diplomatic = yes
+	title = "§GAi-chan§!"
+	desc = "hk648_super_wepons.2003.desc"
+	is_triggered_only = yes
+	picture_event_data = {
+		portrait = aichan8
+		room = "hk001_room"
+	}
+	
+	option = {
+		name = "Confirm purchase"
+		give_technology = { tech = tech_divine_key  }
+		add_research_option = tech_divine_key_11th
+		hidden_effect = {
+			country_event = {
+				id = hk648_super_wepons.2004
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "no_ap_honkai2"
+				has_ascension_perk = ap_honkai2
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 50000 }
+			}
+		}
+		add_resource = {
+			energy = -50000
+		}
+	}
+	option = {
+		name = "Confirm purchase（installment purchase）"
+		give_technology = { tech = tech_divine_key  }
+		allow = {
+			custom_tooltip = {
+				fail_text = "no_ap_honkai2"
+				has_ascension_perk = ap_honkai2
+			}
+		}
+		add_research_option = tech_divine_key_11th
+		add_modifier = { modifier = "aichan_cost_5x10k" days = 180 }
+		hidden_effect = {
+			country_event = {
+				id = hk648_super_wepons.2004
+			}
+		}
+	}
+	option = {
+		name = "I trust my scientist"
+		custom_tooltip = "hk648_super_wepons.2009.r"
+		capital_scope = {
+			enable_special_project = {
+				name = "divine_key_11th_2"
+				location = this
+				owner = root
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_super_wepons.2005
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_super_wepons.2004
+	diplomatic = yes
+	title = "§GAi-chan§!"
+	desc = "hk648_super_wepons.2004.desc"
+	is_triggered_only = yes
+	picture_event_data = {
+		portrait = aichan2
+		room = "hk001_room"
+	}
+	
+	option = {
+		name = "Confirm"
+	}
+}
+
+country_event = {
+	id = hk648_super_wepons.2006
+	diplomatic = yes
+	title = "§GAi-chan§!"
+	desc = "hk648_super_wepons.2004.desc"
+	is_triggered_only = yes
+	picture_event_data = {
+		portrait = aichan2
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "Confirm"
+	}
+}
+
+country_event = {
+	id = hk648_super_wepons.2005
+	diplomatic = yes
+	title = "§GAi-chan§!"
+	desc = "hk648_super_wepons.2005.desc"
+	is_triggered_only = yes
+	picture_event_data = {
+		portrait = aichan9
+		room = "hk001_room"
+	}
+	
+	option = {
+		name = "Confirm"
+	}
+}
+
+country_event = {
+	id = hk648_super_wepons.2008
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_technology = tech_divine_key }
+			}
+			country_event = {
+				id = hk648_super_wepons.2009
+			}
+		}
+		else = {
+			country_event = {
+				id = hk648_super_wepons.2010
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_super_wepons.2009
+	diplomatic = yes
+	title = "§GAi-chan§!"
+	desc = "hk648_super_wepons.2009.desc"
+	is_triggered_only = yes
+	picture_event_data = {
+		portrait = aichan2
+		room = "hk001_room"
+	}
+	option = {
+		name = "Confirm purchase"
+		give_technology = { tech = tech_divine_key  }
+		capital_scope = {
+			enable_special_project = {
+				name = "divine_key_12th_2"
+				location = this
+				owner = root
+			}
+		}
+		remove_relic = r_12th_herrscher
+		hidden_effect = {
+			country_event = {
+				id = hk648_super_wepons.2004
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "no_ap_honkai2"
+				has_ascension_perk = ap_honkai2
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 50000 }
+			}
+		}
+		add_resource = {
+			energy = -50000
+		}
+	}
+	option = {
+		name = "Confirm purchase (installment)"
+		give_technology = { tech = tech_divine_key  }
+		capital_scope = {
+			enable_special_project = {
+				name = "divine_key_12th_2"
+				location = this
+				owner = root
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "no_ap_honkai2"
+				has_ascension_perk = ap_honkai2
+			}
+		}
+		remove_relic = r_12th_herrscher
+		add_modifier = { modifier = "aichan_cost_5x10k" days = 180 }
+		hidden_effect = {
+			country_event = {
+				id = hk648_super_wepons.2004
+			}
+		}
+	}
+	option = {
+		name = "I trust my scientist"
+		remove_relic = r_12th_herrscher
+		custom_tooltip = "hk648_super_wepons.2009.r"
+		capital_scope = {
+			enable_special_project = {
+				name = "divine_key_12th"
+				location = this
+				owner = root
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_super_wepons.2005
+			}
+		}
+	}
+	option = {
+		name = "This knife is of commemorative significance, let's keep it"
+	}
+}
+
+country_event = {
+	id = hk648_super_wepons.2010
+	title = "Key of Corruption reworked"
+	desc = "hk648_super_wepons.2010.desc"
+	picture = GFX_evt_divine_key_12th
+	is_triggered_only = yes
+	
+	option = {
+		name = "We need a Divine key that can keep up with the times"
+		remove_relic = r_12th_herrscher
+		capital_scope = {
+			enable_special_project = {
+				name = "divine_key_12th_2"
+				location = this
+				owner = root
+			}
+		}
+	}
+	
+	option = {
+		name = "This knife is of commemorative significance, let's keep it"
+	}
+}
+
+country_event = {
+	id = hk648_super_wepons.20111
+	title = "Judas Eternal Prison Charge"
+	hide_window = yes
+	is_triggered_only = yes
+	
+	option = {
+		every_owned_ship = {
+			limit = {
+				has_component = hk648_divine_key_11th_plus
+				NOT = { has_modifier = hk648_divine_key_11th_plus_buff }
+			}
+			set_ship_flag = hk648_divine_key_11th_plus_ship
+			
+		}
+		if = {
+			limit = {
+				#3.4改动
+				any_controlled_ship = {
+					has_ship_flag = hk648_divine_key_11th_plus_ship
+				}
+			}
+			country_event = {
+				id = hk648_super_wepons.20112
+				days = 180
+				random = 175
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_super_wepons.20112
+	title = "Judas Eternal Prison Charge"
+	hide_window = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "I see"
+		if = {
+			limit = {
+				#3.4改动
+				any_controlled_ship = {
+					has_ship_flag = hk648_divine_key_11th_plus_ship
+				}
+			}
+			country_event = {
+				id = hk648_super_wepons.2011
+			}
+		}
+	}
+}
+
+#Ai-chan充能
+country_event = {
+	id = hk648_super_wepons.20131
+	title = "Judas Eternal Prison Charge"
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		last_increased_tech = tech_divine_key_11th_plus
+	}
+	
+	immediate = {
+		country_event = {
+			id = hk648_super_wepons.2013
+			days = 45
+			random = 15
+		}
+	}
+}
+#Ai-chan充能
+country_event = {
+	id = hk648_super_wepons.2013
+	diplomatic = yes
+	title = "§GAi-chan§!"
+	desc = "hk648_super_wepons.2013.desc"
+	is_triggered_only = yes
+	picture_event_data = {
+		portrait = aichan2
+		room = "hk001_room"
+	}
+	
+	immediate = {
+		set_country_flag = hk648_divine_key_11th_plus_aichan
+	}
+	option = {
+		name = "I see"
+	}
+}
+
+country_event = {
+	id = hk648_super_wepons.2011
+	title = "Judas Eternal Prison Charge complete"
+	desc = "hk648_super_wepons.2011.desc"
+	picture = GFX_evt_divine_key_11th
+	is_triggered_only = yes
+	
+	option = {
+		name = "I see"
+		
+		every_owned_ship = {
+			if = {
+				limit = {
+					has_ship_flag = hk648_divine_key_11th_plus_ship
+				}
+				add_modifier = {
+					modifier = hk648_divine_key_11th_plus_buff
+				}
+				remove_ship_flag = hk648_divine_key_11th_plus_ship
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_super_wepons.20121
+	title = "Judas Eternal Prison Energy Rampage"
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_owned_fleet = {
+			if = {
+				limit = {
+					#3.4改动
+					any_controlled_ship = {
+						has_modifier = hk648_divine_key_11th_plus_buff
+						NOT = { has_component = hk648_divine_key_11th_plus }
+					}
+				}
+				set_fleet_flag = hk648_divine_key_11th_boom
+			}
+		}
+		if = {
+			limit = {
+				#3.4改动
+				any_controlled_fleet = {
+					has_fleet_flag = hk648_divine_key_11th_boom
+				}
+			}
+			country_event = {
+				id = hk648_super_wepons.2012
+				days = 15
+				random = 12
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_super_wepons.2012
+	title = "Judas Eternal Prison Energy Rampage"
+	desc = "hk648_super_wepons.2012.desc"
+	picture = GFX_evt_hk648_start.5
+	is_triggered_only = yes
+	
+	immediate = {
+		every_owned_fleet = { 
+			if = {
+				limit = {
+					has_fleet_flag = hk648_divine_key_11th_boom
+				}
+				remove_fleet_flag = hk648_divine_key_11th_boom
+				delete_fleet = this 
+			}	
+		}
+	}
+	
+	option = {
+		name = "Damn it!"
+	}
+}
+
+#犹大配套动能武器
+country_event = {
+	id = hk648_super_wepons.2014
+	title = "Constraint field"
+	desc = "hk648_super_wepons.2014.desc"
+	picture = GFX_evt_hk648_start.5
+	is_triggered_only = yes
+	
+	option = {
+		name = "A set of weapons immune to bound fields is necessary"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 25000 }
+			}
+		}
+		add_resource = {
+			energy = -25000
+		}
+		capital_scope = {
+			enable_special_project = {
+				name = "divine_key_11th_weapon"
+				location = this
+				owner = root
+			}
+		}
+	}
+	option = {
+		name = "Money should not be wasted on this kind of project"
+	}
+	option = {
+		name = "Talk about it later"
+		country_event ={
+			id = hk648_super_wepons.2014
+			days = 180
+		}
+	}
+}

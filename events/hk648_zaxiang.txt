@@ -1,0 +1,224 @@
+namespace= hk648_zaxiang
+
+country_event = {
+	id = hk648_zaxiang.1
+	title = "hk648_zaxiang.1.title"
+	desc = "hk648_zaxiang.1.desc"
+	picture = GFX_evt_hk648_fkns
+	is_triggered_only = yes
+	trigger = { NOT = {has_country_flag = dsszj } }
+	
+	immediate = {
+		set_country_flag = dsszj
+	}
+	
+	option = {
+		name = "The truth came out"
+		owner = {
+			add_resource = {
+				unity = 2500
+			}
+		}
+	}
+}
+
+#隐藏更新设置#
+
+#更新通知#
+country_event = {
+	id = hk648_zaxiang.2
+	title = "Update notice"
+	desc = "hk648_zaxiang.2.desc"
+	picture = GFX_evt_update
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = { 
+		has_authority = auth_schicksal 
+		NOT = { 
+			has_country_flag = hk648_update_2 
+			has_country_flag = hk648_update_8
+		}
+	}
+	
+	immediate = {
+		set_country_flag = hk648_update_2
+		if = {
+			limit = {
+				has_ascension_perk = ap_honkai1
+			}
+			country_event = { 
+				id = hk648_cocoon_of_finality.0007 
+				days = 540
+				random = 180
+			}
+		}
+	}
+	
+	option = {
+		name = "I see"
+		
+	}
+}
+
+#手动查标识与七七八八的#
+country_event = {
+	id = hk648_zaxiang.3
+	title = "Manual testing done"
+	desc = "signets_of_deliverance_response_b"
+	picture = GFX_evt_update
+	is_triggered_only = yes
+	
+	show_sound = event_aichan_food
+	
+	trigger = { 
+	}
+	
+	option = {
+		name = "Option one"
+		start_situation = {
+			type = hk648_military_force_situations_1
+			target = root
+		}
+	}
+	option = {
+		name = "Option two"
+	}
+}
+
+
+planet_event = {
+	id = hk648_zaxiang.4
+	title = "Poor logo"
+	desc = "hk648_zaxiang.4.desc"
+	picture = GFX_evt_update
+	is_triggered_only = yes
+	
+	trigger = { 
+		has_planet_flag = d_hk_energy_648
+	}
+	immediate = {
+		add_deposit = d_society_1
+		add_deposit = d_hk_energy_648
+	}
+	option = {
+		name = "01"
+		add_deposit = d_society_1
+		add_deposit = d_hk_energy_648
+	}
+}
+
+#buff测试#
+country_event = {
+	id = hk648_zaxiang.5
+	title = "Examination buff"
+	desc = "hk648_zaxiang.5.desc"
+	picture = GFX_evt_update
+	is_triggered_only = yes
+	
+	option = {
+		add_modifier = {
+			modifier = hk648_light
+		}
+	}
+}
+
+
+country_event = {
+	id = hk648_zaxiang.6
+	title = "Title"
+	desc = "Content"
+	picture = GFX_evt_hk648_ai_test
+	is_triggered_only = yes
+	
+	show_sound = event_aichan_food
+	
+	trigger = { 
+	}
+	
+	option = {
+		name = "Option one"
+	}
+	option = {
+		name = "Option Two"
+	}
+}
+
+country_event = {
+	id = hk648_zaxiang.7
+	title = "Name"
+	desc = "Content"
+	picture = GFX_evt_update
+	is_triggered_only = yes
+	
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "hk648_ai_test_1_room"
+	}
+	
+	show_sound = event_aichan_food
+	
+	trigger = { 
+	}
+	
+	option = {
+		name = "Option one"
+	}
+	option = {
+		name = "Option two"
+	}
+}
+
+country_event = {
+	id = hk648_zaxiang.8
+	title = "Name"
+	desc = "content"
+	picture = GFX_evt_update
+	is_triggered_only = yes
+	
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "hk648_ai_test_2_room"
+	}
+	
+	show_sound = event_aichan_food
+	
+	trigger = { 
+	}
+	
+	option = {
+		name = "Option one"
+	}
+	option = {
+		name = "Option two"
+	}
+}
+
+country_event = {
+	id = hk648_zaxiang.9
+	title = "Name"
+	desc = "Content"
+	picture = GFX_evt_update
+	is_triggered_only = yes
+	
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "hk648_ai_test_3_room"
+	}
+	
+	show_sound = event_aichan_food
+	
+	trigger = { 
+	}
+	
+	option = {
+		name = "Option one"
+	}
+	option = {
+		name = "Option two"
+	}
+}
+

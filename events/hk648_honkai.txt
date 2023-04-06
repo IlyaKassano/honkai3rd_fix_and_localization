@@ -1,0 +1,2453 @@
+namespace= hk648_honkai
+
+
+country_event = {
+	id = hk648_honkai.1000
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		has_authority = auth_schicksal
+	}
+	
+	immediate = {
+		create_species = {
+			name = "Honkai Beast"
+			class = VALKYRIES
+			portrait = random
+		}
+		last_created_species = {
+			save_global_event_target_as = hk_Beast
+		}
+		create_species = {
+			name = "Honkai Impact - Valkyries"
+			class = VALKYRIES
+			portrait = random
+		}
+		last_created_species = {
+			save_global_event_target_as = hk_valkyrie
+		}
+		create_country = {
+			name = "§MHonkai§!"
+			type = hk_country
+			flag = {
+				icon= {
+					category = "tm"
+					file = "flag_honkai.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors={
+					"blue"
+					"blue"
+					"null"
+					"null"
+				}
+			}
+			species = last_created_species
+			effect = {
+				establish_communications_no_message = root.owner
+				save_global_event_target_as = honkai_country
+			}
+		}
+	}
+}
+
+# Triggers country_event for the attacker upon defeat
+# This = country, attack leader
+# From = country, planet owner
+# FromFrom = planet
+#战胜崩坏#
+country_event = {
+	id = hk648_honkai.4001
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		this = { is_country_type = hk_country }
+	}
+	
+	immediate = {
+		fromfrom = {
+			remove_planet_flag = honkai_attack
+		}
+		from = {
+			country_event = { 
+				id = hk648_honkai.4002 
+				days = 50
+				random = 10
+			} 
+		}
+		if = {	
+			limit = { 
+				fromfrom = { 
+					OR = {
+						has_planet_flag = honkai_500
+						has_planet_flag = honkai_3000
+						has_planet_flag = honkai_1000
+					}
+				}
+			}
+			fromfrom = {
+				planet_event = {
+					id = hk648_honkai.4005
+				}
+			}
+		}
+		if = {	
+			limit = { 
+				fromfrom = { 
+					OR = {
+						has_planet_flag = honkai_8000
+						has_planet_flag = honkai_12000
+						has_planet_flag = honkai_25000
+					}
+				}
+			}
+			fromfrom = {
+				planet_event = {
+					id = hk648_honkai.4006
+				}
+			}
+		}
+		if = {	
+			limit = { 
+				fromfrom = { 
+					OR = {
+						has_planet_flag = honkai_40000
+						has_planet_flag = honkai_70000
+						has_planet_flag = honkai_100000
+					}
+				}
+			}
+			fromfrom = {
+				planet_event = {
+					id = hk648_honkai.4007
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_honkai.4002
+	title = "Honkai Alert System"
+	desc = "hk648_honkai.4002.desc"
+	picture = GFX_evt_honkai_win
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = honkai_impact }
+	}
+	
+	option = {
+		name = "Start researching immediately"
+		set_country_flag = honkai_impact
+		capital_scope = {
+			enable_special_project = {
+				name = "BHYJQ"
+				location = this
+				owner = root
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_honkai.4003
+	title = "Honkai Alert System"
+	desc = "hk648_honkai.4003.desc"
+	picture = GFX_evt_hk_warning
+	is_triggered_only = yes
+
+	option = {
+		name = "Deploy the device immediately"
+		capital_scope = {
+			set_planet_flag =honkai_warning_yes
+			add_modifier = { modifier = "honkai_warning" }
+		}
+	}
+}
+
+#低级崩坏获胜奖励#
+planet_event = {
+	id = hk648_honkai.4005
+	title = "Defeat Honkai"
+	desc = "hk648_honkai.4005.desc"
+	picture = GFX_evt_honkai_win
+	is_triggered_only = yes
+	trigger = {
+		owner = {
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	option = {
+		name = "Fight for all the good things in the world!"
+		owner = {
+			add_resource = {
+				unity = 2500
+				honkai648_energy = 2500
+			}
+		}
+		remove_planet_flag = honkai_500
+		remove_planet_flag = honkai_3000
+		remove_planet_flag = honkai_1000
+	}
+}
+
+#中级崩坏获胜奖励#
+planet_event = {
+	id = hk648_honkai.4006
+	title = "Defeat Honkai"
+	desc = "hk648_honkai.4006.desc"
+	picture = GFX_evt_honkai_win
+	is_triggered_only = yes
+	trigger = {
+		owner = {
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	option = {
+		name = "Fight for all the good things in the world!"
+		owner = {
+			add_resource = {
+				unity = 10000
+				honkai648_energy = 10000
+			}
+		}
+		remove_planet_flag = honkai_8000
+		remove_planet_flag = honkai_12000
+		remove_planet_flag = honkai_25000
+	}
+}
+
+#高级崩坏获胜奖励#
+planet_event = {
+	id = hk648_honkai.4007
+	title = "Defeat Honkai"
+	desc = "hk648_honkai.4007.desc"
+	picture = GFX_evt_honkai_win
+	is_triggered_only = yes
+	trigger = {
+		owner = {
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	option = {
+		name = "Fight for all the good things in the world!"
+		owner = {
+			add_resource = {
+				unity = 15000
+				honkai648_energy = 40000
+			}
+		}
+		remove_planet_flag = honkai_40000
+		remove_planet_flag = honkai_70000
+		remove_planet_flag = honkai_100000
+	}
+}
+
+#难度设置#
+country_event = {
+	id = hk648_honkai.5000
+	title = "Honkai Difficulty Settings"
+	desc = "hk648_ainb.5000.desc"
+	picture = GFX_evt_update
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		has_authority = auth_schicksal
+	}
+	
+	option = {
+		name = "None"
+		remove_global_flag = honkai_easy
+		remove_global_flag = honkai_normal
+		remove_global_flag = honkai_hard
+	}
+	option = {
+		name = "Easy"
+		set_global_flag = honkai_easy
+		remove_global_flag = honkai_normal
+		remove_global_flag = honkai_hard
+	}
+	option = {
+		name = "Normal"
+		set_global_flag = honkai_normal
+		remove_global_flag = honkai_easy
+		remove_global_flag = honkai_hard
+	}
+	option = {
+		name = "Hard"
+		set_global_flag = honkai_hard
+		remove_global_flag = honkai_easy
+		remove_global_flag = honkai_normal
+	}
+}
+#判断#
+country_event = {
+	id = hk648_honkai.5001
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		has_authority = auth_schicksal
+		has_ascension_perk = ap_honkai1
+	}
+	
+	immediate = {
+		if = {
+			limit = { has_global_flag = honkai_easy }
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 25000 } 
+					resource_stockpile_compare = { resource = honkai648_energy value <= 50000 } 
+				}
+				country_event = { id = hk648_honkai.3001 }
+				random_list = {
+					1 = { country_event = { id = hk648_honkai.7002 } }
+					1 = {}
+				}
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 50000 } 
+					resource_stockpile_compare = { resource = honkai648_energy value <= 100000 } 
+				}
+				country_event = { id = hk648_honkai.3002 }
+				random_list = {
+					1 = { country_event = { id = hk648_honkai.7005 } }
+					1 = {}
+				}
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 100000 } 
+					resource_stockpile_compare = { resource = honkai648_energy value <= 250000 } 
+				}
+				country_event = { id = hk648_honkai.3003 }
+				country_event = { id = hk648_honkai.7020 }
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 250000 } 
+					resource_stockpile_compare = { resource = honkai648_energy value <= 1000000 } 
+				}
+				country_event = { id = hk648_honkai.3004 }
+				country_event = { id = hk648_honkai.7050 }
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 1000000 } 
+					resource_stockpile_compare = { resource = honkai648_energy value <= 2500000 } 
+				}
+				country_event = { id = hk648_honkai.3005 }
+				country_event = { id = hk648_honkai.7250 }
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 2500000 } 
+					resource_stockpile_compare = { resource = honkai648_energy value <= 5000000 } 
+				}
+				country_event = { id = hk648_honkai.3007 }
+				country_event = { id = hk648_honkai.71000 }
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 5000000 } 
+					resource_stockpile_compare = { resource = honkai648_energy value <= 10000000 } 
+				}
+				country_event = { id = hk648_honkai.3009 }
+				country_event = { id = hk648_honkai.72500 }
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 10000000 } 
+					resource_stockpile_compare = { resource = honkai648_energy value <= 20000000 } 
+				}
+				country_event = { id = hk648_honkai.3010 }
+				country_event = { id = hk648_honkai.75000 }
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 20000000 } 
+				}
+				country_event = { id = hk648_honkai.3010 }
+				country_event = { id = hk648_honkai.71999 }
+			}
+		}
+		if = {
+			limit = { has_global_flag = honkai_normal }
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 10000 } 
+					resource_stockpile_compare = { resource = honkai648_energy value <= 25000 } 
+				}
+				country_event = { id = hk648_honkai.3001 }
+				random_list = {
+					1 = { country_event = { id = hk648_honkai.7002 } }
+					2 = {}
+				}
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 25000 } 
+					resource_stockpile_compare = { resource = honkai648_energy value <= 50000 } 
+				}
+				country_event = { id = hk648_honkai.3002 } 
+				random_list = {
+					1 = { country_event = { id = hk648_honkai.7005 } }
+					1 = {}
+				}
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 50000 } 
+					resource_stockpile_compare = { resource = honkai648_energy value <= 100000 } 
+				}
+				country_event = { id = hk648_honkai.3003 }
+				random_list = {
+					1 = { country_event = { id = hk648_honkai.7010 } }
+					1 = {}
+				}
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 100000 } 
+					resource_stockpile_compare = { resource = honkai648_energy value <= 250000 } 
+				}
+				country_event = { id = hk648_honkai.3004 }
+				country_event = { id = hk648_honkai.7050 }
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 250000 } 
+					resource_stockpile_compare = { resource = honkai648_energy value <= 1000000 } 
+				}
+				country_event = { id = hk648_honkai.3005 }
+				country_event = { id = hk648_honkai.7250 }
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 1000000 } 
+					resource_stockpile_compare = { resource = honkai648_energy value <= 2500000 } 
+				}
+				country_event = { id = hk648_honkai.3006 }
+				country_event = { id = hk648_honkai.71000 }
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 2500000 } 
+					resource_stockpile_compare = { resource = honkai648_energy value <= 5000000 } 
+				}
+				country_event = { id = hk648_honkai.3008 }
+				country_event = { id = hk648_honkai.72500 }
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 5000000 } 
+					resource_stockpile_compare = { resource = honkai648_energy value <= 10000000 } 
+				}
+				country_event = { id = hk648_honkai.3009 }
+				country_event = { id = hk648_honkai.75000 }
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 10000000 } 
+					resource_stockpile_compare = { resource = honkai648_energy value <= 20000000 } 					
+				}
+				country_event = { id = hk648_honkai.3010 }
+				country_event = { id = hk648_honkai.71999 }
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 20000000 } 
+
+				}
+				country_event = { id = hk648_honkai.3010 }
+				country_event = { id = hk648_honkai.71999 }
+				country_event = { id = hk648_honkai.71999 }
+			}
+		}
+		if = {
+			limit = { has_global_flag = honkai_hard }
+			if = {
+				limit = {  
+					resource_stockpile_compare = { resource = honkai648_energy value > 1000 } 
+					resource_stockpile_compare = { resource = honkai648_energy value <= 10000 } 
+				}
+				country_event = { id = hk648_honkai.3001 }
+				random_list = {
+					1 = { country_event = { id = hk648_honkai.7002 } }
+					2 = {}
+				}
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 10000 } 
+					resource_stockpile_compare = { resource = honkai648_energy value <= 25000 } 
+				}
+				country_event = { id = hk648_honkai.3002 }
+				random_list = {
+					1 = { country_event = { id = hk648_honkai.7005 } }
+					2 = {}
+				}
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 25000 } 
+					resource_stockpile_compare = { resource = honkai648_energy value <= 50000 } 
+				}
+				country_event = { id = hk648_honkai.3003 }
+				random_list = {
+					1 = { country_event = { id = hk648_honkai.7010 } }
+					1 = {}
+				}
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 50000 } 
+					resource_stockpile_compare = { resource = honkai648_energy value <= 100000 } 
+				}
+				country_event = { id = hk648_honkai.3004 }
+				random_list = {
+					1 = { country_event = { id = hk648_honkai.7020 } }
+					1 = {}
+				}
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 100000 } 
+					resource_stockpile_compare = { resource = honkai648_energy value <= 250000 } 
+				}
+				country_event = { id = hk648_honkai.3005 }
+				random_list = {
+					1 = { country_event = { id = hk648_honkai.7150 } }
+					1 = {}
+				}
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 250000 } 
+					resource_stockpile_compare = { resource = honkai648_energy value <= 1000000 } 
+				}
+				country_event = { id = hk648_honkai.3006 }
+				country_event = { id = hk648_honkai.7500 }
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 1000000 } 
+					resource_stockpile_compare = { resource = honkai648_energy value <= 2500000 } 
+				}
+				country_event = { id = hk648_honkai.3007 }
+				country_event = { id = hk648_honkai.72500 }
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 2500000 } 
+					resource_stockpile_compare = { resource = honkai648_energy value <= 5000000 } 
+				}
+				country_event = { id = hk648_honkai.3009 }
+				country_event = { id = hk648_honkai.75000 }
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 5000000 } 
+					resource_stockpile_compare = { resource = honkai648_energy value <= 10000000 } 
+				}
+				country_event = { id = hk648_honkai.3010 }
+				country_event = { id = hk648_honkai.71999 }
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 10000000 } 
+				}
+				country_event = { id = hk648_honkai.3010 }
+				country_event = { id = hk648_honkai.3010 }
+				country_event = { id = hk648_honkai.71999 }
+				country_event = { id = hk648_honkai.71999 }
+			}
+			if = {
+				limit = { 
+					resource_stockpile_compare = { resource = honkai648_energy value > 20000000 } 
+				}
+				country_event = { id = hk648_honkai.3010 }
+				country_event = { id = hk648_honkai.3010 }
+				country_event = { id = hk648_honkai.3010 }
+				country_event = { id = hk648_honkai.71999 }
+				country_event = { id = hk648_honkai.71999 }
+				country_event = { id = hk648_honkai.71999 }
+			}
+		}
+	}
+}
+#崩坏频率0.5#
+country_event = {
+	id = hk648_honkai.3001
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		random_list = {
+			1 = {
+				random_owned_planet = {	
+					honkai_lv1_warning = yes
+				}
+			}
+			1 = {}
+		}
+	}
+	
+	after = {
+		every_owned_planet = {
+			limit = {
+                has_planet_flag = honkai_planet
+            }
+            remove_planet_flag = honkai_planet
+        }
+	}
+}
+#崩坏频率1#
+country_event = {
+	id = hk648_honkai.3002
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		random_owned_planet = {	
+			honkai_lv1_warning = yes
+		}
+	}
+	
+	after = {
+		every_owned_planet = {
+			limit = {
+                has_planet_flag = honkai_planet
+            }
+            remove_planet_flag = honkai_planet
+        }
+	}
+}
+#崩坏频率2#
+country_event = {
+	id = hk648_honkai.3003
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv1_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv1_warning = yes
+		}
+	}
+	
+	after = {
+		every_owned_planet = {
+			limit = {
+                has_planet_flag = honkai_planet
+            }
+            remove_planet_flag = honkai_planet
+        }
+	}
+}
+#崩坏频率3#
+country_event = {
+	id = hk648_honkai.3004
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv2_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv1_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv1_warning = yes
+		}
+	}
+	
+	after = {
+		every_owned_planet = {
+			limit = {
+                has_planet_flag = honkai_planet
+            }
+            remove_planet_flag = honkai_planet
+        }
+	}
+}
+#崩坏频率4#
+country_event = {
+	id = hk648_honkai.3005
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv2_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv1_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv2_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv1_warning = yes
+		}
+	}
+	
+	after = {
+		every_owned_planet = {
+			limit = {
+                has_planet_flag = honkai_planet
+            }
+            remove_planet_flag = honkai_planet
+        }
+	}
+}
+#崩坏频率5#
+country_event = {
+	id = hk648_honkai.3006
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv2_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv1_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv2_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv1_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv2_warning = yes
+		}
+	}
+	
+	after = {
+		every_owned_planet = {
+			limit = {
+                has_planet_flag = honkai_planet
+            }
+            remove_planet_flag = honkai_planet
+        }
+	}
+}
+#崩坏频率6#
+country_event = {
+	id = hk648_honkai.3007
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv3_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv2_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv1_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv2_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv1_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv2_warning = yes
+		}
+		
+	}
+	
+	after = {
+		every_owned_planet = {
+			limit = {
+                has_planet_flag = honkai_planet
+            }
+            remove_planet_flag = honkai_planet
+        }
+	}
+}
+#崩坏频率7#
+country_event = {
+	id = hk648_honkai.3008
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv3_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv2_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv3_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv1_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv2_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv1_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv2_warning = yes
+		}
+	}
+	
+	after = {
+		every_owned_planet = {
+			limit = {
+                has_planet_flag = honkai_planet
+            }
+            remove_planet_flag = honkai_planet
+        }
+	}
+}
+#崩坏频率8#
+country_event = {
+	id = hk648_honkai.3009
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv3_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv2_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv3_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv1_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv3_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv2_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv1_warning = yes
+		}
+		random_owned_planet = {	
+			limit = { NOT = { has_planet_flag = honkai_planet } }
+			honkai_lv2_warning = yes
+		}
+	}
+	
+	after = {
+		every_owned_planet = {
+			limit = {
+                has_planet_flag = honkai_planet
+            }
+            remove_planet_flag = honkai_planet
+        }
+	}
+}
+#超级崩坏#
+country_event = {
+	id = hk648_honkai.3010
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	immediate = {
+		random_list = {
+			2 = {
+				random_owned_planet = {	
+					limit = { NOT = { has_planet_flag = honkai_planet } }
+					honkai_lv4_warning = yes
+				}
+			}
+			3 = {
+				random_owned_planet = {	
+					limit = { NOT = { has_planet_flag = honkai_planet } }
+					honkai_lv4_warning = yes
+				}
+			}
+		}
+	}
+	after = {
+		every_owned_planet = {
+			limit = {
+                has_planet_flag = honkai_planet
+            }
+            remove_planet_flag = honkai_planet
+        }
+	}
+}
+#小型崩坏预警#
+planet_event = {
+	id = hk648_honkai.30001
+	title = "Small-scale outbreak alert"
+	desc = "hk648_honkai.30001.desc"
+	picture = GFX_evt_hk_warning
+	is_triggered_only = yes
+	
+	immediate = {
+		honkai_lv1 = yes
+	}
+	
+	option = {
+		name = "I understand"
+	}
+}
+#中型崩坏预警#
+planet_event = {
+	id = hk648_honkai.30002
+	title = "Medium-scale outbreak alert"
+	desc = "hk648_honkai.30002.desc"
+	picture = GFX_evt_hk_warning
+	is_triggered_only = yes
+	
+	immediate = {
+		honkai_lv2 = yes
+	}
+	
+	option = {
+		name = "I understand"
+	}
+}
+#大型崩坏预警#
+planet_event = {
+	id = hk648_honkai.30003
+	title = "Large-scale outbreak alert"
+	desc = "hk648_honkai.30003.desc"
+	picture = GFX_evt_hk_warning
+	is_triggered_only = yes
+	
+	immediate = {
+		honkai_lv3 = yes
+	}
+	
+	option = {
+		name = "I understand"
+	}
+}
+#超级崩坏预警#
+planet_event = {
+	id = hk648_honkai.30004
+	title = "Super outbreak alert"
+	desc = "hk648_honkai.30004.desc"
+	picture = GFX_evt_hk_warning
+	is_triggered_only = yes
+	
+	immediate = {
+		planet_event = { 
+			id = hk648_honkai.2010
+			days = 100
+			random = 30
+		}
+	}
+	
+	option = {
+		name = "I understand"
+	}
+}
+#测试用#
+planet_event = {
+	id = hk648_honkai.2000
+	title = "hk648_honkai.2000.name"
+	desc = "hk648_honkai.2000.desc"
+	picture = GFX_evt_honkai_impact
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		honkai_tj = yes
+		honkai_zc = yes
+		honkai_qs = yes
+		honkai_np = yes
+		honkai_cx = yes
+		honkai_fy = yes
+		honkai_dj = yes
+		honkai_sd = yes
+		honkai_bhdw = yes
+		honkai_bz = yes
+		honkai_lmz = yes
+		honkai_asb = yes
+		honkai_hasb = yes
+		honkai_lasb = yes
+		honkai_bbl = yes
+		honkai_tllk = yes
+		honkai_cy = yes
+	}
+}
+
+#一级崩坏兽群500#
+planet_event = {
+	id = hk648_honkai.2001
+	title = "Level 1 outbreak"
+	desc = "hk648_honkai.2001.desc"
+	picture = GFX_evt_honkai_impact
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		honkai_tj10 = yes
+		set_planet_flag = honkai_500
+	}
+}
+
+#二级崩坏兽群1k#
+planet_event = {
+	id = hk648_honkai.2002
+	title = "Level 2 outbreak"
+	desc = "hk648_honkai.2002.desc"
+	picture = GFX_evt_honkai_impact
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		
+		set_planet_flag = honkai_1000
+		random_list = {
+			1 = { 
+				honkai_tj10 = yes
+				honkai_tj10 = yes
+			}
+			1 = {
+				honkai_tj10 = yes
+				honkai_qs = yes
+			}
+			1 = {
+				honkai_tj10 = yes
+				honkai_np = yes
+				honkai_np = yes
+			}
+			1 = {
+				honkai_np = yes
+				honkai_zc = yes
+			}
+			1 = {
+				honkai_qs = yes
+				honkai_qs = yes
+			}
+		}
+	}
+}
+
+#三级崩坏兽群3k#
+planet_event = {
+	id = hk648_honkai.2003
+	title = "Level 3 outbreak"
+	desc = "hk648_honkai.2003.desc"
+	picture = GFX_evt_honkai_impact
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+	
+		set_planet_flag = honkai_3000
+		random_list = {
+			1 = { 
+				honkai_tj10 = yes
+				honkai_tj10 = yes
+				honkai_zc = yes
+				honkai_np = yes
+				honkai_qs = yes
+				honkai_qs = yes
+			}
+			1 = { 
+				honkai_tj10 = yes
+				honkai_zc = yes
+				honkai_np = yes
+				honkai_zc = yes
+				honkai_np = yes
+				honkai_np = yes
+			}
+			1 = { 
+				honkai_qs = yes
+				honkai_qs = yes
+				honkai_qs = yes
+				honkai_zc = yes
+				honkai_qs = yes
+				honkai_np = yes
+			}
+			1 = { 
+				honkai_tj10 = yes
+				honkai_tj10 = yes
+				honkai_tj10 = yes
+				honkai_tj10 = yes
+				honkai_np = yes
+				honkai_np = yes
+				honkai_np = yes
+			}
+			1 = { 
+				honkai_tj10 = yes
+				honkai_tj10 = yes
+				honkai_tj10 = yes
+				honkai_tj10 = yes
+				honkai_tj10 = yes
+				honkai_tj10 = yes
+			}
+		}
+	}
+}
+
+#四级崩坏兽群8k#
+planet_event = {
+	id = hk648_honkai.2004
+	title = "Level 4 outbreak"
+	desc = "hk648_honkai.2004.desc"
+	picture = GFX_evt_honkai_impact
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		
+		set_planet_flag = honkai_8000
+		random_list = {
+			1 = { 
+				honkai_sd = yes
+				honkai_sd = yes
+				honkai_sd = yes
+				honkai_sd = yes
+				honkai_sd = yes
+				honkai_tj10 = yes
+			}
+			1 = {
+				honkai_dj = yes
+				honkai_qs10 = yes
+				honkai_tj10 = yes
+			}
+			1 = {
+				honkai_dj = yes
+				honkai_sd = yes
+				honkai_np10 = yes
+				honkai_tj10 = yes
+			}
+			1 = {
+				honkai_qs10 = yes
+				honkai_np10 = yes
+				honkai_tj10 = yes
+			}
+			1 = {
+				honkai_dj = yes
+				honkai_dj = yes
+				honkai_qs = yes
+				honkai_qs = yes
+				honkai_qs = yes
+				honkai_zc = yes
+				honkai_zc = yes
+				honkai_tj10 = yes
+				honkai_tj10 = yes
+			}
+		}
+	}
+}
+
+#五级崩坏兽群12k#
+planet_event = {
+	id = hk648_honkai.2005
+	title = "Level 5 outbreak"
+	desc = "hk648_honkai.2005.desc"
+	picture = GFX_evt_honkai_impact
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		
+		set_planet_flag = honkai_12000
+		random_list = {
+			1 = {
+				honkai_bhdw = yes
+				honkai_bhdw = yes
+				honkai_sd = yes
+				honkai_sd = yes
+				honkai_dj = yes
+			}
+			1 = {
+				honkai_bhdw = yes
+				honkai_bhdw = yes
+				honkai_bhdw = yes
+			}
+			1 = {
+				honkai_bhdw = yes
+				honkai_zc = yes
+				honkai_zc = yes
+				honkai_zc = yes
+				honkai_zc = yes
+				honkai_zc = yes
+				honkai_np10 = yes
+				honkai_qs = yes
+				honkai_qs = yes
+			}
+			1 = {
+				honkai_bhdw = yes
+				honkai_dj = yes
+				honkai_dj = yes
+				honkai_sd = yes
+				honkai_sd = yes
+				honkai_sd = yes
+				honkai_sd = yes
+			}
+			1 = {
+				honkai_bhdw = yes
+				honkai_dj = yes
+				honkai_tj10 = yes
+				honkai_sd = yes
+				honkai_sd = yes
+				honkai_tj10 = yes
+				honkai_sd = yes
+				honkai_sd = yes
+				honkai_tj10 = yes
+				honkai_tj10 = yes
+			}
+		}
+	}
+}
+
+#六级崩坏兽群25k#
+planet_event = {
+	id = hk648_honkai.2006
+	title = "Level 6 outbreak"
+	desc = "hk648_honkai.2006.desc"
+	picture = GFX_evt_honkai_impact
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		
+		set_planet_flag = honkai_25000
+		random_list = {
+			1 = {
+				honkai_bhdw = yes
+				honkai_bhdw = yes
+				honkai_bhdw = yes
+				honkai_dj = yes
+				honkai_dj = yes
+				honkai_dj = yes
+				honkai_sd = yes
+				honkai_sd = yes
+				honkai_sd = yes
+				honkai_sd = yes
+				honkai_sd = yes
+			}
+			1 = {
+				honkai_bhdw = yes
+				honkai_bhdw = yes
+				honkai_bhdw = yes
+				honkai_bhdw = yes
+				honkai_bhdw = yes
+				honkai_bhdw = yes
+			}
+			1 = {
+				honkai_bhdw = yes
+				honkai_zc = yes
+				honkai_tj10 = yes
+				honkai_bhdw = yes
+				honkai_zc = yes
+				honkai_np10 = yes
+				honkai_bhdw = yes
+				honkai_zc = yes
+				honkai_bhdw = yes
+				honkai_tj10 = yes
+				honkai_zc = yes
+			}
+			1 = {
+				honkai_bhdw = yes
+				honkai_tj10 = yes
+				honkai_np10 = yes
+				honkai_qs10 = yes
+				honkai_zc10 = yes
+				honkai_np10 = yes
+				honkai_tj10 = yes
+			}
+		}
+	}
+}
+
+#七级崩坏兽群40k#
+planet_event = {
+	id = hk648_honkai.2007
+	title = "Level 7 outbreak"
+	desc = "hk648_honkai.2007.desc"
+	picture = GFX_evt_honkai_impact
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		
+		set_planet_flag = honkai_40000
+		random_list = {
+			1 = {
+				honkai_bbl = yes
+			}
+			1 = {
+				honkai_asb = yes
+				honkai_lmz = yes
+			}
+			1 = {
+				honkai_bz = yes
+				honkai_lmz = yes
+				honkai_hasb = yes
+			}
+			1 = {
+				honkai_hasb = yes
+				honkai_lasb = yes
+				honkai_bz = yes
+			}
+		}
+	}
+}
+
+#八级崩坏兽群70k#
+planet_event = {
+	id = hk648_honkai.2008
+	title = "Level 8 outbreak"
+	desc = "hk648_honkai.2008.desc"
+	picture = GFX_evt_honkai_impact
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		
+		set_planet_flag = honkai_70000
+		random_list = {
+			1 = {
+				honkai_tllk = yes
+				honkai_tj10 = yes
+				honkai_tj10 = yes
+			}
+			1 = {
+				honkai_bbl = yes
+				honkai_bz = yes
+				honkai_tj10 = yes
+				honkai_tj10 = yes
+			}
+			1 = {
+				honkai_bz = yes
+				honkai_lmz = yes
+				honkai_asb = yes
+				honkai_tj10 = yes
+				honkai_tj10 = yes
+			}
+			1 = {
+				honkai_lmz = yes
+				honkai_hasb = yes
+				honkai_tj10 = yes
+				honkai_lasb = yes
+				honkai_tj10 = yes
+				honkai_asb = yes
+			}
+		}
+	}
+}
+
+#九级崩坏兽群100k#
+planet_event = {
+	id = hk648_honkai.2009
+	title = "Level 9 outbreak"
+	desc = "hk648_honkai.2009.desc"
+	picture = GFX_evt_honkai_impact
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		
+		set_planet_flag = honkai_100000
+		random_list = {
+			1 = {
+				honkai_bbl = yes
+				honkai_bbl = yes
+			}
+			1 = { 
+				honkai_tllk = yes
+				honkai_asb = yes
+			}
+			1 = {
+				honkai_asb = yes
+				honkai_asb = yes
+				honkai_hasb = yes
+				honkai_lasb = yes
+				honkai_hasb = yes
+				honkai_lasb = yes
+			}
+			1 = {
+				honkai_bz = yes
+				honkai_lm = yes
+				honkai_asb = yes
+				honkai_asb = yes
+				honkai_hasb = yes
+				honkai_lasb = yes
+			}
+		}
+	}
+}
+
+#十级崩坏兽150k#
+planet_event = {
+	id = hk648_honkai.2010
+	title = "Super outbreak"
+	desc = "hk648_honkai.2010.desc"
+	picture = GFX_evt_honkai_impact
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		set_planet_flag = honkai_boss
+		honkai_cy = yes
+	}
+}
+
+#测试用
+country_event = {
+	id = hk648_honkai.6000
+	title = "Examination"
+	desc = "hk648_honkai.6000.desc"
+	picture = GFX_evt_honkai_impact
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		random_system_within_border = {
+			save_event_target_as = honkai_system
+			event_target:honkai_system = {
+				random_system_planet = {
+					save_event_target_as = honkai_planet_1
+				}
+			}
+			honkai_2.5k = yes
+			honkai_5k = yes
+			honkai_10k = yes
+			honkai_20k = yes
+			honkai_50k = yes
+			honkai_150k = yes
+			honkai_250k = yes
+			honkai_500k = yes
+		}
+	}
+}
+
+country_event = {
+	id = hk648_honkai.6002
+	title = "Honkai outbreak"
+	desc = "hk648_honkai.6002.desc"
+	picture = GFX_evt_honkai_impact
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		random_system_within_border = {
+			save_event_target_as = honkai_system
+			event_target:honkai_system = {
+				random_system_planet = {
+					save_event_target_as = honkai_planet_1
+				}
+			}
+			honkai_2.5k = yes
+		}
+	}
+}
+
+country_event = {
+	id = hk648_honkai.6005
+	title = "Honkai outbreak"
+	desc = "hk648_honkai.6005.desc"
+	picture = GFX_evt_honkai_impact
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		random_system_within_border = {
+			save_event_target_as = honkai_system
+			event_target:honkai_system = {
+				random_system_planet = {
+					save_event_target_as = honkai_planet_1
+				}
+			}
+			honkai_5k = yes
+		}
+	}
+}
+
+country_event = {
+	id = hk648_honkai.6010
+	title = "Honkai outbreak"
+	desc = "hk648_honkai.6010.desc"
+	picture = GFX_evt_honkai_impact
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		random_system_within_border = {
+			save_event_target_as = honkai_system
+			event_target:honkai_system = {
+				random_system_planet = {
+					save_event_target_as = honkai_planet_1
+				}
+			}
+			honkai_10k = yes
+		}
+	}
+}
+
+country_event = {
+	id = hk648_honkai.6020
+	title = "Honkai outbreak"
+	desc = "hk648_honkai.6020.desc"
+	picture = GFX_evt_honkai_impact
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		random_system_within_border = {
+			save_event_target_as = honkai_system
+			event_target:honkai_system = {
+				random_system_planet = {
+					save_event_target_as = honkai_planet_1
+				}
+			}
+			honkai_20k = yes
+		}
+	}
+}
+
+country_event = {
+	id = hk648_honkai.6050
+	title = "Honkai outbreak"
+	desc = "hk648_honkai.6050.desc"
+	picture = GFX_evt_honkai_impact
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		random_system_within_border = {
+			save_event_target_as = honkai_system
+			event_target:honkai_system = {
+				random_system_planet = {
+					save_event_target_as = honkai_planet_1
+				}
+			}
+			honkai_50k = yes
+		}
+	}
+}
+
+country_event = {
+	id = hk648_honkai.6150
+	title = "Honkai outbreak"
+	desc = "hk648_honkai.61500.desc"
+	picture = GFX_evt_honkai_impact
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		random_system_within_border = {
+			save_event_target_as = honkai_system
+			event_target:honkai_system = {
+				random_system_planet = {
+					save_event_target_as = honkai_planet_1
+				}
+			}
+			honkai_150k = yes
+		}
+	}
+}
+
+country_event = {
+	id = hk648_honkai.6250
+	title = "Honkai outbreak"
+	desc = "hk648_honkai.6250.desc"
+	picture = GFX_evt_honkai_impact
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		random_system_within_border = {
+			save_event_target_as = honkai_system
+			event_target:honkai_system = {
+				random_system_planet = {
+					save_event_target_as = honkai_planet_1
+				}
+			}
+			honkai_250k = yes
+		}
+	}
+}
+
+country_event = {
+	id = hk648_honkai.6500
+	title = "Honkai outbreak"
+	desc = "hk648_honkai.6500.desc"
+	picture = GFX_evt_honkai_impact
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		random_system_within_border = {
+			save_event_target_as = honkai_system
+			event_target:honkai_system = {
+				random_system_planet = {
+					save_event_target_as = honkai_planet_1
+				}
+			}
+			honkai_500k = yes
+		}
+	}
+}
+
+country_event = {
+	id = hk648_honkai.61000
+	title = "Honkai outbreak"
+	desc = "hk648_honkai.61000.desc"
+	picture = GFX_evt_honkai_impact
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		random_system_within_border = {
+			save_event_target_as = honkai_system
+			event_target:honkai_system = {
+				random_system_planet = {
+					save_event_target_as = honkai_planet_1
+				}
+			}
+			honkai_1m = yes
+		}
+	}
+}
+
+country_event = {
+	id = hk648_honkai.62500
+	title = "Honkai outbreak"
+	desc = "hk648_honkai.62500.desc"
+	picture = GFX_evt_honkai_impact
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		random_system_within_border = {
+			save_event_target_as = honkai_system
+			event_target:honkai_system = {
+				random_system_planet = {
+					save_event_target_as = honkai_planet_1
+				}
+			}
+			honkai_2.5m = yes
+		}
+	}
+}
+
+country_event = {
+	id = hk648_honkai.65000
+	title = "Honkai outbreak"
+	desc = "hk648_honkai.65000.desc"
+	picture = GFX_evt_honkai_impact
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		random_system_within_border = {
+			save_event_target_as = honkai_system
+			event_target:honkai_system = {
+				random_system_planet = {
+					save_event_target_as = honkai_planet_1
+				}
+			}
+			honkai_5m = yes
+		}
+	}
+}
+
+country_event = {
+	id = hk648_honkai.61999
+	title = "Honkai outbreak"
+	desc = "hk648_honkai.61999.desc"
+	picture = GFX_evt_honkai_impact
+	is_triggered_only = yes
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_authority = auth_schicksal 
+		}
+	}
+	
+	immediate = {
+		random_system_within_border = {
+			save_event_target_as = honkai_system
+			event_target:honkai_system = {
+				random_system_planet = {
+					save_event_target_as = honkai_planet_1
+				}
+			}
+			honkai_10m = yes
+		}
+	}
+}
+
+country_event = {
+	id = hk648_honkai.7002
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+	}
+	immediate = {
+		country_event = {
+			id = hk648_honkai.6002
+			days = 180
+			random = 175
+		}
+	}
+}
+country_event = {
+	id = hk648_honkai.7005
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+	}
+	immediate = {
+		country_event = {
+			id = hk648_honkai.6005
+			days = 180
+			random = 175
+		}
+	}
+}
+country_event = {
+	id = hk648_honkai.7010
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+	}
+	immediate = {
+		country_event = {
+			id = hk648_honkai.6010
+			days = 180
+			random = 175
+		}
+	}
+}
+country_event = {
+	id = hk648_honkai.7020
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+	}
+	immediate = {
+		country_event = {
+			id = hk648_honkai.6020
+			days = 180
+			random = 175
+		}
+	}
+}
+country_event = {
+	id = hk648_honkai.7050
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+	}
+	immediate = {
+		country_event = {
+			id = hk648_honkai.6050
+			days = 180
+			random = 175
+		}
+	}
+}
+country_event = {
+	id = hk648_honkai.7150
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+	}
+	immediate = {
+		country_event = {
+			id = hk648_honkai.6150
+			days = 180
+			random = 175
+		}
+	}
+}
+country_event = {
+	id = hk648_honkai.7250
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+	}
+	immediate = {
+		country_event = {
+			id = hk648_honkai.6250
+			days = 180
+			random = 175
+		}
+	}
+}
+country_event = {
+	id = hk648_honkai.7500
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+	}
+	immediate = {
+		country_event = {
+			id = hk648_honkai.6500
+			days = 180
+			random = 175
+		}
+	}
+}
+country_event = {
+	id = hk648_honkai.71000
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+	}
+	immediate = {
+		country_event = {
+			id = hk648_honkai.61000
+			days = 180
+			random = 175
+		}
+	}
+}
+country_event = {
+	id = hk648_honkai.72500
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+	}
+	immediate = {
+		country_event = {
+			id = hk648_honkai.62500
+			days = 180
+			random = 175
+		}
+	}
+}
+country_event = {
+	id = hk648_honkai.75000
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+	}
+	immediate = {
+		country_event = {
+			id = hk648_honkai.65000
+			days = 180
+			random = 175
+		}
+	}
+}
+country_event = {
+	id = hk648_honkai.71999
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+	}
+	immediate = {
+		country_event = {
+			id = hk648_honkai.61999
+			days = 180
+			random = 175
+		}
+	}
+}
+
+country_event = {
+	id = hk648_honkai.6999
+	title = "Examination"
+	desc = "hk648_honkai.2010.desc"
+	picture = GFX_evt_honkai_impact
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = yes
+	}
+	
+	immediate = {
+		add_modifier = {
+			modifier = hk648_honkai
+		}
+	}
+}
+
+country_event = {
+	id = hk648_honkai.7000
+	title = "Destroy the Houkai energy"
+	desc = "hk648_honkai.7000.desc"
+	picture = GFX_evt_honkai_impact
+	is_triggered_only = yes
+	
+	option = {
+		name = "Destroy 5k Honkai Energy"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Insufficient Honkai Energy"
+				resource_stockpile_compare = { resource = honkai648_energy value >= 5000 }
+			}
+			custom_tooltip = {
+				fail_text = "Insufficient energy"
+				resource_stockpile_compare = { resource = honkai648_energy value >= 250 }
+			}
+		}
+		add_resource = {
+			honkai648_energy = -5000
+			energy = -250
+		}
+	}
+	
+	option = {
+		name = "Destroy 25k Honkai Energy"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Insufficient Honkai Energy"
+				resource_stockpile_compare = { resource = honkai648_energy value >= 25000 }
+			}
+			custom_tooltip = {
+				fail_text = "Insufficient energy"
+				resource_stockpile_compare = { resource = honkai648_energy value >= 1250 }
+			}
+		}
+		add_resource = {
+			honkai648_energy = -25000
+			energy = -1250
+		}
+	}
+	
+	option = {
+		name = "Destroy 100k Honkai Energy"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Insufficient Honkai Energy"
+				resource_stockpile_compare = { resource = honkai648_energy value >= 100000 }
+			}
+			custom_tooltip = {
+				fail_text = "Insufficient energy"
+				resource_stockpile_compare = { resource = honkai648_energy value >= 5000 }
+			}
+		}
+		add_resource = {
+			honkai648_energy = -100000
+			energy = -5000
+		}
+	}
+	option = {
+		name = "Destroy 250k Honkai Energy"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Insufficient Honkai Energy"
+				resource_stockpile_compare = { resource = honkai648_energy value >= 250000 }
+			}
+			custom_tooltip = {
+				fail_text = "Insufficient energy"
+				resource_stockpile_compare = { resource = honkai648_energy value >= 12500 }
+			}
+		}
+		add_resource = {
+			honkai648_energy = -250000
+			energy = -12500
+		}
+	}
+	option = {
+		name = "Destroy 500k Honkai Energy"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Insufficient Honkai Energy"
+				resource_stockpile_compare = { resource = honkai648_energy value >= 500000 }
+			}
+			custom_tooltip = {
+				fail_text = "Insufficient energy"
+				resource_stockpile_compare = { resource = honkai648_energy value >= 25000 }
+			}
+		}
+		add_resource = {
+			honkai648_energy = -500000
+			energy = -25000
+		}
+	}
+	option = {
+		name = "Destroy 1m of Houkai Energy"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Insufficient Honkai Energy"
+				resource_stockpile_compare = { resource = honkai648_energy value >= 1000000 }
+			}
+			custom_tooltip = {
+				fail_text = "Insufficient energy"
+				resource_stockpile_compare = { resource = honkai648_energy value >= 50000 }
+			}
+		}
+		add_resource = {
+			honkai648_energy = -1000000
+			energy = -50000
+		}
+	}
+	option = {
+		name = "Destroy 2.5m of Houkai Energy"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Insufficient Honkai Energy"
+				resource_stockpile_compare = { resource = honkai648_energy value >= 2500000 }
+			}
+			custom_tooltip = {
+				fail_text = "Insufficient energy"
+				resource_stockpile_compare = { resource = honkai648_energy value >= 125000 }
+			}
+		}
+		add_resource = {
+			honkai648_energy = -2500000
+			energy = -125000
+		}
+	}
+	option = {
+		name = "Forget it"
+	}
+}
+
+country_event = {
+	id = hk648_honkai.8001
+	title = "Mysterious communication"
+	desc = "hk648_honkai.8001.desc"
+	picture = GFX_evt_physics_research
+	is_triggered_only = yes
+	
+	option = {
+		name = "Display on screen"
+		hidden_effect = {
+			country_event = {
+				id = hk648_honkai.8002
+			}
+			remove_relic = r_2nd_herrscher
+		}
+	}
+}
+
+country_event = {
+	id = hk648_honkai.8002
+	title = "Herrscher of the Void"
+	desc = "hk648_honkai.8002.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = kzlz
+		room = "2nd_herrscher_room"
+	}
+	
+	show_sound = event_herrscher_2nd_word
+	
+	option = {
+		name = "Herrscher of the Void?"
+		response_text = "Prepare yourself for death, human."
+		hidden_effect = {
+			honkai_2nd_herrscher = yes
+			country_event = {
+				id = hk648_honkai.8003
+				days = 30
+			}
+			play_sound = event_herrscher_2nd_bgm
+		}
+	}
+	
+}
+
+country_event = {
+	id = hk648_honkai.8003
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		honkai_8th_herrscher = yes
+		country_event = {
+			id = hk648_honkai.8004
+			days = 360
+		}
+		country_event = { id = hk648_honkai.8005 }
+	}
+}
+
+country_event = {
+	id = hk648_honkai.8004
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		event_target:8th_herrscher_warship = { delete_fleet = this }
+	}
+}
+
+country_event = {
+	id = hk648_honkai.8005
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_honkai.8005.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz1
+		room = "revans_room"
+	}
+	
+	option = {
+		name = "There is something wrong with your core! You profiteer!"
+		hidden_effect = {
+			country_event = {
+				id = hk648_honkai.8006
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_honkai.8006
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_honkai.8006.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz1
+		room = "revans_room"
+	}
+	
+	option = {
+		name = "Good"
+		add_resource = {
+			food = 1000
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_honkai.8007
+			}
+		}
+	}
+	option = {
+		name = "What the hell is going on?"
+		hidden_effect = {
+			country_event = {
+				id = hk648_honkai.8008
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_honkai.8007
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_honkai.8007.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz1
+		room = "revans_room"
+	}
+	
+	option = {
+		name = "What are you going to do then"
+		response_text = "hk648_honkai.8008.response"
+		add_resource = {
+			energy = 75000
+		}
+		add_relic = r_2nd_herrscher_fake
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = r_1st_herrscher_y } }
+				country_event = {
+					id = hk648_honkai.8009
+					days = 30
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_honkai.8008
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_honkai.8008.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz1
+		room = "revans_room"
+	}
+	
+	option = {
+		name = "What are you going to do then"
+		response_text = "hk648_honkai.8008.response"
+		add_resource = {
+			energy = 50000
+		}
+		add_relic = r_2nd_herrscher_fake
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = r_1st_herrscher_y } }
+				country_event = {
+					id = hk648_honkai.8009
+					days = 30
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_honkai.8009
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_honkai.8009.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz1
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "I see"
+	}
+}
+

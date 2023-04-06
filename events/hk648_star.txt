@@ -1,0 +1,1480 @@
+namespace= hk648_star
+
+#逐梦双星剧情，需要为了世界上的美好而战飞升#
+
+#圣芙蕾雅学园计划
+country_event = {
+	id = hk648_star.1000
+	title = "St. Freya Academy"
+	desc = "hk648_star.1000.desc"
+	picture = GFX_evt_hk648_st_freya1
+	is_triggered_only = yes 
+	
+	option = {
+		name = "For a better tomorrow!"
+		capital_scope = {
+			enable_special_project = {
+				name = "st_freya"
+				location = this
+				owner = root
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "Insufficient influence"
+				resource_stockpile_compare = { resource = influence value >= 100 }
+			}
+		}
+		add_resource = {
+			influence = -100
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_star.2000 
+				days = 720
+				random = 180
+			}
+		}
+	}
+	
+	option = {
+		name = "Nonsense!"
+		hidden_effect = {
+			country_event = {
+				id = hk648_star.2000 
+				days = 720
+				random = 180
+			}
+		}
+	}
+	
+	option = {
+		name = "let me think twice"
+		country_event = { 
+			id = hk648_star.1000 
+			days = 45
+		}
+	}
+}
+
+#校长的选择#
+country_event = {
+	id = hk648_star.1001
+	title = "Principal's Choice"
+	desc = "hk648_star.1001.desc"
+	picture = GFX_evt_hk648_headmaster
+	is_triggered_only = yes 
+	
+	immediate = {
+		remove_modifier = headmaster_cks
+		remove_modifier = headmaster_teriri
+		remove_modifier = headmaster_jz
+		remove_modifier = headmaster_otto
+		remove_modifier = headmaster_tesla
+		remove_modifier = headmaster_einstein
+		remove_modifier = headmaster_ylde
+		remove_modifier = headmaster_kkly
+		remove_modifier = headmaster_welt
+		remove_modifier = headmaster_dy
+	}
+	
+	option = {
+		name = "Chang Kaishen"
+		custom_tooltip = star_cks.response
+		add_modifier = {
+			modifier = headmaster_cks
+		}
+	}
+	
+	option = {
+		name = "Teresa Apocalypse"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Requires Teresa to be the leader"
+				exists = event_target:teriri
+			}
+		}
+		custom_tooltip = star_teriri.response
+		add_modifier = {
+			modifier = headmaster_teriri
+		}
+	}
+	
+	option = {
+		name = "Murata Himeko"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Requires Himeko to be the leader"
+				exists = event_target:jz
+			}
+		}
+		custom_tooltip = star_headmaster_jz.response
+		add_modifier = {
+			modifier = headmaster_jz
+		}
+	}
+	
+	option = {
+		name = "Albert Einstein"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Requires Einstein to be the leader"
+				exists = event_target:einstein
+			}
+		}
+		custom_tooltip = star_einstein.response
+		add_modifier = {
+			modifier = headmaster_einstein
+		}
+	}
+	
+	option = {
+		name = "Nikola Tesla"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Requires Tesla to be the leader"
+				exists = event_target:tesla
+			}
+		}
+		custom_tooltip = star_tesla.response
+		add_modifier = {
+			modifier = headmaster_tesla
+		}
+	}
+	
+	option = {
+		name = "Otto Apocalypse"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Requires Otto to be the leader"
+				exists = event_target:otto
+			}
+		}
+		custom_tooltip = star_otto.response
+		add_modifier = {
+			modifier = headmaster_otto
+		}
+	}
+	
+	option = {
+		name = "Bianca Durandal Ataegina"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Requires Durandal to be the leader"
+				exists = event_target:ylde
+			}
+		}
+		custom_tooltip = star_ylde.response
+		add_modifier = {
+			modifier = headmaster_ylde
+		}
+	}
+	
+	option = {
+		name = "Cocolia"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Requires Cocolia to be the leader"
+				exists = event_target:kkly
+			}
+		}
+		custom_tooltip = star_kkly.response
+		add_modifier = {
+			modifier = headmaster_kkly
+		}
+	}
+	
+	option = {
+		name = "Walter Young"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Requires Walter to be the leader"
+				exists = event_target:welt
+			}
+		}
+		custom_tooltip = star_welt.response
+		add_modifier = {
+			modifier = headmaster_welt
+		}
+	}
+	
+	option = {
+		name = "Natasha Ciola"
+		custom_tooltip = star_dy.response
+		allow = {
+			custom_tooltip = {
+				fail_text = "Requires Raven to be the leader"
+				exists = event_target:dy
+			}
+		}
+		add_modifier = {
+			modifier = headmaster_dy
+		}
+	}
+}
+	
+#加特质#
+country_event = {
+	id = hk648_star.1002
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		from = {
+			owner = {
+				has_modifier = st_freya
+			}
+		}
+	}
+	
+	immediate = {
+		from = {
+			#总督#
+			if = { 
+				limit = { leader_class = governor }
+				if = {
+					limit = { owner = { has_modifier = headmaster_teriri } }
+					random_list = {
+						10 = { add_trait = leader_trait_s10 }
+						35 = { add_trait = leader_trait_a10 }
+						55 = { add_trait = leader_trait_b1 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_jz } }
+					random_list = {
+						10 = { add_trait = leader_trait_s10 }
+						35 = { add_trait = leader_trait_a10 }
+						55 = { add_trait = leader_trait_b1 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_einstein } }
+					random_list = {
+						10 = { add_trait = leader_trait_s10 }
+						35 = { add_trait = leader_trait_a10 }
+						55 = { add_trait = leader_trait_b1 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_tesla } }
+					random_list = {
+						10 = { add_trait = leader_trait_s10 }
+						35 = { add_trait = leader_trait_a10 }
+						55 = { add_trait = leader_trait_b1 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_otto } }
+					random_list = {
+						15 = { add_trait = leader_trait_s10 }
+						45 = { add_trait = leader_trait_a10 }
+						40 = { add_trait = leader_trait_b1 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_ylde } }
+					random_list = {
+						5 = { add_trait = leader_trait_s12 }
+						25 = { add_trait = leader_trait_a11 }
+						70 = { add_trait = leader_trait_b1 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_kkly } }
+					random_list = {
+						25 = { add_trait = leader_trait_s101 }
+						60 = { add_trait = leader_trait_a101 }
+						15 = { add_trait = leader_trait_b1 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_welt } }
+					random_list = {
+						10 = { add_trait = leader_trait_s11 }
+						35 = { add_trait = leader_trait_a11 }
+						55 = { add_trait = leader_trait_b1 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_dy } }
+					random_list = {
+						10 = { add_trait = leader_trait_s10 }
+						35 = { add_trait = leader_trait_a10 }
+						55 = { add_trait = leader_trait_b1 }
+					}
+				}
+			}
+			#科学家#
+			if = { 
+				limit = { leader_class = scientist }
+				if = {
+					limit = { owner = { has_modifier = headmaster_teriri } }
+					random_list = {
+						10 = { add_trait = leader_trait_s20 }
+						35 = { add_trait = leader_trait_a20 }
+						55 = { add_trait = leader_trait_b2 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_jz } }
+					random_list = {
+						10 = { add_trait = leader_trait_s20 }
+						35 = { add_trait = leader_trait_a20 }
+						55 = { add_trait = leader_trait_b2 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_einstein } }
+					random_list = {
+						10 = { add_trait = leader_trait_s23 }
+						35 = { add_trait = leader_trait_a22 }
+						55 = { add_trait = leader_trait_b2 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_tesla } }
+					random_list = {
+						10 = { add_trait = leader_trait_s22 }
+						35 = { add_trait = leader_trait_a22 }
+						55 = { add_trait = leader_trait_b2 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_otto } }
+					random_list = {
+						15 = { add_trait = leader_trait_s20 }
+						45 = { add_trait = leader_trait_a20 }
+						40 = { add_trait = leader_trait_b2 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_ylde } }
+					random_list = {
+						5 = { add_trait = leader_trait_s22 }
+						25 = { add_trait = leader_trait_a21 }
+						70 = { add_trait = leader_trait_b1 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_kkly } }
+					random_list = {
+						25 = { add_trait = leader_trait_s201 }
+						60 = { add_trait = leader_trait_a201 }
+						15 = { add_trait = leader_trait_b2 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_welt } }
+					random_list = {
+						10 = { add_trait = leader_trait_s21 }
+						35 = { add_trait = leader_trait_a21 }
+						55 = { add_trait = leader_trait_b2 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_dy } }
+					random_list = {
+						10 = { add_trait = leader_trait_s20 }
+						35 = { add_trait = leader_trait_a20 }
+						55 = { add_trait = leader_trait_b2 }
+					}
+				}
+			}
+			#舰队司令#
+			if = { 
+				limit = { leader_class = admiral }
+				if = {
+					limit = { owner = { has_modifier = headmaster_teriri } }
+					random_list = {
+						10 = { add_trait = leader_trait_s3t }
+						35 = { add_trait = leader_trait_a3t }
+						55 = { add_trait = leader_trait_b3 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_jz } }
+					random_list = {
+						10 = { add_trait = leader_trait_s3j }
+						35 = { add_trait = leader_trait_a3j }
+						55 = { add_trait = leader_trait_b3 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_einstein } }
+					random_list = {
+						10 = { add_trait = leader_trait_s30 }
+						35 = { add_trait = leader_trait_a30 }
+						55 = { add_trait = leader_trait_b3 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_tesla } }
+					random_list = {
+						10 = { add_trait = leader_trait_s31 }
+						35 = { add_trait = leader_trait_a31 }
+						55 = { add_trait = leader_trait_b3 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_otto } }
+					random_list = {
+						15 = { add_trait = leader_trait_s30 }
+						45 = { add_trait = leader_trait_a30 }
+						40 = { add_trait = leader_trait_b3 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_ylde } }
+					random_list = {
+						5 = { add_trait = leader_trait_s31 }
+						25 = { add_trait = leader_trait_a31 }
+						70 = { add_trait = leader_trait_b3 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_kkly } }
+					random_list = {
+						25 = { add_trait = leader_trait_s301 }
+						60 = { add_trait = leader_trait_a301 }
+						15 = { add_trait = leader_trait_b3 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_welt } }
+					random_list = {
+						10 = { add_trait = leader_trait_s31 }
+						35 = { add_trait = leader_trait_a31 }
+						55 = { add_trait = leader_trait_b3 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_dy } }
+					random_list = {
+						10 = { add_trait = leader_trait_s30 }
+						35 = { add_trait = leader_trait_a30 }
+						55 = { add_trait = leader_trait_b3 }
+					}
+				}
+			}
+			#陆军#
+			if = { 
+				limit = { leader_class = general }
+				if = {
+					limit = { owner = { has_modifier = headmaster_teriri } }
+					random_list = {
+						10 = { add_trait = leader_trait_s40 }
+						35 = { add_trait = leader_trait_a40 }
+						55 = { add_trait = leader_trait_b4 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_jz } }
+					random_list = {
+						10 = { add_trait = leader_trait_s40 }
+						35 = { add_trait = leader_trait_a40 }
+						55 = { add_trait = leader_trait_b4 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_einstein } }
+					random_list = {
+						10 = { add_trait = leader_trait_s40 }
+						35 = { add_trait = leader_trait_a40 }
+						55 = { add_trait = leader_trait_b4 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_tesla } }
+					random_list = {
+						10 = { add_trait = leader_trait_s41 }
+						35 = { add_trait = leader_trait_a41 }
+						55 = { add_trait = leader_trait_b4 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_otto } }
+					random_list = {
+						15 = { add_trait = leader_trait_s40 }
+						45 = { add_trait = leader_trait_a40 }
+						40 = { add_trait = leader_trait_b4 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_ylde } }
+					random_list = {
+						5 = { add_trait = leader_trait_s42 }
+						25 = { add_trait = leader_trait_a41 }
+						70 = { add_trait = leader_trait_b4 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_kkly } }
+					random_list = {
+						25 = { add_trait = leader_trait_s401 }
+						60 = { add_trait = leader_trait_a401 }
+						15 = { add_trait = leader_trait_b1 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_welt } }
+					random_list = {
+						10 = { add_trait = leader_trait_s41 }
+						35 = { add_trait = leader_trait_a41 }
+						55 = { add_trait = leader_trait_b4 }
+					}
+				}
+				if = {
+					limit = { owner = { has_modifier = headmaster_dy } }
+					random_list = {
+						10 = { add_trait = leader_trait_s43 }
+						35 = { add_trait = leader_trait_a42 }
+						55 = { add_trait = leader_trait_b4 }
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_star.2000
+	title = "Outbreak thread"
+	desc = "hk648_star.2000.desc"
+	picture = GFX_evt_honkai_win
+	is_triggered_only = yes 
+	
+	immediate = {
+		set_country_flag = hk3sgz
+	}
+	
+	option = {
+		name = "Gradually make the outbreak public"
+		custom_tooltip = star_2000a.response
+		country_event = {
+			id = hk648_star.2101
+			days = 50
+			random = 10
+		}
+	}
+	
+	option = {
+		name = "Directly expose the outbreak to the public"
+		custom_tooltip = star_2000b.response
+		country_event = {
+			id = hk648_star.2201
+			days = 50
+			random = 10
+		}
+	}
+	
+	option = {
+		name = "Concealing news of the Honkai outbreak"
+		custom_tooltip = star_2000c.response
+		allow = {
+			custom_tooltip = {
+				fail_text = "Content under construction"
+				NOT = { has_country_flag = hk3sgz }
+			}
+		}
+	}
+	
+	after = {
+		remove_country_flag = hk3sgz
+	}
+}
+
+country_event = {
+	id = hk648_star.2101
+	title = "Kallen Fantasy"
+	desc = "hk648_star.2101.desc"
+	picture = GFX_evt_hk648_kallen_fantasy_0
+	is_triggered_only = yes 
+	
+	option = {
+		name = "Start making games"
+		capital_scope = {
+			enable_special_project = {
+				name = "klhx"
+				location = this
+				owner = root
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_star.2102
+	title = "Manufacture complete"
+	desc = "hk648_star.2102.desc"
+	picture = GFX_evt_hk648_kallen_fantasy_1
+	is_triggered_only = yes 
+	
+	option = {
+		name = "Hope people will enjoy this game"
+		hidden_effect = {
+			country_event = {
+				id = hk648_star.2103
+				days = 480
+				random = 60
+			}
+		}
+		add_modifier = {
+			modifier = kallen_fantasy
+		}
+	}
+}
+
+country_event = {
+	id = hk648_star.2103
+	title = "Strike while the iron is hot"
+	desc = "hk648_star.2103.desc"
+	picture = GFX_evt_hk648_hk3_logo
+	is_triggered_only = yes 
+	
+	option = {
+		name = "Open casting"
+		country_event = {
+			id = hk648_star.2104
+			days = 135
+			random = 15
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_star.21031
+				days = 70
+				random = 5
+			}
+		}
+		add_resource = {
+			unity = 25000
+		}
+	}
+	
+	option = {
+		name = "The role has already been determined"
+		custom_tooltip = star_2103.response
+		allow = {
+			custom_tooltip = {
+				fail_text = "Insufficient influence"
+				resource_stockpile_compare = { resource = influence value >= 100 }
+			}
+		}
+		add_resource = {
+			unity = 25000
+			influence = -100
+		}
+		country_event = { 
+			id = hk648_star.2105
+			days = 30
+		}
+		#这里添加k423领袖
+		hidden_effect = {
+			create_blny = yes
+			create_yy =yes
+			create_k423 =yes
+		}
+	}
+}
+
+country_event = {
+	id = hk648_star.21031
+	title = "§GAi-chan§!"
+	desc = "hk648_star.21031.desc"
+	is_triggered_only = yes 
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "Of course, Ai-chan is the cutest in the world"
+		custom_tooltip = star_21031a.response
+		add_resource = {
+			energy = 50000
+			alloys = 15000
+		}
+		hidden_effect = {
+			set_country_flag = aichan_protagonist_yes
+			country_event = {
+				id = hk648_star.21032
+			}
+		}
+	}
+	
+	option = {
+		name = "Don't even think about it"
+		custom_tooltip = star_21031b.response
+		hidden_effect = {
+			set_country_flag = aichan_out
+			country_event = {
+				id = hk648_star.21033
+			}
+		}
+	}
+}
+#内定
+country_event = {
+	id = hk648_star.21032
+	title = "§GAi-chan§!"
+	desc = "hk648_star.21032.desc"
+	is_triggered_only = yes 
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan8
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "Sure"
+	}
+}
+#不内定
+country_event = {
+	id = hk648_star.21033
+	title = "§GAi-chan§!"
+	desc = "hk648_star.21033.desc"
+	is_triggered_only = yes 
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan9
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "Sure"
+	}
+}
+
+country_event = {
+	id = hk648_star.2104
+	title = "Honkai Three Casts - Protagonist"
+	desc = "hk648_star.2104.desc"
+	picture = GFX_evt_hk648_leader.0
+	is_triggered_only = yes 
+	
+	option = {
+		name = "Obviously, the heroine can only be §GAi-chan§!"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Ai-chan has been disqualified"
+				NOT = { has_country_flag = aichan_out }
+			}
+		}
+		country_event = { 
+			id = hk648_star.21041 
+			days = 30
+		}
+		hidden_effect = {
+			set_country_flag = aichan_1
+		}
+	}
+	
+	option = {
+		name = "qyn1.name"
+		allow = {
+			custom_tooltip = {
+				fail_text = "You've made a dirty deal with Ai-chan"
+				NOT = { has_country_flag = aichan_protagonist_yes }
+			}
+		}
+		country_event = { 
+			id = hk648_star.21041 
+			days = 30
+		}
+		custom_tooltip = star_k423.response
+		hidden_effect = {
+			set_country_flag = qyn_1
+			create_k423 = yes
+		}
+	}
+	
+	option = {
+		name = "yy1.name"
+		allow = {
+			custom_tooltip = {
+				fail_text = "You've made a dirty deal with Ai-chan"
+				NOT = { has_country_flag = aichan_protagonist_yes }
+			}
+		}
+		country_event = { 
+			id = hk648_star.21041 
+			days = 30
+		}
+		custom_tooltip = star_yy.response
+		hidden_effect = {
+			set_country_flag = yy_1
+			create_yy = yes
+		}
+	}
+	
+	option = {
+		name = "blny1.name"
+		allow = {
+			custom_tooltip = {
+				fail_text = "You've made a dirty deal with Ai-chan"
+				NOT = { has_country_flag = aichan_protagonist_yes }
+			}
+		}
+		country_event = { 
+			id = hk648_star.21041 
+			days = 30
+		}
+		custom_tooltip = star_blny.response
+		hidden_effect = {
+			set_country_flag = blny_1
+			create_blny = yes
+		}
+	}
+	
+	option = {
+		name = "lt1.name"
+		allow = {
+			custom_tooltip = {
+				fail_text = "You've made a dirty deal with Ai-chan"
+				NOT = { has_country_flag = aichan_protagonist_yes }
+			}
+		}
+		country_event = { 
+			id = hk648_star.21041 
+			days = 30
+		}
+		custom_tooltip = star_lt.response
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = leader_lt } }
+				create_lt = yes
+			}
+			set_country_flag = lt_1
+		}
+	}
+	
+	option = {
+		name = "lsly1.name"
+		allow = {
+			custom_tooltip = {
+				fail_text = "You've made a dirty deal with Ai-chan"
+				NOT = { has_country_flag = aichan_protagonist_yes }
+			}
+		}
+		country_event = { 
+			id = hk648_star.21041 
+			days = 30
+		}
+		custom_tooltip = star_lsly.response
+		hidden_effect = {
+			set_country_flag = lsly_1
+			create_lsly = yes
+		}
+	}
+	
+	option = {
+		name = "I think we should appreciate the performance of the actors first"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Audition has ended"
+				NOT = { has_country_flag = hk3sy }
+			}
+		}
+		country_event = {
+			id = hk648_star.21043
+			days = 10
+		}
+	}
+}
+
+country_event = {
+	id = hk648_star.21043
+	title = "Role audition"
+	desc = "hk648_star.21043.desc"
+	picture = GFX_evt_hk648_leader.0
+	is_triggered_only = yes 
+	
+	immediate = {
+		set_country_flag = hk3sy
+	}
+	
+	option = {
+		name = "\"Wake up\""
+		allow = {
+			custom_tooltip = {
+				fail_text = "Audition has ended"
+				NOT = { has_country_flag = hk3sy1 }
+			}
+		}
+		add_resource = {
+			unity = 1000
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_star.21044
+			}
+		}
+	}
+	
+	option = {
+		name = "\"Affectionate Confrontation\""
+		allow = {
+			custom_tooltip = {
+				fail_text = "Audition has ended"
+				NOT = { has_country_flag = hk3sy2 }
+			}
+		}
+		add_resource = {
+			unity = 1000
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_star.21045
+			}
+		}
+	}
+	
+	option = {
+		name = "\"The Last Lesson\""
+		allow = {
+			custom_tooltip = {
+				fail_text = "Audition has ended"
+				NOT = { has_country_flag = hk3sy3 }
+			}
+		}
+		add_resource = {
+			unity = 1000
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_star.21046
+			}
+		}
+	}
+	
+	option = {
+		name = "Audition end"
+		country_event = {
+			id = hk648_star.2104
+			days = 10
+		}
+	}
+}
+
+country_event = {
+	id = hk648_star.21044
+	title = "\"Wake up\""
+	desc = "hk648_star.21044.desc"
+	picture = GFX_evt_hk648_hk3_sy1
+	show_sound = event_hk_hk3sy1
+	is_triggered_only = yes 
+	
+	immediate = {
+		set_country_flag = hk3sy1
+	}
+	
+	option = {
+		name = "Excellent performance"
+		hidden_effect = {
+			country_event = {
+				id = hk648_star.21043
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_star.21045
+	title = "\"Affectionate Confrontation\""
+	desc = "hk648_star.21045.desc"
+	picture = GFX_evt_hk648_hk3_sy2
+	is_triggered_only = yes 
+	show_sound = event_hk_hk3sy2
+	
+	immediate = {
+		set_country_flag = hk3sy2
+	}
+	
+	option = {
+		name = "Excellent performance"
+		hidden_effect = {
+			country_event = {
+				id = hk648_star.21043
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_star.21046
+	title = "\"The Last Lesson\""
+	desc = "hk648_star.21046.desc"
+	picture = GFX_evt_hk648_hk3_sy3
+	is_triggered_only = yes 
+	show_sound = event_hk_hk3sy3
+	
+	immediate = {
+		set_country_flag = hk3sy3
+	}
+	
+	option = {
+		name = "It seems... It didn't follow the script at all."
+		hidden_effect = {
+			country_event = {
+				id = hk648_star.21043
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_star.21041
+	title = "Honkai Three Castings - Female No. 2"
+	desc = "hk648_star.21041.desc"
+	picture = GFX_evt_hk648_leader.0
+	is_triggered_only = yes 
+	
+	immediate = {
+		remove_country_flag = aichan_out
+		remove_country_flag = hk3sy
+		remove_country_flag = hk3sy1
+		remove_country_flag = hk3sy2
+		remove_country_flag = hk3sy3
+	}
+	
+	option = {
+		name = "qyn2.name"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Kiyana has already acted as the heroine"
+				NOT = { has_country_flag = qyn_1 }
+			}
+		}
+		country_event = { 
+			id = hk648_star.21042
+			days = 30
+		}
+		custom_tooltip = star_k423.response
+		hidden_effect = {
+			set_country_flag = qyn_2
+			create_k423 = yes
+		}
+	}
+	
+	option = {
+		name = "yy2.name"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Mei has acted as the heroine"
+				NOT = { has_country_flag = yy_1 }
+			}
+		}
+		country_event = { 
+			id = hk648_star.21042
+			days = 30
+		}
+		custom_tooltip = star_yy.response
+		hidden_effect = {
+			set_country_flag = yy_2
+			create_yy = yes
+		}
+	}
+	
+	option = {
+		name = "blny2.name"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Bronya has acted as the heroine"
+				NOT = { has_country_flag = blny_1 }
+			}
+		}
+		country_event = { 
+			id = hk648_star.21042
+			days = 30
+		}
+		custom_tooltip = star_blny.response
+		hidden_effect = {
+			set_country_flag = blny_2
+			create_blny = yes
+		}
+	}
+	
+	option = {
+		name = "lt2.name"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Rita has already acted as the heroine"
+				NOT = { has_country_flag = lt_1 }
+			}
+		}
+		country_event = { 
+			id = hk648_star.21042
+			days = 30
+		}
+		custom_tooltip = star_lt.response
+		hidden_effect = {
+			set_country_flag = lt_2
+			if = {
+				limit = { NOT = { has_country_flag = leader_lt } }
+				create_lt = yes
+			}
+		}
+	}
+	
+	option = {
+		name = "lly2.name"
+		country_event = { 
+			id = hk648_star.21042
+			days = 30
+		}
+		custom_tooltip = star_lly.response
+		hidden_effect = {
+			set_country_flag = lly_2
+			create_lly = yes
+		}
+	}
+}
+
+country_event = {
+	id = hk648_star.21042
+	title = "Honkai Three Casts-Supporting Actors"
+	desc = "hk648_star.21042.desc"
+	picture = GFX_evt_hk648_leader.0
+	is_triggered_only = yes 
+	
+	option = {
+		name = "qyn3.name"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Kiyana has taken on other roles"
+				NOT = { 
+					has_country_flag = qyn_1 
+					has_country_flag = qyn_2
+				}
+			}
+		}
+		custom_tooltip = star_k423.response
+		country_event = { 
+			id = hk648_star.2105
+			days = 30
+		}
+		hidden_effect = {
+			create_k423 = yes
+		}
+	}
+	
+	option = {
+		name = "yy3.name"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Mei has taken on other roles"
+				NOT = { 
+					has_country_flag = yy_2 
+					has_country_flag = yy_1
+				}
+			}
+		}
+		custom_tooltip = star_yy.response
+		country_event = { 
+			id = hk648_star.2105
+			days = 30
+		}
+		hidden_effect = {
+			create_yy = yes
+		}
+	}
+	
+	option = {
+		name = "blny3.name"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Bronya has taken on other roles"
+				NOT = { 
+					has_country_flag = blny_1 
+					has_country_flag = blny_2
+				}
+			}
+		}
+		custom_tooltip = star_blny.response
+		country_event = { 
+			id = hk648_star.2105
+			days = 30
+		}
+		hidden_effect = {
+			create_blny = yes
+		}
+	}
+	
+	option = {
+		name = "lt3.name"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Rita has taken on other roles"
+				NOT = { 
+					has_country_flag = lt_1 
+					has_country_flag = lt_2
+				}
+			}
+		}
+		custom_tooltip = star_lt.response
+		country_event = { 
+			id = hk648_star.2105
+			days = 30
+		}
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = leader_lt } }
+				create_lt = yes
+			}
+		}
+	}
+	
+	option = {
+		name = "jz3.name"
+		country_event = { 
+			id = hk648_star.2105
+			days = 30
+		}
+		custom_tooltip = star_jz.response
+		hidden_effect = {
+			set_country_flag = jz_3
+			if = {
+				limit = { NOT = { exists = event_target:jz } }
+				create_jz = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_star.2105
+	title = "Casting complete"
+	desc = "hk648_star.2105.desc"
+	picture = GFX_evt_hk648_leader.0
+	is_triggered_only = yes 
+	
+	option = {
+		name = "Start making Honkai III"
+		capital_scope = {
+			enable_special_project = {
+				name = "honkai3"
+				location = this
+				owner = root
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_star.2106
+	title = "Game publishing"
+	desc = "hk648_star.2106.desc"
+	picture = GFX_evt_hk3_player
+	is_triggered_only = yes 
+	
+	option = {
+		name = "Wait and see"
+		hidden_effect = {
+			country_event = {
+				id = hk648_star.21070
+				days = 30
+			}
+		}
+		add_modifier = {
+			modifier = honkai3rd
+		}
+	}
+}
+
+country_event = {
+	id = hk648_star.21070
+	hide_window = yes
+	is_triggered_only = yes 
+	
+	immediate = {
+		#完美剧本
+		if = {
+			limit = {
+				has_country_flag = qyn_1
+				has_country_flag = yy_2
+				has_country_flag = jz_3
+			}
+			country_event = {
+				id = hk648_star.21071
+				days = 720
+				random = 180
+			}
+		}
+		#逐梦双星
+		else_if = {
+			limit = {
+				has_country_flag = lsly_1
+				has_country_flag = lly_2
+			}
+			country_event = {
+				id = hk648_star.21072
+				days = 720
+				random = 180
+			}
+		}
+		#一般选角
+		else = {
+			country_event ={
+				id = hk648_star.21073
+				days = 720
+				random = 180
+			}
+		}
+		#最后一课
+		if = {
+			limit = {
+				has_country_flag = jz_3
+			}
+			country_event = {
+				id = hk648_star.21074
+				days = 450
+				random = 30
+			}
+		}
+		#叛逆之剑
+		country_event = {
+			id = hk648_star.21075
+			days = 300
+			random = 30
+		}
+	}
+}
+
+country_event = {
+	id = hk648_star.21071
+	title = "Passing the torch"
+	desc = "hk648_star.21071.desc"
+	picture = GFX_evt_hk648_xhxc
+	is_triggered_only = yes 
+	
+	option = {
+		name = "Fight for all the good in the world!"
+		add_modifier = {
+			modifier = hk3_xhxc
+		}
+	}
+}
+
+country_event = {
+	id = hk648_star.21072
+	title = "dream double star"
+	desc = "hk648_star.21072.desc"
+	picture = GFX_evt_hk648_zmsx
+	is_triggered_only = yes 
+	
+	option = {
+		name = "Vodka Girl, here we go!"
+		add_modifier = {
+			modifier = hk3_zmsx
+		}
+	}
+}
+
+country_event = {
+	id = hk648_star.21073
+	title = "Rave reviews"
+	desc = "hk648_star.21073.desc"
+	picture = GFX_evt_hk648_ybxj
+	is_triggered_only = yes 
+	
+	option = {
+		name = "Fight for all the good in the world!"
+		add_modifier = {
+			modifier = hk3_ybxj
+		}
+	}
+}
+
+country_event = {
+	id = hk648_star.21074
+	title = "Last lesson"
+	desc = "hk648_star.21074.desc"
+	picture = GFX_evt_hk648_zhyk
+	is_triggered_only = yes 
+	
+	option = {
+		name = "We will turn this imperfect world into what we want it to be!"
+		add_modifier = {
+			modifier = hk3_zhyk
+		}
+	}
+}
+
+country_event = {
+	id = hk648_star.21075
+	title = "Raise the sword of rebellion to the sky"
+	desc = "hk648_star.21075.desc"
+	picture = GFX_evt_hk648_pnzj
+	is_triggered_only = yes 
+	
+	option = {
+		name = "When we meet on a narrow road, the brave wins!"
+		add_modifier = {
+			modifier = hk3_pnzj
+		}
+	}
+}
+
+country_event = {
+	id = hk648_star.2201
+	title = "Crazy empire"
+	desc = "hk648_star.2201.desc"
+	picture = GFX_evt_honkai_win
+	is_triggered_only = yes 
+	
+	option = {
+		name = "It is a necessary means"
+		add_modifier = {
+			modifier = fkddg
+			days = 5400
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_star.2202
+				days = 5400
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_star.2202
+	title = "Gradually numb"
+	desc = "hk648_star.2202.desc"
+	picture = GFX_evt_honkai_win
+	is_triggered_only = yes 
+	
+	option = {
+		name = "Hope all is well"
+		add_modifier = {
+			modifier = zjmmddg days = 5400
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_star.2203
+				days = 5400
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_star.2203
+	title = "Not finished"
+	desc = "hk648_star.2203.desc"
+	picture = GFX_evt_update
+	is_triggered_only = yes 
+	
+	option = {
+		name = "Never mind"
+	}
+	
+	option = {
+		name = "Choose another route"
+		country_event = {
+			id = hk648_star.2101
+		}
+	}
+}

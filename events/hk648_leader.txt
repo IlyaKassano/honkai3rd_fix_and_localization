@@ -1,0 +1,1811 @@
+namespace= hk648_leader
+
+#开局领袖#
+country_event = {
+	id = hk648_leader.0
+	title = "World Line Changes"
+	desc = "hk648_leader.0.desc"
+	picture = GFX_evt_hk648_leader.0
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	#天命总部#
+	option = {
+		name = "otto.name"
+		custom_tooltip = otto.response
+		hidden_effect = {
+			set_country_flag = time1
+			create_leader = {
+				class = admiral
+				species = VALKYRIES
+				name = "Teresa Apocalypse"
+				traits = {
+					trait = leader_trait_teriri_a310
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 28
+				set_is_female = yes
+			}
+			last_created_leader = {
+				save_global_event_target_as = teriri
+			}
+			set_country_flag = leader_a310
+			
+			create_leader = {
+				class = admiral
+				species = VALKYRIES
+				name = "Rita"
+				traits = {
+					trait = leader_trait_lt
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 21
+				set_is_female = yes
+			}
+			set_country_flag = leader_lt
+			
+			create_leader = {
+				class = general
+				species = VALKYRIES
+				name = "Durandal"
+				traits = {
+					trait = leader_trait_ylde
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 16
+				set_is_female = yes
+			}
+			last_created_leader = {
+				save_global_event_target_as = ylde
+			}
+			set_country_flag = leader_ylde
+			
+			create_leader = {
+				class = general
+				species = VALKYRIES
+				name = "Siegfried"
+				traits = {
+					trait = leader_trait_qgf
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 28
+				set_is_female = no
+			}
+			set_country_flag = leader_qgf
+			
+			create_leader = {
+				class = scientist
+				species = VALKYRIES
+				name = "Dr. Magi"
+				traits = {
+					trait = leader_trait_mj
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 35
+				set_is_female = no
+			}
+			set_country_flag = leader_mj
+			
+			create_leader = {
+				class = governor
+				species = VALKYRIES
+				name = "§GOtto Apocalypse§!"
+				traits = {
+					trait = leader_trait_otto
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 1452
+				set_is_female = no
+			}
+			last_created_leader = {
+				save_global_event_target_as = otto
+			}
+			set_country_flag = leader_otto
+		
+			assign_leader = last_created_leader
+			random_owned_leader = { 
+				limit = {
+					leader_class = ruler
+				}
+				remove_trait = leader_trait_adaptable
+				remove_trait = leader_trait_stubborn
+				remove_trait = leader_trait_resilient
+				remove_trait = leader_trait_substance_abuser
+				remove_trait = leader_trait_eager      
+				remove_trait = trait_ruler_corvette_focus
+				remove_trait = trait_ruler_destroyer_focus
+				remove_trait = trait_ruler_fortifier
+				remove_trait = trait_ruler_battleship_focus
+				remove_trait = trait_ruler_recruiter
+				remove_trait = trait_ruler_military_pioneer
+				remove_trait = trait_ruler_warlike
+				remove_trait = trait_ruler_world_shaper
+				remove_trait =trait_ruler_home_in_the_sky
+				remove_trait =trait_ruler_industrialist
+				remove_trait =trait_ruler_champion_of_the_people
+				remove_trait=trait_ruler_expansionist
+				remove_trait=trait_ruler_fertility_preacher
+				remove_trait=trait_ruler_investor
+				remove_trait=trait_ruler_space_miner
+				remove_trait=trait_ruler_explorer
+				remove_trait=trait_ruler_eye_for_talent
+				add_trait =leader_trait_otto
+				add_trait = leader_trait_ruler_chosen
+			}
+		}
+	}
+	#逆商#
+	option = {
+		name = "welt.name"
+		custom_tooltip = welt.response
+		hidden_effect = {
+			set_country_flag = time2
+			create_leader = {
+				class = admiral
+				species = VALKYRIES
+				name = "Cocolia"
+				traits = {
+					trait = leader_trait_kkly
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 29
+				set_is_female = yes
+			}
+			last_created_leader = {
+				save_global_event_target_as = kkly
+			}
+			set_country_flag = leader_kkly
+			
+			create_leader = {
+				class = admiral
+				species = VALKYRIES
+				name = "Sin Mal"
+				traits = {
+					trait = leader_trait_xme
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 14
+				set_is_female = yes
+			}
+			set_country_flag = leader_xme
+			
+			create_leader = {
+				class = scientist
+				species = VALKYRIES
+				name = "Einstein"
+				traits = {
+					trait = leader_trait_einstein
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 245
+				set_is_female = yes
+			}
+			last_created_leader = {
+				save_global_event_target_as = einstein
+			}
+			set_country_flag = leader_einstein
+			
+			create_leader = {
+				class = scientist
+				species = VALKYRIES
+				name = "Tesla"
+				traits = {
+					trait = leader_trait_tesla
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 266
+				set_is_female = yes
+			}
+			last_created_leader = {
+				save_global_event_target_as = tesla
+			}
+			set_country_flag = leader_tesla
+			
+			create_leader = {
+				class = governor
+				species = VALKYRIES
+				name = "Raiden Mei"
+				traits = {
+					trait = leader_trait_ldlm
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 27
+				set_is_female = no
+			}
+			set_country_flag = leader_ldlm
+			
+			create_leader = {
+				class = governor
+				species = VALKYRIES
+				name = "Walter Young"
+				traits = {
+					trait = leader_trait_welt
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 253
+				set_is_female = no
+			}
+			last_created_leader = {
+				save_global_event_target_as = welt
+			}
+			set_country_flag = leader_welt
+			
+			assign_leader = last_created_leader
+			random_owned_leader = { 
+				limit = {
+					leader_class = ruler
+				}
+				remove_trait = leader_trait_adaptable
+				remove_trait = leader_trait_stubborn
+				remove_trait = leader_trait_resilient
+				remove_trait = leader_trait_substance_abuser
+				remove_trait = leader_trait_eager      
+				remove_trait = trait_ruler_corvette_focus
+				remove_trait = trait_ruler_destroyer_focus
+				remove_trait = trait_ruler_fortifier
+				remove_trait = trait_ruler_battleship_focus
+				remove_trait = trait_ruler_recruiter
+				remove_trait = trait_ruler_military_pioneer
+				remove_trait = trait_ruler_warlike
+				remove_trait = trait_ruler_world_shaper
+				remove_trait =trait_ruler_home_in_the_sky
+				remove_trait =trait_ruler_industrialist
+				remove_trait =trait_ruler_champion_of_the_people
+				remove_trait=trait_ruler_expansionist
+				remove_trait=trait_ruler_fertility_preacher
+				remove_trait=trait_ruler_investor
+				remove_trait=trait_ruler_space_miner
+				remove_trait=trait_ruler_explorer
+				remove_trait=trait_ruler_eye_for_talent
+				add_trait =leader_trait_welt
+				add_trait = leader_trait_ruler_chosen
+			}
+		}
+	}
+	#世界蛇#
+	option = {
+		name = "kevin.name"
+		custom_tooltip = kevin.response
+		allow = {
+			custom_tooltip = {
+				fail_text = "Affected by the main plot, the plot related to Kevin is temporarily closed"
+				always = no
+			}
+		}
+		hidden_effect = {
+			set_country_flag = time2
+			create_leader = {
+				class = admiral
+				species = VALKYRIES
+				name = "Gray Serpent"
+				traits = {
+					trait = leader_trait_hs
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 0
+				set_is_female = no
+			}
+			create_leader = {
+				class = admiral
+				species = VALKYRIES
+				name = "Gray Serpent"
+				traits = {
+					trait = leader_trait_hs
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 0
+				set_is_female = no
+			}
+			create_leader = {
+				class = admiral
+				species = VALKYRIES
+				name = "Gray Serpent"
+				traits = {
+					trait = leader_trait_hs
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 0
+				set_is_female = no
+			}
+			set_country_flag = leader_hs
+			
+			create_leader = {
+				class = general
+				species = VALKYRIES
+				name = "Raven"
+				traits = {
+					trait = leader_trait_dy
+				}
+				skill = 10
+			}
+			last_created_leader = {
+				save_global_event_target_as = dy
+			}
+			last_created_leader = {  
+				set_age = 18
+				set_is_female = yes
+			}
+			set_country_flag = leader_dy
+			
+			create_leader = {
+				class = scientist
+				species = VALKYRIES
+				name = "Jackal"
+				traits = {
+					trait = leader_trait_hl
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 24
+				set_is_female = yes
+			}
+			last_created_leader = {
+				save_global_event_target_as = hl
+			}
+			set_country_flag = leader_hl
+			create_leader = {
+				class = general
+				species = VALKYRIES
+				name = "Kevin Kaslana"
+				traits = {
+					trait = leader_trait_kevin
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 52232
+				set_is_female = no
+				add_trait = leader_trait_rhzs4
+			}
+			set_country_flag = leader_kevin
+		
+			assign_leader = last_created_leader
+			random_owned_leader = { 
+				limit = {
+					leader_class = ruler
+				}
+				remove_trait = leader_trait_adaptable
+				remove_trait = leader_trait_stubborn
+				remove_trait = leader_trait_resilient
+				remove_trait = leader_trait_substance_abuser
+				remove_trait = leader_trait_eager      
+				remove_trait = trait_ruler_corvette_focus
+				remove_trait = trait_ruler_destroyer_focus
+				remove_trait = trait_ruler_fortifier
+				remove_trait = trait_ruler_battleship_focus
+				remove_trait = trait_ruler_recruiter
+				remove_trait = trait_ruler_military_pioneer
+				remove_trait = trait_ruler_warlike
+				remove_trait = trait_ruler_world_shaper
+				remove_trait =trait_ruler_home_in_the_sky
+				remove_trait =trait_ruler_industrialist
+				remove_trait =trait_ruler_champion_of_the_people
+				remove_trait=trait_ruler_expansionist
+				remove_trait=trait_ruler_fertility_preacher
+				remove_trait=trait_ruler_investor
+				remove_trait=trait_ruler_space_miner
+				remove_trait=trait_ruler_explorer
+				remove_trait=trait_ruler_eye_for_talent
+				add_trait =leader_trait_kevin
+				add_trait = leader_trait_ruler_chosen
+			}
+		}	
+	}
+	#极东支部#
+	option = {
+		name = "teriri0.name"
+		custom_tooltip = teriri0.response
+		hidden_effect = {
+			set_country_flag = time2
+			set_country_flag = leader_captain
+			
+			create_leader = {
+				class = scientist
+				species = VALKYRIES
+				name = "Einstein"
+				traits = {
+					trait = leader_trait_einstein
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 245
+				set_is_female = yes
+			}
+			last_created_leader = {
+				save_global_event_target_as = einstein
+			}
+			set_country_flag = leader_einstein
+			
+			create_leader = {
+				class = scientist
+				species = VALKYRIES
+				name = "Tesla"
+				traits = {
+					trait = leader_trait_tesla
+				}
+				skill = 10
+			}
+			last_created_leader = {
+				save_global_event_target_as = tesla
+			}
+			last_created_leader = {  
+				set_age = 266
+				set_is_female = yes
+			}
+			set_country_flag = leader_tesla
+			
+			create_leader = {
+				class = admiral
+				species = VALKYRIES
+				name = "Himeko"
+				traits = {
+					trait = leader_trait_jz
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 16
+				set_is_female = yes
+				add_trait = leader_trait_sh3
+			}
+			last_created_leader = {
+				save_global_event_target_as = jz
+			}
+			set_country_flag = leader_jz
+			
+			create_leader = {
+				class = general
+				species = VALKYRIES
+				name = "Adam"
+				traits = {
+					trait = leader_trait_yd
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 18
+				set_is_female = no
+			}
+			set_country_flag = leader_yd
+			
+			create_leader = {
+				class = admiral
+				species = VALKYRIES
+				name = "Teresa Apocalypse"
+				traits = {
+					trait = leader_trait_teriri_a310
+				}
+				skill = 10
+			}
+			last_created_leader = {
+				save_global_event_target_as = teriri
+			}
+			last_created_leader = {  
+				set_age = 28
+				set_is_female = yes
+			}
+			set_country_flag = leader_a310
+		
+			assign_leader = last_created_leader
+			random_owned_leader = { 
+				limit = {
+					leader_class = ruler
+				}
+				remove_trait = leader_trait_adaptable
+				remove_trait = leader_trait_stubborn
+				remove_trait = leader_trait_resilient
+				remove_trait = leader_trait_substance_abuser
+				remove_trait = leader_trait_eager      
+				remove_trait = trait_ruler_corvette_focus
+				remove_trait = trait_ruler_destroyer_focus
+				remove_trait = trait_ruler_fortifier
+				remove_trait = trait_ruler_battleship_focus
+				remove_trait = trait_ruler_recruiter
+				remove_trait = trait_ruler_military_pioneer
+				remove_trait = trait_ruler_warlike
+				remove_trait = trait_ruler_world_shaper
+				remove_trait =trait_ruler_home_in_the_sky
+				remove_trait =trait_ruler_industrialist
+				remove_trait =trait_ruler_champion_of_the_people
+				remove_trait=trait_ruler_expansionist
+				remove_trait=trait_ruler_fertility_preacher
+				remove_trait=trait_ruler_investor
+				remove_trait=trait_ruler_space_miner
+				remove_trait=trait_ruler_explorer
+				remove_trait=trait_ruler_eye_for_talent
+				add_trait =leader_trait_teriri_a310
+				add_trait = leader_trait_ruler_chosen
+			}
+		}
+	}
+	#舰长#
+	option = {
+		trigger = {
+			is_ai = no
+		}
+		custom_tooltip = captain.response
+		begin_event_chain = {
+			event_chain = "hk648_captain_usurper"
+			target = ROOT
+		}
+		country_event = {
+			id = hk648_time3.1001
+			days = 30
+		}
+		name = "captain.name"
+		
+		
+		hidden_effect = {
+			set_country_flag = time2
+			set_country_flag = time3
+			
+			create_leader = {
+				class = scientist
+				species = VALKYRIES
+				name = "Einstein"
+				traits = {
+					trait = leader_trait_einstein
+				}
+				skill = 10
+			}
+			last_created_leader = {
+				save_global_event_target_as = einstein
+			}
+			last_created_leader = {  
+				set_age = 245
+				set_is_female = yes
+			}
+			set_country_flag = leader_einstein
+			
+			create_leader = {
+				class = scientist
+				species = VALKYRIES
+				name = "Tesla"
+				traits = {
+					trait = leader_trait_tesla
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 266
+				set_is_female = yes
+			}
+			last_created_leader = {
+				save_global_event_target_as = tesla
+			}
+			set_country_flag = leader_tesla
+			
+			create_leader = {
+				class = admiral
+				species = VALKYRIES
+				name = "Himeko"
+				traits = {
+					trait = leader_trait_jz
+				}
+				skill = 10
+			}
+			last_created_leader = {
+				save_global_event_target_as = jz
+			}
+			last_created_leader = {  
+				set_age = 16
+				set_is_female = yes
+				add_trait = leader_trait_sh3
+			}
+			set_country_flag = leader_jz
+			
+			create_leader = {
+				class = general
+				species = VALKYRIES
+				name = "Adam"
+				traits = {
+					trait = leader_trait_yd
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 18
+				set_is_female = no
+				save_global_event_target_as = yd
+			}
+			set_country_flag = leader_yd
+			
+			#德丽莎#
+			create_leader = {
+				class = admiral
+				species = VALKYRIES
+				name = "Teresa Apocalypse"
+				traits = {
+					trait = leader_trait_teriri_a310
+				}
+				skill = 10
+			}
+			last_created_leader = {
+				save_global_event_target_as = teriri
+			}
+			last_created_leader = {  
+				set_age = 28
+				set_is_female = yes
+			}
+			set_country_flag = leader_a310
+		
+			assign_leader = last_created_leader
+			random_owned_leader = { 
+				limit = {
+					leader_class = ruler
+				}
+				remove_trait = leader_trait_adaptable
+				remove_trait = leader_trait_stubborn
+				remove_trait = leader_trait_resilient
+				remove_trait = leader_trait_substance_abuser
+				remove_trait = leader_trait_eager      
+				remove_trait = trait_ruler_corvette_focus
+				remove_trait = trait_ruler_destroyer_focus
+				remove_trait = trait_ruler_fortifier
+				remove_trait = trait_ruler_battleship_focus
+				remove_trait = trait_ruler_recruiter
+				remove_trait = trait_ruler_military_pioneer
+				remove_trait = trait_ruler_warlike
+				remove_trait = trait_ruler_world_shaper
+				remove_trait =trait_ruler_home_in_the_sky
+				remove_trait =trait_ruler_industrialist
+				remove_trait =trait_ruler_champion_of_the_people
+				remove_trait=trait_ruler_expansionist
+				remove_trait=trait_ruler_fertility_preacher
+				remove_trait=trait_ruler_investor
+				remove_trait=trait_ruler_space_miner
+				remove_trait=trait_ruler_explorer
+				remove_trait=trait_ruler_eye_for_talent
+				add_trait =leader_trait_teriri_a310
+				add_trait = leader_trait_ruler_chosen
+			}
+		}
+	}
+}
+#############################领袖招纳############################
+#放下成见#
+country_event = {
+	id = hk648_leader.1001
+	title = "Let go of prejudice"
+	desc = "hk648_leader.1001.desc"
+	picture = GFX_evt_hk648_leader.1001
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Fight for all the good in the world"
+		country_event = {
+			id =hk648_leader.1002
+		}
+	}
+}
+
+country_event = {
+	id = hk648_leader.1002
+	title = "Let go of prejudice"
+	desc = "hk648_leader.1002.desc"
+	picture = GFX_evt_hk648_leader.1002
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Otto"
+		country_event = {
+			id =hk648_leader.0
+		}
+	}
+}
+#############################量子之海############################
+#吉尔准备就绪#
+country_event = {
+	id = hk648_leader.20000
+	title = "Candidates to Cross the Quantum Sea"
+	desc = "hk648_leader.20000.desc"
+	picture = GFX_evt_hk648_lzzh1
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	immediate = {
+	}
+	option = {
+		name = "Jill is ready"
+		country_event = { 
+			id = hk648_leader.2000
+			days = 75
+			random = 30
+		}
+	}
+}
+
+#吉尔准备就绪#
+country_event = {
+	id = hk648_leader.20004
+	title = "End of vacation"
+	desc = "hk648_leader.20004.desc"
+	picture = GFX_evt_hk648_lzzh1
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	immediate = {
+	}
+	option = {
+		name = "Jill is ready"
+		country_event = { 
+			id = hk648_leader.2000
+			days = 30
+		}
+	}
+}
+
+#世界泡捞人#
+country_event = {
+	id = hk648_leader.2000
+	title = "Exploring the Quantum Sea"
+	desc = "hk648_leader.2000.desc"
+	picture = GFX_evt_hk648_lzzh1
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	immediate = {
+	}
+	option = {
+		name = "Start exploring the quantum sea"
+		capital_scope = {
+			enable_special_project = {
+				name = "DIRAC_SEA3"
+				location = this
+				owner = root
+			}
+		}
+	}
+	option = {
+		name = "Give jill a break"
+		trigger = {
+			is_ai = no
+		}
+		country_event = {
+			id =hk648_leader.20004
+			days = 360
+		}
+	}
+	option = {
+		name = "Give Jill a long vacation"
+		trigger = {
+			is_ai = no
+		}
+		country_event = {
+			id =hk648_leader.20004
+			days = 1080
+		}
+	}
+
+}
+
+#世界泡抽卡1#
+country_event = {
+	id = hk648_leader.20001
+	hide_window = yes
+	title = "World Bubble Draw 1"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	immediate = {
+		country_event = {
+			id = hk648_leader.20002
+		}
+	}
+}
+
+#世界泡抽卡2#
+country_event = {
+	id = hk648_leader.20002
+	hide_window = yes
+	title = "World Bubble Draw 2"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	immediate = {
+		random_list = {
+			1 = { country_event = { id = hk648_leader.20031 } }
+			1 = { country_event = { id = hk648_leader.20041 } }
+			1 = { country_event = { id = hk648_leader.20051 } }
+			1 = { country_event = { id = hk648_leader.20061 } }
+			1 = { country_event = { id = hk648_leader.20071 } }
+			1 = { country_event = { id = hk648_leader.20081 } }
+			1 = { country_event = { id = hk648_leader.20091 } }
+			1 = { country_event = { id = hk648_leader.20101 } }
+			1 = { country_event = { id = hk648_leader.20111 } }
+			1 = { country_event = { id = hk648_leader.20121 } }
+			1 = { country_event = { id = hk648_leader.20131 } }
+			1 = { country_event = { id = hk648_leader.28721 } }
+		}
+	}
+}
+
+#抽完了#
+country_event = {
+	id = hk648_leader.20003
+	title = "Quantum Sea Dries up"
+	desc = "hk648_leader.20003.desc"
+	picture = GFX_evt_hk648_lzzh1
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	immediate = {
+	}
+	option = {
+		name = "Just give Jill a break"
+		country_event = {
+			id =hk648_leader.20004
+			days = 1080
+		}
+	}
+}
+	
+
+#世界泡计划#
+country_event = {
+	id = hk648_leader.2001
+	title = "World Bubble Project"
+	desc = "hk648_leader.2001.desc"
+	picture = GFX_evt_hk648_lzzh2
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "It's better to be cautious"
+		capital_scope = {
+			enable_special_project = {
+				name = "DIRAC_SEA1"
+				location = this
+				owner = root
+			}
+		}
+	}
+	
+	option = {
+		name = "We don't have time to wait"
+		capital_scope = {
+			enable_special_project = {
+				name = "DIRAC_SEA21"
+				location = this
+				owner = root
+			}
+		}
+	}
+}
+
+#量子波动#
+country_event = {
+	id = hk648_leader.20011
+	title = "Quantum fluctuations"
+	desc = "hk648_leader.20011.desc"
+	picture = GFX_evt_hk648_lzzh2
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Be cautious"
+		capital_scope  = {
+			add_modifier = { modifier = "DIRAC_SEA21m" days = 3600 }
+		}
+		capital_scope  = {
+			enable_special_project = {
+				name = "DIRAC_SEA12"
+				location = this
+				owner = root
+			}
+		}
+		owner = {
+			add_resource = {
+				minerals = -1000
+				energy = -1000
+				volatile_motes = -50
+			}
+		}
+	}
+	
+	option = {
+		name = "Panic is better than collapse"
+		capital_scope  = {
+			add_modifier = { modifier = "DIRAC_SEA21m" days = 3600 }
+		}
+		capital_scope  = {
+			enable_special_project = {
+				name = "DIRAC_SEA22"
+				location = this
+				owner = root
+			}
+		}
+		owner = {
+			add_resource = {
+				minerals = -1000
+				energy = -1000
+				volatile_motes = -50
+			}
+		}
+	}
+}
+
+#来自异世界的歌声#
+country_event = {
+	id = hk648_leader.20012
+	title = "Songs from Another World"
+	desc = "hk648_leader.20012.desc"
+	picture = GFX_evt_hk648_leader.20012
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "TERITERI？"
+		capital_scope  = {
+			add_modifier = { modifier = "DIRAC_SEA22m" days = 3600 }
+		}
+	}
+}
+
+#####异界德丽莎群体召唤术#####
+country_event = {
+	id = hk648_leader.2002
+	title = "Teresa?"
+	desc = "hk648_leader.2002.desc"
+	picture = GFX_evt_hk648_leader.2002
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "The FBI is at your door right now"
+		country_event = { id = hk648_leader.20000 }
+		hidden_effect = {
+			#月下初拥·A872#
+			create_leader = {
+				class = admiral
+				species = VALKYRIES
+				name = "Embrace at the beginning of the month"
+				traits = {
+					trait = leader_trait_teriri_a872
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 6
+				set_is_female = yes
+				change_species = owner_species
+				change_leader_portrait = species
+			}
+			set_country_flag = leader_a872
+			#魔法少女teriri#
+			create_leader = {
+				class = general
+				species = VALKYRIES
+				name = "Magic girl Teriri"
+				traits = {
+					trait = leader_trait_teriri_teriri
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 12
+				set_is_female = yes
+				change_species = owner_species
+				change_leader_portrait = species
+			}
+			set_country_flag = leader_teriri
+			#星穹少女teriri#
+			create_leader = {
+				class = governor
+				species = VALKYRIES
+				name = "Star girl Teriri"
+				traits = {
+					trait = leader_trait_teriri_xqsn
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 12
+				set_is_female = yes
+				change_species = owner_species
+				change_leader_portrait = species
+			}
+			set_country_flag = leader_xqsn
+			#天穹偶像teriri#
+			create_leader = {
+				class = governor
+				species = VALKYRIES
+				name = "Sky idol Teriri"
+				traits = {
+					trait = leader_trait_teriri_tqox
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 14
+				set_is_female = yes
+				change_species = owner_species
+				change_leader_portrait = species
+			}
+			set_country_flag = leader_tqox
+		}
+	}
+	after = {
+	}
+}
+
+###星穹少女teriri###
+country_event = {
+	id = hk648_leader.20031
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	immediate = {
+		if = {
+			limit = { NOT = { has_country_flag = leader_gx } }
+			country_event = { id = hk648_leader.20061 }
+		}
+		else_if = {
+			limit = { 
+				NOT = { has_country_flag = leader_xqsn } 
+				has_country_flag = time3
+			}
+			country_event = { id = hk648_leader.2003}
+		}
+		else = {
+			country_event = {id = hk648_leader.20041 }
+		}
+	}
+}
+country_event = {
+	id = hk648_leader.2003
+	title = "Star girl"
+	desc = "hk648_leader.2003.desc"
+	picture = GFX_evt_hk648_leader.2003
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "No problem, Teresa is the cutest in the world"
+		hidden_effect = {
+			create_leader = {
+				class = governor
+				species = VALKYRIES
+				name = "Star girl Teriri"
+				traits = {
+					trait = leader_trait_teriri_xqsn
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 12
+				set_is_female = yes
+				change_species = owner_species
+				change_leader_portrait = species
+			}
+			set_country_flag = leader_xqsn
+			
+			country_event = { 
+				id = hk648_leader.2000
+			}
+			
+		}
+	}
+}
+
+###天穹偶像teriri###
+country_event = {
+	id = hk648_leader.20041
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	immediate = {
+		if = {
+			limit = { NOT = { has_country_flag = leader_tqox } }
+			country_event = { id = hk648_leader.20042}
+		}
+		else = {
+			country_event = {id = hk648_leader.20051 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_leader.20042
+	title = "Signal from Quantum Sea"
+	desc = "hk648_leader.20042.desc"
+	picture = GFX_evt_hk648_leader.2004
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "displayed on screen"
+		country_event = {
+			id = hk648_leader.2004
+		}
+	}
+}
+	
+country_event = {
+	id = hk648_leader.2004
+	title = "Sky idol Teriri"
+	desc = "hk648_leader.2004.desc"
+	picture = GFX_evt_hk648_leader.2004
+	is_triggered_only = yes
+	diplomatic = yes
+	trigger = { has_authority = auth_schicksal }
+	picture_event_data = {
+		portrait = tqox
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "No problem"
+		hidden_effect = {
+			create_leader = {
+				class = governor
+				species = VALKYRIES
+				name = "Sky idol Teriri"
+				traits = {
+					trait = leader_trait_teriri_tqox
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 14
+				set_is_female = yes
+				change_species = owner_species
+				change_leader_portrait = species
+			}
+			set_country_flag = leader_tqox
+			
+			country_event = { 
+				id = hk648_leader.2000
+			}
+			
+		}
+	}
+}
+
+###魔法少女teriri###
+country_event = {
+	id = hk648_leader.20051
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	immediate = {
+		if = {
+			limit = { NOT = { has_country_flag = leader_teriri } }
+			country_event = { id = hk648_leader.2005}
+		}
+		else = {
+			country_event = {id = hk648_leader.20061 }
+		}
+	}
+}
+country_event = {
+	id = hk648_leader.2005
+	title = "Magic girl Teriri"
+	desc = "hk648_leader.2005.desc"
+	picture = GFX_evt_hk648_leader.2005
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Welcome Magical Girls to Destiny"
+		hidden_effect = {
+			create_leader = {
+				class = general
+				species = VALKYRIES
+				name = "Magic girl Teriri"
+				traits = {
+					trait = leader_trait_teriri_teriri
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 12
+				set_is_female = yes
+				change_species = owner_species
+				change_leader_portrait = species
+			}
+			set_country_flag = leader_teriri
+			
+			country_event = { 
+				id = hk648_leader.2000
+			}
+			
+		}
+	}
+}
+
+###观星###
+country_event = {
+	id = hk648_leader.20061
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	immediate = {
+		if = {
+			limit = { NOT = { has_country_flag = time3 } }
+			country_event = { id = hk648_leader.20071 }
+			country_event = {
+				id = hk648_ravens.1012
+				days = 360
+			}
+			set_country_flag = leader_gx
+		}
+		else_if = {
+			limit = { NOT = { has_country_flag = leader_gx } }
+			country_event = { id = hk648_leader.2006}
+		}
+		else = {
+			country_event = {id = hk648_leader.20071 }
+		}
+	}
+}
+country_event = {
+	id = hk648_leader.2006
+	title = "Old club news"
+	desc = "hk648_leader.2006.desc"
+	picture = GFX_evt_hk648_leader.2006
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "I see"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.1001
+				days = 360
+			}
+			create_leader = {
+				class = admiral
+				species = VALKYRIES
+				name = "Sage King. Star Gazing"
+				traits = {
+					trait = leader_trait_teriri_gx
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 1012
+				set_is_female = yes
+				change_species = owner_species
+				change_leader_portrait = species
+			}
+			set_country_flag = leader_gx
+			
+			country_event = { 
+				id = hk648_leader.2000
+			}
+		}
+	}
+}
+
+###魔王###
+country_event = {
+	id = hk648_leader.20071
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	immediate = {
+		if = {
+			limit = { NOT = { has_country_flag = leader_teriri } }
+			country_event = { id = hk648_leader.20051 }
+		}
+		else_if = {
+			limit = { NOT = { has_country_flag = leader_mw } }
+			country_event = { id = hk648_leader.2007}
+		}
+		else = {
+			country_event = {id = hk648_leader.20081 }
+		}
+	}
+}
+country_event = {
+	id = hk648_leader.2007
+	title = "Devil"
+	desc = "hk648_leader.2007.desc"
+	picture = GFX_evt_hk648_leader.2007
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Two or three things that the magical girl and the devil have to say?"
+		hidden_effect = {
+			create_leader = {
+				class = general
+				species = VALKYRIES
+				name = "Devil"
+				traits = {
+					trait = leader_trait_teriri_mw
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 666
+				set_is_female = yes
+				change_species = owner_species
+				change_leader_portrait = species
+			}
+			set_country_flag = leader_mw
+			
+			country_event = { 
+				id = hk648_leader.2000
+			}
+		}
+	}
+}
+
+###吼姆###
+country_event = {
+	id = hk648_leader.20081
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	immediate = {
+		if = {
+			limit = { NOT = { has_country_flag = leader_hm } }
+			country_event = { id = hk648_leader.2008}
+		}
+		else = {
+			country_event = {id = hk648_leader.20091 }
+		}
+	}
+}
+country_event = {
+	id = hk648_leader.2008
+	title = "Homu Envoy"
+	desc = "hk648_leader.2008.desc"
+	picture = GFX_evt_hk648_leader.2008
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Welcome to Homu"
+		hidden_effect = {
+			create_leader = {
+				class = general
+				species = VALKYRIES
+				name = "Homu"
+				traits = {
+					trait = leader_trait_hm
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 6
+				set_is_female = yes
+				change_species = owner_species
+				change_leader_portrait = species
+			}
+			set_country_flag = leader_hm
+			
+			country_event = { 
+				id = hk648_leader.2000
+			}
+		}
+	}
+}
+
+###疯帽匠###
+country_event = {
+	id = hk648_leader.20091
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	immediate = {
+		if = {
+			limit = { NOT = { has_country_flag = leader_fmj } }
+			country_event = { id = hk648_leader.2009}
+		}
+		else = {
+			country_event = {id = hk648_leader.20101 }
+		}
+	}
+}
+country_event = {
+	id = hk648_leader.2009
+	title = "Mad Hatter"
+	desc = "hk648_leader.2009.desc"
+	picture = GFX_evt_hk648_leader.2009
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Welcome Mad Hatter to Destiny"
+		hidden_effect = {
+			create_leader = {
+				class = general
+				species = VALKYRIES
+				name = "Mad Hatter"
+				traits = {
+					trait = leader_trait_fmj
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 14
+				set_is_female = yes
+				change_species = owner_species
+				change_leader_portrait = species
+			}
+			set_country_flag = leader_fmj
+			
+			country_event = { 
+				id = hk648_leader.2000
+			}
+		}
+	}
+}
+
+###指挥官###
+country_event = {
+	id = hk648_leader.20101
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	immediate = {
+		if = {
+			limit = { NOT = { has_country_flag = leader_zhg } }
+			country_event = { id = hk648_leader.2010}
+		}
+		else = {
+			country_event = {id = hk648_leader.20111 }
+		}
+	}
+}
+country_event = {
+	id = hk648_leader.2010
+	title = "Strange Fu-Hua"
+	desc = "hk648_leader.2010.desc"
+	picture = GFX_evt_hk648_leader.2010
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Ok, another Kevin"
+		hidden_effect = {
+			create_leader = {
+				class = admiral
+				species = VALKYRIES
+				name = "Commander"
+				traits = {
+					trait = leader_trait_zhg
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 52426
+				set_is_female = yes
+				add_trait = leader_trait_rhzs3
+				change_species = owner_species
+				change_leader_portrait = species
+			}
+			set_country_flag = leader_zhg
+			
+			country_event = { 
+				id = hk648_leader.2000
+			}
+		}
+	}
+}
+
+###王符华###
+country_event = {
+	id = hk648_leader.20111
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	immediate = {
+		if = {
+			limit = { NOT = { has_country_flag = leader_wfh } }
+			country_event = { id = hk648_leader.2011}
+		}
+		else = {
+			country_event = {id = hk648_leader.20121 }
+		}
+	}
+}
+country_event = {
+	id = hk648_leader.2011
+	title = "Hero. Wang Fu-Hua"
+	desc = "hk648_leader.2011.desc"
+	picture = GFX_evt_hk648_leader.2011
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Long time no see, old friend"
+		hidden_effect = {
+			create_leader = {
+				class = admiral
+				species = VALKYRIES
+				name = "Wang Fu-Hua"
+				traits = {
+					trait = leader_trait_wfh
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 52226
+				set_is_female = yes
+				add_trait = leader_trait_rhzs3
+				change_species = owner_species
+				change_leader_portrait = species
+			}
+			set_country_flag = leader_wfh
+			
+			country_event = { 
+				id = hk648_leader.2000
+			}
+		}
+	}
+}
+
+###天使###
+country_event = {
+	id = hk648_leader.20121
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	immediate = {
+		if = {
+			limit = { NOT = { has_country_flag = leader_wfh } }
+			country_event = { id = hk648_leader.20111 }
+		}
+		else_if = {
+			limit = { NOT = { has_country_flag = leader_ts } }
+			country_event = { id = hk648_leader.2012}
+		}
+		else = {
+			country_event = {id = hk648_leader.20131 }
+		}
+	}
+}
+country_event = {
+	id = hk648_leader.2012
+	title = "Angels come"
+	desc = "hk648_leader.2012.desc"
+	picture = GFX_evt_hk648_leader.2012
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Cough, in short, welcome angels to join Destiny"
+		hidden_effect = {
+			create_leader = {
+				class = general
+				species = VALKYRIES
+				name = "Angel"
+				traits = {
+					trait = leader_trait_ts
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 18
+				set_is_female = yes
+				change_species = owner_species
+				change_leader_portrait = species
+			}
+			set_country_flag = leader_ts
+			
+			country_event = { 
+				id = hk648_leader.2000
+			}
+		}
+	}
+}
+
+###魔女###
+country_event = {
+	id = hk648_leader.20131
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	immediate = {
+		if = {
+			limit = { NOT = { has_country_flag = leader_mn } }
+			country_event = { id = hk648_leader.2013}
+		}
+		else = {
+			country_event = {id = hk648_leader.28721 }
+		}
+	}
+}
+country_event = {
+	id = hk648_leader.2013
+	title = "Twilight witch"
+	desc = "hk648_leader.2013.desc"
+	picture = GFX_evt_hk648_leader.2013
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Welcome Twilight Witch to Destiny"
+		hidden_effect = {
+			create_leader = {
+				class = general
+				species = VALKYRIES
+				name = "Witch"
+				traits = {
+					trait = leader_trait_mn
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 16
+				set_is_female = yes
+				change_species = owner_species
+				change_leader_portrait = species
+			}
+			set_country_flag = leader_mn
+			
+			country_event = { 
+				id = hk648_leader.2000
+			}
+		}
+	}
+}
+
+###月下初拥·A872###
+country_event = {
+	id = hk648_leader.28721
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	immediate = {
+		if = {
+			limit = { 
+				has_country_flag = leader_a872
+				has_country_flag = leader_xqsn 
+				has_country_flag = leader_tqox 
+				has_country_flag = leader_teriri 
+				has_country_flag = leader_gx 
+				has_country_flag = leader_mn
+				has_country_flag = leader_ts
+				has_country_flag = leader_mw
+				has_country_flag = leader_hm
+				has_country_flag = leader_fmj
+				has_country_flag = leader_zhg
+				has_country_flag = leader_wfh
+			}
+			country_event = { id = hk648_leader.20003 } 
+		}
+		else_if = {
+			limit = { NOT = { has_country_flag = leader_a872 } }
+			country_event = { id = hk648_leader.2872 }
+		}
+		else = {
+			country_event = { id = hk648_leader.20031 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_leader.2872
+	title = "Embrace at the beginning of the month"
+	desc = "hk648_leader.2872.desc"
+	picture = GFX_evt_hk648_leader.2872
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "I won't let you go this time"
+		hidden_effect = {
+			create_leader = {
+				class = admiral
+				species = VALKYRIES
+				name = "Embrace at the beginning of the month"
+				traits = {
+					trait = leader_trait_teriri_a872
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 6
+				set_is_female = yes
+				change_species = owner_species
+				change_leader_portrait = species
+			}
+			set_country_flag = leader_a872
+			
+			country_event = { 
+				id = hk648_leader.2000
+			}
+		}
+	}
+}
+	
+	
+######德丽莎单体召唤术######
+#a303#
+country_event = {
+	id = hk648_leader.2303
+	title = "hk648_leader.2303.name"
+	desc = "hk648_leader.2303.desc"
+	picture = GFX_evt_hk648_leader.2000
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "tttt"
+		if = {
+			limit = { NOT = { has_country_flag = leader_a310 } }
+			#德丽莎·A303#
+			create_leader = {
+				class = admiral
+				species = VALKYRIES
+				name = "Teresa A303"
+				traits = {
+					trait = leader_trait_teriri_a303
+				}
+				skill = 10
+			}
+			last_created_leader = {  
+				set_age = 20
+				set_is_female = yes
+				change_species = owner_species
+				change_leader_portrait = species
+			}
+			set_country_flag = leader_a303
+		}
+	}
+}
+
+#灰蛇年龄#
+country_event = {
+	id = hk648_leader.3000
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_owned_leader = {
+			limit = { has_trait = leader_trait_hs }
+			set_age = 0
+		}
+	}
+}

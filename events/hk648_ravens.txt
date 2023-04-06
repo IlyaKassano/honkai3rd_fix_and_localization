@@ -1,0 +1,3543 @@
+namespace= hk648_ravens
+#picture = GFX_evt_hk648_fkns
+#1000-1999发现Raven's
+#2100-2199识律商店
+#2200-2299雇佣服务
+#2300-2399获取情报
+#2400-2499布朗尼闲聊
+country_event = {
+	id = hk648_ravens.1001
+	title = "Bronie"
+	desc = "hk648_ravens.1001.desc"
+	is_triggered_only = yes
+	trigger = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = ravens_y }
+	}
+	diplomatic = yes
+	picture_event_data = {
+		portrait = bln1_gx0
+		room = "honkai_impact_bridge2_room"
+	}
+	show_sound = event_hk648_r1001
+	
+	immediate = {
+		set_country_flag = ravens_y
+	}
+	option = {
+		default_hide_option = yes
+		name = "Who are you?"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.1002 }
+		}
+	}
+	option = {
+		name = "Stargazer hired you to come to me?"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.1004 }
+		}
+	}
+	after = {
+	}
+}
+
+country_event = {
+	id = hk648_ravens.1002
+	title = "Bronie"
+	desc = "hk648_ravens.1002.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = bln1_gx0
+		room = "honkai_impact_bridge2_room"
+	}
+	show_sound = event_hk648_r1002
+	
+	option = {
+		default_hide_option = yes
+		name = "You just said that Guan Xing hired you to find me?"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.1003 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ravens.1003
+	title = "Bronie"
+	desc = "hk648_ravens.1003.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = bln1_gx0
+		room = "honkai_impact_bridge2_room"
+	}
+	show_sound = event_hk648_r1003
+	
+	option = {
+		default_hide_option = yes
+		name = "(continue)"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.1006 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ravens.1004
+	title = "？？？"
+	desc = "hk648_ravens.1004.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = bln1_gx0
+		room = "honkai_impact_bridge2_room"
+	}
+	show_sound = event_hk648_r1004
+	
+	option = {
+		name = "Then who are you?"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.1005 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ravens.1005
+	title = "Bronie"
+	desc = "hk648_ravens.1005.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = bln1_gx0
+		room = "honkai_impact_bridge2_room"
+	}
+	show_sound = event_hk648_r1005
+	
+	option = {
+		default_hide_option = yes
+		name = "(continue)"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.1006 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ravens.1006
+	title = "Stargazing"
+	desc = "hk648_ravens.1006.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = bln2_gx1
+		room = "honkai_impact_bridge2_room"
+	}
+	show_sound = event_hk648_r1006
+	
+	option = {
+		default_hide_option = yes
+		name = "§GOtto§!over there..."
+		hidden_effect = {
+			country_event = { id = hk648_ravens.1007 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ravens.1007
+	title = "Bronie"
+	desc = "hk648_ravens.1007.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = bln1_gx2
+		room = "honkai_impact_bridge2_room"
+	}
+	show_sound = event_hk648_r1007
+	
+	option = {
+		default_hide_option = yes
+		name = "No problem"
+		add_resource = {
+			energy = -10000
+		}
+		hidden_effect = {
+			country_event = { id = hk648_ravens.1008 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ravens.1008
+	title = "Bronie"
+	desc = "hk648_ravens.1008.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = bln1_gx2
+		room = "honkai_impact_bridge2_room"
+	}
+	show_sound = event_hk648_r1008
+	
+	option = {
+		default_hide_option = yes
+		name = "(continue)"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.1009 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ravens.1009
+	title = "Captain"
+	desc = "hk648_ravens.1009.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = bln2_gx2
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "(continue)"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.1010 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ravens.1010
+	title = "Bronie"
+	desc = "hk648_ravens.1010.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = bln1_gx2
+		room = "honkai_impact_bridge2_room"
+	}
+	show_sound = event_hk648_r1010
+	
+	option = {
+		default_hide_option = yes
+		name = "Close communication"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.1011 }
+		}
+		response_text = "See you next time"
+	}
+}
+#非舰长世界线发现Raven's
+country_event = {
+	id = hk648_ravens.1012
+	title = "？？？"
+	desc = "hk648_ravens.1012.desc"
+	is_triggered_only = yes
+	trigger = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = ravens_y }
+	}
+	diplomatic = yes
+	picture_event_data = {
+		portrait = bln1_gx0
+		room = "honkai_impact_bridge2_room"
+	}
+	show_sound = event_hk648_r1012
+	
+	immediate = {
+		set_country_flag = ravens_y
+	}
+	
+	option = {
+		name = "First Herrscher?"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.1013
+			}
+		}
+	}
+	option = {
+		name = "Bronya? What the hell are you doing?"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.1013
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ravens.1013
+	title = "Bronie"
+	desc = "hk648_ravens.1013.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = bln1_gx0
+		room = "honkai_impact_bridge2_room"
+	}
+	show_sound = event_hk648_r1013
+	
+	option = {
+		name = "Confirm"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.1011
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ravens.1011
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+	}
+	
+	immediate = {
+		capital_scope = {
+			save_global_event_target_as = player_capital_hk
+		}
+		create_country = {
+			name = "Raven's"
+			type = Raven
+			flag = {
+				icon= {
+					category = "tm"
+					file = "flag_raven.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors={
+					"grey"
+					"grey"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				save_global_event_target_as = ravens_country
+			}
+		}
+		last_created_country = {
+			establish_communications_no_message = root
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2001
+	title = "Bronie"
+	desc = "hk648_ravens.2001.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	trigger = {
+		from = { is_country_type = Raven }
+		NOT = { has_country_flag = raven_conversation }
+	}
+	picture_event_data = {
+		portrait = bln3
+		room = "revans_room"
+	}
+	show_sound = event_hk648_r2001
+	
+	immediate = {
+		set_country_flag = raven_conversation
+		set_country_flag = hk3sgz
+	}
+	after = {
+		remove_country_flag = raven_conversation
+		remove_country_flag = hk3sgz
+	}
+	option = {
+		name = "Buy items"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2100 }
+		}
+	}
+	option = {
+		name = "Employment service"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2201 }
+		}
+	}
+	option = {
+		name = "Get intelligence"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2301 }
+		}
+	}
+	option = {
+		name = "Special commission"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Content under construction"
+				NOT = { has_country_flag = hk3sgz }
+			}
+		}
+	}
+	option = {
+		name = "Gossip"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2401
+			}
+		}
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "Leave"
+		response_text = "See you next time."
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2002
+	title = "Bronie"
+	desc = "hk648_ravens.2002.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	trigger = {
+		NOT = { has_country_flag = raven_conversation }
+	}
+	picture_event_data = {
+		portrait = bln3
+		room = "revans_room"
+	}
+	
+	immediate = {
+		set_country_flag = raven_conversation
+		set_country_flag = hk3sgz
+	}
+	after = {
+		remove_country_flag = raven_conversation
+		remove_country_flag = hk3sgz
+	}
+	option = {
+		name = "Buy items"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2100 }
+		}
+	}
+	option = {
+		name = "Employment service"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2201 }
+		}
+	}
+	option = {
+		name = "Get intelligence"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2301 }
+		}
+	}
+	option = {
+		name = "Special commission"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Content under construction"
+				NOT = { has_country_flag = hk3sgz }
+			}
+		}
+	}
+	option = {
+		name = "Gossip"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2401
+			}
+		}
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "Leave"
+		response_text = "See you next time."
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2100
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+	}
+	
+	immediate = {
+		if = {
+			limit = { 
+				NOT = { has_country_flag = first_raven } 
+				has_country_flag = time3
+			}
+			country_event = { id = hk648_ravens.2199 }
+		}
+		else = {
+			country_event = { id = hk648_ravens.2107 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2199
+	title = "Bronie"
+	desc = "hk648_ravens.2199.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = bln3_szlz1
+		room = "revans_room"
+	}
+	
+	immediate = {
+		set_country_flag = raven_conversation
+		set_country_flag = first_raven
+	}
+	after = {
+		remove_country_flag = raven_conversation
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "(seems familiar)"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2101 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2101
+	title = "§H？？？？§!"
+	desc = "hk648_ravens.2101.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz2
+		room = "revans_room"
+	}
+	
+	immediate = {
+		set_country_flag = raven_conversation
+	}
+	after = {
+		remove_country_flag = raven_conversation
+	}
+	
+	option = {
+		name = "Are you... the examiner of the Bengkemeng Contest?"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2102 }
+		}
+	}
+	option = {
+		default_hide_option = yes
+		name = "You are... that unscrupulous businessman!"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2103 }
+		}
+	}
+	option = {
+		name = "Are you... the Herrscher of Sentience?"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2105 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2102
+	title = "§HPokémon Examiner§!"
+	desc = "hk648_ravens.2102.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz3
+		room = "revans_room"
+	}
+	
+	immediate = {
+		set_country_flag = raven_conversation
+	}
+	after = {
+		remove_country_flag = raven_conversation
+	}
+	option = {
+		default_hide_option = yes
+		name = "So what are you going to sell this time?"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2106 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2103
+	title = "Captain"
+	desc = "hk648_ravens.2103.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz2
+		room = "revans_room"
+	}
+	
+	immediate = {
+		set_country_flag = raven_conversation
+	}
+	after = {
+		remove_country_flag = raven_conversation
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "(continue)"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2104 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2104
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_ravens.2104.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz4
+		room = "revans_room"
+	}
+	
+	immediate = {
+		set_country_flag = raven_conversation
+	}
+	after = {
+		remove_country_flag = raven_conversation
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "What are you going to sell this time?"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2106 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2105
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_ravens.2105.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz5
+		room = "revans_room"
+	}
+	
+	immediate = {
+		set_country_flag = raven_conversation
+	}
+	after = {
+		remove_country_flag = raven_conversation
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "So what are you going to sell this time?"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2106 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2106
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_ravens.2106.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz1
+		room = "revans_room"
+	}
+	
+	immediate = {
+		set_country_flag = hk3sgz2
+	}
+	after = {
+		remove_country_flag = hk3sgz2
+	}
+	
+	option = {
+		name = "Buy Lawrence Core"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2108 }
+		}
+	}
+	option = {
+		name = "Buy warships"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2113 }
+		}
+	}
+	option = {
+		name = "Gossip"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Content under construction"
+				NOT = { has_country_flag = hk3sgz2 }
+			}
+		}
+	}
+	option = {
+		default_hide_option = yes
+		name = "Leave"
+		response_text = "Alright, thank you for your patronage~"
+	}
+}
+
+#识律商店#
+country_event = {
+	id = hk648_ravens.2107
+	title = "Herrscher of Sentience"
+	desc = "hk648_ravens.2107.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz1
+		room = "revans_room"
+	}
+	
+	immediate = {
+		set_country_flag = raven_conversation
+		set_country_flag = hk3sgz2
+	}
+	after = {
+		remove_country_flag = raven_conversation
+		remove_country_flag = hk3sgz2
+	}
+	
+	option = {
+		name = "Buy Lawrence Core"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2108 }
+		}
+	}
+	option = {
+		name = "Buy resources"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2120 }
+		}
+	}
+	option = {
+		name = "Buy warships"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2113 }
+		}
+	}
+	option = {
+		name = "About the First Herrscher Core"
+		trigger = { 
+			has_country_flag = r_1st_herrscher_y 
+			NOT = { has_country_flag = r_1st_herrscher_1 }
+		}
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2111 }
+		}
+	}
+	option = {
+		name = "Gossip"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Content under construction"
+				NOT = { has_country_flag = hk3sgz2 }
+			}
+		}
+	}
+	option = {
+		default_hide_option = yes
+		name = "Leave"
+		response_text = "Alright, thank you for your patronage~"
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2108
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_ravens.2108.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz1
+		room = "revans_room"
+	}
+	
+	option = {
+		name = "Herrscher Core"
+		trigger = {
+			NOT = { has_country_flag = r_1st_herrscher_y }
+		}
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2109 }
+		}
+	}
+	
+	option = {
+		name = "Herrscher of the Void Core"
+		trigger = {
+			NOT = { has_country_flag = r_2nd_herrscher_y }
+		}
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2110 }
+		}
+	}
+	
+	option = {
+		name = "Herrscher of Reason Core"
+		trigger = {
+			NOT = { has_country_flag = r_11th_herrscher_y }
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "no_ap_honkai2"
+				has_ascension_perk = ap_honkai2
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = r_1st_herrscher_y
+					NOT = { has_country_flag = r_2nd_herrscher_y}
+				}
+				country_event = { id = hk648_ravens.2122 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = r_2nd_herrscher_y
+					NOT = { has_country_flag = r_1st_herrscher_y }
+				}
+				country_event = { id = hk648_ravens.2123 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = r_2nd_herrscher_y
+					has_country_flag = r_1st_herrscher_y 
+				}
+				country_event = { id = hk648_ravens.2124 }
+			}
+			else_if = {
+				limit = {
+					NOT = { has_country_flag = r_1st_herrscher_y }
+					NOT = { has_country_flag = r_1st_herrscher_y }
+				}
+				country_event = { id = hk648_ravens.2125 }
+			}
+		}
+	}
+	
+	option = {
+		name = "Corrupted Herrscher Core"
+		allow = {
+			custom_tooltip = {
+				fail_text = "no_ap_honkai2"
+				has_ascension_perk = ap_honkai2
+			}
+		}
+		trigger = {
+			NOT = { has_country_flag = r_12th_herrscher_y }
+		}
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2126 }
+		}
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2107 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2109
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_ravens.2109.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz1
+		room = "revans_room"
+	}
+	
+	option = {
+		name = "Confirm purchase"
+		add_relic = r_1st_herrscher
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 100000 }
+			}
+		}
+		add_resource = {
+			energy = -100000
+		}
+		hidden_effect = {
+			set_country_flag = r_1st_herrscher_y
+		}
+		response_text = "Alright, thank you for your patronage~"
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2108 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2110
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_ravens.2110.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz1
+		room = "revans_room"
+	}
+	
+	option = {
+		name = "Confirm purchase"
+		add_relic = r_2nd_herrscher
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 100000 }
+			}
+		}
+		add_resource = {
+			energy = -100000
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_honkai.8001
+				days = 15
+			}
+			set_country_flag = r_2nd_herrscher_y
+		}
+		response_text = "Alright, thank you for your patronage~"
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2108 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2111
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_ravens.2111.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz1
+		room = "revans_room"
+	}
+	
+	immediate = {
+		set_country_flag = r_1st_herrscher_1
+	}
+	
+	option = {
+		name = "You profiteer!"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2112
+			}
+		}
+	}
+}
+country_event = {
+	id = hk648_ravens.2112
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_ravens.2112.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz1
+		room = "revans_room"
+	}
+	
+	option = {
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2107
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2113
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_ravens.2113.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz1
+		room = "revans_room"
+	}
+	
+	option = {
+		name = "Buy Tier I battleships"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2114 }
+		}
+	}
+	
+	option = {
+		name = "Buy Tier II battleships"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2116 }
+		}
+	}
+	
+	option = {
+		name = "Buy Tier III battleships"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2118 }
+		}
+	}
+	
+	option = {
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2107
+			}
+		}
+	}
+	
+	option = {
+		name = "Leave"
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2114
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_ravens.2114.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz1
+		room = "revans_room"
+	}
+	
+	option = {
+		name = "Buy one"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 3000 }
+			}
+		}
+		add_resource = {
+			energy = -3000
+		}
+		hidden_effect = { 
+			country_event = { id = hk648_ravens.2115 }
+			ravenⅠ_battleship_1 = yes
+		}
+	}
+	
+	option = {
+		name = "Buy five"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 15000 }
+			}
+		}
+		add_resource = {
+			energy = -15000
+		}
+		hidden_effect = { 
+			country_event = { id = hk648_ravens.2115 }
+			ravenⅠ_battleship_5 = yes
+		}
+	}
+	
+	option = {
+		name = "Buy ten"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 27000 }
+			}
+		}
+		add_resource = {
+			energy = -27000
+		}
+		hidden_effect = { 
+			country_event = { id = hk648_ravens.2115 }
+			ravenⅠ_battleship_10 = yes
+		}
+	}
+	
+	option = {
+		name = "Buy fifty"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 120000 }
+			}
+		}
+		add_resource = {
+			energy = -120000
+		}
+		hidden_effect = { 
+			country_event = { id = hk648_ravens.2115 }
+			ravenⅠ_battleship_50 = yes
+		}
+	}
+	
+	option = {
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2113
+			}
+		}
+	}
+	
+	option = {
+		name = "Leave"
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2115
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_ravens.2115.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz1
+		room = "revans_room"
+	}
+	
+	option = {
+		name = "Buy one"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 3000 }
+			}
+		}
+		add_resource = {
+			energy = -3000
+		}
+		hidden_effect = { 
+			country_event = { id = hk648_ravens.2115 }
+			ravenⅠ_battleship_1 = yes
+		}
+	}
+	
+	option = {
+		name = "Buy five"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 15000 }
+			}
+		}
+		add_resource = {
+			energy = -15000
+		}
+		hidden_effect = { 
+			country_event = { id = hk648_ravens.2115 }
+			ravenⅠ_battleship_5 = yes
+		}
+	}
+	
+	option = {
+		name = "Buy ten"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 27000 }
+			}
+		}
+		add_resource = {
+			energy = -27000
+		}
+		hidden_effect = { 
+			country_event = { id = hk648_ravens.2115 }
+			ravenⅠ_battleship_10 = yes
+		}
+	}
+	
+	option = {
+		name = "Buy fifty"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 120000 }
+			}
+		}
+		add_resource = {
+			energy = -120000
+		}
+		hidden_effect = { 
+			country_event = { id = hk648_ravens.2115 }
+			ravenⅠ_battleship_50 = yes
+		}
+	}
+	
+	option = {
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2113
+			}
+		}
+	}
+	
+	option = {
+		name = "Leave"
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2116
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_ravens.2116.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz1
+		room = "revans_room"
+	}
+	
+	option = {
+		name = "Buy one"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 15000 }
+			}
+		}
+		add_resource = {
+			energy = -15000
+		}
+		hidden_effect = { 
+			country_event = { id = hk648_ravens.2117 }
+			ravenⅡ_battleship_1 = yes
+		}
+	}
+	
+	option = {
+		name = "Buy five"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 75000 }
+			}
+		}
+		add_resource = {
+			energy = -75000
+		}
+		hidden_effect = { 
+			country_event = { id = hk648_ravens.2117 }
+			ravenⅡ_battleship_5 = yes
+		}
+	}
+	
+	option = {
+		name = "Buy ten"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 135000 }
+			}
+		}
+		add_resource = {
+			energy = -135000
+		}
+		hidden_effect = { 
+			country_event = { id = hk648_ravens.2117 }
+			ravenⅡ_battleship_10 = yes
+		}
+	}
+	
+	option = {
+		name = "Buy fifty"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 675000 }
+			}
+		}
+		add_resource = {
+			energy = -675000
+		}
+		hidden_effect = { 
+			country_event = { id = hk648_ravens.2117 }
+			ravenⅡ_battleship_50 = yes
+		}
+	}
+	
+	option = {
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2113
+			}
+		}
+	}
+	
+	option = {
+		name = "Leave"
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2117
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_ravens.2117.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz1
+		room = "revans_room"
+	}
+	
+	option = {
+		name = "Buy one"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 15000 }
+			}
+		}
+		add_resource = {
+			energy = -15000
+		}
+		hidden_effect = { 
+			country_event = { id = hk648_ravens.2117 }
+			ravenⅡ_battleship_1 = yes
+		}
+	}
+	
+	option = {
+		name = "Buy five"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 75000 }
+			}
+		}
+		add_resource = {
+			energy = -75000
+		}
+		hidden_effect = { 
+			country_event = { id = hk648_ravens.2117 }
+			ravenⅡ_battleship_5 = yes
+		}
+	}
+	
+	option = {
+		name = "Buy ten"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 135000 }
+			}
+		}
+		add_resource = {
+			energy = -135000
+		}
+		hidden_effect = { 
+			country_event = { id = hk648_ravens.2117 }
+			ravenⅡ_battleship_10 = yes
+		}
+	}
+	
+	option = {
+		name = "Buy fifty"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 675000 }
+			}
+		}
+		add_resource = {
+			energy = -675000
+		}
+		hidden_effect = { 
+			country_event = { id = hk648_ravens.2117 }
+			ravenⅡ_battleship_50 = yes
+		}
+	}
+	
+	option = {
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2113
+			}
+		}
+	}
+	
+	option = {
+		name = "Leave"
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2118
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_ravens.2118.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz1
+		room = "revans_room"
+	}
+	
+	option = {
+		name = "Buy one"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 30000 }
+			}
+		}
+		add_resource = {
+			energy = -30000
+		}
+		hidden_effect = { 
+			country_event = { id = hk648_ravens.2119 }
+			ravenⅢ_battleship_1 = yes
+		}
+	}
+	
+	option = {
+		name = "Buy five"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 150000 }
+			}
+		}
+		add_resource = {
+			energy = -150000
+		}
+		hidden_effect = { 
+			country_event = { id = hk648_ravens.2119 }
+			ravenⅢ_battleship_5 = yes
+		}
+	}
+	
+	option = {
+		name = "Buy ten"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 300000 }
+			}
+		}
+		add_resource = {
+			energy = -300000
+		}
+		hidden_effect = { 
+			country_event = { id = hk648_ravens.2119 }
+			ravenⅢ_battleship_10 = yes
+		}
+	}
+	
+	option = {
+		name = "Buy fifty"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 1425000 }
+			}
+		}
+		add_resource = {
+			energy = -1425000
+		}
+		hidden_effect = { 
+			country_event = { id = hk648_ravens.2119 }
+			ravenⅢ_battleship_50 = yes
+		}
+	}
+	
+	option = {
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2113
+			}
+		}
+	}
+	
+	option = {
+		name = "Leave"
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2119
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_ravens.2119.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz1
+		room = "revans_room"
+	}
+	
+	option = {
+		name = "Buy one"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 30000 }
+			}
+		}
+		add_resource = {
+			energy = -30000
+		}
+		hidden_effect = { 
+			country_event = { id = hk648_ravens.2119 }
+			ravenⅢ_battleship_1 = yes
+		}
+	}
+	
+	option = {
+		name = "Buy five"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 150000 }
+			}
+		}
+		add_resource = {
+			energy = -150000
+		}
+		hidden_effect = { 
+			country_event = { id = hk648_ravens.2119 }
+			ravenⅢ_battleship_5 = yes
+		}
+	}
+	
+	option = {
+		name = "Buy ten"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 300000 }
+			}
+		}
+		add_resource = {
+			energy = -300000
+		}
+		hidden_effect = { 
+			country_event = { id = hk648_ravens.2119 }
+			ravenⅢ_battleship_10 = yes
+		}
+	}
+	
+	option = {
+		name = "Buy fifty"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 1425000 }
+			}
+		}
+		add_resource = {
+			energy = -1425000
+		}
+		hidden_effect = { 
+			country_event = { id = hk648_ravens.2119 }
+			ravenⅢ_battleship_50 = yes
+		}
+	}
+	
+	option = {
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2113
+			}
+		}
+	}
+	
+	option = {
+		name = "Leave"
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2120
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_ravens.2120.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz1
+		room = "revans_room"
+	}
+	
+	option = {
+		name = "hk648_ravens.2120.1"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 4000 }
+			}
+		}
+		add_resource = {
+			energy = -4000
+			honkai648_energy = 1000
+		}
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2120 }
+		}
+	}
+	option = {
+		name = "hk648_ravens.2120.2"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 2000 }
+			}
+		}
+		add_resource = {
+			energy = -2000
+			consumer_goods = 1000
+		}
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2120 }
+		}
+	}
+	option = {
+		name = "hk648_ravens.2120.3"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 4000 }
+			}
+		}
+		add_resource = {
+			energy = -4000
+			alloys = 1000
+		}
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2120 }
+		}
+	}
+	option = {
+		name = "hk648_ravens.2120.4"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 10000 }
+			}
+		}
+		add_resource = {
+			energy = -10000
+			exotic_gases = 1000
+		}
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2120 }
+		}
+	}
+	option = {
+		name = "hk648_ravens.2120.5"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 10000 }
+			}
+		}
+		add_resource = {
+			energy = -10000
+			volatile_motes = 1000
+		}
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2120 }
+		}
+	}
+	option = {
+		name = "hk648_ravens.2120.6"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 10000 }
+			}
+		}
+		add_resource = {
+			energy = -10000
+			rare_crystals = 1000
+		}
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2120 }
+		}
+	}
+	option = {
+		name = "Buy more resources"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2121 }
+		}
+	}
+	option = {
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2107 }
+		}
+	}
+	option = {
+		name = "Leave"
+	}
+}
+country_event = {
+	id = hk648_ravens.2121
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_ravens.2121.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz1
+		room = "revans_room"
+	}
+	
+	option = {
+		name = "hk648_ravens.2121.1"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 40000 }
+			}
+		}
+		add_resource = {
+			energy = -40000
+			honkai648_energy = 10000
+		}
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2121 }
+		}
+	}
+	option = {
+		name = "hk648_ravens.2121.2"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 20000 }
+			}
+		}
+		add_resource = {
+			energy = -20000
+			consumer_goods = 10000
+		}
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2121 }
+		}
+	}
+	option = {
+		name = "hk648_ravens.2121.3"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 40000 }
+			}
+		}
+		add_resource = {
+			energy = -40000
+			alloys = 10000
+		}
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2121 }
+		}
+	}
+	option = {
+		name = "hk648_ravens.2121.4"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 100000 }
+			}
+		}
+		add_resource = {
+			energy = -100000
+			exotic_gases = 10000
+		}
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2121 }
+		}
+	}
+	option = {
+		name = "hk648_ravens.2121.5"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 100000 }
+			}
+		}
+		add_resource = {
+			energy = -100000
+			volatile_motes = 10000
+		}
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2121 }
+		}
+	}
+	option = {
+		name = "hk648_ravens.2121.6"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 100000 }
+			}
+		}
+		add_resource = {
+			energy = -100000
+			rare_crystals = 10000
+		}
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2121 }
+		}
+	}
+	option = {
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2120 }
+		}
+	}
+	option = {
+		name = "Leave"
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2122
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_ravens.2122.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz1
+		room = "revans_room"
+	}
+	
+	option = {
+		name = "Confirm purchase"
+		add_relic = r_11th_herrscher
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 150000 }
+			}
+		}
+		add_resource = {
+			energy = -150000
+		}
+		hidden_effect = {
+			set_country_flag = r_11th_herrscher_y
+			country_event = {
+				id = hk648_super_wepons.2001
+				days = 35
+			}
+		}
+		response_text = "Alright, thank you for your patronage~"
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2108 }
+		}
+	}
+}
+country_event = {
+	id = hk648_ravens.2123
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_ravens.2123.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz1
+		room = "revans_room"
+	}
+	
+	option = {
+		name = "Confirm purchase"
+		add_relic = r_11th_herrscher
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 150000 }
+			}
+		}
+		add_resource = {
+			energy = -150000
+		}
+		hidden_effect = {
+			set_country_flag = r_11th_herrscher_y
+			country_event = {
+				id = hk648_super_wepons.2001
+				days = 35
+			}
+		}
+		response_text = "Alright, thank you for your patronage~"
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2108 }
+		}
+	}
+}
+country_event = {
+	id = hk648_ravens.2124
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_ravens.2124.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz1
+		room = "revans_room"
+	}
+	
+	option = {
+		name = "Confirm purchase"
+		add_relic = r_11th_herrscher
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 150000 }
+			}
+		}
+		add_resource = {
+			energy = -150000
+		}
+		hidden_effect = {
+			set_country_flag = r_11th_herrscher_y
+			country_event = {
+				id = hk648_super_wepons.2001
+				days = 35
+			}
+		}
+		response_text = "Alright, thank you for your patronage~"
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2108 }
+		}
+	}
+}
+country_event = {
+	id = hk648_ravens.2125
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_ravens.2125.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz1
+		room = "revans_room"
+	}
+	
+	option = {
+		name = "Confirm purchase"
+		add_relic = r_11th_herrscher
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 150000 }
+			}
+		}
+		add_resource = {
+			energy = -150000
+		}
+		hidden_effect = {
+			set_country_flag = r_11th_herrscher_y
+			country_event = {
+				id = hk648_super_wepons.2001
+				days = 35
+			}
+		}
+		response_text = "Alright, thank you for your patronage~"
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2108 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2126
+	title = "§HHerrscher of Sentience§!"
+	desc = "hk648_ravens.2126.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = szlz1
+		room = "revans_room"
+	}
+	
+	option = {
+		name = "Confirm purchase"
+		add_relic = r_12th_herrscher
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 50000 }
+			}
+		}
+		add_resource = {
+			energy = -50000
+		}
+		hidden_effect = {
+			set_country_flag = r_12th_herrscher_y
+			country_event = {
+				id = hk648_super_wepons.2008
+				days = 35
+			}
+		}
+	}
+	option = {
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2108 }
+		}
+	}
+}
+
+#检测雇佣金额
+country_event = {
+	id = hk648_ravens.2200
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	hide_window = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				resource_stockpile_compare = { resource = energy value < 1000 }
+			}
+			remove_country_flag = raven_employ
+			event_target:employ_warship = { delete_fleet = this }
+			remove_modifier = raven1_employ
+			remove_modifier = raven2_employ
+			remove_modifier = raven3_employ
+		}
+		if = {
+			limit = {
+				NOT = { exists = event_target:employ_warship }
+			}
+			remove_country_flag = raven_employ
+			remove_modifier = raven1_employ
+			remove_modifier = raven2_employ
+			remove_modifier = raven3_employ
+		}
+	}
+}
+country_event = {
+	id = hk648_ravens.2201
+	title = "Hiola"
+	desc = "hk648_ravens.2201.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = xal1
+		room = "revans_room"
+	}
+	
+	immediate = {
+		set_country_flag = hk3sgz
+	}
+	after = {
+		remove_country_flag = hk3sgz
+	}
+	
+	option = {	
+		name = "Mercenary army"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2202
+			}
+		}
+	}
+	
+	option = {
+		name = "Hire leaders"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2204
+			}
+		}
+	}
+	
+	option = {
+		name = "Hire a professional team"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2203
+			}
+		}
+	}
+	
+	option = {
+		name = "Gossip"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2205 }
+		}
+	}
+	
+	option = {
+		name = "Leave"
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2202
+	title = "Hiola"
+	desc = "hk648_ravens.2202.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = xal1
+		room = "revans_room"
+	}
+	
+	option = {
+		name = "Hire Type I Fleet"
+		custom_tooltip = hk648_ravens2202.1.response
+		allow = {
+			custom_tooltip = {
+				fail_text = "Hired fleet"
+				NOT = { has_country_flag = raven_employ }
+			}
+		}
+		hidden_effect = {
+			set_country_flag = raven_employ
+			ravenⅠ_battleship_employ = yes
+			add_modifier = { modifier = raven1_employ }
+		}
+	}
+	option = {
+		name = "Hire Type II Fleet"
+		custom_tooltip = hk648_ravens2202.2.response
+		allow = {
+			custom_tooltip = {
+				fail_text = "Hired fleet"
+				NOT = { has_country_flag = raven_employ }
+			}
+		}
+		hidden_effect = {
+			set_country_flag = raven_employ
+			add_modifier = { modifier = raven2_employ }
+			ravenⅡ_battleship_employ = yes
+		}
+	}
+	option = {
+		name = "Hire Type III Fleet"
+		custom_tooltip = hk648_ravens2202.3.response
+		allow = {
+			custom_tooltip = {
+				fail_text = "Hired fleet"
+				NOT = { has_country_flag = raven_employ }
+			}
+		}
+		hidden_effect = {
+			set_country_flag = raven_employ
+			add_modifier = { modifier = raven3_employ }
+			ravenⅢ_battleship_employ = yes
+		}
+	}
+	option = {
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2201 }
+		}
+	}
+	option = {
+		name = "Leave"
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2203
+	title = "Hiola"
+	desc = "hk648_ravens.2203.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = xal1
+		room = "revans_room"
+	}
+	
+	option = {
+		name = "Research Team"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 10000 }
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "The team has been hired"
+				NOT = { has_modifier = hk_tech }
+			}
+		}
+		add_resource = {
+			energy = -10000
+		}
+		add_modifier = { 
+			modifier = hk_tech
+			days = 3600
+		}
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2203 }
+		}
+	}
+	option = {
+		name = "Construction team"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 10000 }
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "The team has been hired"
+				NOT = { has_modifier = hk_titan }
+			}
+		}
+		add_resource = {
+			energy = -10000
+		}
+		add_modifier = { 
+			modifier = hk_titan
+			days = 3600
+		}
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2203 }
+		}
+	}
+	option = {
+		name = "Diplomatic group"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 15000 }
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "The team has been hired"
+				NOT = { has_modifier = hk_diplomacy }
+			}
+		}
+		add_resource = {
+			energy = -15000
+		}
+		add_modifier = { 
+			modifier = hk_diplomacy
+			days = 3600
+		}
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2203 }
+		}
+	}
+	option = {
+		name = "Megastructure Expert"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 75000 }
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "The team has been hired"
+				NOT = { has_modifier = hk_megastructures }
+			}
+		}
+		add_resource = {
+			energy = -75000
+		}
+		add_modifier = { 
+			modifier = hk_megastructures
+			days = 3600
+		}
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2203 }
+		}
+	}
+	option = {
+		name = "Production specialist"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 15000 }
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "The team has been hired"
+				NOT = { has_modifier = hk_produces }
+			}
+		}
+		add_resource = {
+			energy = -15000
+		}
+		add_modifier = { 
+			modifier = hk_produces
+			days = 3600
+		}
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2203 }
+		}
+	}
+	option = {
+		name = "Military adviser"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 25000 }
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "The team has been hired"
+				NOT = { has_modifier = hk_ship }
+			}
+		}
+		add_resource = {
+			energy = -25000
+		}
+		add_modifier = { 
+			modifier = hk_ship
+			days = 3600
+		}
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2203 }
+		}
+	}
+	option = {
+		name = "Famous idol"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 10000 }
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "The team has been hired"
+				NOT = { has_modifier = hk_idol }
+			}
+		}
+		add_resource = {
+			energy = -10000
+		}
+		add_modifier = { 
+			modifier = hk_idol
+			days = 3600
+		}
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2203 }
+		}
+	}
+	option = {
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2201 }
+		}
+	}
+	option = {
+		name = "Leave"
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2204
+	title = "Hiola"
+	desc = "hk648_ravens.2204.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = xal1
+		room = "revans_room"
+	}
+	
+	option = {
+		name = "Moff"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 5000 }
+			}
+		}
+		add_resource = {
+			energy = -5000
+		}
+		hidden_effect = {
+			create_leader = {
+				class = governor
+				species = VALKYRIES
+				traits = {
+					trait = leader_employ1
+				}
+				skill = 7
+			}
+			last_created_leader = {  
+				set_is_female = yes
+				change_species = owner_species
+				change_leader_portrait = species
+			}
+			country_event = { id = hk648_ravens.2204 }
+		}
+	}
+	option = {
+		name = "Researcher"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 5000 }
+			}
+		}
+		add_resource = {
+			energy = -5000
+		}
+		hidden_effect = {
+			create_leader = {
+				class = scientist
+				species = VALKYRIES
+				traits = {
+					trait = leader_employ2
+				}
+				skill = 7
+			}
+			last_created_leader = {  
+				set_is_female = yes
+				change_species = owner_species
+				change_leader_portrait = species
+			}
+			country_event = { id = hk648_ravens.2204 }
+		}
+	}
+	option = {
+		name = "Fleet commander"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 5000 }
+			}
+		}
+		add_resource = {
+			energy = -5000
+		}
+		hidden_effect = {
+			create_leader = {
+				class = admiral
+				species = VALKYRIES
+				traits = {
+					trait = leader_employ3
+				}
+				skill = 7
+			}
+			last_created_leader = {  
+				set_is_female = yes
+				change_species = owner_species
+				change_leader_portrait = species
+			}
+			country_event = { id = hk648_ravens.2204 }
+		}
+	}
+	option = {
+		name = "Army general"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 5000 }
+			}
+		}
+		add_resource = {
+			energy = -5000
+		}
+		hidden_effect = {
+			create_leader = {
+				class = general
+				species = VALKYRIES
+				traits = {
+					trait = leader_employ4
+				}
+				skill = 7
+			}
+			last_created_leader = {  
+				set_is_female = yes
+				change_species = owner_species
+				change_leader_portrait = species
+			}
+			country_event = { id = hk648_ravens.2204 }
+		}
+	}
+	option = {
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2201 }
+		}
+	}
+	option = {
+		name = "Leave"
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2205
+	title = "Hiola"
+	desc = "hk648_ravens.2205.desc"
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	diplomatic = yes
+	picture_event_data = {
+		portrait = xal1
+		room = "revans_room"
+	}
+	
+	option = {
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2201 }
+		}
+	}
+	option = {
+		name = "Leave"
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2301
+	title = "Bronie"
+	desc = "hk648_ravens.2301.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	trigger = { has_authority = auth_schicksal }
+	picture_event_data = {
+		portrait = bln3
+		room = "revans_room"
+	}
+	show_sound = event_hk648_r2301
+	
+	immediate = {
+		set_country_flag = hk3sgz3
+	}
+	after = {	
+		remove_country_flag = hk3sgz3
+	}
+	
+	
+	option = {
+		name = "About Fallen Empire"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2302
+			}
+		}
+	}
+	option = {
+		name = "About terminal crisis"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2303
+			}
+		}
+	}
+	option = {
+		name = "About the Honkai Disaster"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2304
+			}
+		}
+	}
+	option = {
+		name = "About the outbreak"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2305
+			}
+		}
+	}
+	option = {
+		name = "revan2301.name"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Content under construction"
+				NOT = { has_country_flag = hk3sgz3 }
+			}
+		}
+	}
+	option = {
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = { id = hk648_ravens.2002 }
+		}
+	}
+	option = {
+		name = "Leave"
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2302
+	title = "Bronie"
+	desc = "hk648_ravens.2302.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	trigger = { has_authority = auth_schicksal }
+	picture_event_data = {
+		portrait = bln3
+		room = "revans_room"
+	}
+	show_sound = event_hk648_r2302
+	
+	option = {
+		name = "Fallen Empire Intelligence One"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 10000 }
+			}
+			custom_tooltip = {
+				fail_text = "This information has been obtained"
+				NOT = { has_modifier = hk_anti_fallen1 }
+			}
+		}
+		add_resource = {
+			energy = -10000
+		}
+		add_modifier = {
+			modifier = hk_anti_fallen1
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2302
+			}
+		}
+	}
+	
+	option = {
+		name = "Fallen Empire Intelligence II"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 15000 }
+			}
+			custom_tooltip = {
+				fail_text = "This information has been obtained"
+				NOT = { has_modifier = hk_anti_fallen2 }
+			}
+		}
+		add_resource = {
+			energy = -15000
+		}
+		add_modifier = {
+			modifier = hk_anti_fallen2
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2302
+			}
+		}
+	}
+	
+	option = {
+		name = "Fallen Empire Intelligence III"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 20000 }
+			}
+			custom_tooltip = {
+				fail_text = "This information has been obtained"
+				NOT = { has_modifier = hk_anti_fallen3 }
+			}
+		}
+		add_resource = {
+			energy = -20000
+		}
+		
+		add_modifier = {
+			modifier = hk_anti_fallen3
+		}
+		hidden_effect = {	
+			country_event = {
+				id = hk648_ravens.2302
+			}
+		}
+	}
+	
+	option = {
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2301
+			}
+		}
+	}
+	
+	option = {
+		name = "Leave"
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2303
+	title = "Bronie"
+	desc = "hk648_ravens.2303.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	trigger = { has_authority = auth_schicksal }
+	picture_event_data = {
+		portrait = bln3
+		room = "revans_room"
+	}
+	show_sound = event_hk648_r2303
+	
+	option = {
+		name = "About the Alien Swarm"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 25000 }
+			}
+			custom_tooltip = {
+				fail_text = "This information has been obtained"
+				NOT = { has_modifier = hk_anti_swarm }
+			}
+		}
+		add_resource = {
+			energy = -25000
+		}
+		
+		add_modifier = {
+			modifier = hk_anti_swarm
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2303
+			}
+		}
+	}
+	option = {
+		name = "About High Dimensional Demons"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 25000 }
+			}
+			custom_tooltip = {
+				fail_text = "This information has been obtained"
+				NOT = { has_modifier = hk_anti_extradimensional }
+			}
+		}
+		add_resource = {
+			energy = -25000
+		}
+		
+		add_modifier = {
+			modifier = hk_anti_extradimensional
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2303
+			}
+		}
+	}
+	option = {
+		name = "ravens2303.name"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 25000 }
+			}
+			custom_tooltip = {
+				fail_text = "This information has been obtained"
+				NOT = { has_modifier = hk_anti_ai }
+			}
+		}
+		add_resource = {
+			energy = -25000
+		}
+		
+		add_modifier = {
+			modifier = hk_anti_ai
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2303
+			}
+		}
+	}
+	option = {
+		name = "About Scourge Empire"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 5000 }
+			}
+			custom_tooltip = {
+				fail_text = "This information has been obtained"
+				NOT = { has_modifier = hk_anti_player }
+			}
+		}
+		add_resource = {
+			energy = -5000
+		}
+		
+		add_modifier = {
+			modifier = hk_anti_player
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2303
+			}
+		}
+	}
+	
+	option = {
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2301
+			}
+		}
+	}
+	option = {
+		name = "Leave"
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2304
+	title = "Bronie"
+	desc = "hk648_ravens.2304.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	trigger = { has_authority = auth_schicksal }
+	picture_event_data = {
+		portrait = bln3
+		room = "revans_room"
+	}
+	show_sound = event_hk648_r2304
+	
+	option = {
+		name = "Outburst Information I"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 15000 }
+			}
+			custom_tooltip = {
+				fail_text = "This information has been obtained"
+				NOT = { has_modifier = hk_anti_honkai1 }
+			}
+		}
+		add_resource = {
+			energy = -15000
+		}
+		add_modifier = {
+			modifier = hk_anti_honkai1
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2304
+			}
+		}
+	}
+	option = {
+		name = "Outburst Information II"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 30000 }
+			}
+			custom_tooltip = {
+				fail_text = "This information has been obtained"
+				NOT = { has_modifier = hk_anti_honkai2 }
+			}
+		}
+		add_resource = {
+			energy = -30000
+		}
+		add_modifier = {
+			modifier = hk_anti_honkai2
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2304
+			}
+		}
+	}
+	option = {
+		name = "Outburst Information III"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 45000 }
+			}
+			custom_tooltip = {
+				fail_text = "This information has been obtained"
+				NOT = { has_modifier = hk_anti_honkai3 }
+			}
+		}
+		add_resource = {
+			energy = -45000
+		}
+		add_modifier = {
+			modifier = hk_anti_honkai3
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2304
+			}
+		}
+	}
+	option = {
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2301
+			}
+		}
+	}
+	option = {
+		name = "Leave"
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2305
+	title = "Bronie"
+	desc = "hk648_ravens.2305.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	trigger = { has_authority = auth_schicksal }
+	picture_event_data = {
+		portrait = bln3
+		room = "revans_room"
+	}
+	show_sound = event_hk648_r2305
+	
+	option = {
+		name = "Buy the Complete Over Limit Technology"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2306
+			}
+		}
+	}
+	option = {
+		name = "Purchasing the over-limit technology of a single piece of equipment"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2307
+			}
+		}
+	}
+	
+	option = {
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2301
+			}
+		}
+	}
+	option = {
+		name = "Leave"
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2306
+	title = "Bronie"
+	desc = "hk648_ravens.2306.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	trigger = { has_authority = auth_schicksal }
+	picture_event_data = {
+		portrait = bln3
+		room = "revans_room"
+	}
+	show_sound = event_hk648_r2306
+	
+	option = {
+		name = "Confirm purchase"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 1000000 }
+			}
+			custom_tooltip = {
+				fail_text = "This information has been obtained"
+				NOT = { has_country_flag = hk_superweapon }
+			}
+		}
+		add_resource = {
+			energy = -1000000
+		}
+		hidden_effect = {
+			set_country_flag = hk_superweapon
+			country_event = {
+				id = hk648_ravens.2306
+			}
+		}
+	}
+	
+	option = {
+		name = "Let me think again"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2305
+			}
+		}
+	}
+	option = {
+		name = "Leave"
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2307
+	title = "Bronie"
+	desc = "hk648_ravens.2307.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	trigger = { has_authority = auth_schicksal }
+	picture_event_data = {
+		portrait = bln3
+		room = "revans_room"
+	}
+	show_sound = event_hk648_r2307
+	
+	option = {
+		name = "Ship Armor"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 250000 }
+			}
+			custom_tooltip = {
+				fail_text = "Front-end technology has not yet mastered"
+				has_technology = tech_hk648_white
+				has_technology = tech_hk648_black
+			}
+			custom_tooltip = {
+				fail_text = "The technology has been mastered"
+				NOT = { has_country_flag = jcwj0 }
+			}
+		}
+		add_resource = {
+			energy = -250000
+		}
+		capital_scope = {
+			enable_special_project = {
+				name = "XZYZJ_R"
+				location = this
+				owner = root
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2307
+			}
+		}
+		custom_tooltip = hk648_super_wepons.1002.2.response
+		set_country_flag = jcwj0
+	}
+	
+	option = {
+		name = "Key to truth"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 250000 }
+			}
+			custom_tooltip = {
+				fail_text = "Front-end technology has not yet mastered"
+				has_technology = tech_hk648_zlzy 
+			}
+			custom_tooltip = {
+				fail_text = "The technology has been mastered"
+				NOT = { has_country_flag = zlzy0 }
+			}
+		}
+		add_resource = {
+			energy = -250000
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2307
+			}
+		}
+		capital_scope = {
+			enable_special_project = {
+				name = "ZLZJ_R"
+				location = this
+				owner = root
+			}
+		}
+		custom_tooltip = hk648_super_wepons.1002.3.response
+		set_country_flag = zlzy0
+	}
+	
+	option = {
+		name = "Honkai Vulcan Cannon"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 50000 }
+			}
+			custom_tooltip = {
+				fail_text = "Front-end technology has not yet mastered"
+				has_technology = tech_hk648_jtl
+			}
+			custom_tooltip = {
+				fail_text = "The technology has been mastered"
+				NOT = { has_country_flag = jtl0 }
+			}
+		}
+		add_resource = {
+			energy = -50000
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2307
+			}
+		}
+		capital_scope = {
+			enable_special_project = {
+				name = "CXJTL_R"
+				location = this
+				owner = root
+			}
+		}
+		custom_tooltip = hk648_super_wepons.1002.4.response
+		set_country_flag = jtl0
+	}
+	
+	option = {
+		name = "Quantum destroyer"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 100000 }
+			}
+			custom_tooltip = {
+				fail_text = "Front-end technology has not yet mastered"
+				has_technology = tech_hk648_lzhmz
+			}
+			custom_tooltip = {
+				fail_text = "The technology has been mastered"
+				NOT = { has_country_flag = lzhmz0 }
+			}
+		}
+		add_resource = {
+			energy = -100000
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2307
+			}
+		}
+		capital_scope = {
+			enable_special_project = {
+				name = "LZHMZ_R"
+				location = this
+				owner = root
+			}
+		}
+		custom_tooltip = hk648_super_wepons.1002.5.response
+		set_country_flag = lzhmz0
+	}
+	
+	option = {
+		name = "Star Destroyer 19C-X"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 250000 }
+			}
+			custom_tooltip = {
+				fail_text = "Front-end technology has not yet mastered"
+				has_technology = tech_hk648_19c
+			}
+			custom_tooltip = {
+				fail_text = "The technology has been mastered"
+				NOT = { has_country_flag = jxz19c0 }
+			}
+		}
+		add_resource = {
+			energy = -250000
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2307
+			}
+		}
+		capital_scope = {
+			enable_special_project = {
+				name = "JXZ19C-X_R"
+				location = this
+				owner = root
+			}
+		}
+		custom_tooltip = hk648_super_wepons.1002.6.response
+		set_country_flag = jxz19c0
+	}
+	option = {
+		name = "Judah's Oath Eternal Prisoner"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 200000 }
+			}
+			custom_tooltip = {
+				fail_text = "Front-end technology has not yet mastered"
+				has_technology = tech_divine_key_11th
+			}
+			custom_tooltip = {
+				fail_text = "The technology has been mastered"
+				NOT = { has_country_flag = divine_key_11th0 }
+			}
+		}
+		add_resource = {
+			energy = -200000
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2307
+			}
+		}
+		capital_scope = {
+			enable_special_project = {
+				name = "divine_key_11th_plus_R"
+				location = this
+				owner = root
+			}
+		}
+		custom_tooltip = hk648_super_wepons.1002.7.response
+		set_country_flag = divine_key_11th0
+	}
+	option = {
+		name = "Cyclops Final Form"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 250000 }
+			}
+			custom_tooltip = {
+				fail_text = "Front-end technology has not yet mastered"
+				has_technology = tech_hk648_dyjr
+			}
+			custom_tooltip = {
+				fail_text = "The technology has been mastered"
+				NOT = { has_country_flag = hk648_dyjr0 }
+			}
+		}
+		add_resource = {
+			energy = -250000
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2307
+			}
+		}
+		capital_scope = {
+			enable_special_project = {
+				name = "hk648_dyjr_zR"
+				location = this
+				owner = root
+			}
+		}
+		custom_tooltip = hk648_super_wepons.1002.8.response
+		set_country_flag = hk648_dyjr0
+	}
+	option = {
+		name = "Hundred-Handed Giant Final Form"
+		allow = {
+			custom_tooltip = {
+				fail_text = "Lack of energy"
+				resource_stockpile_compare = { resource = energy value >= 250000 }
+			}
+			custom_tooltip = {
+				fail_text = "Front-end technology has not yet mastered"
+				has_technology = tech_hk648_bsjr
+			}
+			custom_tooltip = {
+				fail_text = "The technology has been mastered"
+				NOT = { has_country_flag = hk648_bsjr0 }
+			}
+		}
+		add_resource = {
+			energy = -250000
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2307
+			}
+		}
+		capital_scope = {
+			enable_special_project = {
+				name = "hk648_bsjr_zR"
+				location = this
+				owner = root
+			}
+		}
+		custom_tooltip = hk648_super_wepons.1002.9.response
+		set_country_flag = hk648_bsjr0
+	}
+	
+	option = {
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2305
+			}
+		}
+	}
+	option = {
+		name = "Leave"
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2401
+	title = "Bronie"
+	desc = "hk648_ravens.2401.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = bln3
+		room = "revans_room"
+	}
+	show_sound = event_hk648_r2401
+	
+	option = {
+		name = "About Teresa"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2402
+			}
+		}
+	}
+	option = {
+		name = "Back to previous"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2002
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2402
+	title = "Bronie"
+	desc = "hk648_ravens.2402.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = bln3
+		room = "revans_room"
+	}
+	show_sound = event_hk648_r2402
+	
+	option = {
+		name = "Little White Devil of Taixu Gate"
+		trigger = {
+			NOT = { has_country_flag = bln_tqox_1 }
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2403
+			}
+		}
+	}
+	
+	option = {
+		name = "Embrace at the beginning of the month"
+		trigger = {
+			has_country_flag = time3
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2406
+			}
+		}
+	}
+	
+	option = {
+		name = "Let's talk next time"
+		response_text = "Run away when you hear the reward, are you a miser?"
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2403
+	title = "Bronie"
+	desc = "hk648_ravens.2403.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = bln3
+		room = "revans_room"
+	}
+	show_sound = event_hk648_r2403
+	
+	option = {
+		name = "Are you running away?"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2404
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2404
+	title = "Bronie"
+	desc = "hk648_ravens.2404.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = bln3
+		room = "revans_room"
+	}
+	show_sound = event_hk648_r2404
+	
+	option = {
+		name = "She has been looking for you!"
+		hidden_effect = {
+			country_event = {
+				id = hk648_ravens.2405
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2405
+	title = "Bronie"
+	desc = "hk648_ravens.2405.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = bln3
+		room = "revans_room"
+	}
+	show_sound = event_hk648_r2405
+	
+	immediate = {
+		set_country_flag = bln_tqox_1
+	}
+	option = {
+		name = "(Communications are closed)"
+	}
+}
+
+country_event = {
+	id = hk648_ravens.2406
+	title = "Bronie"
+	desc = "hk648_ravens.2406.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = bln3
+		room = "revans_room"
+	}
+	show_sound = event_hk648_r2406
+	
+	option = {
+		name = "All right"
+	}
+}

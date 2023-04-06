@@ -1,0 +1,558 @@
+namespace = hk648_pop
+
+#第一次圣痕计划#
+country_event = {
+	id = hk648_pop.1001
+	title = "Stigmata Project"
+	desc = "hk648_pop.1001.desc"
+	picture = GFX_evt_hk648_shjh
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Start the Stigmata plan"
+		capital_scope = {
+			enable_special_project = {
+				name = "SHJH"
+				location = this
+				owner = root
+			}
+		}
+	}
+}
+
+#再次启动圣痕计划#
+country_event = {
+	id = hk648_pop.1002
+	title = "Stigmata Project"
+	desc = "hk648_pop.1002.desc"
+	picture = GFX_evt_hk648_shjh
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	option = {
+		name = "Start the Stigmata plan"
+		capital_scope = {
+			enable_special_project = {
+				name = "SHJH"
+				location = this
+				owner = root
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_pop.1999
+	title = "Implantation complete"
+	desc = "hk648_pop.1999.desc"
+	picture = GFX_evt_hk648_shjh
+	show_sound = event_the_flesh_is_weak
+	trigger = { has_authority = auth_schicksal }
+	is_triggered_only = yes
+
+	immediate = {
+		remove_country_flag = shjh_during_the_research
+		#本物种#
+		every_owned_pop = {
+			limit = {
+				is_same_species = root
+				species = { 
+					NOR = { 
+						has_trait = trait_hksh 
+						has_trait = trait_machine_unit
+						has_trait = trait_mechanical
+						has_trait = trait_lithoid
+					} 
+				}
+			}
+			modify_species = {
+				species = this
+				add_trait = trait_hksh
+			}
+			species = { save_event_target_as = hksh_species }
+		}
+		change_dominant_species = { species = event_target:hksh_species }
+		
+		
+		
+		#特殊物种#
+		every_owned_pop = {
+			limit = {
+				species = {
+					#Valkyrie, Gensokyo Girls#
+					OR = {
+						has_trait = trait_valkyries
+						has_trait = trait_touhou					#东方project
+						has_trait = ngnl_Exmachine_jikaizhong		#机凯种
+						has_trait = trait_azur_a1					#KEN-SEN （舰B）
+						has_trait = trait_azurlanegirls 			#心智魔方（舰B）
+						has_trait = wsg_trait_warshipgirls			#战舰少女（舰R）
+						has_trait = wsg_trait_warshipgirls1			#战舰少女（舰R）
+						has_trait = wsg_trait_warshipgirls2 		#战舰少女（舰R）
+						has_trait = sh_trait_shenhai				#深海舰队（舰R）
+						has_trait = sh_trait_shenhai1				#深海舰队（舰R）
+						has_trait = sh_trait_shenhai2				#深海舰队（舰R）
+						has_trait = sh_trait_shenhai3				#深海舰队（舰R）
+						has_trait = trait_scarlet_dolls				#自律人形
+						has_trait = swg_trait_starshipgirls			#星舰少女（星舰）
+						has_trait = kancolle_trait_kanmusu			#舰娘    （舰c）
+						has_trait = kancolle_trait_kanmusu			#舰娘	 （舰c）
+						has_trait = kancolle_trait_kanmusu			#舰娘	 （舰c）
+						has_trait = trait_xyzl						#游戏业界的人民
+					}
+				}
+			}
+			modify_species = {
+				add_trait = trait_hksh
+			}
+		}
+		
+		#一般物种#
+		every_owned_pop = {
+			limit = {
+				species = {
+					#机器人、石头人、武装人偶等特殊物种除外#
+					NOR = {
+						has_trait = trait_hksh
+						has_trait = trait_machine_unit
+						has_trait = trait_mechanical
+						has_trait = trait_lithoid
+						has_trait = trait_hkrobot
+					}
+				}
+			}
+			random_list = {
+				50 = {}
+				50 = {kill_pop = yes}
+			}
+		}
+		
+		every_owned_pop = {
+			limit = {
+				species = {
+					NOR = {
+						has_trait = trait_hksh
+						has_trait = trait_machine_unit
+						has_trait = trait_mechanical
+						has_trait = trait_lithoid
+						has_trait = trait_hkrobot
+					}
+				}
+			}
+			change_species = owner_species
+		}
+		
+		every_owned_pop = {
+			limit = {
+				is_same_species = root
+				species = {
+					NOR = {
+						has_trait = trait_hksh
+						has_trait = trait_machine_unit
+						has_trait = trait_mechanical
+						has_trait = trait_lithoid
+						has_trait = trait_hkrobot
+					}
+				}
+			}
+			modify_species = {
+				species = this
+				add_trait = trait_hksh
+			}
+			species = { save_event_target_as = hksh_species }
+		}
+		change_dominant_species = { species = event_target:hksh_species }
+		
+		
+		#领袖#
+		every_owned_leader = {
+			limit = {
+				NOR = {
+					has_trait = leader_trait_sh0
+					has_trait = leader_trait_sh1
+					has_trait = leader_trait_sh2
+					has_trait = leader_trait_sh3
+					has_trait = leader_trait_sh4
+				}
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_sh1
+				add_ruler_trait = leader_trait_sh0
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = leader_trait_sh2
+				add_ruler_trait = leader_trait_sh0
+			}
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = leader_trait_sh3
+				add_ruler_trait = leader_trait_sh0
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = leader_trait_sh4
+				add_ruler_trait = leader_trait_sh0
+			}
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = leader_trait_sh0
+				add_ruler_trait = leader_trait_sh0
+			}
+		}
+		every_pool_leader = {
+			limit = {
+				NOR = {
+					has_trait = leader_trait_sh0
+					has_trait = leader_trait_sh1
+					has_trait = leader_trait_sh2
+					has_trait = leader_trait_sh3
+					has_trait = leader_trait_sh4
+				}
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_sh1
+				add_ruler_trait = leader_trait_sh0
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = leader_trait_sh2
+				add_ruler_trait = leader_trait_sh0
+			}
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = leader_trait_sh3
+				add_ruler_trait = leader_trait_sh0
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = leader_trait_sh4
+				add_ruler_trait = leader_trait_sh0
+			}
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = leader_trait_sh0
+				add_ruler_trait = leader_trait_sh0
+			}
+		}
+		
+	}
+	option = {
+		name = "Plan completed"
+	}
+	
+}
+
+country_event = {
+	id = hk648_pop.1003
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		from = {
+			species = { has_trait = trait_hksh }
+		}
+	}
+	
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_sh1
+				add_ruler_trait = leader_trait_sh0
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = leader_trait_sh2
+				add_ruler_trait = leader_trait_sh0
+			}
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = leader_trait_sh3
+				add_ruler_trait = leader_trait_sh0
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = leader_trait_sh4
+				add_ruler_trait = leader_trait_sh0
+			}
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = leader_trait_sh0
+				add_ruler_trait = leader_trait_sh0
+			}
+		}
+	}
+}
+#逐火之蛾领袖
+country_event = {
+	id = hk648_pop.1004
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		has_origin = origin_ark_moth2 
+	}
+	
+	immediate = {
+		from = {
+			set_is_female = yes
+		}
+	}
+}
+
+#第一次融合战士计划#
+country_event = {
+	id = hk648_pop.2001
+	title = "Fusion Warrior Project"
+	desc = "hk648_pop.2001.desc"
+	picture = GFX_evt_hk648_rhzs
+	is_triggered_only = yes
+	trigger = { 
+		has_authority = auth_schicksal 
+		has_country_flag = rhzs_x
+	}
+	
+	immediate = {
+		remove_country_flag = rhzs_x
+	}
+	option = {
+		name = "Begin execution"
+		capital_scope = {
+			enable_special_project = {
+				name = "RHZS"
+				location = this
+				owner = root
+			}
+		}
+	}
+}
+
+#后续融合战士计划#
+country_event = {
+	id = hk648_pop.2002
+	title = "Fusion Warrior Project"
+	desc = "hk648_pop.2002.desc"
+	picture = GFX_evt_hk648_rhzs2
+	is_triggered_only = yes
+	trigger = { 
+		has_authority = auth_schicksal 
+	}
+	
+	option = {
+		name = "Begin execution"
+		capital_scope = {
+			enable_special_project = {
+				name = "RHZS"
+				location = this
+				owner = root
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_pop.2999
+	title = "Plan completed"
+	desc = "hk648_pop.2999.desc"
+	picture = GFX_evt_hk648_rhzs
+	show_sound = event_the_flesh_is_weak
+	is_triggered_only = yes
+	trigger = { has_authority = auth_schicksal }
+	
+	immediate = {
+		remove_country_flag = rhzs_during_the_research
+		#物种#
+		every_owned_pop = {
+			limit = {
+				species = { has_trait = trait_hksh } 
+			}
+			modify_species = {
+				add_trait = trait_rhzs
+			}
+		}
+		
+		#领袖#
+		every_owned_leader = {
+			limit = {
+				OR = {
+					has_trait = leader_trait_sh0
+					has_trait = leader_trait_sh1
+					has_trait = leader_trait_sh2
+					has_trait = leader_trait_sh3
+					has_trait = leader_trait_sh4
+				}
+				NOR = {
+					has_trait = leader_trait_rhzs0
+					has_trait = leader_trait_rhzs1
+					has_trait = leader_trait_rhzs2
+					has_trait = leader_trait_rhzs3
+					has_trait = leader_trait_rhzs4
+				}
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_rhzs1
+				add_ruler_trait = leader_trait_rhzs0
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = leader_trait_rhzs2
+				add_ruler_trait = leader_trait_rhzs0
+			}
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = leader_trait_rhzs3
+				add_ruler_trait = leader_trait_rhzs0
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = leader_trait_rhzs4
+				add_ruler_trait = leader_trait_rhzs0
+			}
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = leader_trait_rhzs0
+				add_ruler_trait = leader_trait_rhzs0
+			}
+		}
+		every_pool_leader = {
+			limit = {
+				OR = {
+					has_trait = leader_trait_sh0
+					has_trait = leader_trait_sh1
+					has_trait = leader_trait_sh2
+					has_trait = leader_trait_sh3
+					has_trait = leader_trait_sh4
+				}
+				NOR = {
+					has_trait = leader_trait_rhzs0
+					has_trait = leader_trait_rhzs1
+					has_trait = leader_trait_rhzs2
+					has_trait = leader_trait_rhzs3
+					has_trait = leader_trait_rhzs4
+				}
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_rhzs1
+				add_ruler_trait = leader_trait_rhzs0
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = leader_trait_rhzs2
+				add_ruler_trait = leader_trait_rhzs0
+			}
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = leader_trait_rhzs3
+				add_ruler_trait = leader_trait_rhzs0
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = leader_trait_rhzs4
+				add_ruler_trait = leader_trait_rhzs0
+			}
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = leader_trait_rhzs0
+				add_ruler_trait = leader_trait_rhzs0
+			}
+		}
+	}
+	option = {
+		name = "Plan completed"
+	}
+}
+
+#融合战士领袖特质#
+country_event = {
+	id = hk648_pop.2003
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		from = {
+			species = { has_trait = trait_rhzs }
+		}
+	}
+	
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_rhzs1
+				add_ruler_trait = leader_trait_rhzs0
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = leader_trait_rhzs2
+				add_ruler_trait = leader_trait_rhzs0
+			}
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = leader_trait_rhzs3
+				add_ruler_trait = leader_trait_rhzs0
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = leader_trait_rhzs4
+				add_ruler_trait = leader_trait_rhzs0
+			}
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = leader_trait_rhzs0
+				add_ruler_trait = leader_trait_rhzs0
+			}
+		}
+	}
+}
+
+#####武装人偶#####
+#生成物种
+country_event = {
+	id = hk648_pop.4001
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		last_increased_tech = tech_aichan_elf_w
+	}
+	
+	immediate = {
+		hk648_robot = yes
+	}
+}
+
+#解锁作战模块
+country_event = {
+	id = hk648_pop.4002
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		last_increased_tech = tech_aichan_elf_w2
+	}
+	
+	immediate = {
+		hk648_robot_w_unlock = yes
+	}
+}
+
+#解锁科研模块
+country_event = {
+	id = hk648_pop.4003
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		last_increased_tech = tech_aichan_elf_t
+	}
+	
+	immediate = {
+		hk648_robot_t_unlock = yes
+	}
+}

@@ -1,0 +1,235 @@
+namespace = hk648_start
+
+#卡斯兰娜特质#
+country_event = {
+	id = hk648_start.1
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = { 
+		has_trait = trait_kaslana 
+		NOT = { has_country_flag = kaslana }
+	}
+	
+	immediate = {
+		add_modifier = {
+			modifier = kaslana
+		}
+		set_country_flay = kaslana
+		remove_country_flay = no_kaslana
+	}
+}
+
+country_event = {
+	id = hk648_start.2
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {  
+		NOT = { 
+			has_country_flag = no_kaslana
+			has_trait = trait_kaslana
+		}
+	}
+	
+	immediate = {
+		remove_modifier = "kaslana"
+		remove_country_flay = kaslana
+		set_country_flay = no_kaslana
+	}
+}
+
+#阿波卡利斯特质#
+
+country_event = {
+	id = hk648_start.3
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = { 
+		has_trait = trait_apocalypse
+		NOT = { has_country_flag = apocalypse }
+	}
+	
+	immediate = {
+		add_modifier = {
+			modifier = apocalypse
+		}
+		set_country_flay = apocalypse
+		remove_country_flay = no_apocalypse
+	}
+}
+
+country_event = {
+	id = hk648_start.4
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {  
+		NOT = { 
+			has_country_flag = no_apocalypse
+			has_trait = trait_apocalypse
+		}
+	}
+	
+	immediate = {
+		remove_modifier = "apocalypse"
+		remove_country_flay = apocalypse
+		set_country_flay = no_apocalypse
+	}
+}
+
+#第四神之键#
+country_event = {
+	id = hk648_start.5
+	is_triggered_only = yes
+	title = "Forth Divine key"
+	desc = "hk648_start.5.desc"
+	picture = GFX_evt_hk648_start.5
+	trigger = { 
+		has_authority = auth_schicksal 
+		has_origin = origin_fire_of_moths
+		is_ai = no
+	}
+	
+	option = {
+		name = "Receive forth Divine key"
+		hidden_effect = {
+			add_modifier = {
+				modifier = divine_key_4th_1
+			}
+			
+			capital_scope = {
+				create_fleet = {
+					name = "Key of the forth Divine key"
+					effect = {
+						set_owner = root						
+						create_ship = {
+							name = "Forth Divine key"
+							design = "Forth Divine key"
+						}
+						set_location = {
+							target = prev
+							distance = 80
+							angle = random
+						}	
+					}
+					settings = {
+						can_upgrade = no
+						can_disband = yes
+						can_change_leader = yes
+						can_change_composition = no
+						uses_naval_capacity = no
+						spawn_debris = no
+					}
+					set_fleet_flag = hk648_captain
+				}
+			}
+		}
+	}
+}
+
+#19k23#收容所
+country_event = {
+	id = hk648_start.6
+	title = "19k23_2.1.name"
+	desc = "19k23_2.1.desc"
+	picture = GFX_evt_19k23_2.1
+	
+	hide_window = yes
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { 
+		has_authority = auth_schicksal 
+		has_origin = origin_fire_of_moths
+		is_ai = no
+	}
+	
+	immediate = {
+		name = "19k23_2.1a"
+		capital_scope = {
+			create_archaeological_site = 19k23_asylum
+		}
+	}
+}
+
+#逐火之蛾基地#
+country_event = {
+	id = hk648_start.7
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_authority = auth_schicksal 
+		has_origin = origin_fire_of_moths
+	}
+	
+	immediate = {
+		capital_scope = {
+			add_deposit = d_fire_of_moths
+		}
+	}
+}
+
+#更新标志#
+country_event = {
+	id = hk648_start.8
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		
+	}
+	
+	immediate = {
+		set_country_flag = hk648_update_8
+	}
+}
+
+#ai标识
+country_event = {
+	id = hk648_start.9
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = yes
+		or = {
+			has_authority = auth_schicksal 
+			has_origin = origin_ark_moth2
+		}
+	}
+	
+	immediate = {
+		set_global_flag = honkai_ai_country_yes
+		if = {
+			limit = { has_authority = auth_schicksal }
+			country_event = {
+				id = hk648_ainb.1
+				day = 8
+			}
+		}
+	}
+}
+#mod标识
+country_event = {
+	id = hk648_start.10
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = has_honkai648_mod
+	}
+}
+#玩家标识
+country_event = {
+	id = hk648_start.11
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		has_authority = auth_schicksal 
+	}
+	
+	immediate = {
+		set_global_flag = honkai_player_country_yes
+		save_global_event_target_as = honkai_player_country
+	}
+}

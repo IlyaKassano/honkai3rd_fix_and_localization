@@ -1,0 +1,3914 @@
+namespace= hk648_aichan
+
+########################
+#爱酱世界第一可爱！！！#
+#爱酱世界第一可爱！！！#
+#爱酱世界第一可爱！！！#
+#爱酱世界第一可爱！！！#
+#爱酱世界第一可爱！！！#
+#爱酱世界第一可爱！！！#
+########################
+
+#爱酱诞生#
+country_event = {
+	id = hk648_aichan.0000
+	title = "hk648_aichan.0000.title"
+	desc = "hk648_aichan.0000.desc"
+	picture = GFX_evt_physics_research
+	is_triggered_only = yes
+	
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan.0000.a"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.1000 }
+			set_global_flag = aichan_exist
+		}
+	}
+}
+country_event = {
+	id = hk648_aichan.1000
+	title = "hk648_aichan.1000.title"
+	desc = "hk648_aichan.1000.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan3_teriri2
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan.1000.a"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.2000 }
+		}
+	}
+}
+country_event = {
+	id = hk648_aichan.2000
+	title = "hk648_aichan.2000.title"
+	desc = "hk648_aichan.2000.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan4_teriri1
+		room = "honkai_impact_bridge2_room"
+	}
+	show_sound = event_hk648_aichan2000
+	
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan.2000.a"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.3000 }
+		}
+	}
+}
+country_event = {
+	id = hk648_aichan.3000
+	title = "hk648_aichan.3000.title"
+	desc = "hk648_aichan.3000.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan1_teriri2
+		room = "honkai_impact_bridge2_room"
+	}
+	show_sound = event_hk648_aichan3000
+	
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan.3000.a"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.4000 }
+		}
+	}
+}
+country_event = {
+	id = hk648_aichan.4000
+	title = "hk648_aichan.4000.title"
+	desc = "hk648_aichan.4000.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan2_teriri1
+		room = "honkai_impact_bridge2_room"
+	}
+	show_sound = event_hk648_aichan4000
+	
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan.4000.a"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.5000 }
+		}
+	}
+}
+country_event = {
+	id = hk648_aichan.5000
+	title = "hk648_aichan.5000.title"
+	desc = "hk648_aichan.5000.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan1_teriri2
+		room = "honkai_impact_bridge2_room"
+	}
+	show_sound = event_hk648_aichan5000
+	
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan.5000.a"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.0001 }
+		}
+	}
+}
+
+#召唤爱酱#
+country_event = {
+	id = hk648_aichan.0001
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+	}
+	
+	immediate = {
+		set_country_flag = aichan_lv1
+		create_country = {
+			name = "NAME_Aichan"
+			type = aichan
+			flag = {
+				icon= {
+					category = "tm"
+					file = "flag_ai.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors={
+					"green"
+					"green"
+					"null"
+					"null"
+				}
+			}
+		}
+		last_created_country = {
+			establish_communications_no_message = root
+			save_global_event_target_as = aichan_country
+		}
+		create_species = {
+			name = "aichan.1.title"
+			class = VALKYRIES
+			portrait = "ai_hyperion"
+		}
+		last_created_species = {
+			save_global_event_target_as = aichan
+		}
+		#子个体
+		create_species = {
+			name = "aichan.2.title"
+			#class = VALKYRIES
+			class = MACHINE
+			portrait = "aichan_drone1"
+			traits = {
+				trait = trait_hkrobot
+				trait = trait_hkrobot_2
+			}
+		}
+		last_created_species = {
+			save_global_event_target_as = aichan_drone
+		}
+		save_global_event_target_as = aichan_owner
+	}
+}
+
+#####对话#####
+
+#爱酱菜单#
+#判定对话
+country_event = {
+	id = hk648_aichan.0002
+	title = "aichan.1.title"
+	desc = "hk648_aichan.0002.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	hide_window = yes
+	
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	trigger = {
+		from = { is_country_type = aichan }
+		NOT = { 
+			has_country_flag = aichan_conversation 
+			has_country_flag = aichan_talk_code_kill_over
+			has_country_flag = test
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = { has_modifier = aichan_angry }
+			country_event = { id = hk648_aichan.2221 }
+		}
+		else_if = {
+			limit = { has_country_flag = aichan_angry }
+			country_event = { id = hk648_aichan.3221 }
+		}
+		else_if = {
+			limit = {
+				has_ascension_perk = ap_blackai_arm
+				has_ascension_perk = ap_lord_of_war
+				NOT = { 
+					has_country_flag = aichan_mercenary_first_yes
+					has_country_flag = aichan_mercenary_first_no
+					has_country_flag = aichan_mercenary_next_time
+				}
+			}
+			country_event = {
+				id = hk648_aichan.1021
+			}
+		}
+		else_if = {
+			limit = { NOT = { has_country_flag = aichan_full } }
+			random_list = {
+				20 = { 
+					country_event = { id = hk648_aichan.9218 } 
+					set_timed_country_flag = { flag = aichan_full days = 10 }
+				}
+				80 = { country_event = { id = hk648_aichan.1002 } }
+			}
+		}
+		else = { country_event = { id = hk648_aichan.1002 } }
+	}
+	
+}
+
+#爱酱菜单#
+country_event = {
+	id = hk648_aichan.1002
+	title = "aichan.1.title"
+	desc = "hk648_aichan.1002.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	immediate = {
+		set_country_flag = aichan_conversation
+	}
+	
+	after = {
+		remove_country_flag = aichan_conversation
+	}
+	
+	option = { 
+		name = "hk648_aichan.1002.a"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.2002 }
+		}
+	}
+	
+	option = { 
+		name = "hk648_aichan.1002.b"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.0010 }
+		}
+	}
+	
+	option = { 
+		name = "hk648_aichan.1002.e"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.7021 }
+		}
+		trigger = {
+			has_country_flag = aichan_mercenary_first_no
+			NOT = { has_country_flag = aichan_mercenary_first_yes }
+		}
+	}
+	
+	option = { 
+		name = "hk648_aichan.1002.c"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.0018 }
+		}
+		custom_tooltip = aichan.0018.response
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan.1002.d"
+		response_text = "hk648_aichan_bye"
+	}
+}
+
+#领袖选择
+country_event = {
+	id = hk648_aichan.2002
+	title = "aichan.1.title"
+	desc = "hk648_aichan.2002.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	immediate = {
+		set_country_flag = aichan_conversation
+	}
+	
+	after = {
+		remove_country_flag = aichan_conversation
+	}
+	
+	option = { 
+		name = "hk648_aichan.2002.a"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.0005 }
+		}
+		trigger = {
+			NOT = { 
+				has_country_flag = aichan_governor 
+				has_country_flag = aichan_body_no
+			}
+		}
+	}
+	
+	option = { 
+		name = "hk648_aichan.2002.b"
+		hidden_effect = {
+			remove_aichan_governor0 = yes
+		}
+		trigger = {
+			has_country_flag = aichan_governor
+		}
+		response_text = "hk648_aichan_miser"
+	}
+	
+	option = { 
+		name = "hk648_aichan.2002.c"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.0006 }
+		}
+		trigger = {
+			has_ascension_perk = ap_aichan_arm
+			NOT = { 
+				has_country_flag = aichan_scientist 
+				has_country_flag = aichan_body_no
+			}
+		}
+	}
+	
+	option = { 
+		name = "hk648_aichan.2002.d"
+		hidden_effect = {
+			remove_aichan_scientist0 = yes
+		}
+		trigger = {
+			has_country_flag = aichan_scientist 
+		}
+		response_text = "hk648_aichan_miser"
+	}
+	
+	option = { 
+		name = "hk648_aichan.2002.e"
+		hidden_effect = {
+			remove_aichan_admiral0 = yes
+		}
+		trigger = {
+			has_country_flag = aichan_admiral
+		}
+		response_text = "hk648_aichan_miser"
+	}
+	
+	option = { 
+		name = "hk648_aichan.2002.f"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.0003 }
+		}
+	}
+	
+	option = { 
+		name = "hk648_aichan.2002.g"
+		hidden_effect = {
+			remove_aichan_general0 = yes
+		}
+		trigger = {
+			has_country_flag = aichan_general
+		}
+		response_text = "hk648_aichan_miser"
+	}
+	
+	option = { 
+		name = "hk648_aichan.2002.h"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.0007 }
+		}
+	}
+	
+
+	option = { 
+		name = "hk648_aichan.2002.j"
+		trigger = {
+			has_country_flag = aichan_13_start
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = aichan_13_yes }
+				country_event = { id = hk648_aichan.5022 }
+			}
+			else_if = {
+				limit = { has_country_flag = aichan_13_no }
+				country_event = { id = hk648_aichan.3022 }
+			}
+			else_if = {
+				limit = { has_country_flag = aichan_13_progress }
+				country_event = { id = hk648_aichan.4022 }
+			}
+		}
+	}
+	
+	option = { 
+		name = "hk648_aichan.2002.i"
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = { id = hk648_aichan.1002 }
+		}
+	}
+}
+	
+	
+
+#舰队司令选择#
+country_event = {
+	id = hk648_aichan.0003
+	title = "aichan.1.title"
+	desc = "hk648_aichan.0003.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	immediate = {
+		set_country_flag = aichan_conversation
+	}
+	
+	after = {
+		remove_country_flag = aichan_conversation
+	}
+	
+	option = { 
+		name = "hk648_aichan.0003.a"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.0004 }
+		}
+	}
+	
+	option = { 
+		name = "hk648_aichan.0003.b"
+		trigger = {
+			has_ascension_perk = ap_aichan_A1
+			has_country_flag = aichan_body_no
+		}
+		response_text = "hk648_aichan.0003.b.r"
+	}
+	
+	option = { 
+		name = "hk648_aichan.0003.c"
+		trigger = {
+			NOT = { has_ascension_perk = ap_aichan_A1 }
+		}
+		response_text = "hk648_aichan.0003.c.r"
+	}
+	
+	option = { 
+		name = "hk648_aichan.0003.d"
+		trigger = {
+			has_ascension_perk = ap_aichan_A1
+			NOT = { 
+				has_country_flag = aichan_admiral_yes 
+				has_country_flag = aichan_body_no
+			}
+		}
+		response_text = "hk648_aichan.0003.d.r"
+	}
+	
+	option = { 
+		name = "hk648_aichan.0003.e"
+		trigger = {
+			has_ascension_perk = ap_aichan_A1
+			has_country_flag = aichan_admiral_yes
+			NOT = { 
+				has_country_flag = aichan_admiral 
+				has_country_flag = aichan_body_no
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_hyperion_upgrade"
+				NOT = { has_country_flag = aichan_ship_update }
+			}
+		}
+		hidden_effect = {
+			aichan_admiral0 = yes
+		}
+		response_text = "hk648_aichan.0003.e.r"
+	}
+	
+	option = { 
+		name = "hk648_aichan.0003.f"
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = { id = hk648_aichan.1002 }
+		}
+	}
+}
+
+	
+#司令爱酱子个体#
+country_event = {
+	id = hk648_aichan.0004
+	title = "aichan.1.title"
+	desc = "hk648_aichan.0004.desc"
+	is_triggered_only = yes
+	
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	immediate = {
+		set_country_flag = aichan_conversation
+	}
+	
+	after = {
+		remove_country_flag = aichan_conversation
+	}
+	
+	option = { 
+		name = "hk648_aichan.0004.a"
+		response_text = "hk648_aichan.0004.a.r"
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 5000 }
+			}
+		}
+		add_resource = {
+			energy = -5000
+		}
+		hidden_effect = {
+			aichan_admiral = yes
+		}
+	}
+	option = { 
+		name = "hk648_aichan.0004.b"
+		response_text = "hk648_aichan.0004.b.r"
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 50000 }
+			}
+		}
+		add_resource = {
+			energy = -50000
+		}
+		hidden_effect = {
+			aichan_admiral = yes
+			aichan_admiral = yes
+			aichan_admiral = yes
+			aichan_admiral = yes
+			aichan_admiral = yes
+			aichan_admiral = yes
+			aichan_admiral = yes
+			aichan_admiral = yes
+			aichan_admiral = yes
+			aichan_admiral = yes
+		}
+	}
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan.0004.c"
+		response_text = "hk648_aichan_bye"
+	}
+}
+
+#总督
+country_event = {
+	id = hk648_aichan.0005
+	title = "aichan.1.title"
+	desc = "hk648_aichan.0005.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	immediate = {
+		set_country_flag = aichan_conversation
+	}
+	
+	after = {
+		remove_country_flag = aichan_conversation
+	}
+	
+	option = { 
+		name = "hk648_aichan.0005.a"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.1005 }
+		}
+	}
+	
+	option = { 
+		name = "hk648_aichan.0005.b"
+		hidden_effect = {
+			aichan_governor0 = yes
+		}
+		response_text = "hk648_aichan.0005.b.r"
+	}
+	
+	option = { 
+		name = "hk648_aichan.0005.c"
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = { id = hk648_aichan.1002 }
+		}
+	}
+}
+
+#总督爱酱子个体#
+country_event = {
+	id = hk648_aichan.1005
+	title = "aichan.1.title"
+	desc = "hk648_aichan.1005.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan9
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	immediate = {
+		set_country_flag = aichan_conversation
+	}
+	
+	after = {
+		remove_country_flag = aichan_conversation
+	}
+	
+	option = { 
+		name = "hk648_aichan.1005.a"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.2005 }
+		}
+	}
+	
+	option = { 
+		name = "hk648_aichan.1005.b"
+		default_hide_option = yes
+		response_text = "hk648_aichan_ok"
+		hidden_effect = {
+			aichan_governor0 = yes
+		}
+	}
+}
+country_event = {
+	id = hk648_aichan.2005 
+	title = "aichan.1.title"
+	desc = "hk648_aichan.2005.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan8
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	immediate = {
+		set_country_flag = aichan_conversation
+	}
+	
+	after = {
+		remove_country_flag = aichan_conversation
+	}
+	
+	option = { 
+		name = "hk648_aichan.2005.a"
+		default_hide_option = yes
+		response_text = "hk648_aichan_ok"
+		hidden_effect = {
+			aichan_governor0 = yes
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.0006
+	title = "aichan.1.title"
+	desc = "hk648_aichan.0006.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	immediate = {
+		set_country_flag = aichan_conversation
+	}
+	
+	after = {
+		remove_country_flag = aichan_conversation
+	}
+	
+	option = { 
+		name = "hk648_aichan.0006.a"
+		response_text = "hk648_aichan.0006.a.r"
+		hidden_effect = {
+			aichan_scientist0 = yes
+		}
+	}
+	
+	option = { 
+		name = "hk648_aichan.0006.b"
+		default_hide_option = yes
+		response_text = "hk648_aichan_miser"
+	}
+}
+
+#爱酱陆军#
+country_event = {
+	id = hk648_aichan.0007
+	title = "aichan.1.title"
+	desc = "hk648_aichan.0007.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	immediate = {
+		set_country_flag = aichan_conversation
+	}
+	
+	after = {
+		remove_country_flag = aichan_conversation
+	}
+	
+	option = { 
+		name = "hk648_aichan.0007.a"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.1007 }
+		}
+	}
+	
+	option = { 
+		name = "hk648_aichan.0007.b"
+		trigger = {
+			NOT = { has_ascension_perk = ap_blackai_arm }
+		}
+		response_text = "hk648_aichan.0007.b.r"
+	}
+	
+	option = { 
+		name = "hk648_aichan.0007.c"
+		trigger = {
+			has_country_flag = aichan_body_no
+			has_country_flag = aichan_general_yes
+		}
+		response_text = "hk648_aichan.0007.c.r"
+	}
+	
+	option = { 
+		name = "hk648_aichan.0007.d"
+		trigger = {
+			has_ascension_perk = ap_blackai_arm
+			NOT = { 
+				has_country_flag = aichan_general_yes 
+				has_country_flag = aichan_body_no
+			}
+		}
+		response_text = "hk648_aichan.0007.d.r"
+	}
+	
+	option = { 
+		name = "hk648_aichan.0007.e"
+		trigger = {
+			has_ascension_perk = ap_blackai_arm
+			has_country_flag = aichan_general_yes
+			NOT = { 
+				has_country_flag = aichan_general 
+				has_country_flag = aichan_body_no
+			}
+		}
+		hidden_effect = {
+			aichan_general0 = yes
+		}
+		response_text = "hk648_aichan.0007.c.response"
+	}
+	
+	
+	
+	option = { 
+		name = "hk648_aichan.0007.f"
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = { id = hk648_aichan.1002 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.1007
+	title = "aichan.1.title"
+	desc = "hk648_aichan.1007.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	immediate = {
+		set_country_flag = aichan_conversation
+	}
+	
+	after = {
+		remove_country_flag = aichan_conversation
+	}
+	
+	option = { 
+		name = "hk648_aichan.1007.aa"
+		response_text = "hk648_aichan.1007.a.r"
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 2500 }
+			}
+		}
+		add_resource = {
+			energy = -2500
+			}
+		hidden_effect = {
+			aichan_general = yes
+		}
+	}
+	option = { 
+		name = "hk648_aichan.1007.ba"
+		response_text = "hk648_aichan.1007.b.r"
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 25000 }
+			}
+		}
+		add_resource = {
+			energy = -25000
+		}
+		hidden_effect = {
+			aichan_general = yes
+			aichan_general = yes
+			aichan_general = yes
+			aichan_general = yes
+			aichan_general = yes
+			aichan_general = yes
+			aichan_general = yes
+			aichan_general = yes
+			aichan_general = yes
+			aichan_general = yes
+		}
+	}
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan.1007.cc"
+		response_text = "hk648_aichan_bye"
+	}
+}
+
+#休伯利安研究#
+country_event = {
+	id = hk648_aichan.0008
+	title = "aichan.1.title"
+	desc = "hk648_aichan.0008.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	immediate = {
+		set_country_flag = aichan_conversation
+	}
+	
+	after = {
+		remove_country_flag = aichan_conversation
+	}
+	
+	#aichan_admiral#
+	option = {
+		name = "hk648_aichan.0008.aa"
+		capital_scope = {
+			enable_special_project = {
+				name = "aichan_admiral"
+				location = this
+				owner = root
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 50000 }
+			}
+		}
+		add_resource = {
+			energy = -50000
+		}
+		response_text = "hk648_aichan.0008.a.r"
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan.0008.ba"
+		hidden_effect = {
+			set_country_flag = aichan_admiral_no
+		}
+		response_text = "hk648_aichan_miser"
+	}
+}
+
+country_event = {
+	id = hk648_aichan.0009
+	title = "aichan.1.title"
+	desc = "hk648_aichan.0009.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	immediate = {
+		set_country_flag = aichan_admiral_yes
+	}
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan_i_see"
+	}
+}
+
+#二级战舰#
+country_event = {
+	id = hk648_aichan.00092
+	title = "aichan.1.title"
+	desc = "hk648_aichan.00092.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	immediate = {
+		remove_country_flag = aichan_ship_update
+		set_country_flag = aichan_ship_lv2
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan_i_see"
+	}
+}
+
+#三级战舰#
+country_event = {
+	id = hk648_aichan.00093
+	title = "aichan.1.title"
+	desc = "hk648_aichan.00093.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	immediate = {
+		remove_country_flag = aichan_ship_update
+		set_country_flag = aichan_ship_lv3
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan_i_see"
+	}
+}
+
+#四级战舰#
+country_event = {
+	id = hk648_aichan.00094
+	title = "aichan.1.title"
+	desc = "hk648_aichan.00094.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	immediate = {
+		remove_country_flag = aichan_ship_update
+		set_country_flag = aichan_ship_lv4
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan_i_see"
+	}
+}
+
+#爱酱模块#
+country_event = {
+	id = hk648_aichan.0010
+	title = "aichan.1.title"
+	desc = "hk648_aichan.0010.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	immediate = {
+		set_country_flag = aichan_conversation
+	}
+	
+	after = {
+		remove_country_flag = aichan_conversation
+	}
+	
+	option = {
+		name = "hk648_aichan.0010.body"
+		trigger = {
+			has_country_flag = aichan_body_no
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 10000 }
+			}
+		}
+		add_resource = {
+			energy = -10000
+		}
+		hidden_effect = {
+			remove_country_flag = aichan_body_no
+		}
+		response_text = "hk648_aichan.0010.body.r"
+	}
+	
+	#爱酱本体#
+	#二级
+	#lv2
+	option = {
+		name = "hk648_aichan.0010.body_upgrade"
+		trigger = {
+			has_country_flag = aichan_lv1
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 25000 }
+			}
+		}
+		add_resource = {
+			energy = -25000
+		}
+		hidden_effect = {
+			remove_country_flag = aichan_lv1
+			set_country_flag = aichan_lv2
+		}
+		response_text = "hk648_aichan.0010.body_upgrade.r1"
+	}
+	
+	#lv3
+	option = {
+		name = "hk648_aichan.0010.body_upgrade"
+		trigger = {
+			has_country_flag = aichan_lv2
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 75000 }
+			}
+		}
+		add_resource = {
+			energy = -75000
+		}
+		hidden_effect = {
+			set_country_flag = aichan_lv3
+			remove_country_flag = aichan_lv2
+		}
+		response_text = "hk648_aichan.0010.body_upgrade.r2"
+	}
+	
+	
+	
+	#爱酱战舰#
+	#初始战舰
+	option = {
+		name = "hk648_aichan.0010.hyperion"
+		trigger = {
+			has_country_flag = aichan_admiral_no
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 30000 }
+			}
+		}
+		add_resource = {
+			energy = -30000
+		}
+		hidden_effect = {
+			remove_country_flag = aichan_admiral_no
+			capital_scope = {
+				enable_special_project = {
+					name = "aichan_admiral"
+					location = this
+					owner = root
+				}
+			}
+		}
+		response_text = "hk648_aichan.0010.hyperion.r"
+	}
+	
+	#二级战舰
+	option = {
+		name = "hk648_aichan.0010.hyperion_upgrade"
+		trigger = {
+			has_country_flag = aichan_ship_lv1
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 75000 }
+			}
+		}
+		add_resource = {
+			energy = -75000
+		}
+		hidden_effect = {
+			remove_country_flag = aichan_ship_lv1
+			set_country_flag = aichan_ship_update
+			capital_scope = {
+				enable_special_project = {
+					name = "aichan_ship_lv2"
+					location = this
+					owner = root
+				}
+			}
+		}
+		response_text = "hk648_aichan.0010.hyperion_upgrade.r1"
+	}
+	
+	#三级战舰
+	option = {
+		name = "hk648_aichan.0010.hyperion_upgrade"
+		trigger = {
+			has_country_flag = aichan_ship_lv2
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 250000 }
+			}
+		}
+		add_resource = {
+			energy = -250000
+		}
+		hidden_effect = {
+			set_country_flag = aichan_ship_update
+			remove_country_flag = aichan_ship_lv2
+			capital_scope = {
+				enable_special_project = {
+					name = "aichan_ship_lv3"
+					location = this
+					owner = root
+				}
+			}
+		}
+		response_text = "hk648_aichan.0010.hyperion_upgrade.r2"
+	}
+	
+	#爱酱究极战舰
+	#四级战舰
+	option = {
+		name = "hk648_aichan.0010.hyperion_upgrade"
+		trigger = {
+			has_country_flag = aichan_ship_lv3
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 1000000 }
+			}
+		}
+		add_resource = {
+			energy = -1000000
+		}
+		hidden_effect = {
+			set_country_flag = aichan_ship_update
+			remove_country_flag = aichan_ship_lv3
+			capital_scope = {
+				enable_special_project = {
+					name = "aichan_ship_lv4"
+					location = this
+					owner = root
+				}
+			}
+		}
+		response_text = "hk648_aichan.0010.hyperion_upgrade.r2"
+	}
+	
+	#只要你使用爱酱作战就能轻松胜利，但你真的不想看到超几把炫酷的宇宙级打call战舰吗？
+	
+	#爱酱子个体#
+	#lv2
+	option = {
+		name = "hk648_aichan.0010.aichan_individual_upgrade"
+		trigger = {
+			has_country_flag = aichan0_lv1
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 15000 }
+			}
+		}
+		add_resource = {
+			energy = -15000
+		}
+		hidden_effect = {
+			set_country_flag = aichan0_lv2
+			remove_country_flag = aichan0_lv1
+		}
+		response_text = "hk648_aichan.0010.aichan_individual_upgrade.r"
+	}
+	
+	#lv3
+	option = {
+		name = "hk648_aichan.0010.aichan_individual_upgrade"
+		trigger = {
+			has_country_flag = aichan0_lv2
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 35000 }
+			}
+		}
+		add_resource = {
+			energy = -35000
+		}
+		hidden_effect = {
+			set_country_flag = aichan0_lv3
+			remove_country_flag = aichan0_lv2
+		}
+		response_text = "hk648_aichan.0010.aichan_individual_upgrade.r"
+	}
+	
+	option = {
+		name = "hk648_aichan.0010.battlebody"
+		trigger = {
+			has_country_flag = aichan_general_no
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 25000 }
+			}
+		}
+		add_resource = {
+			energy = -25000
+		}
+		hidden_effect = {
+			remove_country_flag = aichan_general_no
+			capital_scope = {
+				enable_special_project = {
+					name = "aichan_general"
+					location = this
+					owner = root
+				}
+			}
+		}
+		response_text = "hk648_aichan.0010.battlebody.r"
+	}
+	
+	option = {
+		trigger = {
+			NOT = { has_technology = tech_divine_key }
+			or = {
+				has_country_flag = r_11th_herrscher_y
+				has_country_flag = r_12th_herrscher_y
+			}
+		}
+		name = "hk648_aichan.0010.divine_key"
+		give_technology = { tech = tech_divine_key  }
+		if = {
+			limit = {
+				NOT = { has_technology = tech_divine_key_11th }
+			}
+			add_research_option = tech_divine_key_11th
+		}
+		if = {
+			limit = {
+				NOT = { has_technology = tech_divine_key_12th }
+			}
+			add_research_option = tech_divine_key_12th
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "no_ap_honkai2"
+				has_ascension_perk = ap_honkai2
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 50000 }
+			}
+		}
+		add_resource = {
+			energy = -50000
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_super_wepons.2004
+			}
+		}
+	}
+	option = {
+		trigger = {
+			NOT = { has_technology = tech_divine_key }
+			or = {
+				has_country_flag = r_11th_herrscher_y
+				has_country_flag = r_11th_herrscher_y
+			}
+		}
+		name = "hk648_aichan.0010.divine_key2"
+		give_technology = { tech = tech_divine_key  }
+		allow = {
+			custom_tooltip = {
+				fail_text = "no_ap_honkai2"
+				has_ascension_perk = ap_honkai2
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_technology = tech_divine_key_11th }
+			}
+			add_research_option = tech_divine_key_11th
+		}
+		if = {
+			limit = {
+				NOT = { has_technology = tech_divine_key_12th }
+			}
+			add_research_option = tech_divine_key_12th
+		}
+		add_modifier = { modifier = "aichan_cost_5x10k" days = 180 }
+		hidden_effect = {
+			country_event = {
+				id = hk648_super_wepons.2006
+			}
+		}
+	}
+	
+	option = {
+		name = "hk648_aichan.0010.divine_key_charge"
+		trigger = {
+			has_country_flag = hk648_divine_key_11th_plus_aichan
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_aichan.0010.divine_key_charge1"
+				#3.4改动
+				any_controlled_ship = {
+					has_component = hk648_divine_key_11th_plus
+					NOT = { has_modifier = hk648_divine_key_11th_plus_buff }
+				}
+			}
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 20000 }
+			}
+		}
+		add_resource = {
+			energy = -20000
+		}
+		every_owned_ship = {
+			if = {
+				limit = {
+					has_component = hk648_divine_key_11th_plus
+					NOT = { has_modifier = hk648_divine_key_11th_plus_buff }
+				}
+				add_modifier = {
+					modifier = hk648_divine_key_11th_plus_buff
+				}
+				remove_ship_flag = hk648_divine_key_11th_plus_ship
+			}
+		}
+		response_text = "Okay boss! No problem boss!"
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan.0010.return"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.1002 }
+		}
+	}
+}
+
+
+#爱酱战体研究#
+country_event = {
+	id = hk648_aichan.0011
+	title = "aichan.1.title"
+	desc = "hk648_aichan.0011.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	#aichan_general#
+	option = {
+		name = "hk648_aichan.0011.aa"
+		capital_scope = {
+			enable_special_project = {
+				name = "aichan_general"
+				location = this
+				owner = root
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 25000 }
+			}
+		}
+		add_resource = {
+			energy = -25000
+		}
+		response_text = "hk648_aichan.0011.a.r1"
+	}
+	
+	immediate = {
+		set_country_flag = aichan_conversation
+	}
+	
+	after = {
+		remove_country_flag = aichan_conversation
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan.0011.ba"
+		hidden_effect = {
+			set_country_flag = aichan_general_no
+		}
+		response_text = "hk648_aichan.0011.b.r1"
+	}
+}
+#爱酱战体研究完成#
+country_event = {
+	id = hk648_aichan.0012
+	title = "aichan.1.title"
+	desc = "hk648_aichan.0012.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	immediate = {
+		set_country_flag = aichan_general_yes
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan.0012.aa"
+	}
+}
+
+#爱酱死亡判断#
+country_event = {
+	id = hk648_aichan.0013
+	title = "aichan.1.title"
+	desc = "hk648_aichan.0013.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	hide_window = yes
+	
+	trigger = {
+		any_country = { is_country_type = aichan }
+		exists = event_target:aichan_owner
+		event_target:aichan_owner = {
+			OR = {
+				#陆军
+				AND = {
+					has_country_flag = aichan_general
+					NOT = {
+						any_owned_army = { army_type = aichan_army }
+					}
+				}
+				#战舰
+				AND = {
+					has_country_flag = aichan_admiral
+					NOT = { exists = event_target:aichan_warship }
+				}
+				#总督
+				AND = {
+					has_country_flag = aichan_governor
+					NOT = { exists = event_target:aichan_governor }
+				}
+				#科学家
+				AND = {
+					has_country_flag = aichan_scientist
+					NOT = { exists = event_target:aichan_scientist }
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = { has_country_flag = aichan_admiral }
+			country_event = { id = hk648_aichan.0014 }
+		}
+		else_if = {
+			limit = { has_country_flag = aichan_general }
+			country_event = { id = hk648_aichan.0015 }
+		}
+		else_if = {
+			limit = { 
+				OR = { 
+					has_country_flag = aichan_governor
+					has_country_flag = aichan_scientist
+				}
+			}
+			country_event = { id = hk648_aichan.0016 }
+		}
+	}
+}
+
+#爱酱战舰摧毁#
+country_event = {
+	id = hk648_aichan.0014
+	title = "aichan.1.title"
+	desc = "hk648_aichan.0014.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan10
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	immediate = {
+		remove_country_flag = aichan_admiral
+		remove_country_flag = aichan_admiral_yes
+		remove_modifier = aichan_admiral_cost
+		set_country_flag = aichan_admiral_no
+		set_country_flag = aichan_body_no
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan.0014.aa"
+	}
+}
+
+#爱酱陆军摧毁#
+country_event = {
+	id = hk648_aichan.0015
+	title = "aichan.1.title"
+	desc = "hk648_aichan.0015.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan10
+		room = "honkai_aichan_general_destroyed_room"
+	}
+	immediate = {
+		if = {
+			limit = { has_country_flag = aichan_general }
+			event_target:aichan_general = {
+				kill_leader = { show_notification = no } 
+			}
+			remove_country_flag = aichan_general
+		}	
+		remove_country_flag = aichan_general_yes
+		set_country_flag = aichan_general_no
+		set_country_flag = aichan_body_no
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan.0015.aa"
+	}
+}
+
+#爱酱一般领袖死亡#
+country_event = {
+	id = hk648_aichan.0016
+	title = "aichan.1.title"
+	desc = "hk648_aichan.0016.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan10
+		room = "honkai_impact_bridge2_room"
+	}
+	immediate = {
+		remove_country_flag = aichan_governor
+		remove_country_flag = aichan_scientist
+		remove_modifier = leader_trait_aichan2_cost
+		remove_modifier = leader_trait_aichan22_cost
+		remove_modifier = leader_trait_aichan23_cost
+	}
+	
+	option = {
+		name = "hk648_aichan.0016.aa"
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 10000 }
+			}
+		}
+		add_resource = {
+			energy = -10000
+		}
+	}
+	
+	option = {
+		default_hide_option = yes
+		set_country_flag = aichan_body_no
+		name = "hk648_aichan.0016.ba"
+		response_text = "hk648_aichan_miser"
+	}
+}
+
+#科研模块
+country_event = {
+	id = hk648_aichan.0017
+	title = "aichan.1.title"
+	desc = "hk648_aichan.0017.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan.0017.aa"
+	}
+}
+
+#注：18-20序号被闲聊占用，其他事件需从21开始继续
+#表情：  司马脸：1  微笑：2  坏笑：8  怒：9  哭：10  翠绿装：3-5   A1:6   幼爱酱：7
+#目录：
+#智械危机：1-6
+#第四面墙：7-17
+#代码杀：18-28
+#AI为什么要吃饭：29-31
+#爱酱雇佣兵：xx21
+#十三菜菜：xx22
+#聊天菜单#闲聊
+country_event = {
+	id = hk648_aichan.0018
+	title = "aichan.1.title"
+	desc = "hk648_aichan.0018.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "honkai_impact_bridge2_room"
+	}
+	show_sound = event_hk648_aichan0018
+	
+	#智械危机
+	option = {
+		name = "hk648_aichan.0018.omnic_crisis"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.1018 }
+		}
+	}
+	
+	#第四面墙的十倍武器
+	option = {
+		name = "hk648_aichan.0018.tenfold_weapon"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.7018 }
+		}
+		trigger = {
+			OR = { 
+				has_country_flag = aichan_ship_lv4
+				has_country_flag = aichan_ship_lv3
+			}
+			NOT = {
+				has_country_flag = aichan_lv4_over
+				has_country_flag = aichan_lv4_half
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_aichan.0018.tenfold_weapon.a"
+				NOT = { has_country_flag = aichan_lv4_lock }
+			}
+		}
+	}
+	
+	#第四面墙的十倍武器2
+	option = {
+		name = "hk648_aichan.0018.tenfold_weapon"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.5118 }
+			remove_country_flag = aichan_lv4_half
+		}
+		trigger = { 
+			has_country_flag = aichan_lv4_half
+		}
+	}
+	
+	#代码杀
+	option = {
+		name = "hk648_aichan.0018.code_kill"
+		hidden_effect = {
+			country_event = {
+				id = hk648_aichan.8118
+			}
+		}
+		trigger = { 
+			has_country_flag = aichan_lv4_over 
+			NOT = {
+				has_country_flag = aichan_talk_code_kill_save
+				has_country_flag = aichan_talk_code_kill_1
+				has_country_flag = aichan_talk_iron
+				has_country_flag = aichan_talk_code_kill_over
+			}
+		}
+	}
+	
+	#代码杀2
+	option = {
+		name = "hk648_aichan.0018.code_kill"
+		hidden_effect = {
+			country_event = {
+				id = hk648_aichan.1218
+			}
+		}
+		trigger = { has_country_flag = aichan_talk_code_kill_1 }
+	}
+	option = {
+		name = "hk648_aichan.0018.code_kill"
+		hidden_effect = {
+			country_event = {
+				id = hk648_aichan.2218
+			}
+		}
+		trigger = { has_country_flag = aichan_talk_code_kill_save }
+	}
+	
+	#ai为什么要吃饭
+	option = {
+		name = "hk648_aichan.0018.ai_food"
+		hidden_effect = {
+			country_event = {
+				id = hk648_aichan.1318
+			}
+		}
+		trigger = { 
+			has_country_flag = aichan_food 
+			NOT = {
+				has_country_flag = aichan_talk_food_over
+			}
+		}
+	}
+	
+	#结束
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan.0018.end"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.1002 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.1018
+	title = "aichan.1.title"
+	desc = "hk648_aichan.1018.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan8
+		room = "honkai_impact_bridge2_room"
+	}
+	show_sound = event_hk648_aichan1018
+	
+	option = {
+		name = "hk648_aichan.1018.desc.aa"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.2018 }
+		}
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan.1018.desc.ba"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.3018 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.3018
+	title = "aichan.1.title"
+	desc = "hk648_aichan.3018.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan6
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan.2018.desc.aa"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.4018 }
+		}
+	}
+	
+}
+
+country_event = {
+	id = hk648_aichan.2018
+	title = "aichan.1.title"
+	desc = "hk648_aichan.2018.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan6
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan.2018.desc.aa"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.4018 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.4018
+	title = "aichan.1.title"
+	desc = "hk648_aichan.4018.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan2
+		room = "honkai_impact_bridge2_room"
+	}
+	show_sound = event_hk648_aichan4018
+	
+	option = {
+		name = "That's all?"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.5018 }
+		}
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "Indeed, a bit"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.6018 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.5018
+	title = "aichan.1.title"
+	desc = "hk648_aichan.5018.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan9
+		room = "honkai_impact_bridge2_room"
+	}
+	show_sound = event_hk648_aichan5018
+	
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan.5018.aa"
+	}
+}
+
+country_event = {
+	id = hk648_aichan.6018
+	title = "aichan.1.title"
+	desc = "hk648_aichan.6018.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan8
+		room = "honkai_impact_bridge2_room"
+	}
+	show_sound = event_hk648_aichan6018
+	
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan.5018.aa"
+	}
+}
+
+country_event = {
+	id = hk648_aichan.7018
+	title = "aichan.1.title"
+	desc = "hk648_aichan.7018.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan2
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.7018.aa"
+		add_resource = {
+			energy = 50000
+		}
+		hidden_effect = {
+			set_country_flag = aichan_lv4_lock
+			country_event = {
+				id = hk648_aichan.4118
+			}
+		}
+	}
+	
+	option = {
+		name = "hk648_aichan.7018.ba"
+		hidden_effect = {
+			country_event = {
+				id = hk648_aichan.8018
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.8018
+	title = "aichan.1.title"
+	desc = "hk648_aichan.8018.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan8
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.8018.aa"
+		is_dialog_only = yes
+		response_text = "hk648_aichan.8018.a.r1"
+	}
+	
+	option = {
+		name = "hk648_aichan.8018.ba"
+		is_dialog_only = yes
+		response_text = "hk648_aichan.8018.b.r1"
+	}
+	
+	option = {
+		name = "hk648_aichan.8018.ca"
+		hidden_effect = {
+			country_event = {
+				id = hk648_aichan.9018
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.9018
+	title = "aichan.1.title"
+	desc = "hk648_aichan.9018.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan10
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.9018.aa"
+		is_dialog_only = yes
+		response_text = "hk648_aichan.9018.response_texta"
+	}
+	
+	option = {
+		name = "hk648_aichan.9018.ba"
+		hidden_effect = {
+			country_event = {
+				id = hk648_aichan.0118
+			}
+		}
+	}
+	
+	option = {
+		name = "hk648_aichan.9018.ca"
+		hidden_effect = {
+			set_country_flag =aichan_lv4_half
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.0118
+	title = "aichan.1.title"
+	desc = "hk648_aichan.0118.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan8
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.0118.aa"
+		add_resource = {
+			energy = -10000
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 10000 }
+			}
+		}
+		add_modifier = {
+			modifier = hk_stellaris
+		}
+		hidden_effect = {
+			country_event = {
+				id = hk648_aichan.1118
+			}
+		}
+	}
+	
+	option = {
+		name = "hk648_aichan.0118.ba"
+		response_text = "hk648_aichan_miser"
+		hidden_effect = {
+			set_country_flag =aichan_lv4_half
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.1118
+	title = "aichan.1.title"
+	desc = "hk648_aichan.1118.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan2
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.1118.aa"
+		is_dialog_only = yes
+		response_text = "hk648_aichan.1118.response_texta"
+	}
+	
+	option = {
+		name = "hk648_aichan.1118.ba"
+		hidden_effect = {
+			country_event = {
+				id = hk648_aichan.2118
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.2118
+	title = "aichan.1.title"
+	desc = "hk648_aichan.2118.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan8
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.2118.aa"
+		is_dialog_only = yes
+		response_text = "hk648_aichan.2118.response_texta"
+	}
+	option = {
+		name = "hk648_aichan.2118.ba"
+		hidden_effect = {
+			country_event = {
+				id = hk648_aichan.3118
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.3118
+	title = "aichan.1.title"
+	desc = "hk648_aichan.3118.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan2
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.3118.aa"
+		hidden_effect = {
+			country_event = {
+				id = hk648_aichan.7118
+			}
+			set_country_flag = aichan_lv4_over
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.4118
+	title = "aichan.1.title"
+	desc = "hk648_aichan.4118.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan2
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.4118.aa"
+	}
+}
+
+country_event = {
+	id = hk648_aichan.5118
+	title = "aichan.1.title"
+	desc = "hk648_aichan.5118.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan8
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.5118.aa"
+		add_resource = {
+			energy = -10000
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 10000 }
+			}
+		}
+		add_modifier = {
+			modifier = hk_stellaris
+		}
+		hidden_effect = {
+			country_event = { 
+				id = hk648_aichan.1118
+			}
+		}
+	}
+	
+	option = {
+		name = "hk648_aichan.5118.ba"
+		hidden_effect = {
+			country_event = {
+				id = hk648_aichan.6118
+			}
+			set_country_flag = aichan_lv4_half
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.6118
+	title = "aichan.1.title"
+	desc = "hk648_aichan.6118.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan9
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.6118.aa "
+	}
+}
+
+country_event = {
+	id = hk648_aichan.7118
+	title = "aichan.1.title"
+	desc = "hk648_aichan.7118.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan2
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.7118.aa"
+	}
+}
+
+country_event = {
+	id = hk648_aichan.8118
+	title = "aichan.1.title"
+	desc = "hk648_aichan.8118.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan8
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.8118.aa"
+		hidden_effect = {
+			country_event = {
+				id = hk648_aichan.9118
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.9118
+	title = "aichan.1.title"
+	desc = "hk648_aichan.9118.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan2
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.9118.aa"
+		hidden_effect = {
+			country_event = {
+				id = hk648_aichan.0218
+			}
+		}
+	}
+	
+	option = {
+		name = "hk648_aichan.9118.ba"
+		hidden_effect = {
+			set_country_flag = aichan_talk_code_kill_1
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.1218
+	title = "aichan.1.title"
+	desc = "hk648_aichan.1218.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan2
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.0218.aa"
+		hidden_effect =	{
+			remove_country_flag = aichan_talk_code_kill_1
+			country_event = {
+				id = hk648_aichan.0218
+			}
+		}
+	}
+	
+	option = {
+		name = "hk648_aichan.0218.ba"
+	}
+}
+
+country_event = {
+	id = hk648_aichan.0218
+	title = "aichan.1.title"
+	desc = "hk648_aichan.0218.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan2
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.1218.aa"
+		hidden_effect = {
+			set_country_flag = aichan_talk_code_kill_save
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.2218
+	title = "aichan.1.title"
+	desc = "hk648_aichan.2218.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan2
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.2218.aa"
+		hidden_effect = {
+			remove_country_flag = aichan_talk_code_kill_save
+			country_event = {
+				id = hk648_aichan.4218
+			}
+		}
+	}
+	
+	option = {
+		name = "hk648_aichan.2218.ba"
+		response_text = "hk648_aichan.2218.b.r1"
+	}
+	
+	option = {
+		name = "hk648_aichan.2218.ca"
+		hidden_effect = {
+			country_event = {
+				id = hk648_aichan.3218
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.3218
+	title = "aichan.1.title"
+	desc = "hk648_aichan.3218.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan9
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.3218.aa"
+		hidden_effect = {
+			remove_country_flag = aichan_talk_code_kill_save
+			set_country_flag = aichan_talk_iron
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.4218
+	title = "aichan.1.title"
+	desc = "hk648_aichan.4218.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan2
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.4218.aa"
+		hidden_effect = {
+			country_event = {
+				id = hk648_aichan.6218
+			}
+		}
+	}
+	
+	option = {
+		name = "hk648_aichan.4218.ba"
+		hidden_effect = {
+			country_event = {
+				id = hk648_aichan.5218
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.5218
+	title = "aichan.1.title"
+	desc = "hk648_aichan.5218.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan8
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	immediate = {
+		aichan_coed_kill = yes
+		set_country_flag = aichan_talk_code_kill_over
+	}
+	
+	option = {
+		name = "hk648_aichan.5218.aa"
+		hidden_effect = {
+			country_event = {
+				id = hk648_aichan.7218
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.6218
+	title = "aichan.1.title"
+	desc = "hk648_aichan.6218.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan2
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	immediate = {
+		aichan_coed_kill = yes
+		set_country_flag = aichan_talk_code_kill_over
+	}
+	
+	option = {
+		name = "hk648_aichan.5218.aa"
+		hidden_effect = {
+			country_event = {
+				id = hk648_aichan.7218
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.7218
+	title = "aichan.1.title"
+	desc = "hk648_aichan.7218.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan2
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.7218.aa"
+	}
+}
+
+country_event = {
+	id = hk648_aichan.8218
+	title = "aichan.1.title"
+	desc = "hk648_aichan.8218.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan5
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	trigger = {
+		from = { is_country_type = aichan }
+		has_country_flag = aichan_talk_code_kill_over
+	}
+	
+	option = {
+		name = "hk648_aichan.7218.aa"
+	}
+}
+
+country_event = {
+	id = hk648_aichan.9218
+	title = "aichan.1.title"
+	desc = "hk648_aichan.9218.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan5
+		room = "honkai_impact_bridge2_room"
+	}
+	show_sound = event_hk648_aichan9218
+	
+	immediate = {
+		set_country_flag = aichan_food 
+	}
+	
+	option = {
+		name = "hk648_aichan.9218.aa"
+		add_resource = {
+			food = 1
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = aichan_fyw
+				}
+				country_event = {
+					id = hk648_aichan.0318
+				}
+			}
+			else = {
+				country_event = {
+					id = hk648_aichan.9218
+				}
+				set_country_flag = aichan_fyw
+			}
+		}
+	}
+	
+	option = {
+		name = "hk648_aichan.9218.ba"
+	}
+}
+
+country_event = {
+	id = hk648_aichan.0318
+	title = "aichan.1.title"
+	desc = "hk648_aichan.0318.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan11
+		room = "honkai_impact_bridge2_room"
+	}
+	show_sound = event_hk648_aichan0318
+	
+	immediate = {
+		remove_country_flag = aichan_fyw
+	}
+	
+	option = {
+		name = "hk648_aichan.9218.ba"
+	}
+}
+
+country_event = {
+	id = hk648_aichan.1318
+	title = "aichan.1.title"
+	desc = "hk648_aichan.1318.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	show_sound = event_aichan_food
+	
+	picture_event_data = {
+		portrait = aichan9
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	immediate = {
+		set_country_flag = aichan_talk_food_over
+	}
+	option = {
+		name = "hk648_aichan.1318.aa"
+	}
+}
+
+#爱酱佣兵#雇佣兵
+country_event = {
+	id = hk648_aichan.1021
+	title = "aichan.1.title"
+	desc = "hk648_aichan.1021.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan2
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.1021.aa"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.2021 }
+		}
+	}
+	
+	option = {
+		name = "hk648_aichan.1021.ba"
+		hidden_effect = {
+			set_timed_country_flag = {	
+				flag = aichan_mercenary_next_time days = 60
+			}
+			has_country_flag = aichan_mercenary_next_time
+		}
+	}
+	
+}
+
+country_event = {
+	id = hk648_aichan.2021
+	title = "aichan.1.title"
+	desc = "hk648_aichan.2021.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan2
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	
+	option = {
+		name = "hk648_aichan.2021.ba"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.3021 }
+		}
+	}
+	
+	option = {
+		default_hide_option = yes
+		name = "hk648_aichan.2021.ca"
+		response_text = "hk648_aichan.2021.c.r"
+		hidden_effect = {
+			set_country_flag = aichan_mercenary_first_no
+		}
+		
+	}
+}
+
+country_event = {
+	id = hk648_aichan.3021
+	title = "aichan.1.title"
+	desc = "hk648_aichan.3021.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan2
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.3021.aa"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.4021 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.4021
+	title = "aichan.1.title"
+	desc = "hk648_aichan.4021.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan9
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.4021.aa"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.5021 }
+		}
+	}
+	
+}
+
+country_event = {
+	id = hk648_aichan.5021
+	title = "aichan.1.title"
+	desc = "hk648_aichan.5021.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan10
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.5021.aa"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.6021 }
+		}
+	}
+	
+	option = {
+		name = "hk648_aichan.5021.ba"
+		response_text = "hk648_aichan.5021.b.r"
+		hidden_effect = {
+			set_country_flag = aichan_mercenary_first_no
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.6021
+	title = "aichan.1.title"
+	desc = "hk648_aichan.6021.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan2
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.6021.aa"
+		add_modifier = {
+			modifier = "aichan_enclave"
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 25000 }
+			}
+		}
+		add_resource = {
+			energy = -25000
+		}
+		custom_tooltip = hk648_aichan.6021.response
+		hidden_effect = {
+			country_event = {
+				id = hk648_aichan.60211
+				days = 540
+				random = 525
+			}
+			country_event = {
+				id = hk648_aichan.60212
+				days = 540
+				random = 525
+			}
+			country_event = {
+				id = hk648_aichan.60213
+				days = 540
+				random = 525
+			}
+			country_event = {
+				id = hk648_aichan.60214
+				days = 540
+				random = 525
+			}
+			country_event = {
+				id = hk648_aichan.60215
+				days = 540
+				random = 525
+			}
+			set_country_flag = aichan_mercenary_first_yes
+		}
+		aichan_Station_create = yes
+	}
+	
+	option = {
+		name = "hk648_aichan.6021.ba"
+		response_text = "hk648_aichan.5021.b.r"
+		hidden_effect = {
+			set_country_flag = aichan_mercenary_first_no
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.60211
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		aichan_mercenary1 = yes
+	}
+}
+country_event = {
+	id = hk648_aichan.60212
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		aichan_mercenary2 = yes
+	}
+}
+country_event = {
+	id = hk648_aichan.60213
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		aichan_mercenary3 = yes
+	}
+}
+country_event = {
+	id = hk648_aichan.60214
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		aichan_mercenary4 = yes
+	}
+}
+country_event = {
+	id = hk648_aichan.60215
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		aichan_mercenary5 = yes
+	}
+}
+
+country_event = {
+	id = hk648_aichan.7021
+	title = "aichan.1.title"
+	desc = "hk648_aichan.7021.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan2
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.6021.aa"
+		add_modifier = {
+			modifier = "aichan_enclave"
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 25000 }
+			}
+		}
+		add_resource = {
+			energy = -25000
+		}
+		custom_tooltip = hk648_aichan.6021.response
+		hidden_effect = {
+			country_event = {
+				id = hk648_aichan.60211
+				days = 540
+				random = 525
+			}
+			country_event = {
+				id = hk648_aichan.60212
+				days = 540
+				random = 525
+			}
+			country_event = {
+				id = hk648_aichan.60213
+				days = 540
+				random = 525
+			}
+			country_event = {
+				id = hk648_aichan.60214
+				days = 540
+				random = 525
+			}
+			country_event = {
+				id = hk648_aichan.60215
+				days = 540
+				random = 525
+			}
+			set_country_flag = aichan_mercenary_first_yes
+		}
+		aichan_Station_create = yes
+	}
+	
+	option = {
+		name = "hk648_aichan.6021.ba"
+		response_text = "hk648_aichan.5021.b.r"
+		hidden_effect = {
+			set_country_flag = aichan_mercenary_first_no
+		}
+	}
+}
+
+#第一次分红
+country_event = {
+	id = hk648_aichan.8021
+	title = "aichan.1.title"
+	desc = "hk648_aichan.8021.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan2
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.8021.aa"
+		hidden_effect = {
+			country_event = {
+				id = hk648_aichan.9021
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.9021
+	title = "aichan.1.title"
+	desc = "hk648_aichan.9021.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan2
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.9021.aa"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.0121 }
+		}
+	}
+	
+	option = {
+		#拒绝分红
+		name = "hk648_aichan.9021.ba"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.5121 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.0121
+	title = "aichan.1.title"
+	desc = "hk648_aichan.0121.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan2
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.0121.aa"
+		add_resource = 	{ energy = -15000 }
+		hidden_effect = { 
+			country_event = { id = hk648_aichan.1121 }
+		}
+	}
+	
+	option = {
+		#拒绝分红
+		name = "hk648_aichan.9021.ba"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.5121 }
+		}
+	}
+}
+
+#佣兵分红处理
+country_event = {
+	id = hk648_aichan.1121
+	title = "aichan.1.title"
+	desc = "hk648_aichan.1121.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan2
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		#买断佣兵
+		name = "hk648_aichan.1121.aa"
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 100000 }
+			}
+		}
+		add_resource = 	{ energy = -100000 }
+	}
+	
+	option = {
+		#给予分红
+		name = "hk648_aichan.1121.ba"
+		custom_tooltip = hk648_aichan.1121.response
+		hidden_effect = {
+			set_country_flag = aichan_dividend_yes
+		}
+		event_target:aichan_country = {
+			start_situation_aichan_dividends = yes
+		}
+	}
+}
+
+#索要分红
+country_event = {
+	id = hk648_aichan.4121
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { has_country_flag = aichan_pays_back_1 }
+			country_event = { id = hk648_aichan.3121 }
+		}
+		else = {
+			country_event = { id = hk648_aichan.2121 }
+		}
+		event_target:aichan_country = {
+			start_situation_aichan_dividends = yes
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.2121
+	title = "hk648_aichan.2121.title"
+	desc = "hk648_aichan.2121.desc"
+	picture = GFX_evt_physics_research
+	is_triggered_only = yes
+	
+	option = {
+		name = "hk648_aichan.2121.aa"
+		add_resource = { energy = -10000 }
+	}
+	option = {
+		name = "hk648_aichan.2121.ba"
+		add_resource = { energy = -10000 }
+		custom_tooltip = hk648_aichan.2121.response
+		hidden_effect = {
+			set_country_flag = aichan_pays_back_1
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.3121
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		add_resource = { energy = -10000 }
+	}
+}
+
+#拒绝分红
+country_event = {
+	id = hk648_aichan.5121
+	title = "aichan.1.title"
+	desc = "hk648_aichan.5121.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan1
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.5121.aa"
+		hidden_effect = { 
+			country_event = { id = hk648_aichan.6121 }
+		}
+	}
+	
+	option = {
+		name = "hk648_aichan.5121.ba"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.7121 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.6121
+	title = "aichan.1.title"
+	desc = "hk648_aichan.6121.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan9
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.6121.aa"
+		add_resource = 	{ energy = -15000 }
+		hidden_effect = {
+			country_event = { id = hk648_aichan.1121 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.7121
+	title = "aichan.1.title"
+	desc = "hk648_aichan.7121.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan8
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.7121.aa"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.6121 }
+		}
+	}
+	
+	option = {
+		name = "hk648_aichan.7121.ba"
+		hidden_effect = {
+			set_country_flag = situation_aichan_dividends_audit
+		}
+		response_text = "hk648_aichan.7121.b.r"
+	}
+}
+
+#爱酱查账
+country_event = {
+	id = hk648_aichan.8121
+	hide_window = yes
+	is_triggered_only = yes
+	
+	
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = situation_aichan_dividends_audit
+			}
+			country_event = {
+				id = hk648_aichan.9121
+				days = 1
+			}
+			remove_country_flag = situation_aichan_dividends_audit
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.9121
+	title = "aichan.1.title"
+	desc = "hk648_aichan.9121.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan_dividends_audit
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.9121.aa"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.0221 }
+		}
+	}
+	
+	option = {
+		name = "hk648_aichan.9121.ba"
+		hidden_effect = {
+			country_event = {id = hk648_aichan.1221 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.0221
+	title = "aichan.1.title"
+	desc = "hk648_aichan.0221.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan9
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	
+	#不给分红
+	option = {
+		name = "hk648_aichan.0221.aa"
+		response_text = "hk648_aichan.0221.a.r"
+		hidden_effect = {
+			set_country_flag = aichan_angry
+			aichan_angry_1 = yes
+			add_modifier = {
+				modifier = aichan_wepon_type_arrearage
+			}
+			if = {
+				limit = { has_ascension_perk = ap_aichan_NO1 }
+				add_modifier = {
+					modifier = anti_ap_aichan_NO1
+				}
+			}
+			if = {
+				limit = { has_ascension_perk = ap_aichan_arm }
+				add_modifier = {
+					modifier = anti_ap_aichan_arm
+				}
+			}
+			if = {
+				limit = { has_ascension_perk = ap_blackai_arm }
+				add_modifier = {
+					modifier = anti_ap_blackai_arm
+				}
+			}
+			if = {
+				limit = { has_ascension_perk = ap_aichan_A1 }
+				add_modifier = {
+					modifier = anti_ap_aichan_A1
+				}
+			}
+			add_modifier = {
+				modifier = aichan_angry
+				days = 360
+			}
+		}
+	}
+	
+	option = {
+		name = "hk648_aichan.0221.ba"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.6121 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.1221
+	title = "aichan.1.title"
+	desc = "hk648_aichan.1221.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan8
+		room = "honkai_impact_bridge2_room"
+	}
+	#给爱酱钱
+	option = {
+		name = "hk648_aichan.1221.aa"
+		add_resource = 	{ energy = -15000 }
+		hidden_effect = {
+			country_event = { id = hk648_aichan.1121 }
+		}
+	}
+}
+
+#不给分红后的爱酱通讯
+country_event = {
+	id = hk648_aichan.2221
+	title = "aichan.1.title"
+	desc = "hk648_aichan.2221.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan9
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.2221.aa"
+		response_text = "hk648_aichan.2221.ar"
+	}
+}
+
+country_event = {
+	id = hk648_aichan.3221
+	title = "aichan.1.title"
+	desc = "hk648_aichan.3221.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan9
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.3221.aa"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.4221 }
+		}
+	}
+	
+	option = {
+		name = "hk648_aichan.3221.ba"
+	}
+}
+
+country_event = {
+	id = hk648_aichan.4221
+	title = "aichan.1.title"
+	desc = "hk648_aichan.4221.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan9
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.4221.aa"
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 10000 }
+			}
+		}
+		add_resource = {
+			energy = -10000
+		}
+		hidden_effect = {
+			random_list = {
+				1 = { country_event = { id = hk648_aichan.4221 } }
+				1 = { country_event = { id = hk648_aichan.5221 } }
+			}
+		}
+	}
+	
+	option = {
+		name = "hk648_aichan.3221.ba"
+	}
+}
+
+country_event = {
+	id = hk648_aichan.5221
+	title = "aichan.1.title"
+	desc = "hk648_aichan.5221.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan9
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.5221.aa"
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 10000 }
+			}
+		}
+		add_resource = {
+			energy = -10000
+		}
+		hidden_effect = {
+			random_list = {
+				1 = { country_event = { id = hk648_aichan.6221 } }
+				1 = { country_event = { id = hk648_aichan.5221 } }
+			}
+		}
+	}
+	
+	option = {
+		name = "hk648_aichan.3221.ba"
+	}
+}
+
+country_event = {
+	id = hk648_aichan.6221
+	title = "aichan.1.title"
+	desc = "hk648_aichan.6221.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan9
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.6221.aa"
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 10000 }
+			}
+		}
+		add_resource = {
+			energy = -10000
+		}
+		hidden_effect = {
+			country_event = { id = hk648_aichan.7221 }
+		}
+	}
+	
+	option = {
+		name = "hk648_aichan.3221.ba"
+	}
+}
+
+country_event = {
+	id = hk648_aichan.7221
+	title = "aichan.1.title"
+	desc = "hk648_aichan.7221.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan8
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.7221.aa"
+		hidden_effect = {
+			remove_country_flag = aichan_angry
+			remove_modifier = aichan_wepon_type_arrearage
+			remove_modifier = anti_ap_blackai_arm
+			remove_modifier = anti_ap_aichan_A1
+			remove_modifier = anti_ap_aichan_arm
+			remove_modifier = anti_ap_aichan_NO1
+		}
+	}
+}
+
+#十三菜菜
+
+country_event = {
+	id = hk648_aichan.1022
+	title = "aichan.1.title"
+	desc = "hk648_aichan.1022.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	trigger = {
+		is_ai = no
+		has_global_flag = aichan_exist
+		NOT = { has_country_flag = aichan_13_start }
+	}
+	
+	immediate = {
+		set_country_flag = aichan_13_start
+	}
+	
+	option = {
+		name = "hk648_aichan.1022.aa"
+		add_resource = { energy = 10000 }
+		custom_tooltip = hk648_aichan.1022.a.r
+		response_text = "hk648_aichan.1022.a.response"
+		hidden_effect {
+			set_country_flag = aichan_13_progress
+			if = {
+				limit = { has_modifier = signets_of_deliverance_a }
+				remove_modifier = signets_of_deliverance_a
+				country_event = { 
+					id = hk648_aichan.6022 
+					days = 360
+				}
+			}
+			if = {
+				limit = { has_modifier = signets_of_deliverance_b }
+				remove_modifier = signets_of_deliverance_b
+				country_event = { 
+					id = hk648_aichan.7022 
+					days = 360
+				}
+			}
+			if = {
+				limit = { has_modifier = signets_of_decimation_a }
+				remove_modifier = signets_of_decimation_a
+				country_event = { 
+					id = hk648_aichan.8022 
+					days = 360
+				}
+			}
+			if = {
+				limit = { has_modifier = signets_of_reverie_a }
+				remove_modifier = signets_of_reverie_a
+				country_event = { 
+					id = hk648_aichan.9022 
+					days = 360
+				}
+			}
+			country_event = {
+				id = hk648_aichan.2022
+				days = 360
+			}
+		}
+	}
+	
+	option = {
+		name = "hk648_aichan.1022.ba"
+		hidden_effect = { set_country_flag = aichan_13_no }
+		response_text = "hk648_aichan.1022.b.response"
+	}
+}
+
+country_event = {
+	id = hk648_aichan.6022
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		add_modifier = { modifier = signets_of_deliverance_a }
+	}
+}
+country_event = {
+	id = hk648_aichan.7022
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		add_modifier = { modifier = signets_of_deliverance_b }
+	}
+}
+country_event = {
+	id = hk648_aichan.8022
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		add_modifier = { modifier = signets_of_decimation_a }
+	}
+}
+country_event = {
+	id = hk648_aichan.9022
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		add_modifier = { modifier = signets_of_reverie_a }
+	}
+}
+
+country_event = {
+	id = hk648_aichan.2022
+	title = "aichan.1.title"
+	desc = "hk648_aichan.2022.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.2022.aa"
+		response_text = "hk648_aichan.2022.a.response_text"
+		custom_tooltip = hk648_aichan.2022.a.r
+		hidden_effect = {
+			set_country_flag = aichan_13_yes
+			remove_country_flag = aichan_13_progress
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.3022
+	title = "aichan.1.title"
+	desc = "hk648_aichan.3022.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.3022.aa"
+		response_text = "hk648_aichan.1022.a.response"
+		custom_tooltip = hk648_aichan.1022.a.r
+		add_resource = { energy = 10000 }
+		hidden_effect = {
+			set_country_flag = aichan_13_progress
+			if = {
+				limit = { has_modifier = signets_of_deliverance_a }
+				remove_modifier = signets_of_deliverance_a
+				country_event = { 
+					id = hk648_aichan.6022 
+					days = 360
+				}
+			}
+			if = {
+				limit = { has_modifier = signets_of_deliverance_b }
+				remove_modifier = signets_of_deliverance_b
+				country_event = { 
+					id = hk648_aichan.7022 
+					days = 360
+				}
+			}
+			if = {
+				limit = { has_modifier = signets_of_decimation_a }
+				remove_modifier = signets_of_decimation_a
+				country_event = { 
+					id = hk648_aichan.8022 
+					days = 360
+				}
+			}
+			if = {
+				limit = { has_modifier = signets_of_reverie_a }
+				remove_modifier = signets_of_reverie_a
+				country_event = { 
+					id = hk648_aichan.9022 
+					days = 360
+				}
+			}
+			country_event = {
+				id = hk648_aichan.2022
+				days = 360
+			}
+		}
+	}
+	
+	option = {
+		name = "hk648_aichan.3022.ba"
+		#response_text = "hk648_aichan.3022.b.response_text"
+		hidden_effect = {
+			country_event = { id = hk648_aichan.30221 }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.30221
+	title = "aichan.1.title"
+	desc = "hk648_aichan.30221.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan9
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.30221.aa"
+	}
+	
+}
+
+country_event = {
+	id = hk648_aichan.4022
+	title = "aichan.1.title"
+	desc = "hk648_aichan.4022.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.4022.aa"
+	}
+}
+
+#十三菜菜的菜单
+country_event = {
+	id = hk648_aichan.5022
+	title = "aichan.1.title"
+	desc = "hk648_aichan.5022.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:aichan
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.5022.aa"
+		trigger = { 
+			OR = {	
+				has_modifier = signets_of_deliverance_a 
+				has_modifier = signets_of_deliverance_b
+			}
+		}
+		hidden_effect = {
+			create_aichan_13_01 = yes
+			country_event = {
+				id = hk648_aichan.1122
+			}
+		}
+		add_resource = { energy = -25000 }
+		allow = {
+			custom_tooltip = {
+				fail_text = "aichan_13_01_alive"
+				NOT = { exists = event_target:aichan_13_01 }
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 25000 } 
+			}
+		}
+	}
+	
+	option = {
+		name = "hk648_aichan.5022.fa"
+		trigger = { has_modifier = signets_of_decimation_a  }
+		hidden_effect = {
+			create_aichan_13_06 = yes
+			country_event = {
+				id = hk648_aichan.1222
+			}
+		}
+		add_resource = { energy = -25000 }
+		allow = {
+			custom_tooltip = {
+				fail_text = "aichan_13_06_alive"
+				NOT = { exists = event_target:aichan_13_06 }
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 25000 } 
+			}
+		}
+	}
+	
+	option = {
+		name = "hk648_aichan.5022.ma"
+		trigger = { has_modifier = signets_of_reverie_a  }
+		hidden_effect = {
+			create_aichan_13_13 = yes
+			country_event = {
+				id = hk648_aichan.1322
+			}
+		}
+		add_resource = { energy = -25000 }
+		allow = {
+			custom_tooltip = {
+				fail_text = "aichan_13_13_alive"
+				NOT = { exists = event_target:aichan_13_13 }
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = "hk648_energy_shortage"
+				resource_stockpile_compare = { resource = energy value >= 25000 } 
+			}
+		}
+	}
+	
+	option = {
+		name = "hk648_aichan.5022.na"
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = { id = hk648_aichan.2002 }
+		}
+	}
+}
+
+#6022~9022被占用，从1122开始
+
+country_event = {
+	id = hk648_aichan.1122
+	title = "aichan.1.title"
+	desc = "hk648_aichan.1122.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan0_aichan011
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.1122.aa"
+		hidden_effect = {
+			country_event = {
+				id = hk648_aichan.1422
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.1222
+	title = "aichan.1.title"
+	desc = "hk648_aichan.1222.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan0_aichan061
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.1222.aa"
+		hidden_effect = {
+			country_event = {
+				id = hk648_aichan.1522
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.1322
+	title = "aichan.1.title"
+	desc = "hk648_aichan.1322.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan0_aichan131
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.1322.aa"
+		hidden_effect = {
+			country_event = {
+				id = hk648_aichan.1622
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_aichan.1422
+	title = "aichan.1.title"
+	desc = "hk648_aichan.1422.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan1_aichan010
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.1422.aa"
+	}
+}
+
+country_event = {
+	id = hk648_aichan.1522
+	title = "aichan.1.title"
+	desc = "hk648_aichan.1522.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan1_aichan060
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.1522.aa"
+	}
+}
+
+country_event = {
+	id = hk648_aichan.1622
+	title = "aichan.1.title"
+	desc = "hk648_aichan.1622.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = aichan1_aichan130
+		room = "honkai_impact_bridge2_room"
+	}
+	
+	option = {
+		name = "hk648_aichan.1622.aa"
+	}
+}

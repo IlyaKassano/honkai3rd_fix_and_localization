@@ -1,0 +1,912 @@
+namespace= hk648_time3
+
+country_event = {
+	id = hk648_time3.1001
+	title = "A red-haired demon from the Quantum Sea lands in the Eye of the Abyss"
+	desc = "hk648_time3.1001.desc"
+	picture = GFX_evt_alien_propaganda
+	is_triggered_only = yes
+	trigger = { 
+		has_country_flag = time3
+		is_ai = no 
+	}
+	
+	immediate = {
+		#舰长#
+		create_leader = {
+			class = admiral
+			species = VALKYRIES
+			name = "Fourth natural disaster"
+			traits = {
+				trait = leader_trait_captain
+			}
+			skill = 100
+		}
+		last_created_leader = {  
+			set_age = 18
+			set_is_female = no
+			save_global_event_target_as = hk648_captain
+		}
+		set_country_flag = leader_captain
+	}
+	option = {
+		name = "Seize power by force"
+		custom_tooltip = hk648_time3.1001.a.response
+		begin_event_chain = {
+			event_chain = "hk648_captain_usurper"
+			target = this
+		}
+		start_situation = {
+			type = hk648_military_force_situations_1
+			target = root
+		}
+		#capital_scope = {
+		#	enable_special_project = {
+		#		name = "hk648_military_force"
+		#		location = this
+		#		owner = root
+		#	}
+		#}
+		create_captain_forces = yes
+		create_hk648_rebel = yes
+		add_modifier = {
+			modifier = hk648_captain_usurper
+		}
+		
+	}
+	option = {
+		name = "Secret Conversation with Otto"
+		custom_tooltip = hk648_time3.1001.b.response
+		begin_event_chain = {
+			event_chain = "hk648_captain_usurper"
+			target = this
+		}
+		#capital_scope = {
+		#	enable_special_project = {
+		#		name = "hk648_fake_otto1"
+		#		location = this
+		#		owner = root
+		#	}
+		#}
+		start_situation = {
+			type = hk648_fake_otto_situations_1
+			target = root
+		}
+		add_modifier = {
+			modifier = hk648_captain_usurper
+		}
+	}
+	option = {
+		name = "Raiders Teresa"
+		custom_tooltip = hk648_time3.1001.c.response
+		begin_event_chain = {
+			event_chain = "hk648_captain_usurper"
+			target = this
+		}
+		#capital_scope = {
+		#	enable_special_project = {
+		#		name = "hk648_teriri1"
+		#		location = this
+		#		owner = root
+		#	}
+		#}
+		start_situation = {
+			type = hk648_teriri1_1
+			target = root
+		}
+		event_target:teriri = {
+			add_trait = leader_trait_teriri_captain
+		}
+		hidden_effect = {
+			event_target:hk648_captain = {
+				kill_leader = { show_notification = no } 
+			}
+		}
+	}
+	option = {
+		name = "I am the fourth natural disaster!"
+		assign_leader = event_target:hk648_captain
+		end_event_chain = "hk648_captain_usurper"
+		hidden_effect = {
+			random_owned_leader = { 
+				limit = {
+					leader_class = ruler
+				}
+				remove_trait = leader_trait_adaptable
+				remove_trait = leader_trait_stubborn
+				remove_trait = leader_trait_resilient
+				remove_trait = leader_trait_substance_abuser
+				remove_trait = leader_trait_eager      
+				remove_trait = trait_ruler_corvette_focus
+				remove_trait = trait_ruler_destroyer_focus
+				remove_trait = trait_ruler_fortifier
+				remove_trait = trait_ruler_battleship_focus
+				remove_trait = trait_ruler_recruiter
+				remove_trait = trait_ruler_military_pioneer
+				remove_trait = trait_ruler_warlike
+				remove_trait = trait_ruler_world_shaper
+				remove_trait =trait_ruler_home_in_the_sky
+				remove_trait =trait_ruler_industrialist
+				remove_trait =trait_ruler_champion_of_the_people
+				remove_trait=trait_ruler_expansionist
+				remove_trait=trait_ruler_fertility_preacher
+				remove_trait=trait_ruler_investor
+				remove_trait=trait_ruler_space_miner
+				remove_trait=trait_ruler_explorer
+				remove_trait=trait_ruler_eye_for_talent
+				add_trait =leader_trait_captain
+				add_trait = leader_trait_ruler_chosen
+			}
+		}
+	}
+	option = {
+		name = "Cleaners also want to be leaders?"
+		event_target:hk648_captain = {
+			kill_leader = { show_notification = no } 
+		}
+		hidden_effect = {
+			remove_country_flag = time3
+		}
+		end_event_chain = "hk648_captain_usurper"
+	}
+}
+
+country_event = {
+	id = hk648_time3.1002
+	title = "The unexplainable cannibal devil is approaching Anti-Entropy"
+	desc = "hk648_time3.1002.desc"
+	picture = GFX_evt_hk648_time3_1002
+	is_triggered_only = yes
+	trigger = { 
+		has_country_flag = time3
+	}
+	
+	immediate = {
+		capital_scope = {
+			planet_event = {
+				id = hk648_time3.10021
+			}
+		}
+		country_event = {
+			id  = hk648_time3.10022
+			days = 45
+		}
+	}
+	
+	option = {
+		name = "Clean up from the weakest"
+	}
+	
+}
+planet_event = {
+	id = hk648_time3.10021
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		create_hk_rebel1 = yes
+	}
+}
+
+country_event = {
+	id = hk648_time3.10022
+	title = "Unplanned Fleet"
+	desc = "hk648_time3.10022.desc"
+	picture = GFX_evt_hk648_time3_10022
+	is_triggered_only = yes
+	trigger = { 
+		has_country_flag = time3
+	}
+	
+	immediate = {
+		hk_rebel_ship_201 = yes
+	}
+	
+	option = {
+		name = "Make them stop"
+		hidden_effect = {
+			country_event  = {
+				id = hk648_time3.10023
+				days = 60
+			}
+		}
+		add_resource = {
+			energy = 1000
+		}
+	}
+	option = {
+		name = "There is such a good thing?"
+		country_event  = {
+			id = hk648_time3.10024
+			days = 60
+		}
+		add_resource = {
+			energy = 1000
+		}
+	}
+}
+
+country_event = {
+	id = hk648_time3.10023
+	title = "Fleet still under construction"
+	desc = "hk648_time3.10023.desc"
+	picture = GFX_evt_hk648_time3_10023
+	is_triggered_only = yes
+	trigger = { 
+		has_country_flag = time3
+	}
+	
+	immediate = {
+		hk_rebel_ship_202 = yes
+	}
+	
+	option = {
+		name = "Make them look good when it's over"
+		add_resource = {
+			energy = 1500
+		}
+	}
+}
+
+country_event = {
+	id = hk648_time3.10024
+	title = "Delivery of the second batch of ships"
+	desc = "hk648_time3.10024.desc"
+	picture = GFX_evt_hk648_time3_10023
+	is_triggered_only = yes
+	trigger = { 
+		has_country_flag = time3
+	}
+	
+	immediate = {
+		hk_rebel_ship_202 = yes
+	}
+	
+	option = {
+		name = "The more boats for whoring, the better"
+		add_resource = {
+			energy = 500
+		}
+	}
+}
+
+country_event = {
+	id = hk648_time3.1003
+	title = "Anti-entropy has stopped resisting"
+	desc = "hk648_time3.1003.desc"
+	picture = GFX_evt_hk648_time3_1003
+	is_triggered_only = yes
+	trigger = { 
+		has_country_flag = time3
+	}
+	
+	option = {
+		name = "Attack on destiny"
+		capital_scope = {
+			enable_special_project = {
+				name = "hk648_military_force2"
+				location = this
+				owner = root
+			}
+		}
+		capital_scope = {
+			random_owned_pop = {
+				kill_pop = yes
+			}
+		}
+		event_target:einstein = {
+			kill_leader = { show_notification = yes } 
+		}
+		event_target:tesla = {
+			kill_leader = { show_notification = yes } 
+		}
+	}
+	
+}
+
+country_event = {
+	id = hk648_time3.10031
+	title = "Anti-entropy has stopped resisting"
+	desc = "hk648_time3.1003.desc"
+	picture = GFX_evt_hk648_time3_1003
+	is_triggered_only = yes
+	trigger = { 
+		has_country_flag = time3
+	}
+	
+	option = {
+		name = "Attack on destiny"
+		start_situation = {
+			type = hk648_military_force_situations_2
+			target = root
+		}
+		capital_scope = {
+			random_owned_pop = {
+				kill_pop = yes
+			}
+		}
+		event_target:einstein = {
+			kill_leader = { show_notification = yes } 
+		}
+		event_target:tesla = {
+			kill_leader = { show_notification = yes } 
+		}
+	}
+	
+	
+}
+
+country_event = {
+	id = hk648_time3.1004
+	title = "Despicable and shameless robbers entered the headquarters of destiny"
+	desc = "hk648_time3.1004.desc"
+	picture = GFX_evt_hk648_time3_1004
+	is_triggered_only = yes
+	trigger = { 
+		has_country_flag = time3
+	}
+	
+	immediate = {
+		capital_scope = {
+			planet_event = {
+				id = hk648_time3.10041
+			}
+		}
+		hk_rebel_ship = yes
+	}
+	
+	option = {
+		name = "Be sure to punch hard!"
+	}
+	
+}
+planet_event = {
+	id = hk648_time3.10041
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		create_hk_rebel2 = yes
+	}
+}
+
+country_event = {
+	id = hk648_time3.1005
+	title = "Mandate has stopped resisting"
+	desc = "hk648_time3.1005.desc"
+	picture = GFX_evt_hk648_time3_1005
+	is_triggered_only = yes
+	trigger = { 
+		has_country_flag = time3
+	}
+	
+	option = {
+		name = "Attack on the World Serpent"
+		capital_scope = {
+			enable_special_project = {
+				name = "hk648_military_force3"
+				location = this
+				owner = root
+			}
+		}
+		add_modifier = {
+			modifier = hk648_rebel2
+			days = 3600
+		}
+		event_target:yd = {
+			kill_leader = { show_notification = yes } 
+		}
+		event_target:jz = {
+			kill_leader = { show_notification = yes } 
+		}
+	}
+}
+
+country_event = {
+	id = hk648_time3.10051
+	title = "Mandate has stopped resisting"
+	desc = "hk648_time3.1005.desc"
+	picture = GFX_evt_hk648_time3_1005
+	is_triggered_only = yes
+	trigger = { 
+		has_country_flag = time3
+	}
+	
+	option = {
+		name = "Attack on the World Serpent"
+		start_situation = {
+			type = hk648_military_force_situations_3
+			target = root
+		}
+		add_modifier = {
+			modifier = hk648_rebel2
+			days = 3600
+		}
+		event_target:yd = {
+			kill_leader = { show_notification = yes } 
+		}
+		event_target:jz = {
+			kill_leader = { show_notification = yes } 
+		}
+	}
+}
+
+country_event = {
+	id = hk648_time3.1006
+	title = "The Ferryman Attacks the World Serpent"
+	desc = "hk648_time3.1006.desc"
+	picture = GFX_evt_hk648_time3_1006
+	is_triggered_only = yes
+	trigger = { 
+		has_country_flag = time3
+	}
+	
+	option = {
+		name = "Time to sweep Kevin into the dustbin of history"
+	}
+	
+}
+
+country_event = {
+	id = hk648_time3.1007
+	title = "The World Serpent has stopped resisting"
+	desc = "hk648_time3.1007.desc"
+	picture = GFX_evt_hk648_time3_1007
+	is_triggered_only = yes
+	trigger = { 
+		has_country_flag = time3
+	}
+	
+	option = {
+		name = "Bishop succession"
+		capital_scope = {
+			enable_special_project = {
+				name = "hk648_military_force4"
+				location = this
+				owner = root
+			}
+		}
+		capital_scope = {
+			random_owned_pop = {
+				kill_pop = yes
+			}
+		}
+		capital_scope = {
+			random_owned_pop = {
+				kill_pop = yes
+			}
+		}
+		capital_scope = {
+			random_owned_pop = {
+				kill_pop = yes
+			}
+		}
+		add_modifier = {
+			modifier = hk648_rebel3
+			days = 3600
+		}
+	}
+}
+
+country_event = {
+	id = hk648_time3.1007
+	title = "The World Serpent has stopped resisting"
+	desc = "hk648_time3.1007.desc"
+	picture = GFX_evt_hk648_time3_1007
+	is_triggered_only = yes
+	trigger = { 
+		has_country_flag = time3
+	}
+	
+	option = {
+		name = "Bishop succession"
+		capital_scope = {
+			enable_special_project = {
+				name = "hk648_military_force4"
+				location = this
+				owner = root
+			}
+		}
+		capital_scope = {
+			random_owned_pop = {
+				kill_pop = yes
+			}
+		}
+		capital_scope = {
+			random_owned_pop = {
+				kill_pop = yes
+			}
+		}
+		capital_scope = {
+			random_owned_pop = {
+				kill_pop = yes
+			}
+		}
+		add_modifier = {
+			modifier = hk648_rebel3
+			days = 3600
+		}
+	}
+}
+
+country_event = {
+	id = hk648_time3.1008
+	title = "The supreme bishop the archbishop will arrive today to his faithful destiny"
+	desc = "hk648_time3.1008.desc"
+	picture = GFX_evt_hk648_time3_1008
+	is_triggered_only = yes
+	trigger = { 
+		has_country_flag = time3
+	}
+	
+	option = {
+		name = "Political stability"
+		remove_modifier = hk648_captain_usurper
+		assign_leader = event_target:hk648_captain
+		custom_tooltip = hk648_time3.1008.response
+		end_event_chain = "hk648_captain_usurper"
+		hidden_effect = {
+			event_target:teriri = {
+				kill_leader = { show_notification = no } 
+			}
+			random_owned_leader = { 
+				limit = {
+					leader_class = ruler
+				}
+				remove_trait = leader_trait_adaptable
+				remove_trait = leader_trait_stubborn
+				remove_trait = leader_trait_resilient
+				remove_trait = leader_trait_substance_abuser
+				remove_trait = leader_trait_eager      
+				remove_trait = trait_ruler_corvette_focus
+				remove_trait = trait_ruler_destroyer_focus
+				remove_trait = trait_ruler_fortifier
+				remove_trait = trait_ruler_battleship_focus
+				remove_trait = trait_ruler_recruiter
+				remove_trait = trait_ruler_military_pioneer
+				remove_trait = trait_ruler_warlike
+				remove_trait = trait_ruler_world_shaper
+				remove_trait =trait_ruler_home_in_the_sky
+				remove_trait =trait_ruler_industrialist
+				remove_trait =trait_ruler_champion_of_the_people
+				remove_trait=trait_ruler_expansionist
+				remove_trait=trait_ruler_fertility_preacher
+				remove_trait=trait_ruler_investor
+				remove_trait=trait_ruler_space_miner
+				remove_trait=trait_ruler_explorer
+				remove_trait=trait_ruler_eye_for_talent
+				add_trait =leader_trait_captain
+				add_trait = leader_trait_ruler_chosen
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_time3.1009
+	title = "Negotiated development policy"
+	desc = "hk648_time3.1009.desc"
+	picture = GFX_evt_hk648_time3_1009
+	is_triggered_only = yes
+	trigger = { 
+		has_country_flag = time3
+	}
+	
+	
+	option = {
+		name = "Commitment to the development of people's livelihood"
+		random_list = {
+			1 = { country_event = { id = hk648_time3.1011 days = 360} }
+			9 = { 
+				capital_scope = {
+					enable_special_project = {
+						name = "hk648_fake_otto2"
+						location = this
+						owner = root
+					}
+				}
+				add_modifier = {	
+					modifier = hk648_fake_otto_1
+					days = 5400
+				}
+				
+			}
+		}
+	}
+	
+	option = {
+		name = "Emphasis on the threat of the Quantum Sea"
+		random_list = {
+			7 = { country_event = { id = hk648_time3.1011 days = 360} }
+			3 = { 
+				capital_scope = {
+					enable_special_project = {
+						name = "hk648_fake_otto2"
+						location = this
+						owner = root
+					}
+				}
+				add_modifier = {	
+					modifier = hk648_fake_otto_2
+					days = 5400
+				}
+			}
+			
+		}
+	}
+}
+
+country_event = {
+	id = hk648_time3.10091
+	title = "Negotiated development policy"
+	desc = "hk648_time3.1009.desc"
+	picture = GFX_evt_hk648_time3_1009
+	is_triggered_only = yes
+	trigger = { 
+		has_country_flag = time3
+	}
+	
+	
+	option = {
+		name = "Commitment to the development of people's livelihood"
+		random_list = {
+			1 = { country_event = { id = hk648_time3.1011 days = 360} }
+			9 = { 
+				start_situation = {
+					type = hk648_fake_otto_situations_2
+					target = root
+				}
+				add_modifier = {	
+					modifier = hk648_fake_otto_1
+					days = 5400
+				}
+				
+			}
+		}
+	}
+	
+	option = {
+		name = "Emphasis on the threat of the Quantum Sea"
+		random_list = {
+			7 = { country_event = { id = hk648_time3.1011 days = 360} }
+			3 = { 
+				start_situation = {
+					type = hk648_fake_otto_situations_2
+					target = root
+				}
+				add_modifier = {	
+					modifier = hk648_fake_otto_2
+					days = 5400
+				}
+			}
+			
+		}
+	}
+}
+
+country_event = {
+	id = hk648_time3.1010
+	title = "New bishop takes office"
+	desc = "hk648_time3.1010.desc"
+	picture = GFX_evt_hk648_time3_1008
+	is_triggered_only = yes
+	trigger = { 
+		has_country_flag = time3
+	}
+	
+	option = {
+		name = "Make destiny great again!"
+		remove_modifier = hk648_captain_usurper
+		assign_leader = event_target:hk648_captain
+		end_event_chain = "hk648_captain_usurper"
+		hidden_effect = {
+			random_owned_leader = { 
+				limit = {
+					leader_class = ruler
+				}
+				remove_trait = leader_trait_adaptable
+				remove_trait = leader_trait_stubborn
+				remove_trait = leader_trait_resilient
+				remove_trait = leader_trait_substance_abuser
+				remove_trait = leader_trait_eager      
+				remove_trait = trait_ruler_corvette_focus
+				remove_trait = trait_ruler_destroyer_focus
+				remove_trait = trait_ruler_fortifier
+				remove_trait = trait_ruler_battleship_focus
+				remove_trait = trait_ruler_recruiter
+				remove_trait = trait_ruler_military_pioneer
+				remove_trait = trait_ruler_warlike
+				remove_trait = trait_ruler_world_shaper
+				remove_trait =trait_ruler_home_in_the_sky
+				remove_trait =trait_ruler_industrialist
+				remove_trait =trait_ruler_champion_of_the_people
+				remove_trait=trait_ruler_expansionist
+				remove_trait=trait_ruler_fertility_preacher
+				remove_trait=trait_ruler_investor
+				remove_trait=trait_ruler_space_miner
+				remove_trait=trait_ruler_explorer
+				remove_trait=trait_ruler_eye_for_talent
+				add_trait =leader_trait_captain
+				add_trait = leader_trait_ruler_chosen
+			}
+		}
+	}
+}
+country_event = {
+	id = hk648_time3.1011
+	title = "Negotiated development policy"
+	desc = "hk648_time3.1011.desc"
+	picture = GFX_evt_hk648_time3_1009
+	is_triggered_only = yes
+	trigger = { 
+		has_country_flag = time3
+	}
+	option = {
+		name = "Commitment to the development of people's livelihood"
+		random_list = {
+			
+			9 = { 
+				start_situation = {
+					type = hk648_fake_otto_situations_2
+					target = root
+				}
+			}
+			1 = { country_event = { id = hk648_time3.1011 days = 360} }
+		}
+	}
+	
+	option = {
+		name = "Emphasis on the threat of the Quantum Sea"
+		random_list = {
+			
+			3 = { 
+				start_situation = {
+					type = hk648_fake_otto_situations_2
+					target = root
+				}
+			}
+			7 = { country_event = { id = hk648_time3.1011 days = 360} }
+		}
+	}
+}
+
+country_event = {
+	id = hk648_time3.1012
+	title = "Magical girl"
+	desc = "hk648_time3.1012.desc"
+	picture = GFX_evt_hk648_leader.20012
+	is_triggered_only = yes
+	trigger = { 
+		has_country_flag = time3
+	}
+	
+	option = {
+		name = "Theresa is the cutest in the world"
+		capital_scope = {
+			enable_special_project = {
+				name = "hk648_teriri2"
+				location = this
+				owner = root
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hk648_time3.10121
+	title = "Magical girl"
+	desc = "hk648_time3.1012.desc"
+	picture = GFX_evt_hk648_leader.20012
+	is_triggered_only = yes
+	trigger = { 
+		has_country_flag = time3
+	}
+	
+	option = {
+		name = "Theresa is the cutest in the world"
+		start_situation = {
+			type = hk648_teriri1_2
+			target = root
+		}
+	}
+}
+
+country_event = {
+	id = hk648_time3.1013
+	title = "Too many resources"
+	desc = "hk648_time3.1013.desc"
+	picture = GFX_evt_hk648_leader.20012
+	is_triggered_only = yes
+	trigger = { 
+		has_country_flag = time3
+	}
+	
+	option = {
+		name = "I will always support theresa"
+		custom_tooltip = hk648_time3.1013.a.response
+		capital_scope = {
+			enable_special_project = {
+				name = "hk648_teriri3"
+				location = this
+				owner = root
+			}
+		}
+	}
+	option = {
+		name = "I can't get used to Teresa anymore."
+		end_event_chain = "hk648_captain_usurper"
+		add_modifier = {
+			modifier = hk648_teriri_modifier_1
+		}
+		event_target:teriri = {
+			remove_trait = leader_trait_teriri_captain
+		}
+		end_event_chain_counter = {
+			event_chain = "hk648_captain_usurper"
+			target = ROOT
+		}
+	}
+}
+
+country_event = {
+	id = hk648_time3.1014
+	title = "New bishop"
+	desc = "hk648_time3.1014.desc"
+	picture = GFX_evt_hk648_time3_1010
+	is_triggered_only = yes
+	trigger = { 
+		has_country_flag = time3
+	}
+	
+	immediate = {
+		create_leader = {
+			class = admiral
+			species = VALKYRIES
+			name = "Fourth natural disaster"
+			traits = {
+				trait = leader_trait_captain
+			}
+			skill = 100
+		}
+		last_created_leader = {  
+			set_age = 18
+			set_is_female = no
+			save_global_event_target_as = hk648_captain
+		}
+	}
+	
+	option = {
+		name = "Congratulations"
+		assign_leader = event_target:hk648_captain
+		end_event_chain = "hk648_captain_usurper"
+		hidden_effect = {
+			random_owned_leader = { 
+				limit = {
+					leader_class = ruler
+				}
+				remove_trait = leader_trait_adaptable
+				remove_trait = leader_trait_stubborn
+				remove_trait = leader_trait_resilient
+				remove_trait = leader_trait_substance_abuser
+				remove_trait = leader_trait_eager      
+				remove_trait = trait_ruler_corvette_focus
+				remove_trait = trait_ruler_destroyer_focus
+				remove_trait = trait_ruler_fortifier
+				remove_trait = trait_ruler_battleship_focus
+				remove_trait = trait_ruler_recruiter
+				remove_trait = trait_ruler_military_pioneer
+				remove_trait = trait_ruler_warlike
+				remove_trait = trait_ruler_world_shaper
+				remove_trait =trait_ruler_home_in_the_sky
+				remove_trait =trait_ruler_industrialist
+				remove_trait =trait_ruler_champion_of_the_people
+				remove_trait=trait_ruler_expansionist
+				remove_trait=trait_ruler_fertility_preacher
+				remove_trait=trait_ruler_investor
+				remove_trait=trait_ruler_space_miner
+				remove_trait=trait_ruler_explorer
+				remove_trait=trait_ruler_eye_for_talent
+				add_trait =leader_trait_captain
+				add_trait = leader_trait_ruler_chosen
+			}
+		}
+	}
+}

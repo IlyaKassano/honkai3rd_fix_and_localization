@@ -1,0 +1,1589 @@
+#AI Enhancement Program
+namespace = hk648_ainb
+
+#预判
+country_event = {
+	id = hk648_ainb.9999
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+	}
+	
+	immediate = {
+		country_event = {
+			id = hk648_ainb.0
+			days = 2
+		}
+	}
+}
+
+#设定强度#
+country_event = {
+	id = hk648_ainb.0
+	title = "Setting for Honkai Impact 3 intensity level."
+	desc = "hk648_ainb.0.desc"
+	picture = GFX_evt_update
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		has_global_flag = honkai_ai_country_yes
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name = "Zero-level Reinforcement"
+		hidden_effect = {
+			set_global_flag = AINB_0
+			random_country = {
+				limit = { has_origin = origin_ark_moth2 }
+				add_modifier = {
+					modifier = fire_moth_AINB_0
+				}
+			}
+		}
+		custom_tooltip = ainb0.response
+	}
+	option = {
+		name = "Level 1 Reinforcement"
+		hidden_effect = {
+			set_global_flag = AINB_1
+			random_country = {
+				limit = { has_origin = origin_ark_moth2 }
+				add_modifier = {
+					modifier = fire_moth_AINB_1
+				}
+			}
+		}
+		custom_tooltip = ainb1.response
+		country_event = {
+			id = hk648_ainb.2000
+			days = 3600
+		}
+	}
+	option = {
+		name = "Level 2 Reinforcement"
+		hidden_effect = {
+			set_global_flag = AINB_2
+			random_country = {
+				limit = { has_origin = origin_ark_moth2 }
+				add_modifier = {
+					modifier = fire_moth_AINB_2
+				}
+			}
+		}
+		custom_tooltip = ainb2.response
+		country_event = {
+			id = hk648_ainb.2000
+			days = 3600
+		}
+	}
+	option = {
+		name = "Level 3 Reinforcement"
+		hidden_effect = {
+			set_global_flag = AINB_3
+		}
+		custom_tooltip = ainb3.response
+		country_event = {
+			id = hk648_ainb.2000
+			days = 3600
+		}
+	}
+}
+#Intensity setting every ten years
+country_event = {
+	id = hk648_ainb.2000
+	title = "Honkai Impact 3 intensity setting"
+	desc = "hk648_ainb.2000.desc"
+	picture = GFX_evt_update
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		has_global_flag = honkai_ai_country_yes
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name = "I no longer need to change the difficulty level"
+		custom_tooltip = ainb4.response
+	}
+	option = {
+		name = "Level 1 Reinforcement"
+		hidden_effect = {
+			set_global_flag = AINB_1
+			remove_global_flag = AINB_2
+			remove_global_flag = AINB_3
+			random_country = {
+				limit = { has_origin = origin_ark_moth2 }
+				remove_modifier = fire_moth_AINB_0
+				remove_modifier = fire_moth_AINB_1
+				remove_modifier = fire_moth_AINB_2
+				add_modifier = {
+					modifier = fire_moth_AINB_1
+				}
+			}
+		}
+		custom_tooltip = ainb1.response
+		country_event = {
+			id = hk648_ainb.2000
+			days = 3600
+		}
+		
+	}
+	option = {
+		name = "Level 2 Reinforcement"
+		hidden_effect = {
+			set_global_flag = AINB_2
+			remove_global_flag = AINB_1
+			remove_global_flag = AINB_3
+			random_country = {
+				limit = { has_origin = origin_ark_moth2 }
+				remove_modifier = fire_moth_AINB_0
+				remove_modifier = fire_moth_AINB_1
+				remove_modifier = fire_moth_AINB_2
+				add_modifier = {
+					modifier = fire_moth_AINB_2
+				}
+			}
+		}
+		custom_tooltip = ainb2.response
+		country_event = {
+			id = hk648_ainb.2000
+			days = 3600
+		}
+		
+	}
+	option = {
+		name = "Level 3 Reinforcement"
+		hidden_effect = {
+			set_global_flag = AINB_3
+			remove_global_flag = AINB_1
+			remove_global_flag = AINB_2
+			random_country = {
+				limit = { has_origin = origin_ark_moth2 }
+				remove_modifier = fire_moth_AINB_0
+				remove_modifier = fire_moth_AINB_1
+				remove_modifier = fire_moth_AINB_2
+			}
+		}
+		custom_tooltip = ainb3.response
+		country_event = {
+			id = hk648_ainb.2000
+			days = 3600
+		}
+		
+	}
+}
+#Reinforcement Countdown#
+country_event = {
+	id = hk648_ainb.1000
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		country_event = { 
+			id = hk648_ainb.3 
+			days = 10
+		}
+		country_event = { 
+			id = hk648_ainb.6
+			days = 3600
+		}
+		country_event = { 
+			id = hk648_ainb.7
+			days = 7200
+		}
+		#Give the warship a timing point#
+		country_event = {
+			id = hk648_ainb.2009
+			days = 7200
+		}
+		country_event = {
+			id = hk648_ainb.1509
+			days = 5400
+		}
+		country_event = {
+			id = hk648_ainb.1009
+			days = 3600
+		}
+	}
+}
+	
+	
+#Honkai can be strengthened#
+country_event = {
+	id = hk648_ainb.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_authority = auth_schicksal 
+		is_ai = yes
+		NOT = { has_global_flag = AINB_0 } 
+	}
+	
+	immediate = {
+		country_event = { 
+			id = hk648_ainb.9
+			days = 5400
+		}
+		country_event = { 
+			id = hk648_ainb.10
+			days = 5400
+		}
+		country_event = { 
+			id = hk648_ainb.11
+			days = 5400
+		}
+		country_event = { 
+			id = hk648_ainb.11
+			days = 10800
+		}
+		country_event = { 
+			id = hk648_ainb.11
+			days = 18000
+		}
+		country_event = { 
+			id = hk648_ainb.11
+			days = 27000
+		}
+		add_modifier = {
+			modifier = ainb_honkai
+		}
+	}
+}
+
+#Cancel captain#
+country_event = {
+	id = hk648_ainb.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_authority = auth_schicksal 
+		is_ai = yes
+		NOT = { has_country_flag = captain_no }
+	}
+	
+	immediate = {
+		event_target:captain = {
+			kill_leader = { show_notification = no } 
+		}
+		set_country_flag = captain_no
+	}
+}
+
+#Comprehensively strengthen level 1#
+country_event = {
+	id = hk648_ainb.3
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_authority = auth_schicksal
+		NOT = { has_global_flag = AINB_0 } 		
+		is_ai = yes
+	}
+	
+	immediate = {
+		add_modifier = {
+			modifier = ainb_ainb1
+		}
+	}
+}
+
+#Replace Ai Jiang's Ascension#
+#Ten Years#
+country_event = {
+	id = hk648_ainb.6
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_authority = auth_schicksal 
+		is_ai = yes
+		NOT = { has_global_flag = AINB_0 } 
+	}
+	
+	immediate = {
+		add_modifier = {
+			modifier = ainb_ainb4
+		}
+		give_technology = { tech = tech_aichan_tbox1 message = no }
+		give_technology = { tech = tech_aichan_tbox2 message = no }
+		give_technology = { tech = tech_blackai_tbox message = no }
+		give_technology = { tech = tech_aichan_A1 message = no }
+	}
+}
+
+#Replace the Ascension of Stages 1 and 2#
+#Twenty Years#
+country_event = {
+	id = hk648_ainb.7
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_authority = auth_schicksal 
+		is_ai = yes
+		NOT = { has_global_flag = AINB_0 } 
+		NOT = { has_global_flag = AINB_1 } 
+		
+	}
+	immediate = {
+		add_modifier = {
+			modifier = ainb_ainb5
+		}
+		give_technology = { tech = tech_hk648_1 message = no }
+		give_technology = { tech = tech_hk648_2 message = no }
+	}
+}
+#Replace the Stigmata Project and the Quantum Leader#
+#After mid-term five years#
+country_event = {
+	id = hk648_ainb.4
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_authority = auth_schicksal 
+		is_ai = yes
+		mid_game_years_passed > 5
+		NOT = { has_global_flag = AINB_1 }
+		NOT = { has_global_flag = AINB_0 } 
+		NOT = { has_country_flag = ainb_4 } 
+	}
+	
+	immediate = {
+		set_country_flag = ainb_4
+		add_modifier = {
+			modifier = ainb_ainb2
+		}
+		country_event = { id = hk648_leader.2001 }
+		set_country_flag = rhzs_during_the_research
+		set_country_flag = shjh_during_the_research
+		set_country_flag = rhzs_x
+		country_event = { 
+			id = hk648_pop.1999 
+			days = 360
+			random = 180
+		}
+		country_event = { 
+			id = hk648_pop.2999
+			days = 1800
+			random = 360
+		}
+		country_event = { id = hk648_pop.1001 }
+	}
+}
+
+#超限解放#
+#大约四十年发放#
+country_event = {
+	id = hk648_ainb.5
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_authority = auth_schicksal 
+		is_ai = yes
+		end_game_years_passed >= 0
+		NOT = { has_country_flag = ainb_5 } 
+		NOT = { has_global_flag = AINB_0 } 
+		NOT = { has_global_flag = AINB_1 }
+		NOT = { has_global_flag = AINB_2 }
+	}
+	
+	immediate = {
+		add_modifier = {
+			modifier = ainb_ainb3
+		}
+		set_country_flag - ainb_5
+		country_event = { id = hk648_super_wepons.1001 } 
+		add_research_option = tech_hk648_19cx
+		add_research_option = tech_hk648_19ai
+		add_research_option = tech_hk648_zlzj
+		add_research_option = tech_aichan_zlzj
+		add_research_option = tech_hk648_xzy
+		add_research_option = tech_aichan_648
+	}
+}
+
+####给战舰####
+#测试#
+country_event = {
+	id = hk648_ainb.0008
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_authority = auth_schicksal 
+	}
+	
+	immediate = {
+		ai_0 = yes
+		ai_1st_1 = yes
+		ai_1st30_1 = yes
+		ai_1st30_3 = yes
+		ai_2ed_1 = yes
+		ai_3rd_1 = yes
+		ai_4th_1 = yes
+		ai_4th_2 = yes
+		ai_4th_3 = yes
+		ai_5th_1 = yes
+		ai_5th_2 = yes
+		ai_5th_3 = yes
+		ai_6th_3 = yes
+		hk648_titan = yes
+	}
+}
+
+###第一次补给,10K合金###
+country_event = {
+	id = hk648_ainb.1108
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		resource_stockpile_compare = { resource = alloys value >= 20000 }
+		has_authority = auth_schicksal 
+		is_ai = yes
+		mid_game_years_passed < 0
+		has_country_flag = pass_time_10
+		NOT = { 
+			has_global_flag = AINB_0 
+			has_global_flag = AINB_1
+			has_global_flag = AINB_2
+			has_country_flag = pass_time_20
+		}
+	}
+	
+	immediate = {
+		random_list = {
+			1 = { 
+				ai_1st_1 = yes 
+				add_resource = {
+					alloys = -20000
+				}
+			}
+			1 = {
+				add_resource = {
+					alloys = -20000
+				}
+			}
+		}
+	}
+}
+###第二次补给###
+country_event = {
+	id = hk648_ainb.2108
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		resource_stockpile_compare = { resource = alloys value >= 30000 }
+		has_authority = auth_schicksal 
+		is_ai = yes
+		mid_game_years_passed < 0
+		has_country_flag = pass_time_15
+		NOT = { 
+			has_global_flag = AINB_0 
+			has_country_flag = pass_time_20
+		}
+	}
+	
+	immediate = {
+		random_list = {
+			1 = { 
+				ai_2ed_1 = yes 
+				add_resource = {
+					alloys = -40000
+				}
+			}
+			1 = {
+				add_resource = {
+					alloys = -40000
+				}
+			}
+		}
+	}
+}
+###第三次补给###
+country_event = {
+	id = hk648_ainb.3108
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_authority = auth_schicksal 
+		resource_stockpile_compare = { resource = alloys value >= 55000 }
+		is_ai = yes
+		mid_game_years_passed < 0
+		has_country_flag = pass_time_20
+		NOT = { has_global_flag = AINB_0 }
+		used_naval_capacity_percent <= 0.75
+	}
+	
+	immediate = {
+		random_list = {
+			1 = { 
+				ai_3rd_1 = yes 
+				add_resource = {
+					alloys = -55000
+				}
+			}
+			1 = {
+				ai_3rd_1 = yes 
+				add_resource = {
+					alloys = -55000
+				}
+			}
+		}
+	}
+}
+###第四次补给###
+#判断强化等级#
+country_event = {
+	id = hk648_ainb.4008
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_authority = auth_schicksal 
+		resource_stockpile_compare = { resource = alloys value >= 50000 }
+		is_ai = yes
+		mid_game_years_passed >= 0
+		mid_game_years_passed <  20
+	}
+	
+	immediate = {
+		if = {
+			limit = { has_global_flag = AINB_1 }
+			country_event = { id = hk648_ainb.4108 }
+		}
+		else_if = {
+			limit = { has_global_flag = AINB_2 }
+			country_event = { id = hk648_ainb.4208 }
+		}
+		else_if = {
+			limit = { has_global_flag = AINB_3 }
+			country_event = { id = hk648_ainb.4308 }
+		}
+	}
+}
+#一级强化#
+country_event = {
+	id = hk648_ainb.4108
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_authority = auth_schicksal 
+		is_ai = yes
+		used_naval_capacity_percent <= 0.1
+	}
+	
+	immediate = {
+		random_list = {
+			1 = { 
+				ai_4th_1 = yes 
+				add_resource = {
+					alloys = -50000
+				}
+			}
+			1 = {
+				add_resource = {
+					alloys = -50000
+				}
+			}
+		}
+	}
+}
+#二级强化#
+country_event = {
+	id = hk648_ainb.4208
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_authority = auth_schicksal 
+		is_ai = yes
+		used_naval_capacity_percent <= 0.125
+	}
+	
+	immediate = {
+		random_list = {
+			1 = { 
+				ai_4th_2 = yes 
+				add_resource = {
+					alloys = -80000
+				}
+			}
+			1 = {
+				add_resource = {
+					alloys = -80000
+				}
+			}
+		}
+	}
+}
+#三级强化#
+country_event = {
+	id = hk648_ainb.4308
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_authority = auth_schicksal 
+		is_ai = yes
+		used_naval_capacity_percent <= 0.125
+	}
+	
+	immediate = {
+		ai_4th_3 = yes 
+		add_resource = {
+			alloys = -120000
+		}
+	}
+}
+#####第五次补给#####
+#判断强化等级#
+country_event = {
+	id = hk648_ainb.5008
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_authority = auth_schicksal 
+		resource_stockpile_compare = { resource = alloys value >= 80000 }
+		is_ai = yes
+		mid_game_years_passed >= 20
+	}
+	
+	immediate = {
+		if = {
+			limit = { has_global_flag = AINB_1 }
+			country_event = { id = hk648_ainb.5108 }
+		}
+		else_if = {
+			limit = { has_global_flag = AINB_2 }
+			country_event = { id = hk648_ainb.5208 }
+		}
+		else_if = {
+			limit = { has_global_flag = AINB_3 }
+			country_event = { id = hk648_ainb.5308 }
+		}
+	}
+}
+#一级强化#
+country_event = {
+	id = hk648_ainb.5108
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_authority = auth_schicksal 
+		is_ai = yes
+		resource_stockpile_compare = { resource = alloys value >= 80000 }
+		used_naval_capacity_percent <= 0.15
+	}
+	
+	immediate = {
+		random_list = {
+			1 = { 
+				ai_5th_1 = yes 
+				add_resource = {
+					alloys = -80000
+				}
+				country_event = {
+					id = hk648_ainb.5008
+				}
+			}
+			1 = {
+				add_resource = {
+					alloys = -80000
+				}
+			}
+		}
+	}
+}
+#二级强化#
+country_event = {
+	id = hk648_ainb.5208
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_authority = auth_schicksal 
+		resource_stockpile_compare = { resource = alloys value >= 200000 }
+		used_naval_capacity_percent <= 0.2
+		is_ai = yes
+	}
+	
+	immediate = {
+		random_list = {
+			5 = { 
+				ai_5th_2 = yes 
+				add_resource = {
+					alloys = -200000
+				}
+				country_event = {
+					id = hk648_ainb.5008
+				}
+			}
+			2 = {
+				ai_5th_2 = yes 
+				add_resource = {
+					alloys = -200000
+				}
+			}
+		}
+	}
+}
+#三级强化#
+country_event = {
+	id = hk648_ainb.5308
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_authority = auth_schicksal 
+		NOT = {
+			mid_game_years_passed >= 35
+			end_game_years_passed >= 0
+		}
+		is_ai = yes
+		resource_stockpile_compare = { resource = alloys value >= 250000 }
+		used_naval_capacity_percent <= 0.2
+	}
+	
+	immediate = {
+		random_list = {
+			4 = {
+				ai_5th_3 = yes 
+				add_resource = {
+					alloys = -250000
+				}
+				country_event = {
+					id = hk648_ainb.5308
+				}
+			}
+			1 = {
+				ai_5th_3 = yes 
+				add_resource = {
+					alloys = -250000
+				}
+			}
+		}
+	}
+}
+####第六次补给####
+country_event = {
+	id = hk648_ainb.6308
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_authority = auth_schicksal 
+		has_global_flag = AINB_3
+		resource_stockpile_compare = { resource = alloys value >= 350000 }
+		used_naval_capacity_percent <= 0.3
+		is_ai = yes
+		OR = {
+			mid_game_years_passed >= 35
+			end_game_years_passed >= 0
+		}
+	}
+	
+	immediate = {
+		random_list = {
+			4 = {
+				ai_6th_3 = yes 
+				add_resource = {
+					alloys = -350000
+				}
+				country_event = {
+					id = hk648_ainb.6308
+				}
+			}
+			1 = {
+				ai_6th_3 = yes 
+				add_resource = {
+					alloys = -350000
+				}
+			}
+		}
+	}
+}
+#散护卫#
+country_event = {
+	id = hk648_ainb.7308
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_authority = auth_schicksal 
+		resource_stockpile_compare = { resource = alloys value >= 35000 }
+		is_ai = yes
+		mid_game_years_passed >= 25
+		has_country_flag = AINB_3
+	}
+	
+	immediate = {
+		random_list = {
+			1 = { 
+				ai_1st30_3 = yes 
+				add_resource = {
+					alloys = -35000
+				}
+			}
+			1 = { 
+				add_resource = {
+					alloys = -35000
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = hk648_ainb.7108
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_authority = auth_schicksal 
+		resource_stockpile_compare = { resource = alloys value >= 20000 }
+		is_ai = yes
+		mid_game_years_passed >= 0
+		NOT = { has_global_flag = AINB_3 }
+		NOT = { has_global_flag = AINB_0 }
+	}
+	
+	immediate = {
+		random_list = {
+			1 = { 
+				ai_1st30_1 = yes 
+				add_resource = {
+					alloys = -20000
+				}
+			}
+			1 = { 
+				add_resource = {
+					alloys = -20000
+				}
+			}
+		}
+	}
+}
+
+#工程船和科研船#
+country_event = {
+	id = hk648_ainb.8008
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_authority = auth_schicksal 
+		is_ai = yes
+	}
+	
+	immediate = {
+		random_list = {
+			1 = { ai_0 = yes }
+			9 = {}
+		}
+	}
+}
+#陆军#
+country_event = {
+	id = hk648_ainb.9008
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_authority = auth_schicksal 
+		is_ai = yes
+	}
+	
+	immediate = {
+		random_list = {
+			1 = { hk648_titan = yes }
+			9 = {}
+		}
+	}
+}
+
+###时间点###
+#end_game_years_passed >= 0
+#mid_game_years_passed < 0
+#mid_game_years_passed >= 0
+
+country_event = {
+	id = hk648_ainb.1009
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_authority = auth_schicksal 
+		is_ai = yes
+	}
+	
+	immediate = {
+		set_country_flag = pass_time_10
+	}
+}
+country_event = {
+	id = hk648_ainb.1509
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_authority = auth_schicksal 
+		is_ai = yes
+	}
+	
+	immediate = {
+		set_country_flag = pass_time_15
+	}
+}
+country_event = {
+	id = hk648_ainb.2009
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_authority = auth_schicksal 
+		is_ai = yes
+	}
+	
+	immediate = {
+		set_country_flag = pass_time_20
+		set_global_flag = pass_time_20_g
+	}
+}
+
+###AI建筑增加###
+#一级强化#
+planet_event = {
+	id = hk648_ainb.1010
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			has_authority = auth_schicksal 
+			is_ai = yes
+		}
+		NOT = { has_global_flag = AINB_0 }
+		has_global_flag = AINB_1
+	}
+	
+	immediate = {
+		
+		add_district = district_city
+		
+		#移除垃圾建筑
+		remove_building = building_commercial_zone
+		
+		#新增建筑
+		if = {
+			limit = { 
+				num_pops >= 20 
+				NOT = { has_planet_flag = hkr648_yes}
+				free_building_slots >= 2
+			}
+			add_building = building_hkr648
+			add_building = building_hkr648
+			set_planet_flag = hkr648_yes
+		}
+		if = {
+			limit = { 
+				num_pops >= 35 
+				NOT = { has_building = building_hkf648 }
+				NOT = { has_building = building_hkf648648 }
+				free_building_slots >= 1
+			}
+			add_building = building_hkf648
+		}
+		if = {
+			limit = { 
+				num_pops >= 20
+				NOT = { has_building = building_hkc648 }
+				NOT = { has_building = building_hkc648648 }
+				free_building_slots >= 1
+			}
+			add_building = building_hkc648
+		}
+		
+		#替换原版建筑
+		while = { 
+			#五年一次
+			count = 1
+			#凝聚力
+			if = { 
+				limit = { 
+					has_building = building_bureaucratic_1
+				}
+				remove_building = building_bureaucratic_1
+				add_building = building_hkq648
+			}
+			if = { 
+				limit = { 
+					has_building = building_bureaucratic_2
+				}
+				remove_building = building_bureaucratic_2
+				add_building = building_hkq648
+			}
+			if = { 
+				limit = { 
+					has_building = building_bureaucratic_3
+				}
+				remove_building = building_bureaucratic_3
+				add_building = building_hkq648
+			}
+			#科研
+			if = { 
+				limit = { 
+					has_building = building_research_lab_1 
+				}
+				remove_building = building_research_lab_1 
+				add_building = building_hkr648
+			}
+			if = { 
+				limit = { 
+					has_building = building_research_lab_2 
+				}
+				remove_building = building_research_lab_2 
+				add_building = building_hkr648
+			}
+			if = { 
+				limit = { 
+					has_building = building_research_lab_3 
+				}
+				remove_building = building_research_lab_3 
+				add_building = building_hkr648
+			}
+		}
+	}
+}
+
+#二级强化#
+planet_event = {
+	id = hk648_ainb.2010
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			has_authority = auth_schicksal 
+			is_ai = yes
+		}
+		NOT = { has_global_flag = AINB_0 }
+		has_global_flag = AINB_2
+	}
+	
+	immediate = {
+		add_district = district_city
+		add_district = district_city
+		
+		remove_building = building_commercial_zone
+		
+		#升级建筑
+		while = {
+			count = 1
+			if = { 
+				limit = { 
+					has_building = building_hkq648
+				}
+				remove_building = building_hkq648
+				add_building = building_hkq648648
+			}
+			if = { 
+				limit = { 
+					has_building = building_hkr648
+				}
+				remove_building = building_hkr648
+				add_building = building_hkr648648
+			}
+			if = { 
+				limit = { 
+					has_building = building_hkf648
+				}
+				remove_building = building_hkf648
+				add_building = building_hkf648648
+			}
+			if = { 
+				limit = { 
+					has_building = building_hkc648
+				}
+				remove_building = building_hkc648
+				add_building = building_hkc648648
+			}
+		}
+		
+		#替换建筑
+		while = { 
+			#五年两次
+			count = 2
+			#凝聚力
+			if = { 
+				limit = { 
+					has_building = building_bureaucratic_1
+				}
+				remove_building = building_bureaucratic_1
+				add_building = building_hkq648
+			}
+			if = { 
+				limit = { 
+					has_building = building_bureaucratic_2
+				}
+				remove_building = building_bureaucratic_2
+				add_building = building_hkq648
+			}
+			if = { 
+				limit = { 
+					has_building = building_bureaucratic_3
+				}
+				remove_building = building_bureaucratic_3
+				add_building = building_hkq648648
+			}
+			#科研
+			if = { 
+				limit = { 
+					has_building = building_research_lab_1 
+				}
+				remove_building = building_research_lab_1 
+				add_building = building_hkr648
+			}
+			if = { 
+				limit = { 
+					has_building = building_research_lab_2 
+				}
+				remove_building = building_research_lab_2 
+				add_building = building_hkr648
+			}
+			if = { 
+				limit = { 
+					has_building = building_research_lab_3 
+				}
+				remove_building = building_research_lab_3 
+				add_building = building_hkr648648
+			}
+		}
+		
+		#新增建筑
+		if = {
+			limit = { 
+				num_pops >= 15
+				NOT = { has_building = building_hkf648 }
+				NOT = { has_building = building_hkf648648 }
+				free_building_slots >= 1
+			}
+			add_building = building_hkf648
+		}
+		if = {
+			limit = { 
+				num_pops >= 10
+				NOT = { has_building = building_hkc648 }
+				NOT = { has_building = building_hkc648648 }
+				free_building_slots >= 1
+			}
+			add_building = building_hkc648
+		}
+		if = {
+			limit = { 
+				num_pops >= 15 
+				NOT = { has_planet_flag = hkr648_yes}
+				free_building_slots >= 2
+			}
+			add_building = building_hkr648
+			add_building = building_hkr648
+			set_planet_flag = hkr648_yes
+		}
+		if = {
+			limit = { 
+				num_pops >= 25 
+				NOT = { has_planet_flag = hkr648_yes25}
+				free_building_slots >= 2
+			}
+			add_building = building_hkr648
+			add_building = building_hkr648
+			set_planet_flag = hkr648_yes25
+		}
+		if = {
+			limit = { 
+				num_pops >= 40 
+				NOT = { has_planet_flag = hkr648_yes40}
+				free_building_slots >= 2
+			}
+			add_building = building_hkr648
+			add_building = building_hkr648
+			set_planet_flag = hkr648_yes40
+		}
+		if = {
+			limit = { 
+				num_pops >= 55 
+				NOT = { has_planet_flag = hkr648_yes55}
+				free_building_slots >= 2
+			}
+			add_building = building_hkr648
+			add_building = building_hkr648
+			set_planet_flag = hkr648_yes55
+		}
+		if = {
+			limit = { 
+				num_pops >= 70
+				NOT = { has_planet_flag = hkr648_yes70}
+				free_building_slots >= 2
+			}
+			add_building = building_hkr648
+			add_building = building_hkr648
+			set_planet_flag = hkr648_yes70
+		}
+	}
+}
+
+#三级强化#
+planet_event = {
+	id = hk648_ainb.3010
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			has_authority = auth_schicksal 
+			is_ai = yes
+		}
+		
+		NOT = { has_global_flag = AINB_0 }
+		has_global_flag = AINB_3
+	}
+	
+	immediate = {
+		add_district = district_city
+		add_district = district_city
+
+		remove_building = building_commercial_zone
+		
+		#升级
+		while = {
+			count = 2
+			if = { 
+				limit = { 
+					has_building = building_hkq648
+				}
+				remove_building = building_hkq648
+				add_building = building_hkq648648
+			}
+			if = { 
+				limit = { 
+					has_building = building_hkr648
+				}
+				remove_building = building_hkr648
+				add_building = building_hkr648648
+			}
+			if = { 
+				limit = { 
+					has_building = building_hkf648
+				}
+				remove_building = building_hkf648
+				add_building = building_hkf648648
+			}
+			if = { 
+				limit = { 
+					has_building = building_hkc648
+				}
+				remove_building = building_hkc648
+				add_building = building_hkc648648
+			}
+		}
+		
+		#替换
+		while = { 
+			#五年三次
+			count = 3
+			#凝聚力
+			if = { 
+				limit = { 
+					has_building = building_bureaucratic_1
+				}
+				remove_building = building_bureaucratic_1
+				add_building = building_hkq648
+			}
+			if = { 
+				limit = { 
+					has_building = building_bureaucratic_2
+				}
+				remove_building = building_bureaucratic_2
+				add_building = building_hkq648648
+			}
+			if = { 
+				limit = { 
+					has_building = building_bureaucratic_3
+				}
+				remove_building = building_bureaucratic_3
+				add_building = building_hkq648648
+			}
+			#科研
+			if = { 
+				limit = { 
+					has_building = building_research_lab_1 
+				}
+				remove_building = building_research_lab_1 
+				add_building = building_hkr648
+			}
+			if = { 
+				limit = { 
+					has_building = building_research_lab_2 
+				}
+				remove_building = building_research_lab_2 
+				add_building = building_hkr648648
+			}
+			if = { 
+				limit = { 
+					has_building = building_research_lab_3 
+				}
+				remove_building = building_research_lab_3 
+				add_building = building_hkr648648
+			}
+		}
+		
+		#新增
+		if = {
+			limit = { 
+				num_pops >= 10
+				NOT = { has_building = building_hkc648 }
+				NOT = { has_building = building_hkc648648 }
+				free_building_slots >= 1
+			}
+			add_building = building_hkc648
+		}
+		if = {
+			limit = { 
+				num_pops >= 10
+				NOT = { has_building = building_hkf648648 }
+				NOT = { has_building = building_hkf648 }
+				free_building_slots >= 1
+			}
+			add_building = building_hkf648
+		}
+		if = {
+			limit = { 
+				num_pops >= 10 
+				NOT = { has_planet_flag = hkr648_yes}
+				free_building_slots >= 2
+			}
+			add_building = building_hkr648
+			add_building = building_hkr648
+			set_planet_flag = hkr648_yes
+		}
+		if = {
+			limit = { 
+				num_pops >= 20
+				NOT = { has_planet_flag = hkr648_yes20}
+				free_building_slots >= 2
+			}
+			add_building = building_hkr648
+			add_building = building_hkr648
+			set_planet_flag = hkr648_yes20
+		}
+		if = {
+			limit = { 
+				num_pops >= 30 
+				NOT = { has_planet_flag = hkr648_yes30}
+				free_building_slots >= 2
+			}
+			add_building = building_hkr648
+			add_building = building_hkr648
+			set_planet_flag = hkr648_yes30
+		}
+		if = {
+			limit = { 
+				num_pops >= 40 
+				NOT = { has_planet_flag = hkr648_yes40}
+				free_building_slots >= 2
+			}
+			add_building = building_hkr648
+			add_building = building_hkr648
+			set_planet_flag = hkr648_yes40
+		}
+		if = {
+			limit = { 
+				num_pops >= 50 
+				NOT = { has_planet_flag = hkr648_yes50}
+				free_building_slots >= 2
+			}
+			add_building = building_hkr648
+			add_building = building_hkr648
+			set_planet_flag = hkr648_yes50
+		}
+		if = {
+			limit = { 
+				num_pops >= 60 
+				NOT = { has_planet_flag = hkr648_yes60}
+				free_building_slots >= 2
+			}
+			add_building = building_hkr648
+			add_building = building_hkr648
+			set_planet_flag = hkr648_yes60
+		}
+		if = {
+			limit = { 
+				num_pops >= 70 
+				NOT = { has_planet_flag = hkr648_yes70}
+				free_building_slots >= 2
+			}
+			add_building = building_hkr648
+			add_building = building_hkr648
+			set_planet_flag = hkr648_yes70
+		}
+		if = {
+			limit = { 
+				num_pops >= 80 
+				NOT = { has_planet_flag = hkr648_yes80}
+				free_building_slots >= 2
+			}
+			add_building = building_hkr648
+			add_building = building_hkr648
+			set_planet_flag = hkr648_yes80
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ainb.9
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			has_authority = auth_schicksal 
+			is_ai = yes
+			OR = {
+				has_global_flag = AINB_1
+				has_global_flag = AINB_2
+				has_global_flag = AINB_3
+			}
+		}
+	}
+	
+	immediate = {
+		add_modifier = { modifier = ainb_speed }
+	}
+}
+
+country_event = {
+	id = hk648_ainb.10
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			has_authority = auth_schicksal 
+			is_ai = yes
+		}
+	}
+	
+	immediate = {
+		add_modifier = { modifier = ainb_cap }
+	}
+}
+
+#给殖民船#
+country_event = {
+	id = hk648_ainb.11
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			has_authority = auth_schicksal 
+			is_ai = yes
+		}
+	}
+	
+	immediate = {
+		hk648_colonizer = yes
+		hk648_colonizer = yes
+		hk648_colonizer = yes
+		hk648_colonizer = yes
+		hk648_colonizer = yes
+		hk648_colonizer = yes
+		hk648_colonizer = yes
+		hk648_colonizer = yes
+	}
+}
+
+#改回女武神#
+country_event = {
+	id = hk648_ainb.1012
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			has_authority = auth_schicksal 
+			is_ai = yes
+		}
+	}
+	
+	immediate = {
+		every_owned_pop = {
+			species = { save_global_event_target_as = hkai1_species }
+		}
+		change_dominant_species = { species = event_target:hkai1_species }
+		every_owned_pop = {
+			modify_species = {
+				species = this
+				add_trait = trait_hksh
+			}
+			modify_species = {
+				species = this
+				add_trait = trait_rhzs
+			}
+			species = { save_global_event_target_as = hkai2_species }
+		}
+		every_owned_pop = {
+			change_species = owner_species
+		}
+	}
+}
+
+country_event = {
+	id = hk648_ainb.2012
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			has_authority = auth_schicksal 
+			is_ai = yes
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = { has_country_flag = ainb_4 }
+			change_dominant_species = { species = event_target:hkai2_species }
+		}
+		else = {
+			change_dominant_species = { species = event_target:hkai1_species }
+		}
+		every_owned_pop = {
+			change_species = owner_species
+		}
+		every_owned_leader = {
+			change_species = owner_species
+		}
+		every_pool_leader = {
+			change_species = owner_species
+		}
+	}
+}
