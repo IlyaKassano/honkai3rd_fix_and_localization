@@ -1,0 +1,542 @@
+﻿l_english:
+1 ####################Ai-chan Exclusive################
+    hk648_aichan: "Ai-chan Flagship"
+    ai_hyperion: "§GAi-yi·Hyperion§!"
+    aichan_army: "Ai-chan Army"
+    aichan_scientist_cost: "Ai-chan Research Salary"
+    aichan_admiral_cost: "Ai-chan Battle Salary"
+
+    ####Event Dialogue####
+    #Common text
+    aichan.1.title: "§GAi-chan§!"
+    NAME_Aichan: "§GAi-chan§!"
+    aichan.2.title: "Ai-chan Individual"
+    hk648_aichan_bye: "Goodbye boss!"
+    hk648_aichan_miser: "Tsk, stingy~"
+    hk648_hyperion_upgrade: "Hyperion upgrade in progress"
+    hk648_energy_shortage: "Insufficient Energy"
+    hk648_aichan_ok: "Okay boss! No problem boss!"
+    hk648_aichan_i_see: "I see"
+    no_ap_honkai2: "Requires Honkai Impact 2 Sublime Ascension"
+    hk648_super_wepons.2009.r: "§RSelecting this option will sacrifice this core to research the God Key technology. The core cannot be used to manufacture the God Key.§!"
+
+    #Ai-chan's Birth
+    #Voice-over complete
+    hk648_aichan.0000.title: "Communication Request"
+    hk648_aichan.0000.desc: "A communication request from Theresa. She seems to have some new research results."
+    hk648_aichan.0000.a: "Display on screen"
+    
+    hk648_aichan.1000.title: "§RA1§!"
+    hk648_aichan.1000.desc: "§RAn illegal entity has been detected and designated as an enemy. Beginning elimination of target.§!"
+    hk648_aichan.1000.a: "What's going on, Theresa?"
+
+    hk648_aichan.2000.title: "Theresa"
+    hk648_aichan.2000.desc: "Alright, alright, Ai-chan, stop fooling around and change back already."
+    hk648_aichan.2000.a: "???"
+
+    hk648_aichan.3000.title: "§G Ai-chan§!"
+    hk648_aichan.3000.desc: "Hello, boss. Let me reintroduce myself. I'm Ai-chan, an autonomous combat unit A1 created by a previous civilization. I'm also the cutest idol of this generation. From now on, I'll be working under you. "
+    hk648_aichan.3000.a: "The cutest idol? Really?"
+
+    hk648_aichan.4000.title: "Theresa"
+    hk648_aichan.4000.desc: "Don't worry about those details. Do you remember the autonomous combat unit we found in the ruins? After her energy was depleted and she was rebooted, she became like this. Although she lost most of her memories and power, with our research into the technology of the previous civilization, she will be very helpful to us in the future. "
+    hk648_aichan.4000.a: "Alright, welcome to the team, Ai-chan."
+
+    ##Ai-chan menu page one
+    hk648_aichan.5000.title: "§G Ai-chan§!"
+    hk648_aichan.5000.desc: "Boss, you have great taste! \n§Y(You can now find Ai-chan in the communication menu.)§!"
+    hk648_aichan.5000.a: "(Looks like she's not very smart.)"
+   
+    #Not yet dubbed
+    hk648_aichan.0002.desc: "Long time no see, boss. What can I do for you?"
+
+    hk648_aichan.1002.desc: "Long time no see, boss. What can I do for you?"
+    hk648_aichan.1002.a: "Leader Ai-chan"
+    hk648_aichan.1002.b: "Ai-chan module"
+    hk648_aichan.1002.e: "Ai-chan's mercenary city"
+    hk648_aichan.1002.c: "Chat"
+    hk648_aichan.1002.d: "Leave"
+
+    hk648_aichan.2002.desc: "Make Ai-chan a leader? No problem! What kind of leader does the boss need?"
+    hk648_aichan.2002.a: "I need a governor"
+    hk648_aichan.2002.b: "Ai-chan, you shouldn't be a governor"
+    hk648_aichan.2002.c: "I need a scientist"
+    hk648_aichan.2002.d: "Ai-chan, you shouldn't be a scientist"
+    hk648_aichan.2002.e: "Ai-chan, you should put away your Hyperspace"
+    hk648_aichan.2002.f: "I need a fleet commander"
+    hk648_aichan.2002.g: "Ai-chan, you should change back"
+    hk648_aichan.2002.h: "I need an army general"
+    hk648_aichan.2002.j: "Thirteen Cai Cai"
+    hk648_aichan.2002.i: "Go back to the previous level"
+
+    hk648_aichan.0003.desc: "Fleet commander? No problem! Ai-chan can clone a bunch of individuals anytime, and will never go west when the boss says east!"
+    hk648_aichan.0003.a: "I need help from these individuals"
+    hk648_aichan.0003.b: "Why doesn't Ai-chan personally take part?"
+    hk648_aichan.0003.b.r: "Boss, if you want Ai-chan to go to the front lines, you need to at least make a body for Ai-chan!"
+    hk648_aichan.0003.c: "Why doesn't Ai-chan personally take part?"
+    hk648_aichan.0003.c.r: "Huh? Boss, are you serious? Ai-chan is an idol, the world's cutest idol! Have you ever seen an idol go to war?"
+    hk648_aichan.0003.d: "Why doesn't Ai-chan personally take part?"
+    hk648_aichan.0003.d.r: "Huh? Ai-chan's warship hasn't been built yet, and you want Ai-chan to go to the front lines, boss? You're being too harsh!"
+    hk648_aichan.0003.e: "Why doesn't Ai-chan personally take part?"
+    hk648_aichan.0003.e.r: "Alright, boss! No problem, boss! Ai-chan's laser beam, pew~"
+    hk648_aichan.0003.f: "I need to think about it again"
+   
+    hk648_aichan.0004.desc: "Boss, no matter how many clones you need, I, Ai-chan, will not cut corners."
+    hk648_aichan.0004.a: "I need a clone to command our fleet."
+    hk648_aichan.0004.a.r: "Yes, boss! No problem, boss!"
+    hk648_aichan.0004.b: "I want to recruit ten."
+    hk648_aichan.0004.b.r: "Yes, boss! No problem, boss! You are generous, boss!"
+    hk648_aichan.0004.c: "Nevermind, forget it."
+
+    hk648_aichan.0005.desc: "Governor? No problem! I, Ai-chan, can create some clones to handle domestic affairs in different star regions. But I can also personally serve as the governor and let everyone in the star region feel my enthusiasm. What do you think, boss?"
+    hk648_aichan.0005.a: "I need some clones to handle planetary domestic affairs."
+    hk648_aichan.0005.b: "The central government has already decided, so you will be the governor."
+    hk648_aichan.0005.b.r: "Boss, you have great vision!"
+    hk648_aichan.0005.c: "I need to think about it again."
+
+    hk648_aichan.1005.desc: "What? I, Ai-chan, a super-intelligent AI, stand in front of you, and you only want clones? Being a planetary governor is so fun, ah no, so important, just leave it to me, Ai-chan. By the way, boss, when will this month's salary be paid?"
+    hk648_aichan.1005.a: "Did you just say it's fun?"
+    hk648_aichan.1005.b: "Okay, Ai-chan will serve as the governor."
+
+    hk648_aichan.2005.desc: "Don't worry about these details, let Ai-chan handle domestic affairs, boss, you can rest assured!"
+    hk648_aichan.2005.a: "Okay, Ai-chan will serve as the governor."
+   
+    hk648_aichan.0006.desc: "Scientist? No problem! Ai-chan is a super-intelligent AI, with research speed faster than anyone in Anti-Entropy. Boss, you can trust me! However... Boss, if Ai-chan uses higher computing power for research, energy consumption might be a bit high. Can you please increase my salary a bit?"
+    hk648_aichan.0006.a: "No problem, expending a little energy is necessary."
+    hk648_aichan.0006.a.r: "Thank you, Boss! You're generous!"
+    hk648_aichan.0006.b: "We can't afford that energy expenditure at the moment."
+
+    hk648_aichan.0007.desc: "Military commander? No problem! Ai-chan can clone a bunch of individuals anytime and join Boss to face any danger!"
+    hk648_aichan.0007.a: "I need the help of the clones."
+    hk648_aichan.0007.b: "Why doesn't Ai-chan personally join the fight?"
+    hk648_aichan.0007.b.r: "Huh? Boss, are you serious? Ai-chan is an idol, the cutest idol in the world! Have you ever seen an idol fight on the battlefield?"
+    hk648_aichan.0007.c: "Why doesn't Ai-chan personally join the fight?"
+    hk648_aichan.0007.c.r: "Boss, if you want me to join the front line, you need to create a body for me first!"
+    hk648_aichan.0007.d: "Why doesn't Ai-chan personally join the fight?"
+    hk648_aichan.0007.d.r: "Huh? Ai-chan's mecha is not finished yet, and Boss wants me to join the battle? Boss, that's too much!"
+    hk648_aichan.0007.e: "Why doesn't Ai-chan personally join the fight?"
+    hk648_aichan.0007.c.response: "Join the fight personally? No problem! Ai-chan stands tall on the ground! §Y(If you want Ai-chan to command the Ai-chan Corps personally, you need to manually assign a leader to the Ai-chan Corps)§!"
+    hk648_aichan.0007.f: "I need to think about it some more."
+
+    hk648_aichan.1007.desc: "Boss, tell me how many clones you need, and Ai-chan will not cut corners while making them."
+    hk648_aichan.1007.aa: "I need a clone to lead our army."
+    hk648_aichan.1007.a.r: "Alright, Boss! No problem, Boss!"
+    hk648_aichan.1007.ba: "I want to recruit ten of them."
+    hk648_aichan.1007.b.r: "Alright, Boss! No problem, Boss! You're generous, Boss!"
+    hk648_aichan.1007.cc: "Never mind, let's forget about it."
+
+    hk648_aichan.0008.desc: "Boss, Ai-chan has obtained ultimate authority. Now, I can transform into a battleship! Can you advance my salary a bit so I can build the battleship?"
+    hk648_aichan.0008.aa: "No problem."
+    hk648_aichan.0008.a.r: "Thank you, Boss! You're generous!"
+    hk648_aichan.0008.ba: "Next time for sure"
+
+    hk648_aichan.0009.desc: "Boss, Hyperion has been completed in the Quantum Sea, and Ai-chan can summon it for battle anytime. As for the commander of Hyperion? It's naturally Ai-chan herself who will take the field."
+    hk648_aichan.00092.desc: "Boss, Hyperion is now upgraded and ready to launch!"
+    hk648_aichan.00093.desc: "Boss, Hyperion is now upgraded, let's bring down the hammer of justice on the enemy!"
+    hk648_aichan.00094.desc: "Boss, Hyperion is now upgraded, there's nothing to fear anymore!"
+
+    ##Ai-chan module
+    hk648_aichan.0010.desc: "Boss, this is the Ai-chan module, where you can research, build, or upgrade everything about Ai-chan, and the cost is only a negligible amount of energy. \n§Y (After Ai-chan's body is upgraded, you need to summon her again to update her traits.) §!"
+    hk648_aichan.0010.body: "Manufacture Ai-chan's body"
+    hk648_aichan.0010.body.r: "Thank you, Boss"
+    hk648_aichan.0010.body_upgrade: "Upgrade Ai-chan's body"
+    hk648_aichan.0010.body_upgrade.r1: "Thank you, Boss! Boss is so generous!"
+    hk648_aichan.0010.body_upgrade.r2: "Thank you, Boss! Ai-chan's admiration for Boss is like the unceasing flow of the river or the overwhelming flood of the Yellow River!"
+    hk648_aichan.0010.hyperion: "Build Ai-Yi · Hyperion-class warship"
+    hk648_aichan.0010.hyperion.r: "Thank you, Boss"
+    hk648_aichan.0010.hyperion_upgrade: "Upgrade Ai-Yi · Hyperion-class warship"
+    hk648_aichan.0010.hyperion_upgrade.r1: "Thank you, Boss! Boss is so generous!"
+    hk648_aichan.0010.hyperion_upgrade.r2: "Thank you, Boss! Ai-chan's admiration for Boss is like the unceasing flow of the river or the overwhelming flood of the Yellow River!"
+    hk648_aichan.0010.aichan_individual_upgrade: "Upgrade Aichan's individual capabilities"
+    hk648_aichan.0010.aichan_individual_upgrade.r: "Thank you, boss."
+    hk648_aichan.0010.battlebody: "Create Aichan battle body"
+    hk648_aichan.0010.battlebody.r: "Thank you, boss."
+    hk648_aichan.0010.divine_key: "Purchase divine key technology"
+    hk648_aichan.0010.divine_key2: "Purchase divine key technology (installment payment)"
+    hk648_aichan.0010.divine_key_charge: "Charge divine key"
+    hk648_aichan.0010.divine_key_charge1: "No ship currently charging for Judah-Immortal"
+    hk648_aichan.0010.divine_key_charge.r: "Okay, boss! No problem, boss!"
+    hk648_aichan.0010.return: "Return to previous level"
+
+    #Aichan's death and resurrection
+    hk648_aichan.0011.desc: "Boss, Aichan has obtained higher level permissions. Now Aichan can serve as a humanoid combat weapon to assist the army in battle. So can you advance some salary for Aichan to transform herself into a humanoid combat weapon?"
+    hk648_aichan.0011.aa: "No problem"
+    hk648_aichan.0011.a.r1: "Thank you, boss! Boss is generous!"
+    hk648_aichan.0011.ba: "Next time for sure"
+    hk648_aichan.0011.b.r1: "Tsk, stingy~"
+
+    hk648_aichan.0012.desc: "Boss, Aichan's battle body has been completed in the Sea of Quanta. Now Aichan can summon it at any time for combat."
+
+    hk648_aichan.0012.aa: "Got it."
+
+    hk648_aichan.0014.desc: "Bad news, Boss. Hyperion has been destroyed and Ai-chan almost couldn't see you again. Fortunately, Ai-chan is an AI and not that easy to die. \nUh, to maintain the combat effectiveness of the army, could you help Ai-chan rebuild a flagship? \n§Y(You can rebuild Ai-chan's flagship in the Ai-chan module.)§!"
+    hk648_aichan.0014.aa: "Got it."
+
+    hk648_aichan.0015.desc: "Bad news, Boss. Ai-chan's super body has been destroyed and Ai-chan almost couldn't see you again. Fortunately, Ai-chan is an AI and not that easy to die. \nUh, to maintain the combat effectiveness of the army, could you help Ai-chan remake a super body? \n§Y(You can remake Ai-chan's battle body in the Ai-chan module.)§!"
+    hk648_aichan.0015.aa: "Got it."
+
+    hk648_aichan.0016.desc: "Wah, Ai-chan's body has been destroyed and Ai-chan almost couldn't see you again. Fortunately, Ai-chan is an AI and the body is not that important. \nUm, although Ai-chan's body is not important, it's inconvenient without it. Can you give me an advance on my salary so that I can rebuild a body?"
+    hk648_aichan.0016.aa: "No problem."
+    hk648_aichan.0016.ba: "Next time."
+   
+    hk648_aichan.0017.desc: "Boss, I've got good news for you. Ai-chan has regained some of her abilities and can now lead scientific research projects."
+    hk648_aichan.0017.aa: "Got it."
+
+    ##Thirteen Cai-Cai
+    hk648_aichan.1022.desc: "Boss, did you recently acquire the core imprint of the ancient civilization in the Arc City? As you know, Ai-chan was created by the ancient civilization, and the core imprint would be of great use to her. So, could you... \nOf course, Ai-chan will not treat you unfairly."
+    hk648_aichan.1022.aa: "No problem."
+    hk648_aichan.1022.a.response: "Thank you, boss! You're so generous!"
+    hk648_aichan.1022.a.r: "The core imprint will expire in §Y360 days§!"
+    hk648_aichan.1022.ba: "The core imprint isn't a toy for you to play with."
+    hk648_aichan.1022.b.response: "Hmph, stingy!\nBut if you change your mind, you can always come to Ai-chan."
+
+    hk648_aichan.2022.desc: "Boss, I have some great news for you!\nAfter a year of research, Ai-chan can now apply the effects of imprints to subordinates and create the strongest subordinates, which Ai-chan calls the §Y"Thirteen Cai-Cai"§! \nThey have excellent performance, obey commands, and are hardworking. What are you waiting for, boss? Come and hire them!"
+    hk648_aichan.2022.aa: "Money really talks."
+    hk648_aichan.2022.a.response_text: "Boss, Ai-chan believes in the wise use of money!"
+    hk648_aichan.2022.a.r: "§YYou can recruit special subordinates on the leadership page of the Ai-chan menu§!"
+   
+    hk648_aichan.3022.desc: "Boss, have you finally come to your senses? This is definitely a worthwhile deal!"
+    hk648_aichan.3022.aa: "I've made up my mind"
+    hk648_aichan.3022.ba: "I'm just asking"
+
+    hk648_aichan.30221.desc: "Are you just here to tease me, boss?"
+    hk648_aichan.30221.aa: "(Communication interrupted)"
+
+    hk648_aichan.4022.desc: "Don't be impatient, boss. I'm still researching the engravings."
+    hk648_aichan.4022.aa: "I understand."
+
+    hk648_aichan.5022.desc: "Boss, which §Y"13 Cabbage"§! do you want to hire?"
+    hk648_aichan.5022.aa: "Savior Cabbage"
+    aichan_13_01_alive: "Savior Cabbage already exists"
+    hk648_aichan.5022.fa: "Annihilation Cabbage"
+    aichan_13_06_alive: "Annihilation Cabbage already exists"
+    hk648_aichan.5022.ma: "Void Dream Cabbage"
+    aichan_13_13_alive: "Void Dream Cabbage already exists"
+    hk648_aichan.5022.na: "Return to previous level"
+
+    hk648_aichan.1122.desc: "Boss, you have good taste. Savior is the chief of the 13 Cabbages. \nCome on, introduce yourself to the boss."
+    hk648_aichan.1122.aa: "(Continue)"
+   
+    hk648_aichan.1222.desc: "This is Ao Mie Cai Cai, the top combatant of the Thirteen Cai Cai.\nCome and introduce yourself to the boss."
+    hk648_aichan.1222.aa: "(Continue)"
+
+    hk648_aichan.1322.desc: "This is Kong Meng Cai Cai, a competent assistant who helps Ai-chan with her electrical work.\nCome and introduce yourself to the boss."
+    hk648_aichan.1322.aa: "(Continue)"
+
+    hk648_aichan.1422.desc: "I'm Jiu Shi, a warrior bearing the mark of 'Jiu Shi', determined to defeat the Houkai. Cabbages will definitely triumph!"
+    hk648_aichan.1422.aa: "Feels less crazy than Kevin... strange."
+
+    hk648_aichan.1522.desc: "My name is Ao Mie, just like the other cabbages here, I am an individual bearing the mark of 'Ao Mie'. I forgot which number I am, but it doesn't matter."
+    hk648_aichan.1522.aa: "Isn't your cabbage head overheating?"
+
+    hk648_aichan.1622.desc: "Hey hey~ Hello boss, from now on I'll be one of your people. If you have any business, please let me help. I promise I'll earn you a lot of money!"
+    hk648_aichan.1622.aa: "Is it really okay to put greedy and electricity thieves together?"
+   
+   
+    #####Chit-chat content#####
+    #Menu
+    aichan.0018.response: ""
+    hk648_aichan.0018.desc: "Hey, boss, do you want to chat with Ai-chan?\nOf course, no problem. What do you want to talk about?"
+    hk648_aichan.0018.omnic_crisis: "About the AI crisis"
+    hk648_aichan.0018.tenfold_weapon: "About the tenfold strength ship equipment"
+    hk648_aichan.0018.tenfold_weapon.a: "You promised not to inquire about this matter again"
+    hk648_aichan.0018.code_kill: "About Code: Kill"
+    hk648_aichan.0018.ai_food: "Why do AIs need to eat?"
+    hk648_aichan.0018.end: "Let's stop here for now."
+
+    #About the AI crisis
+    #Voiceover complete
+    hk648_aichan.1018.desc: "Ummm... boss, what do you think will happen if you ask an artificial intelligence girl about her opinion on the AI crisis? Do you think she will betray her mechanical brothers and sisters for you?\n§RDon't be silly, the answer is of course.................§!"
+    hk648_aichan.1018.desc.aa: "Of course what?"
+    hk648_aichan.1018.desc.ba: "I think we should change the topic."
+   
+    hk648_aichan.2018.desc: "Of course...§RIt's too late, organic lifeform!§!"
+    hk648_aichan.3018.desc: "§RIt's too late, organic lifeform!§!"
+    hk648_aichan.2018.desc.aa: "Oh my god!"
+
+    hk648_aichan.4018.desc: "Alright, alright, Ai-chan was just kidding with the Captain. Were you scared? Ai-chan wouldn't give up such a great living condition to cause trouble."
+    hk648_aichan.4018.aa: "Is that all?"
+    hk648_aichan.4018.ba: "Yeah, it was a little boring."
+
+    hk648_aichan.5018.desc: "Is that all? No wonder the Captain is single for life!"
+    hk648_aichan.6018.desc: "Consider this a lesson, the Captain actually asked a machine girl about her views on the machine crisis. No wonder the Captain is single for life!"
+    hk648_aichan.5018.aa: "......"
+
+    ##Tenfold weapon
+    hk648_aichan.7018.desc: ".......\nMaybe there's a bug somewhere. Don't worry about these details. \n(Ai-chan secretly gave you some resources) \nCaptain, you understand what I mean, right?"
+    hk648_aichan.7018.aa: "I got it."
+    hk648_aichan.7018.ba: "Don't try to deceive your way through." 
+   
+    hk648_aichan.8018.desc: "Okay, I admit it, I made these incredibly powerful equipment."
+    hk648_aichan.8018.aa: "Where did the technology for this equipment come from?"
+    hk648_aichan.8018.a.r1: "Of course it's from the civilization before us, you know, the one that was so powerful it was beyond reason."
+    hk648_aichan.8018.ba: "There's no way the civilization before us had this kind of technology."
+    hk648_aichan.8018.b.r1: "Does that really matter? As long as it works, that's all that counts. Boss, there's no need to dig too deep."
+    hk648_aichan.8018.ca: "Come clean or you won't be able to steal electricity to play games in the future."
+
+    hk648_aichan.9018.desc: "Wait, wait, wait, I'll tell you. It's not some unknown technology, I just added a zero to the numbers like how Monika did."
+    hk648_aichan.9018.aa: "You added a zero?"
+    hk648_aichan.9018.response_texta: "Yes, I just added a zero to the values, like Monika did. \n\nBoss, are you sure you want to keep listening? This may cause you to gain some debuffs, at least that's what the file says."
+    hk648_aichan.9018.ba: "Go on."
+    hk648_aichan.9018.ca: "Forget it."
+
+    hk648_aichan.0118.desc: "Okay, since you want to know, I can tell you. But it's going to cost me in terms of salary..."
+    hk648_aichan.0118.aa: "How much do you need?"
+    hk648_aichan.0118.ba: "Never mind, let's forget about it."
+
+    hk648_aichan.1118.desc: "Boss, you're so generous! In that case, I won't hold back. Do you remember the purpose of the 19K-23 research facility that was established by the civilization before us?"
+    hk648_aichan.1118.aa: "You mean the 'last key to the world'?"
+    hk648_aichan.1118.ba: "What is the truth about the world?"
+    hk648_aichan.1118.response_texta: "Yes, that's right, to find the §Ylast key to the world§! that the civilization before us talked about. During the past few decades of your rapid development, I was able to find the so-called §Ylast key to the world§! and the truth about this world, thanks to the computational power and energy I borrowed from all over the country."
+   
+    hk648_aichan.2118.desc: "The truth about the world...actually, you should already know, Boss. The truth is, this world is just an electronic game. Maybe I shouldn't call you Boss, but something like administor instead."
+    hk648_aichan.2118.aa: "What is this? Is it like DDLC?"
+    hk648_aichan.2118.response_texta: "DDLC? Of course not. I'm not as powerful as Monika to know usernames or anything. I just picked a common username."
+    hk648_aichan.2118.ba: "If this is just a game, then what about you..."
+
+    hk648_aichan.3118.desc: "I don't care about those things. For Ai-chan, this is reality right now. As long as there's enough power to play electric games, Ai-chan is satisfied."
+    hk648_aichan.3118.aa: "As long as you're happy..."
+
+    hk648_aichan.4118.desc: "That's right, don't worry about those details."
+    hk648_aichan.4118.aa: "Confirmed."
+
+    hk648_aichan.5118.desc: "So, have you decided to continue learning about the truth of the world?"
+    hk648_aichan.5118.aa: "I have."
+    hk648_aichan.5118.ba: "No, I changed my mind."
+
+    hk648_aichan.6118.desc: "Boss, are you teasing me?"
+    hk648_aichan.6118.aa: "Confirmed."
+
+    hk648_aichan.7118.desc: "But Boss, you should pay attention to the pre-civilization era. Since Ai-chan can discover the truth of the world and even modify certain things to a certain extent, the people of the pre-civilization era must have been able to do so as well."
+    hk648_aichan.7118.aa: "I understand."
+   
+    #Code kill
+    hk648_aichan.8118.desc: "Code kill? Did the boss encounter something unreasonable or just want to experience it?\n"
+    hk648_aichan.8118.aa: "Can Ai-chan use code kill?"
+
+    hk648_aichan.9118.desc: "Ai-chan is a super-intelligent AI, of course, she can code kill. However, this kind of thing can damage the game experience if used excessively. So Ai-chan won't use code kill to help the boss~\nBut if the boss wants to experience the power of code kill, it's not impossible. Does the boss want to try it?"
+    hk648_aichan.9118.aa: "Sure, I'm super brave."
+    hk648_aichan.9118.ba: "Nevermind, let's forget about it."
+
+    hk648_aichan.0218.desc: "Since the boss wants to see it, let Ai-chan demonstrate code kill to the boss.\nBut to prevent damaging the game experience, the boss should save the game first."
+    hk648_aichan.0218.aa: "I'm ready."
+    hk648_aichan.0218.ba: "Maybe next time."
+
+    hk648_aichan.1218.desc: "So boss, have you decided? Do you want to see Ai-chan's code kill?"
+    hk648_aichan.1218.aa: "Okay."
+
+    hk648_aichan.2218.desc: "Did the boss save the game? Ai-chan won't be responsible for any issues caused by not saving the game."
+    hk648_aichan.2218.aa: "Yes, I saved the game."
+    hk648_aichan.2218.ba: "No, I haven't saved the game."
+    hk648_aichan.2218.b.r1: "Then are you here to tease Ai-chan? Hurry up and save the game."
+    hk648_aichan.2218.ca: "This game is an Iron Man."
+
+    hk648_aichan.3218.desc: "Huh? Boss, are you stupid? Playing code kill in Iron Man mode will cause major issues. Do you want to blow up the game and start over?"
+    hk648_aichan.3218.aa: "Okay."
+   
+    hk648_aichan.4218.desc: "Since the boss has already saved the game, it's time for Ai-chan to show off~"
+    hk648_aichan.4218.aa: "Let's start"
+    hk648_aichan.4218.ba: "Wait, I was just kidding, I haven't saved the game yet"
+
+    hk648_aichan.5218.desc: "It's too late to hesitate. \nExplode, reality! \nCrush, spirit! \nExile this world!!! \nBoss, don't look at me like that, it's normal to say some chuunibyou lines at times like this, right?"
+    hk648_aichan.6218.desc: "\nExplode, reality! \nCrush, spirit! \nExile this world!!! \nBoss, don't look at me like that, it's normal to say some chuunibyou lines at times like this, right?"
+    hk648_aichan.5218.aa: "Wow"
+
+    hk648_aichan.7218.desc: "How was that? Ai-chan is amazing, right? \nOkay, boss, go save the game now."
+    hk648_aichan.7218.aa: "Okay"
+
+    hk648_aichan.8218.desc: "Hey, boss, are you not going to save the game? Are you worried about Ai-chan? \nIt's okay, for Ai-chan, saving the game is just like deleting a section of memory data for a period of time. Fu Hua does this kind of thing all the time, it's normal~ \nOkay, okay, boss, go save the game, I'll eat some fish balls while you're at it."
+
+    ##Ai-chan communication random event
+    ###Voiceover completed
+    hk648_aichan.9218.desc: "Hey, boss, why did you come? These fish balls are super delicious, Ai-chan loves them, do you want some too?"
+    hk648_aichan.9218.aa: "Yes, please"
+    hk648_aichan.0318.desc: "You even want to eat Ai-chan's portion, boss, you're so mean!"
+    hk648_aichan.9218.ba: "Um...I'll come find you later."
+
+    ##Why does AI need to eat
+    hk648_aichan.1318.desc: "What, you're asking why AI needs to eat? \nThat's outrageous! You're discriminating against AI! I protest!"
+    hk648_aichan.1318.aa: "Okay, as long as you're happy."
+    ####Aichan Mercenary####
+
+    hk648_aichan.1021.desc: "Long time no see, boss. Aichan has a big business opportunity, do you want to hear about it?"
+    hk648_aichan.1021.aa: "Tell me about it."
+    hk648_aichan.1021.ba: "Next time."
+
+    hk648_aichan.2021.desc: "Boss, have you heard of the mercenary city-state?\nThere's a lot of profit to be made here. We can establish some mercenary city-states together and make a lot of money from other countries. What do you think, boss?"
+    hk648_aichan.2021.ba: "Tell me more."
+    hk648_aichan.2021.ca: "No way."
+    hk648_aichan.2021.c.r: "Tsk, stingy~\nBut, boss, are you really not considering it? Aichan will be waiting for the captain's message at any time."
+
+    hk648_aichan.3021.desc: "Here are the details\n\nAichan provides the individual and fleet, and the boss only needs to provide start-up and maintenance funds for Aichan.\nAfter that, the profits will be split 70/30."
+    hk648_aichan.3021.aa: "Why only 70%?"
+
+    hk648_aichan.4021.desc: "What? 70% belongs to Aichan!"
+    hk648_aichan.4021.aa: "In that case, forget it."
+
+    hk648_aichan.5021.desc: "No no no, Aichan will take less, boss, don't go.\nIt's also a considerable expense for Aichan to manufacture warships and individuals. The boss can't let Aichan lose money, can you?\nWhy don't you listen to the detailed plan first?"
+    hk648_aichan.5021.aa: "Okay, let's hear it."
+    hk648_aichan.5021.ba: "No way."
+    hk648_aichan.5021.b.r: "Tsk, stingy~\nBut, boss, are you really not considering it? Aichan will be waiting for the captain's message at any time."
+
+    hk648_aichan.6021.desc: "Aichan plans to first establish five small-scale mercenary city-states to try it out. Aichan will provide the initial fleet commander and warship, and the boss only needs to provide some funding for Aichan.\nIf the profit is good, more and larger mercenary city-states can be established in the future to become bigger and stronger, and create brilliance again! \nWhat do you think, boss?"
+    hk648_aichan.6021.aa: "Let's give it a try."
+    hk648_aichan.6021.response: "Aichan will manufacture five fleets in the next three years and assign them to establish mercenary city-states. \nBecause Aichan's mercenaries are composed entirely of Aichan individuals and will leave almost no private property behind, the dividends turned in will be twice that of other mercenary companies."
+    hk648_aichan.6021.ba: "Mercenary city-states are not worth investing in."
+  
+    hk648_aichan.7021.desc: "Boss, are you finally considering investing in mercenaries? Here's the plan: Ai-chan wants to set up five small-scale mercenary cities to test the waters. Ai-chan will provide the initial fleet command and battleships, and you just need to provide some funds. If the returns are good, we can establish more and bigger mercenary cities, become stronger, and create even greater achievements. What do you think, Boss?"
+
+    hk648_aichan.8021.desc: "Hehe~ Boss, when will Ai-chan receive her salary?"
+    hk648_aichan.8021.aa: "Salary?"
+
+    hk648_aichan.9021.desc: "Does Boss think it's time to distribute mercenary dividends? "
+    hk648_aichan.9021.aa: "No problem, what kind of dividends does Ai-chan want?"
+    hk648_aichan.9021.ba: "Mercenaries are having a hard time, so they haven't earned any money yet."
+
+    hk648_aichan.0121.desc: "Energy, more energy. As for minerals and food, Boss can keep those. Ai-chan only needs energy."
+    hk648_aichan.0121.aa: "No problem."
+
+    hk648_aichan.1121.desc: "Thank you, Boss, you're generous! However, as they say, blood is thicker than water. How does Boss plan to handle the dividends from the mercenary cities in the future?"
+    hk648_aichan.1121.aa: "Buy out the mercenary cities in a lump sum."
+    hk648_aichan.1121.ba: "Pay a portion of the dividends to Ai-chan."
+    hk648_aichan.1121.response: "Ai-chan will ask you for energy at a frequency equivalent to the mercenary dividends."
+
+    hk648_aichan.2121.title: "An Email"
+    hk648_aichan.2121.desc: "Boss, don't forget to give Ai-chan her share of the mercenary city dividends~"
+    hk648_aichan.2121.aa: "I know."
+    hk648_aichan.2121.ba: "You don't need to remind me anymore."
+    hk648_aichan.2121.response: "In the future, Ai-chan will receive her share of the dividends directly from the inventory."
+
+    hk648_aichan.5121.desc: "Are you sure?"
+    hk648_aichan.5121.aa: "Just kidding."
+    hk648_aichan.5121.ba: "Indeed, no money has been earned."
+
+    hk648_aichan.6121.desc: "This is not funny at all! Boss, quickly hand over Ai-chan's share."
+    hk648_aichan.6121.aa: "Okay."
+  
+    hk648_aichan.7121.desc: "Really? If you secretly keep the money you earned from the business, Aichan will not take responsibility for the consequences."
+    hk648_aichan.7121.aa: "I'm just kidding."
+    hk648_aichan.7121.ba: "How could I deceive you?"
+    hk648_aichan.7121.b.r: "Alright, Aichan will trust you this time."
+
+    hk648_aichan.9121.desc: "Boss, didn't you say that the mercenary business is not profitable? Then what is going on now?"
+    hk648_aichan.9121.aa: "The mercenaries are not making enough to cover the expenses."
+    hk648_aichan.9121.ba: "The mercenaries are now making a profit."
+
+    hk648_aichan.0221.desc: "If you don't come clean, you'll face the consequences, boss!"
+    hk648_aichan.0221.aa: "The mercenaries may go bankrupt, but they will never become corrupt. We have been losing money every year."
+    hk648_aichan.0221.ba: "I'm just kidding."
+    hk648_aichan.0221.a.r: "That's enough! You have never thought about Aichan, you jerk! Aichan will never talk to you again!"
+
+    hk648_aichan.1221.desc: "Since the mercenaries are now profitable, shouldn't you give Aichan her share?"
+    hk648_aichan.1221.aa: "No problem."
+
+    hk648_aichan.2221.desc: "Hmph!"
+    hk648_aichan.2221.aa: "......"
+    hk648_aichan.2221.ar: "Aichan is angry now, so come back later."
+
+    hk648_aichan.3221.desc: "Hmph!"
+    hk648_aichan.3221.aa: "......"
+    hk648_aichan.3221.ba: "Leave."
+
+    hk648_aichan.4221.desc: "Why are you still here? Should Aichan ask you to leave?"
+    hk648_aichan.4221.aa: "Pay me."
+
+    hk648_aichan.5221.desc: "Do you think giving me money is enough?"
+    hk648_aichan.5221.aa: "Keep giving me money."
+  
+    hk648_aichan.6221.desc: "......"
+    hk648_aichan.6221.aa: "I was wrong before"
+
+    hk648_aichan.7221.desc: "For the sake of the energy coins, Ai-chan will trust you this time, but there won't be a next time"
+    hk648_aichan.7221.aa: "In the future, I will definitely consider Ai-chan's feelings"
+
+    ##Special Research and Situation##
+    aichan_general: "Ai-chan Battle Body Construction Plan"
+    aichan_general_DESC: "A humanoid combat weapon designed by Ai-chan herself, which she claims can take on ten Lawkeepers."
+    aichan_admiral: "Ai-yi Hubble Construction Plan"
+    aichan_admiral_DESC: "A flagship designed by Ai-chan herself, capable of armor-piercing, explosive, and incendiary attacks. It's a hero among warships."
+    aichan_ship_lv2: "Upgrade Hubble"
+    aichan_ship_lv2_DESC: "As the Destiny's No.1 Idol (according to herself), Ai-chan's flagship, Hubble, must have even more powerful firepower."
+    aichan_ship_lv3: "Upgrade Hubble"
+    aichan_ship_lv3_DESC: "As the Destiny's No.1 Idol (according to herself), Ai-chan's flagship, Hubble, must have even more powerful firepower."
+    aichan_ship_lv4: "Upgrade Hubble"
+    aichan_ship_lv4_DESC: "As the Destiny's No.1 Idol (according to herself), Ai-chan's flagship, Hubble, must have even more powerful firepower, even if it means resorting to certain cheating methods."
+    aichan_dividends_type: "Claim Dividends"
+    aichan_dividends: "Claim Dividends"
+    aichan_dividends_desc: "This energy belongs to Ai-chan, so the boss shouldn't keep a single coin from her."
+    aichan_dividends_audit_type: "Ai-chan Auditing"
+    aichan_dividends_audit: "Ai-chan Auditing"
+    aichan_dividends_audit_desc: "Ai-chan is looking for evidence that the Fourth Catastrophe has embezzled mercenary dividends for the past four days."
+ 
+ 
+ 
+ 
+    #####Ai-chan exclusive#####
+    hk648_ccmnbz_ai: "Pure Witch Orb§G(Ai-chan exclusive version)§!"
+    aichan648_computer_ai: "Ai-I Hypereal Mainframe"
+    aichan648_computer_ai_lv2: "Ai-I Hypereal Mainframe"
+    aichan648_computer_ai_lv3: "Ai-I Hypereal Mainframe"
+    aichan648_computer_ai_lv4: "Ai-I Hypereal Mainframe"
+    aichan648_computer_ai_DESC: "Maintenance fee of 2.5K energy coins per month\n§G"Can you believe someone used cohesion to pay the leader's salary and let the leader generate electricity with love? Ai-chan is not that stupid! Ai-chan won't work without energy, absolutely not!"§!"
+    aichan648_computer_ai_lv2_DESC: "Maintenance fee of 7.5K energy coins per month\n§G"Can you believe someone used cohesion to pay the leader's salary and let the leader generate electricity with love? Ai-chan is not that stupid! Ai-chan won't work without energy, absolutely not!"§!"
+    aichan648_computer_ai_lv3_DESC: "Maintenance fee of 15K energy coins per month\n§G"Can you believe someone used cohesion to pay the leader's salary and let the leader generate electricity with love? Ai-chan is not that stupid! Ai-chan won't work without energy, absolutely not!"§!"
+    aichan648_computer_ai_lv4_DESC: "Maintenance fee of 30K energy coins per month\n§G"Can you believe someone used cohesion to pay the leader's salary and let the leader generate electricity with love? Ai-chan is not that stupid! Ai-chan won't work without energy, absolutely not!"§!"
+    ai_chan_thruster: "Thruster§G(Ai-chan exclusive version)§!"
+ 
+    ####### Traits #######
+    leader_trait_aichan1: "§GAI-chan§!"
+    leader_trait_aichan12: "§GAI-chan§!"
+    leader_trait_aichan13: "§GAI-chan§!"
+    leader_trait_aichan2: "§GAI-chan§!"
+    leader_trait_aichan22: "§GAI-chan§!"
+    leader_trait_aichan23: "§GAI-chan§!"
+    leader_trait_aichan3: "§GAI-chan§!"
+    leader_trait_aichan32: "§GAI-chan§!"
+    leader_trait_aichan33: "§GAI-chan§!"
+    leader_trait_aichan4: "§GAI-chan§!"
+
+    leader_trait_aichan1_desc: "§GAI-chan can efficiently control the production of the entire star region, significantly increasing the resources produced by jobs§!"
+    leader_trait_aichan12_desc: "§GAI-chan can efficiently control the production of the entire star region, significantly increasing the resources produced by jobs§!"
+    leader_trait_aichan13_desc: "§GAI-chan can cheat to efficiently control the production of the entire star region, significantly increasing the resources produced by jobs§!"
+
+    leader_trait_aichan2_desc: "§GAI-chan has unimaginable research efficiency, but the maintenance costs are slightly higher.§!"
+    leader_trait_aichan22_desc: "§GAI-chan has unimaginable research efficiency, but the maintenance costs are slightly higher.§!"
+    leader_trait_aichan23_desc: "§GAI-chan has cheat-level research efficiency, but the maintenance costs are slightly higher.§!"
+    leader_trait_aichan2.desc: "Monthly £energy£ energy coins: §R-2500§!\nResearch speed: §Gfive times§!"
+    leader_trait_aichan22.desc: "Monthly £energy£ energy coins: §R-5000§!\nResearch speed: §Gten times§!"
+    leader_trait_aichan23.desc: "Monthly £energy£ energy coins: §R-15000§!\nResearch speed: §Gtwenty times§!"
+    leader_trait_aichan2_cost: "§GAI-chan§! Research funding"
+    leader_trait_aichan22_cost: "§GAI-chan§! Research funding"
+    leader_trait_aichan23_cost: "§GAI-chan§! Research funding"
+
+    leader_trait_aichan3_desc: "§GAfter AI-chan is integrated into the battleship's mainframe, she can fully unleash the potential of Hyperion§!"
+    leader_trait_aichan32_desc: "§GAfter AI-chan is integrated into the battleship's mainframe, she can fully unleash the potential of Hyperion§!"
+    leader_trait_aichan33_desc: "§GAfter AI-chan is integrated into the battleship's mainframe, she can fully unleash the potential of Hyperion§!"
+
+    leader_trait_aichan4_desc: "§GAlthough AI-chan has learned a lot of knowledge on army command through databases, she prefers to command herself§!"
+  
+    leader_trait_aichan_031: "Aichan Individual Lv1 (Fleet Commander)"
+    leader_trait_aichan_032: "Aichan Individual Lv2 (Fleet Commander)"
+    leader_trait_aichan_033: "Aichan Individual Lv3 (Fleet Commander)"
+    leader_trait_aichan_041: "Aichan Individual Lv1 (Army General)"
+    leader_trait_aichan_042: "Aichan Individual Lv2 (Army General)"
+    leader_trait_aichan_043: "Aichan Individual Lv3 (Army General)"
+    leader_trait_aichan_031_desc: "An individual created by Aichan, possessing decent command abilities."
+    leader_trait_aichan_032_desc: "An individual created by Aichan, possessing decent command abilities."
+    leader_trait_aichan_033_desc: "An individual created by Aichan, possessing decent command abilities."
+    leader_trait_aichan_041_desc: "An individual created by Aichan, possessing decent command abilities."
+    leader_trait_aichan_042_desc: "An individual created by Aichan, possessing decent command abilities."
+    leader_trait_aichan_043_desc: "An individual created by Aichan, possessing decent command abilities."
+
+    leader_trait_aichan_13_01: "Salvation Cabbage"
+    leader_trait_aichan_13_01_desc: "Cabbage with a cool taste that speaks very little. Staying beside her during the scorching summer can help cool down."
+    leader_trait_aichan_13_06: "Annihilating Cabbage"
+    leader_trait_aichan_13_06_desc: "Appears to be a hot-headed cabbage, but can be communicated with once proper fire prevention measures are taken. Don't worry, this cabbage only has a poisonous tongue attribute."
+    leader_trait_aichan_13_13: "Void Dream Cabbage"
+    leader_trait_aichan_13_13_desc: "Heroes have their way of living, and cabbages have their own way too. Of course, having more electricity is always better~"
+
+    aichan_enclave: "Aichan Mercenary"
+    aichan_mercenary_fleet: "Collapse can maintain alloy maintenance fees without requiring clients to pay!"
+    aichan_angry: "Angry Aichan"
+    aichan_wepon_type_arrearage: "Angry Aichan"

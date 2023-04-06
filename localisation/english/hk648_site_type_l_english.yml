@@ -1,0 +1,334 @@
+﻿l_english:
+1  ###################### Engravings ######################
+
+    ##Signets of Deliverance
+    signets_of_deliverance_1: "Pendant of the Watcher"
+    signets_of_deliverance_response_1: "After ship-to-ship combat, kinetic weapons damage increases by §Y30%§!, lasts for §Y10§! days"
+    signets_of_deliverance_1_100: "§YWatcher's Pendant§! has been activated"
+    signets_of_deliverance_1_150: "§YWatcher's Pendant§! has been activated"
+    signets_of_deliverance_1_200: "§YWatcher's Pendant§! has been activated"
+
+    signets_of_deliverance_2: "Brand of the Immortal"
+    signets_of_deliverance_response_2: "After ship-to-ship combat, energy weapons damage increases by §Y30%§!, lasts for §Y10§! days"
+    signets_of_deliverance_2_100: "§YBrand of the Immortal§! has been activated"
+    signets_of_deliverance_2_150: "§YBrand of the Immortal§! has been activated"
+    signets_of_deliverance_2_200: "§YBrand of the Immortal§! has been activated"
+
+    signets_of_deliverance_3: "Hunter's Mask"
+    signets_of_deliverance_response_3: "After ship-to-ship combat, armor penetration increases by §Y25%§!, lasts for §Y10§! days"
+    signets_of_deliverance_3_100: "§YHunter's Mask§! has been activated"
+    signets_of_deliverance_3_150: "§YHunter's Mask§! has been activated"
+    signets_of_deliverance_3_200: "§YHunter's Mask§! has been activated"
+
+    signets_of_deliverance_4: "Holy Relic of Restraint"
+    signets_of_deliverance_response_4: "After ship-to-ship combat, shield penetration increases by §Y20%§!, lasts for §Y10§! days"
+    signets_of_deliverance_4_100: "§YHoly Relic of Restraint§! has been activated"
+    signets_of_deliverance_4_150: "§YHoly Relic of Restraint§! has been activated"
+    signets_of_deliverance_4_200: "§YHoly Relic of Restraint§! has been activated"
+
+    signets_of_deliverance_5: "Garb of the Seeker"
+    signets_of_deliverance_response_5: "After ship-to-ship combat, regenerate §Y1.5%§! shield, health and hull every day, lasts for §Y10§! days"
+    signets_of_deliverance_5_100: "§YGarb of the Seeker§! has been activated"
+    signets_of_deliverance_5_150: "§YGarb of the Seeker§! has been activated"
+    signets_of_deliverance_5_200: "§YGarb of the Seeker§! has been activated"
+
+    signets_of_deliverance_a: "King Sword of Deliverance"
+    signets_of_deliverance_response_a: "After the ship engages in battle, enter the state of [Final Battle]. During this period, the bonus effect provided by all Savior's common Signets is increased by §Y50%§! Lasts for §Y10§! days."
+    signets_of_deliverance_a1: "Savior's Expedition"
+    signets_of_deliverance_response_a1: "During [Final Battle], the bonus effect of common Signets is increased to §Y100%§!"
+    signets_of_deliverance_a2: "Savior's Echo"
+    signets_of_deliverance_response_a2: "The duration of all Savior's Signets is extended to §Y20§! days."
+    signets_of_deliverance_b: "Savior's Solitude"
+    signets_of_deliverance_response_b: "After engaging in ship battles for 50 times, permanently enter the state of [Final Battle]. During this state, all Savior's common Signets are forced to take effect."
+    signets_of_deliverance_b_yes: "§YFinal Battle§!"
+    signets_of_deliverance_response_b_yes: "All Savior's common Signets have been permanently activated."
+    signets_of_deliverance_b1: "Savior's Dream"
+    signets_of_deliverance_response_b1: "During [Final Battle], the bonus effect of common Signets is increased by §Y50%§!"
+    signets_of_deliverance_b2: "Savior's Triumph"
+    signets_of_deliverance_response_b2: "During [Final Battle], ship damage is increased by §Y50%§!"
+    signets_of_deliverance_b2_yes: "§YSavior's Triumph§! has been activated."
+
+    #Signets of Decimation
+    signets_of_decimation_1: "Sword Edge · Sword Mound · Sword Scar"
+    signets_of_decimation_response_1: "The lower the naval capacity used, the higher the damage caused by the warship. Every unused §Y25%§! naval capacity increases the damage by §Y50%§!."
+    signets_of_decimation_1_25: "§YSword Edge · Sword Mound · Sword Scar§! has been activated."
+    signets_of_decimation_1_50: "§YSword Edge · Sword Mound · Sword Scar§! has been activated."
+    signets_of_decimation_1_75: "§YSword Edge · Sword Mound · Sword Scar§! has been activated."
+  
+    signets_of_decimation_2: "Crimson Bone, Crimson Blood, Crimson Refinement"
+    signets_of_decimation_response_2: "The lower the naval capacity used, the higher the energy and kinetic damage caused by the warship. Every §Y25%§! unused naval capacity increases damage by §Y40%§!."
+    signets_of_decimation_2_25: "§YCrimson Bone, Crimson Blood, Crimson Refinement§! activated."
+    signets_of_decimation_2_50: "§YCrimson Bone, Crimson Blood, Crimson Refinement§! activated."
+    signets_of_decimation_2_75: "§YCrimson Bone, Crimson Blood, Crimson Refinement§! activated."
+
+    signets_of_decimation_3: "Fanaticism, Madman, Rant"
+    signets_of_decimation_response_3: "The lower the naval capacity used, the higher the ship's durability, armor, and shield. Every §Y25%§! unused naval capacity increases the ship's three dimensions by §Y30%§!."
+    signets_of_decimation_3_25: "§YFanaticism, Madman, Rant§! activated."
+    signets_of_decimation_3_50: "§YFanaticism, Madman, Rant§! activated."
+    signets_of_decimation_3_75: "§YFanaticism, Madman, Rant§! activated."
+
+    signets_of_decimation_4: "Destiny, Doom, Fate"
+    signets_of_decimation_response_4: "Increases naval capacity limit by §Y30%§!."
+
+    signets_of_decimation_5: "Forget, Heartless, Returnless"
+    signets_of_decimation_response_5: "When the warship is destroyed by the enemy, make all enemies' shields and armor ineffective by §Y25%§!, lasts for §Y20§! days."
+
+    signets_of_decimation_a: "Chaos, Carnage, Destruction, Oblivion"
+    signets_of_decimation_response_a: "When naval capacity used exceeds §Y25%§!, ship maintenance fee doubles, and fleet capacity increases by §Y3600§!."
+    signets_of_decimation_a_yes: "§RNaval capacity used is already higher than 25%§!"
+
+    signets_of_decimation_a1: "Hometown, Homeland, Old Friends, Old Times"
+    signets_of_decimation_response_a1: "Increases naval capacity limit by §Y1000§!, and gains §Y25%§! armor penetration and shield penetration."
+
+    signets_of_decimation_a2: "Undead, Unborn, Undestroyed, Unextinct"
+    signets_of_decimation_response_a2: "Increases naval capacity limit by §Y1000§!, and gains §Y1.5%§! daily recovery for ship's durability, armor, and shield."
+
+    ##Reverie's Signet
+    signets_of_reverie_1: "Words of the Cat"
+    signets_of_reverie_response_1: "At the beginning of the year, increase the damage caused by the ship based on the amount of energy coins held. Each §Y125K§! energy coins increase damage by §Y10%§!, up to a maximum of §Y500K§! energy coins."
+    signets_of_reverie_2: "Tail of the inverted blade"
+    signets_of_reverie_response_2: "At the beginning of the year, increase the kinetic and energy damage based on the amount of energy coins held. Each §Y125K§! energy coins increase kinetic and energy damage by §Y7.5%§!, up to a maximum of §Y500K§! energy coins."
+    signets_of_reverie_3: "Proclamation in the streets"
+    signets_of_reverie_response_3: "At the beginning of the year, increase the ship's hull value based on the amount of energy coins held. Each §Y125K§! energy coins increase hull value by §Y15%§!, up to a maximum of §Y500K§! energy coins."
+    signets_of_reverie_4: "Philosophy of the merchant"
+    signets_of_reverie_response_4: "At the beginning of the year, gain extra energy coins based on the amount of energy coins held. Each §Y125K§! energy coins grant §Y6.25k§! extra energy coins, up to a maximum of §Y500K§! energy coins. (Not affected by other effects)"
+    signets_of_reverie_5: "Agile P&C"
+    signets_of_reverie_response_5: "At the beginning of the year, increase the ship's automatic recovery based on the amount of energy coins held. Each §Y125K§! energy coins increase armor, shield, and hull value recovery by §Y1%§!, up to a maximum of §Y500K§! energy coins."
+    signets_of_reverie_a: "Empty Dream, Empty Set, Empty Self, Empty Delight"
+    signets_of_reverie_response_a: "Increase the energy coin settlement limit at the beginning of the year to §Y1M§!, and the threshold for the bonus provided by the inscription is increased from every §Y125K§! to every §Y250K§! held.\nWhen holding energy coins reach or exceed §Y500K§!, all basic inscription effects are increased by §Y25%§!. When holding energy coins reach or exceed §Y1M§!, all basic inscription effects are increased by §Y50%§! and kinetic and energy weapon damage is increased by §Y50%§!"
+    signets_of_reverie_a1000: "§YEmpty Dream, Empty Set, Empty Self, Empty Delight§! has been activated."
+  
+    signets_of_reverie_5_a1000: "§YDynamic P&C§! activated"
+    signets_of_reverie_5_a750: "§YDynamic P&C§! activated"
+    signets_of_reverie_5_a500: "§YDynamic P&C§! activated"
+    signets_of_reverie_5_a250: "§YDynamic P&C§! activated"
+    signets_of_reverie_5_500: "§YDynamic P&C§! activated"
+    signets_of_reverie_5_375: "§YDynamic P&C§! activated"
+    signets_of_reverie_5_250: "§YDynamic P&C§! activated"
+    signets_of_reverie_5_125: "§YDynamic P&C§! activated"
+
+    signets_of_reverie_4_a1000: "§YMerchant's Philosophy§! activated"
+    signets_of_reverie_4_a750: "§YMerchant's Philosophy§! activated"
+    signets_of_reverie_4_a500: "§YMerchant's Philosophy§! activated"
+    signets_of_reverie_4_a250: "§YMerchant's Philosophy§! activated"
+    signets_of_reverie_4_500: "§YMerchant's Philosophy§! activated"
+    signets_of_reverie_4_375: "§YMerchant's Philosophy§! activated"
+    signets_of_reverie_4_250: "§YMerchant's Philosophy§! activated"
+    signets_of_reverie_4_125: "§YMerchant's Philosophy§! activated"
+
+    signets_of_reverie_3_a1000: "§YStreet Declaration§! activated"
+    signets_of_reverie_3_a750: "§YStreet Declaration§! activated"
+    signets_of_reverie_3_a500: "§YStreet Declaration§! activated"
+    signets_of_reverie_3_a250: "§YStreet Declaration§! activated"
+    signets_of_reverie_3_500: "§YStreet Declaration§! activated"
+    signets_of_reverie_3_375: "§YStreet Declaration§! activated"
+    signets_of_reverie_3_250: "§YStreet Declaration§! activated"
+    signets_of_reverie_3_125: "§YStreet Declaration§! activated"
+  
+    signets_of_reverie_2_a1000: "§YBlades of Reversal - Tail§! Activated"
+    signets_of_reverie_2_a750: "§YBlades of Reversal - Tail§! Activated"
+    signets_of_reverie_2_a500: "§YBlades of Reversal - Tail§! Activated"
+    signets_of_reverie_2_a250: "§YBlades of Reversal - Tail§! Activated"
+    signets_of_reverie_2_500: "§YBlades of Reversal - Tail§! Activated"
+    signets_of_reverie_2_375: "§YBlades of Reversal - Tail§! Activated"
+    signets_of_reverie_2_250: "§YBlades of Reversal - Tail§! Activated"
+    signets_of_reverie_2_125: "§YBlades of Reversal - Tail§! Activated"
+
+    signets_of_reverie_1_a1000: "§YCat's Teachings§! Activated"
+    signets_of_reverie_1_a750: "§YCat's Teachings§! Activated"
+    signets_of_reverie_1_a500: "§YCat's Teachings§! Activated"
+    signets_of_reverie_1_a250: "§YCat's Teachings§! Activated"
+    signets_of_reverie_1_500: "§YCat's Teachings§! Activated"
+    signets_of_reverie_1_375: "§YCat's Teachings§! Activated"
+    signets_of_reverie_1_250: "§YCat's Teachings§! Activated"
+    signets_of_reverie_1_125: "§YCat's Teachings§! Activated"
+
+    ####################19K··23#####################
+    #Pre-event#
+    19k23_2.1.name: "Pre-event Title"
+    19k23_2.1.desc: "Pre-event Description"
+    19k23_2.1a: "Pre-event Option"
+    #Phase 0#
+    19k23_asylum: "19··K23 Asylum"
+    19k230_desc: "A mysterious cavity was discovered on a floating island in Siberia, and its unnaturally regular shape led people to believe that it was not a natural formation. To investigate the sudden appearance of the mysterious cavity, Theresa Apocalypse, an S-rank Valkyrie, was dispatched by Schicksal with the assistance of a scientist. "
+    #Phase 1#
+    19k23.1.name: "Ancient Civilization Ruins"
+    19k23.1.desc: "As Theresa advances into the cavity, the ice walls begin to deform. Upon closer inspection, Theresa discovers that the ice is condensed by some special energy, a structure that cannot be achieved by the technology of this era. In order to understand the situation of this ruin, Theresa decides to investigate further. "
+    19k23.1-2: "Continue Forward"
+    #Phase 2#
+    19k23.2.name: "Mysterious Girl"
+    19k23.2.desc: "After Theresa enters the interior of the ruins, she discovers a mysterious girl who is sleeping inside. She seems to be the aboriginal resident of the ruins, and may even be a fused warrior who survived from the ancient civilization. A girl who has lived in the ruins for many years will be a great help to our research on the ruins and ancient civilization. "
+    19k232-3: "Wake Up the Girl"
+    #Phase 3#
+    19k23.3.name: "Autonomous Combat Unit A1"
+    19k23.3.desc: "The mysterious girl claims to be an autonomous combat unit called A1, created by the ancient civilization to protect the 'world's last key' in 19··K23 Asylum. She believes that Theresa, who possesses the Key of God, does not have the responsibility and faith commensurate with this enormous power, and warns Theresa, who insists on entering the ruins. Obviously, Theresa does not take the warning seriously, and a battle is about to begin. "
+    19k233-4: "Prepare for Battle"
+    #Phase Four#
+    19k23.4.name: "Intense Battle"
+    19k23.4.desc: "The power of the ancient civilization is beyond our imagination. Although the relics have been around for more than 50,000 years, their guardians are still not opponents that S-rank Valkyries can handle. Theresa is no match for A1. It won't be long before Theresa is defeated by A1. Now, all we can do is pray that Theresa can hold on until the reinforcements outside the hollow arrive at the ruins."
+    19k234-5: "Preparing for Rescue"
+    #Phase Five#
+    19k23.5.name: "Energy Depletion"
+    19k23.5.desc: "It seems that Lady Luck is on our side. The ancient civilization did not create perpetual motion technology, and the autonomous combat unit A1 has depleted all of its energy. When the rescue team entered the ruins, they found that A1 had already fallen into Theresa's arms. After A1 fell, no power to resist destiny appeared in the ruins, and Destiny smoothly obtained the technology and resources left behind by the ancient civilization. However, no information about the so-called 'key to the end of the world' was found. Perhaps the key is not here. Theresa took A1's main body away, and although awakening A1 would cause her to lose most of her memories and abilities, Theresa still insisted on researching how to awaken A1, perhaps as a form of redemption for her past."
+    19k23_over: "A Good Ending"
+
+    3 ####################Elysian Realm####################
+    ##################Elysian Realm Main Tomb##################
+ 
+    hk648_elysian_realm: "Elysian Realm"
+    hk648_elysian_realm_desc: "The Elysian Realm, where the Flame Moth preserves a large amount of technical information. If we can obtain this information, our strength will surely advance even further."
+
+    hk648_elysian_realm.1.name: "Dormant State"
+    hk648_elysian_realm.1.desc: "After the Flame Moth rose again, the fearless Herrschers set the Elysian Realm to a dormant state. If we want to obtain the technology that the Flame Moth has preserved in it, we must find a way to activate the Elysian Realm."
+    hk648_elysian_realm.1.aa: "Let physicists attempt to hack in"
+    hk648_elysian_realm_physics: "Physicists are busy hacking into the Elysian Realm"
+    hk648_elysian_realm.1.ba: "Let engineers attempt to forcefully break in"
+    hk648_elysian_realm_engineering: "Engineers are busy breaking into the Elysian Realm"
+     
+    hk648_elysian_realm.2.name: "Expert Entry"
+    hk648_elysian_realm.2.desc: "To activate the Elysian Realm of the past, a large number of experts in physics and engineering are rushing to support, which will take some time."
+    hk648_elysian_realm.2.aa: "Prepare to Force Start"
+    hk648_elysian_realm.3.name: "Forced Start"
+    hk648_elysian_realm.3.desc: "With the efforts of a large number of scientific research experts, we have forcibly started the Elysian Realm of the past. The realm is a rather strange building, with rubble and ruins swirling around the tower, intersecting into a mesh resembling a birdcage, and the technology of the Fire Moth is hidden within it. What are you waiting for?"
+    hk648_elysian_realm.3.aa: "Enter the Realm"
+
+
+    ################The Tomb of the Key of the Elysian Realm################
+    ######################Deliverance######################
+    hk648_signets_of_deliverance: "Heroic Memory"
+    hk648_signets_of_deliverance_desc: "Here lies the signet of deliverance."
+
+    hk648_signets_of_deliverance.1.name: "Signet of Deliverance"
+    hk648_signets_of_deliverance.1.desc: "“Defeating the Lawkeeper is not a difficult task for the heroes, but as their successors in pursuit...they all failed. I hope you won't be the same.”"
+    hk648_signets_of_deliverance.1.aa: "Amulet of the Watcher"
+    hk648_signets_of_deliverance.1.ba: "Brand of the Undying"
+    hk648_signets_of_deliverance.1.ca: "Mask of the Hunter"
+
+    hk648_signets_of_deliverance.2.name: "Signet of Deliverance"
+    hk648_signets_of_deliverance.2.desc: "“We take power from the gods in order to pull them down from their thrones. And you, [Root.GetName], can you reach higher?”"
+    hk648_signets_of_deliverance.2.aa: "Amulet of the Watcher"
+    hk648_signets_of_deliverance.2.ba: "Brand of the Undying"
+    hk648_signets_of_deliverance.2.ca: "Mask of the Hunter"
+    hk648_signets_of_deliverance.2.da: "Holy Relic of the Restrainer"
+ 
+    hk648_signets_of_deliverance.3.name: "Seals of Deliverance"
+    hk648_signets_of_deliverance.3.desc: "“You have chosen your own path, so you must go to the end of this road, no matter the cost.”"
+    hk648_signets_of_deliverance.3.aa: "Watcher's Pendant"
+    hk648_signets_of_deliverance.3.ba: "Undead's Brand"
+    hk648_signets_of_deliverance.3.ca: "Hunter's Mask"
+    hk648_signets_of_deliverance.3.da: "Constrainer's Relic"
+    hk648_signets_of_deliverance.3.ea: "Seeker's Garment"
+    hk648_signets_of_deliverance.4.name: "Seals of Deliverance"
+    hk648_signets_of_deliverance.4.desc: "“Saving the world is never an easy task, sometimes even saving one person can be hard. But that is not a reason for us to give up easily.”"
+    hk648_signets_of_deliverance.4.aa: "Savior's King Sword"
+    hk648_signets_of_deliverance.4.ba: "Savior's Lone Shadow"
+
+    hk648_signets_of_deliverance.5.name: "Seals of Deliverance"
+    hk648_signets_of_deliverance.5.desc: "“Many people choose to give up when they see the narrow path of deliverance. The path of deliverance is not the plain and easy land they imagine, and it may not even allow two people to walk side by side.”"
+    hk648_signets_of_deliverance.5.aa: "Savior's Expedition"
+    hk648_signets_of_deliverance.5.ba: "Savior's Echo"
+    hk648_signets_of_deliverance.5.ca: "Savior's Remnant Dream"
+    hk648_signets_of_deliverance.5.da: "Savior's Triumph"
+    ######################True Self######################
+    ######################Laws######################
+    ######################Gold######################
+    ######################Spiral######################
+    ######################Decimation######################
+    hk648_signets_of_decimation: "Mad King's Reminiscence"
+    hk648_signets_of_decimation_desc: "Here lies the seal of decimation."
+
+    hk648_signets_of_decimation.1.aa: "Sword Edge · Sword Tomb · Sword Scar"
+    hk648_signets_of_decimation.1.ba: "Crimson Bone · Crimson Blood · Crimson Refinement"
+    hk648_signets_of_decimation.1.ca: "Fanatic · Madman · Rant"
+    hk648_signets_of_decimation.2.da: "Fate · Fate Misfortune · Fate Carving"
+    hk648_signets_of_decimation.3.ea: "Unforgettable · Unfeeling · Nowhere to Return"
+    hk648_signets_of_decimation.4.aa: "Decimating Warrior · Decimating Scissors · Decimating Beheading · Decimation"
+    hk648_signets_of_decimation.5.aa: "Hometown · Homeland · Old Friends · Old Comrades"
+    hk648_signets_of_decimation.5.ba: "No Death · No Life · No Destruction · No Existence"
+ 
+    hk648_signets_of_decimation.1.name: "Signets of Decimation"
+    hk648_signets_of_decimation.1.desc: "Accept anger, hatred, struggle, and destruction, and use them to forge the painful scars."
+ 
+    hk648_signets_of_decimation.2.name: "Signets of Decimation"
+    hk648_signets_of_decimation.2.desc: "Kill the enemy. Kill the obstacle. Kill the potential threat. Kill all foreign objects!"
+
+    hk648_signets_of_decimation.3.name: "Signets of Decimation"
+    hk648_signets_of_decimation.3.desc: "Yes, continue to fight, continue the endless struggle! Only the enemy's wailing can remind us that everything still exists, and we still survive in the world!"
+
+    hk648_signets_of_decimation.4.name: "Signets of Decimation"
+    hk648_signets_of_decimation.4.desc: "Fight, battle, kill, destroy, remember all of this, and blow the horn of destruction."
+
+    hk648_signets_of_decimation.5.name: "Signets of Decimation"
+    hk648_signets_of_decimation.5.desc: "Come on, let me witness your determination, let me witness your anger! Burn everything to ashes!"
+
+    ######################Tianhui######################
+    ######################Shana######################
+    ######################Xuguang######################
+    ######################Infinity######################
+    ######################Fengxing######################
+    ######################Fusheng######################
+    ######################Kongmeng######################
+    hk648_signets_of_reverie: "Memories of Mortals"
+    hk648_signets_of_reverie_desc: "Here lies the signet of Kongmeng."
+
+    hk648_elysian_realm.1301.name: "Signet of Kongmeng"
+    hk648_elysian_realm.1301.desc: "Hmm~ pick whatever you want. The sun is shining so brightly today, I don't want to get up."
+    hk648_elysian_realm.1301.aa: "Maxims of the Cat"
+    hk648_elysian_realm.1301.ba: "The 【Tail】 of the Straight-Edged Reversal"
+    hk648_elysian_realm.1301.ca: "Announcement of the Street"
+    hk648_elysian_realm.1301.da: "Philosophy of the Merchant"
+    hk648_elysian_realm.1301.ea: "Agile 【P&C】"
+
+    hk648_elysian_realm.1302.name: "Signet of Kongmeng"
+    hk648_elysian_realm.1302.desc: "Carefully selected, one in, one out. I don't accept returns, you know~"
+
+    hk648_elysian_realm.1303.name: "Signet of Kongmeng"
+    hk648_elysian_realm.1303.desc: "Don't worry about tomorrow's troubles. The sun today can only be enjoyed today!"
+
+    hk648_elysian_realm.1304.name: "Signet of Kongmeng"
+    hk648_elysian_realm.1304.desc: "I'm not good at fighting, but I know my limits. I'm better suited for supporting others and cheering them on from the sidelines."
+    hk648_elysian_realm.1304.aa: "Kong Meng, Kong Ji, Kong Wo, Kong Huan"
+ 
+    hk648_elysian_realm.1305.name: "Kong Meng's Imprint"
+    hk648_elysian_realm.1305.desc: "Heroes have their way of living, and mortals have theirs. Do we really need to try to be someone else? Is it really necessary?"
+
+    ####################Cocoon of Finality####################
+    hk648_cocoon_of_finality: "Remnants of an Ancient Civilization"
+    hk648_cocoon_of_finality_desc: "Recently, an energy wave from the Sea of Quanta caused some people to be swept up and transported to this location. Experts believe they were transported here by an unknown entity through the Sea of Quanta. The equipment in this ruins has been transferred to Earth for minimal use of Honkai energy after severing imaginary space connections. But it seems that there are still secrets here that we have yet to uncover."
+
+    #Phase 1
+    hk648_cocoon_of_finality.0001.name: "New Atlantis"
+    hk648_cocoon_of_finality.0001.desc: "After a period of preparation, the scientific research team and search and rescue team arrived at the ruins. The data shows that this ruins was excavated decades ago and the equipment was already transferred to Earth. But reality gave us a harsh slap in the face: there must still be secrets here that we have not discovered yet."
+    hk648_cocoon_of_finality.0001.a: "Enter the ruins"
+
+    #Phase 2
+    hk648_cocoon_of_finality.0002.name: "Refuge"
+    hk648_cocoon_of_finality.0002.desc: "Using previous data, the scientific research team and search and rescue team easily entered the ruins and found a refuge from the ancient civilization. All the equipment here had been removed, leaving behind an empty shell that appeared to be of no value. But just as the scientific research team was about to give up, a faint signal was detected in the center of the square. According to records, this square was possibly used by the ancient civilization for some kind of ritual, and it seems that we are about to overturn our previous conclusions."
+    hk648_cocoon_of_finality.0002.a: "Let the scientific research team carefully explore the square."
+ 
+    ##Phase Three
+    hk648_cocoon_of_finality.0003.name: "Under the Square"
+    hk648_cocoon_of_finality.0003.desc: "As the exploration goes deeper, the research team found that the surface plaza is only the top floor of this building, and there is another world beneath it. The plaza itself is not a common object, but a small Stargate that connects to the Sea Source City on Earth. Obviously, those disappeared people in Sea Source City before accidentally triggered the Stargate and were transported here. Fortunately, there are no armed equipment here, except for the stampede caused by panic, no other dangerous incidents have occurred. The search and rescue team evacuated the relic with the people, while the research team continued to explore deeper, and this relic must still preserve something left by the ancient civilization."
+    hk648_cocoon_of_finality.0003.a: "Continue Forward"
+
+    ##Phase Four
+    hk648_cocoon_of_finality.0004.name: "Database"
+    hk648_cocoon_of_finality.0004.desc: "At the bottom of the plaza, there is a database from the ancient civilization. Unlike the databases in other relics, it records a lot of content that has not been recorded in other relics. This information directly points to the origin of the Honkai, and even subverts our cognition. The data here shows that the god we have always believed in, the Honkai will, is actually the super artificial intelligence Prometheus of the ancient civilization. Behind the information in the database, there is a location that many of them point to, and the Stargate seems to serve this place. The research team believes that we must figure out what is still hidden in this location."
+    hk648_cocoon_of_finality.0004.a: "Try to go to the mysterious location through the Stargate"
+
+    ##Phase Five
+    hk648_cocoon_of_finality.0005.name: "Cocoon of the End"
+    hk648_cocoon_of_finality.0005.desc: "After passing through the Stargate, the research team arrived at a place similar to a virtual reality. Here, the stars in the sky flickered, and the ground was as clear as glass, reflecting the starry sky. In front of the research team was a huge egg-shaped object embedded in the ground, with only half of it exposed. In the middle of it, there was a four-pointed star-shaped gap, emitting a beautiful purple light. It seems that this purple light is the essence of this object, and the surface rocks are just its shell. According to the records of the ancient civilization, this egg-shaped object is the Cocoon of the End. If we can fully understand it, our accomplishments in Honkai energy will be further improved. And we have already cut off the imaginary connection for hundreds of years, and the Cocoon of the End is now in its weakest state, which is our opportunity."
+    hk648_cocoon_of_finality.0005.a: "Start researching the Cocoon of the End"
+
+    ##Phase Six
+    hk648_cocoon_of_finality.0006.name: "Origin of the Honkai"
+    hk648_cocoon_of_finality.0006.desc: "Under the round-the-clock efforts of our research team, we have successfully controlled the Cocoon of Finality, and we have almost grasped the essence of Honkai energy. Honkai energy is just a special kind of energy, with its high-dimensional characteristics making it almost omnipotent in its performance. Now that we have almost completely understood Honkai energy, we can use this magical energy more efficiently. \n§Y(Unlock Honkai Ascension II)§!"
+    hk648_cocoon_of_finality.0006.a: "The path to godhood is within reach"
+    hk648_honkai_energy_mastering: "Mastering Honkai Energy"
+ 
+ 
+ 
+ 
+ 
+ 
