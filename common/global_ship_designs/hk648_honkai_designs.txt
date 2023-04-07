@@ -1428,7 +1428,7 @@ ship_design = {
 }
 #识之律者#
 ship_design = {
-	name = "H识之律者!"
+	name = "HThe Law of Knowledge!"
 	ship_size = hk648_honkai
 	
 	section = {

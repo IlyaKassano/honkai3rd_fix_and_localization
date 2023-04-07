@@ -1066,12 +1066,12 @@ honkai_8th_herrscher = {
 	optimize_memory
 	event_target:ravens_country = {
 		create_fleet = {
-			name = "H识之律者!"
+			name = "HThe Law of Knowledge!"
 			effect = {
 				set_owner = event_target:ravens_country
 				create_ship = {
-					name = "H识之律者!"
-					design = "H识之律者!"
+					name = "HThe Law of Knowledge!"
+					design = "HThe Law of Knowledge!"
 				}
 				save_global_event_target_as = 8th_herrscher_warship
 				set_location = event_target:player_capital_hk
