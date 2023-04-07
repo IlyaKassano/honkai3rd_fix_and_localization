@@ -11,7 +11,7 @@ create_captain_forces = {
 					create_army_transport = {
 						ship_name = random
 						#graphical_culture = "root"
-						army_name = Drone
+						army_name = "Drone"
 						army_type = "titan_army_s"
 					}
 				}

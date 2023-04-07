@@ -405,14 +405,14 @@ country_event = {
 		add_modifier = {
 			modifier = ainb_ainb3
 		}
-		set_country_flag - ainb_5
-		country_event = { id = hk648_super_wepons.1001 } 
+		set_country_flag = ainb_5
 		add_research_option = tech_hk648_19cx
 		add_research_option = tech_hk648_19ai
 		add_research_option = tech_hk648_zlzj
 		add_research_option = tech_aichan_zlzj
 		add_research_option = tech_hk648_xzy
 		add_research_option = tech_aichan_648
+		country_event = { id = hk648_super_wepons.1001 }
 	}
 }
 

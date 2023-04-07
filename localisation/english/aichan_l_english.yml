@@ -1,5 +1,5 @@
 ﻿l_english:
-1 ####################Ai-chan Exclusive################
+  ####################Ai-chan Exclusive################
     hk648_aichan: "Ai-chan Flagship"
     ai_hyperion: "§GAi-yi·Hyperion§!"
     aichan_army: "Ai-chan Army"
@@ -478,10 +478,10 @@
     aichan648_computer_ai_lv2: "Ai-I Hypereal Mainframe"
     aichan648_computer_ai_lv3: "Ai-I Hypereal Mainframe"
     aichan648_computer_ai_lv4: "Ai-I Hypereal Mainframe"
-    aichan648_computer_ai_DESC: "Maintenance fee of 2.5K energy coins per month\n§G"Can you believe someone used cohesion to pay the leader's salary and let the leader generate electricity with love? Ai-chan is not that stupid! Ai-chan won't work without energy, absolutely not!"§!"
-    aichan648_computer_ai_lv2_DESC: "Maintenance fee of 7.5K energy coins per month\n§G"Can you believe someone used cohesion to pay the leader's salary and let the leader generate electricity with love? Ai-chan is not that stupid! Ai-chan won't work without energy, absolutely not!"§!"
-    aichan648_computer_ai_lv3_DESC: "Maintenance fee of 15K energy coins per month\n§G"Can you believe someone used cohesion to pay the leader's salary and let the leader generate electricity with love? Ai-chan is not that stupid! Ai-chan won't work without energy, absolutely not!"§!"
-    aichan648_computer_ai_lv4_DESC: "Maintenance fee of 30K energy coins per month\n§G"Can you believe someone used cohesion to pay the leader's salary and let the leader generate electricity with love? Ai-chan is not that stupid! Ai-chan won't work without energy, absolutely not!"§!"
+    aichan648_computer_ai_desc: "Maintenance fee of 2.5K energy coins per month\n§G"Can you believe someone used cohesion to pay the leader's salary and let the leader generate electricity with love? Ai-chan is not that stupid! Ai-chan won't work without energy, absolutely not!"§!"
+    aichan648_computer_ai_lv2_desc: "Maintenance fee of 7.5K energy coins per month\n§G"Can you believe someone used cohesion to pay the leader's salary and let the leader generate electricity with love? Ai-chan is not that stupid! Ai-chan won't work without energy, absolutely not!"§!"
+    aichan648_computer_ai_lv3_desc: "Maintenance fee of 15K energy coins per month\n§G"Can you believe someone used cohesion to pay the leader's salary and let the leader generate electricity with love? Ai-chan is not that stupid! Ai-chan won't work without energy, absolutely not!"§!"
+    aichan648_computer_ai_lv4_desc: "Maintenance fee of 30K energy coins per month\n§G"Can you believe someone used cohesion to pay the leader's salary and let the leader generate electricity with love? Ai-chan is not that stupid! Ai-chan won't work without energy, absolutely not!"§!"
     ai_chan_thruster: "Thruster§G(Ai-chan exclusive version)§!"
  
     ####### Traits #######

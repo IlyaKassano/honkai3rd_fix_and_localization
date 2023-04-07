@@ -3,7 +3,7 @@
 hk648_robot = {
 	optimize_memory
 	create_species = {
-		name = Armed puppets
+		name = "Armed puppets"
 		class = MACHINE
 		portrait = "hkrobot1"
 		traits = {

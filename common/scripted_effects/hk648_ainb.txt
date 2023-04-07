@@ -180,7 +180,7 @@ ai_2ed_1 = {
 					count = 10
 					create_ship = {
 						name = random
-						design = "Love the sauce cannon destroyer"
+						design = "Ai-chan cannon destroyer"
 					}
 				}
 				while = {
@@ -215,14 +215,14 @@ ai_3rd_1 = {
 					count = 5
 					create_ship = {
 						name = random
-						design = "Love sauce cannon cruiser"
+						design = "Ai-chan cannon cruiser"
 					}
 				}
 				while = {
 					count = 10
 					create_ship = {
 						name = random
-						design = "Love the sauce cannon destroyer"
+						design = "Ai-chan cannon destroyer"
 					}
 				}
 				while = {
@@ -258,21 +258,21 @@ ai_4th_1 = {
 					count = 20
 					create_ship = {
 						name = random
-						design = "Love sauce cannon battleship"
+						design = "Ai-chan cannon battleship"
 					}
 				}
 				while = {
 					count = 5
 					create_ship = {
 						name = random
-						design = "Love sauce cannon cruiser"
+						design = "Ai-chan cannon cruiser"
 					}
 				}
 				while = {
 					count = 5
 					create_ship = {
 						name = random
-						design = "Love the sauce cannon destroyer"
+						design = "Ai-chan cannon destroyer"
 					}
 				}
 				while = {
@@ -307,21 +307,21 @@ ai_4th_2 = {
 					count = 25
 					create_ship = {
 						name = random
-						design = "Love sauce cannon battleship"
+						design = "Ai-chan cannon battleship"
 					}
 				}
 				while = {
 					count = 10
 					create_ship = {
 						name = random
-						design = "Love-chan key cruiser"
+						design = "Ai-chan key cruiser"
 					}
 				}
 				while = {
 					count = 5
 					create_ship = {
 						name = random
-						design = "Love the sauce cannon destroyer"
+						design = "Ai-chan cannon destroyer"
 					}
 				}
 				while = {
@@ -363,14 +363,14 @@ ai_4th_3 = {
 					count = 3
 					create_ship = {
 						name = random
-						design = "Love-chan key cruiser"
+						design = "Ai-chan key cruiser"
 					}
 				}
 				while = {
 					count = 1
 					create_ship = {
 						name = random
-						design = "Love the sauce cannon destroyer"
+						design = "Ai-chan cannon destroyer"
 					}
 				}
 				while = {
@@ -406,21 +406,21 @@ ai_5th_1 = {
 					count = 20
 					create_ship = {
 						name = random
-						design = "Love sauce cannon battleship"
+						design = "Ai-chan cannon battleship"
 					}
 				}
 				while = {
 					count = 20
 					create_ship = {
 						name = random
-						design = "Love sauce cannon cruiser"
+						design = "Ai-chan cannon cruiser"
 					}
 				}
 				while = {
 					count = 5
 					create_ship = {
 						name = random
-						design = "Love the sauce cannon destroyer"
+						design = "Ai-chan cannon destroyer"
 					}
 				}
 				while = {
@@ -462,14 +462,14 @@ ai_5th_2 = {
 					count = 10
 					create_ship = {
 						name = random
-						design = "Love-chan key cruiser"
+						design = "Ai-chan key cruiser"
 					}
 				}
 				while = {
 					count = 5
 					create_ship = {
 						name = random
-						design = "Love the sauce cannon destroyer"
+						design = "Ai-chan cannon destroyer"
 					}
 				}
 				while = {
@@ -511,14 +511,14 @@ ai_5th_3 = {
 					count = 1
 					create_ship = {
 						name = random
-						design = "Love-chan key cruiser"
+						design = "Ai-chan key cruiser"
 					}
 				}
 				while = {
 					count = 1
 					create_ship = {
 						name = random
-						design = "Love the sauce cannon destroyer"
+						design = "Ai-chan cannon destroyer"
 					}
 				}
 				while = {

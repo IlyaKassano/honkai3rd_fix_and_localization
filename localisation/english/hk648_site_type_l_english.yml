@@ -1,5 +1,5 @@
 ﻿l_english:
-1  ###################### Engravings ######################
+   ###################### Engravings ######################
 
     ##Signets of Deliverance
     signets_of_deliverance_1: "Pendant of the Watcher"
@@ -172,7 +172,7 @@
     19k23.5.desc: "It seems that Lady Luck is on our side. The ancient civilization did not create perpetual motion technology, and the autonomous combat unit A1 has depleted all of its energy. When the rescue team entered the ruins, they found that A1 had already fallen into Theresa's arms. After A1 fell, no power to resist destiny appeared in the ruins, and Destiny smoothly obtained the technology and resources left behind by the ancient civilization. However, no information about the so-called 'key to the end of the world' was found. Perhaps the key is not here. Theresa took A1's main body away, and although awakening A1 would cause her to lose most of her memories and abilities, Theresa still insisted on researching how to awaken A1, perhaps as a form of redemption for her past."
     19k23_over: "A Good Ending"
 
-    3 ####################Elysian Realm####################
+    ####################Elysian Realm####################
     ##################Elysian Realm Main Tomb##################
  
     hk648_elysian_realm: "Elysian Realm"

@@ -679,7 +679,7 @@ country_event = {
 
 country_event = {
 	id = hk648_star.21031
-	title = "§GAi-chan§!"
+	title = "GAi-chan!"
 	desc = "hk648_star.21031.desc"
 	is_triggered_only = yes 
 	diplomatic = yes
@@ -717,7 +717,7 @@ country_event = {
 #内定
 country_event = {
 	id = hk648_star.21032
-	title = "§GAi-chan§!"
+	title = "GAi-chan!"
 	desc = "hk648_star.21032.desc"
 	is_triggered_only = yes 
 	diplomatic = yes
@@ -733,7 +733,7 @@ country_event = {
 #不内定
 country_event = {
 	id = hk648_star.21033
-	title = "§GAi-chan§!"
+	title = "GAi-chan!"
 	desc = "hk648_star.21033.desc"
 	is_triggered_only = yes 
 	diplomatic = yes
@@ -755,7 +755,7 @@ country_event = {
 	is_triggered_only = yes 
 	
 	option = {
-		name = "Obviously, the heroine can only be §GAi-chan§!"
+		name = "Obviously, the heroine can only be GAi-chan!"
 		allow = {
 			custom_tooltip = {
 				fail_text = "Ai-chan has been disqualified"

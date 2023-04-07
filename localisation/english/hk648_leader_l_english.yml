@@ -1,5 +1,5 @@
 ﻿l_english:
-2 ###################################################### Leader options and events ######################################################
+  ###################################################### Leader options and events ######################################################
     hk648_leader.0.desc: "At the moment we successfully entered space, we realized that only a unified voice can lead our civilization to glory. We must select a leader among the leaders of various forces as the leader of our entire civilization. \n§Y(Note: In the main story of Honkai Impact 3rd (2017), the age of characters over 50 will not change, while the birth year of characters under 50 will be postponed by about 200 years, and the birth year of characters obtained from the Quantum Sea will not be postponed.)§!"
     otto.name: "Let Bishop §G Otto Apocalypse §! know our loyalty"
     otto.response: "Main story timeline (not yet completed, now it is just a blank slate)"
@@ -47,7 +47,7 @@
  
  
  
-2 ###################################################### Leader Names and Traits ######################################################
+  ###################################################### Leader Names and Traits ######################################################
 
     otto_apocalypse: "§G Otto Apocalypse §!"
     leader_trait_hksh: "Stigmata"

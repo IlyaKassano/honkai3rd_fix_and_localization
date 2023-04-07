@@ -1,5 +1,5 @@
 ﻿l_english:
-2  ################################################## National Ideology and Species Traits and Origins ##################################################
+  ################################################## National Ideology and Species Traits and Origins ##################################################
   VAL: "Human (Honkai Impact 3)"
   honkai648_energy: "Honkai Energy"
   honkai648_energy_desc: "Einstein once explained the nature of Honkai Energy:\nThe second law of thermodynamics states that if the entropy of a system decreases, it must cause the entropy of another system to increase by a greater amount. From an information perspective, there is a huge information asymmetry between a chaotic environment with highly chaotic information and a negentropy environment with highly ordered information. Historical studies have shown that Honkai Energy has a strong accompanying relationship with this information asymmetry. In mathematics, the imaginary energy belonging to the collapsed dimension can be expressed in a unified way with the real energy represented by the thermodynamic representation of the divergent dimension - the four-dimensional space-time that we can normally perceive - through high-dimensional complex functions. The result can predict the fluctuation of Honkai at the microscopic scale. Therefore, current researchers generally speculate that this \"imaginary energy\" is Honkai Energy, or at least an important component of Honkai Energy. \nThe above content is purely fictitious, and Honkai Energy actually means \"Honkai can do anything\"."
@@ -221,7 +221,7 @@
   leader_trait_b2_desc: "This leader is a B-rank Valkyrie."
   leader_trait_b3_desc: "This leader is a B-rank Valkyrie."
   leader_trait_b4_desc: "This leader is a B-rank Valkyrie."
-3 ############################################################Profession############################################################
+  ############################################################Profession############################################################
  
  #Job Bonus
   
@@ -352,7 +352,7 @@
  #Jpb Type
   planet_hk648_researchers: "崩坏能研究者岗位"
  
-4 ######################################################### Buildings and Districts #########################################################
+  ######################################################### Buildings and Districts #########################################################
 
   #Star Base Buildings#Ring Structure Buildings
   sm_ring_honkai_work1_hub: "Honkai Energy Transporter I"
@@ -478,7 +478,7 @@
   building_hk648_moth_observation_outpost: "Civilization Observation Station"
   building_hk648_moth_observation_outpost_desc: "This observation station can observe other civilizations in the universe through advanced technology, but the people of the Moth of Descent have almost completely idle it."
 
-5 ############################################################Ship############################################################
+  ############################################################Ship############################################################
   weapon_type_honkai: "§MHonkai§! Energy"
   weapon_type_anti_honkai: "§MAnti-Honkai§!"
   weapon_type_aichan: "§GAi-chan§!'s black technology"
@@ -787,7 +787,7 @@
   hk648_moonlight_warship_size: "Moonlight Throne"
   
   
-6 ############################################################ Technology ############################################################
+  ############################################################ Technology ############################################################
   ######################## Ship Technology ########################
   tech_hk648_19c: "Annihilator 19C"
   tech_hk648_19c_desc: "An axial weapon developed based on the remnants of ancient civilization technology, possessing decent power."
@@ -989,7 +989,7 @@
   tech_hk648_hkjj_desc: "This is a scrapped project."
   ######################## Augmentation ########################
   mod_planet_jobs_honkai648_energy_produces_mult: "Honkai Energy Produced by Jobs"
-7 ############################################################ Ascension ############################################################
+  ############################################################ Ascension ############################################################
   ap_honkai.1: "From £job_honkai648_experts£, Honkai energy experts, comes £honkai648_energy£ $honkai648_energy$:§G+1.5§!\nFrom £job_honkai648_foundry£, Honkai energy metallurgists, comes £alloys£ $alloys$:§G+1§!"
   mod_VALKYRIES_species_trait_points_add: "Valkyrie Trait Points"
   ap_honkai_yuri: "§HLilies Bloom§!"
@@ -1024,7 +1024,7 @@
   ap_hk648_square_brackets_desc: "§Y 'Language' §! is not a one-to-one correspondence of §Y 'rigid knowledge' §!, but rather a product that makes us §Y 'extraordinary' §! which the §Y 'ordinary people' §! cannot understand. Helpless, they can only §Y 'unite' §! to call us §Y 'enigmatic people' §!."
   ap_hk648_square_brackets.c: "Reduce §Y‘favorability’§! of §Y‘other countries’§! towards us!"
 
-8 ######################################################### Revision and Identification #########################################################
+  ######################################################### Revision and Identification #########################################################
 
   ##Favorability modification
   hk_moth_honkai_oppinion1: "Understanding the power of Honkai as a junior"
@@ -1078,7 +1078,7 @@
   honkai_energy_shedding250: "Honkai Energy Control"
   honkai_energy_shedding250_desc: "According to relevant policies, the production of Honkai energy is strictly controlled."
   
-9 ############################################################ Events ############################################################
+  ############################################################ Events ############################################################
   ############ Ascension-related ############
   hk648_pop.1001.desc: "Two centuries ago, we terminated the Stigmata Project due to extremely high failure rates. Now, with more advanced technology, we can lower the mortality rate of the Stigmata Project to an acceptable level. Data shows that the direct fatality rate for weak species implanted with Stigmata is only 50%, while the remaining 50% will be replaced by the product of the Stigmata, the [Ri Type], becoming a member of our main species. A small number of powerful species, including our main species, can completely resist the damage and assimilation effects of the Stigmata."
   hk648_pop.1002.desc: "The equipment required for the Stigmata Project is ready and Stigmata implantation can be carried out at any time for individuals who have not yet been implanted with Stigmata."
@@ -1506,7 +1506,7 @@
   hk648_cocoon_of_finality.0007.desc: "Not long ago, there was a sudden energy fluctuation in the pre-civilization ruins on Earth, and some people were sucked in and went missing. At the same time, a similar energy fluctuation came from a ruin on the moon. Experts speculate that those people were likely transported to the moon by some unknown means."
   hk648_cocoon_of_finality.0007.aa: "Rescue mission is urgently needed."
 
-10 #########################################################Special Research##########################################################
+  #########################################################Special Research##########################################################
   SHJH: "Stigmata Implantation"
   SHJH_DESC: "For most species, implanting stigmata into the body is extremely dangerous, but for a small number of special species, it is absolutely safe. Of course, mechanical bodies cannot have stigmata implanted."
   RHZS: "Gene Fusion"
@@ -1565,7 +1565,7 @@
   divine_key_12th_2_DESC: "The Corruption Laws are very special and can be spread in multiple ways, including electronic and biological viruses. We can use this feature to create our own 'Corruption Laws'."
 
  
-11 ###########################################################Laws############################################################
+  ###########################################################Laws############################################################
 
   edict_shjh648: "Stigmata Plan"
   edict_shjh648_desc: "As more species join us, we need to implant stigmata in them to ensure productivity."
@@ -1579,7 +1579,7 @@
   edict_headmaster_st_desc: "The current headmaster's teaching philosophy no longer meets our needs, we need to replace him/her with one that better suits our needs."
   edict_honkai648_energy: "Destroy Honkai Energy"
   edict_honkai648_energy_desc: "Can destroy excessive Honkai energy."
-12 ###########################################################Miscellaneous############################################################
+  ###########################################################Miscellaneous############################################################
   mod_country_base_alloys_produces_add: "Monthly Alloy Production"
   mod_country_base_honkai648_energy_produces_add: "Monthly Honkai Energy Production"
   FLAG_CATEGORY_tm: "Honkai Impact 3rd"
@@ -1594,7 +1594,7 @@
   sol_system_initializer_tm_NAME: "Solar System"
   sol_system_initializer_tm_DESC: "This is the solar system in Honkai Impact 3rd, which may be somewhat different from the usual solar system."
  
-13 ###########################################################Army############################################################
+  ###########################################################Army############################################################
   valkyrie2_army: "Valkyrie Army"
   valkyrie2_defense_army: "Valkyrie Defense Army"
   valkyrie2_army_desc: "An elite army composed of Valkyries, the main ground force of Schicksal"
@@ -1627,7 +1627,7 @@
   tllk_honkai_Beast: "Honkai Colossus"
   cy_honkai_Beast: "Honkai Leviathan"
  
-14 ###########################################################Relics############################################################
+  ###########################################################Relics############################################################
   relic_triumph_cooldown_360: "\n$relic_activation_cooldown$： £time£ §Y360§!"
   r_1st_herrscher: "Core of the Law of Reason"
   r_1st_herrscher_desc: "The core of the First Lawmaker, capable of creating any object that the user has analyzed through the power of Honkai, even reproducing certain special abilities. However, for some reason, this core has lost the power of the Law of Reason, and even the concentration of Honkai energy has decreased significantly. Now it's just a slightly special high-concentration Honkai crystal."
@@ -1647,7 +1647,7 @@
  
  
  
-15 ###########################################################Tradition############################################################
+  ###########################################################Tradition############################################################
   tradition_tr_hk648_honkai: "Honkai"
   tr_hk648_honkai_adopt: "Traditional Honkai"
   tradition_tr_hk648_honkai_desc: "On the road to fighting against Honkai, victory is the only option we have! \n§YNote： Due to the stupid donkey's magical mechanism, the daily recovery is： §G+100%§! In fact, it's only 1% of the health per day.§!"
@@ -1728,7 +1728,7 @@
   tradition_tr_hk648_hoi4_naval3_base_strick: "Base Strike"
   #
  
-16 ########################################################### POLICIES ###########################################################
+  ########################################################### POLICIES ###########################################################
   policy_hk648_war_doctrine: "New Era War Doctrine"
   policy_hk648_war_doctrine_desc: "The war doctrine of the mother star era is already outdated. We must have a war doctrine suitable for the new era."
   hk648_hoi4_land1: "Mobile Warfare"
@@ -1739,7 +1739,7 @@
   hk648_hoi4_land4_desc: "No assistance, only main attack! This kind of rich battle, I've never fought in my eight generations!\n\n"
   
   
-17 ###########################################################Planets############################################################
+  ###########################################################Planets############################################################
   #Honkai Planet
   col_hk648_honkai: "Honkai Planet"
   col_hk648_honkai_desc: "The concentration of Honkai energy on this planet can be artificially increased, making it highly efficient for Honkai energy production. \n§RWarning： Excessive concentration of Honkai energy can lead to Honkai disasters.§!"

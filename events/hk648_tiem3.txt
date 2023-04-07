@@ -839,7 +839,7 @@ country_event = {
 		event_target:teriri = {
 			remove_trait = leader_trait_teriri_captain
 		}
-		end_event_chain_counter = {
+		begin_event_chain = {
 			event_chain = "hk648_captain_usurper"
 			target = ROOT
 		}

@@ -99,7 +99,7 @@ country_event = {
 			create_leader = {
 				class = governor
 				species = VALKYRIES
-				name = "§GOtto Apocalypse§!"
+				name = "GOtto Apocalypse!"
 				traits = {
 					trait = leader_trait_otto
 				}

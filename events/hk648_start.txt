@@ -14,8 +14,8 @@ country_event = {
 		add_modifier = {
 			modifier = kaslana
 		}
-		set_country_flay = kaslana
-		remove_country_flay = no_kaslana
+		set_country_flag = kaslana
+		remove_country_flag = no_kaslana
 	}
 }
 
@@ -32,8 +32,8 @@ country_event = {
 	
 	immediate = {
 		remove_modifier = "kaslana"
-		remove_country_flay = kaslana
-		set_country_flay = no_kaslana
+		remove_country_flag = kaslana
+		set_country_flag = no_kaslana
 	}
 }
 
@@ -52,8 +52,8 @@ country_event = {
 		add_modifier = {
 			modifier = apocalypse
 		}
-		set_country_flay = apocalypse
-		remove_country_flay = no_apocalypse
+		set_country_flag = apocalypse
+		remove_country_flag = no_apocalypse
 	}
 }
 
@@ -70,8 +70,8 @@ country_event = {
 	
 	immediate = {
 		remove_modifier = "apocalypse"
-		remove_country_flay = apocalypse
-		set_country_flay = no_apocalypse
+		remove_country_flag = apocalypse
+		set_country_flag = no_apocalypse
 	}
 }
 
@@ -202,7 +202,7 @@ country_event = {
 			limit = { has_authority = auth_schicksal }
 			country_event = {
 				id = hk648_ainb.1
-				day = 8
+				days = 8
 			}
 		}
 	}

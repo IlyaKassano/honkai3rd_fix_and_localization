@@ -1,7 +1,7 @@
 
 
 ship_design = {
-	name = "Love sauce frigate"
+	name = "Ai-chan frigate"
 	ship_size = corvette
 	
 	section = {
@@ -45,7 +45,7 @@ ship_design = {
 	required_component="aichan_computer1"
 }
 ship_design = {
-	name = "Love sauce whiteboard frigate"
+	name = "Ai-chan whiteboard frigate"
 	ship_size = corvette
 	
 	section = {
@@ -90,7 +90,7 @@ ship_design = {
 }
 
 ship_design = {
-	name = "Love sauce destroyer"
+	name = "Ai-chan destroyer"
 	ship_size = destroyer
 	
 	section = {
@@ -147,7 +147,7 @@ ship_design = {
 }
 
 ship_design = {
-	name = "Love sauce whiteboard destroyer"
+	name = "Ai-chan whiteboard destroyer"
 	ship_size = destroyer
 	
 	section = {
@@ -283,7 +283,7 @@ ship_design = {
 }
 
 ship_design = {
-	name = "Love sauce whiteboard cruiser"
+	name = "Ai-chan whiteboard cruiser"
 	ship_size = cruiser
 	
 	section = {
@@ -362,7 +362,7 @@ ship_design = {
 }
 
 ship_design = {
-	name = "Love sauce battleship"
+	name = "Ai-chan battleship"
 	ship_size = battleship
 	section = {
 		template = "BATTLESHIP_BOW_L2"
@@ -443,7 +443,7 @@ ship_design = {
 }
 
 ship_design = {
-	name = "Love sauce whiteboard battleship"
+	name = "Ai-chan whiteboard battleship"
 	ship_size = battleship
 	section = {
 		template = "BATTLESHIP_BOW_L2"

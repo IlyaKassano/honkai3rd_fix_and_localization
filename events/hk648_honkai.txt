@@ -29,7 +29,7 @@ country_event = {
 			save_global_event_target_as = hk_valkyrie
 		}
 		create_country = {
-			name = "§MHonkai§!"
+			name = "MHonkai!"
 			type = hk_country
 			flag = {
 				icon= {
@@ -2319,7 +2319,7 @@ country_event = {
 
 country_event = {
 	id = hk648_honkai.8005
-	title = "§HHerrscher of Sentience§!"
+	title = "HHerrscher of Sentience!"
 	desc = "hk648_honkai.8005.desc"
 	is_triggered_only = yes
 	trigger = { has_authority = auth_schicksal }
@@ -2341,7 +2341,7 @@ country_event = {
 
 country_event = {
 	id = hk648_honkai.8006
-	title = "§HHerrscher of Sentience§!"
+	title = "HHerrscher of Sentience!"
 	desc = "hk648_honkai.8006.desc"
 	is_triggered_only = yes
 	trigger = { has_authority = auth_schicksal }
@@ -2374,7 +2374,7 @@ country_event = {
 
 country_event = {
 	id = hk648_honkai.8007
-	title = "§HHerrscher of Sentience§!"
+	title = "HHerrscher of Sentience!"
 	desc = "hk648_honkai.8007.desc"
 	is_triggered_only = yes
 	trigger = { has_authority = auth_schicksal }
@@ -2405,7 +2405,7 @@ country_event = {
 
 country_event = {
 	id = hk648_honkai.8008
-	title = "§HHerrscher of Sentience§!"
+	title = "HHerrscher of Sentience!"
 	desc = "hk648_honkai.8008.desc"
 	is_triggered_only = yes
 	trigger = { has_authority = auth_schicksal }
@@ -2436,7 +2436,7 @@ country_event = {
 
 country_event = {
 	id = hk648_honkai.8009
-	title = "§HHerrscher of Sentience§!"
+	title = "HHerrscher of Sentience!"
 	desc = "hk648_honkai.8009.desc"
 	is_triggered_only = yes
 	trigger = { has_authority = auth_schicksal }

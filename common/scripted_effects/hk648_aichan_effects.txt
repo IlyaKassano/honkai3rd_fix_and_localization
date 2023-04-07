@@ -81,14 +81,14 @@ aichan_mercenary1 = {
 					count = 20
 					create_ship = {
 						name = random
-						design = "Love sauce frigate"
+						design = "Ai-chan frigate"
 					}
 				}
 				while = {
 					count = 10
 					create_ship = {
 						name = random
-						design = "Love sauce destroyer"
+						design = "Ai-chan destroyer"
 					}
 				}
 				while = {
@@ -164,7 +164,7 @@ aichan_mercenary2 = {
 					count = 20
 					create_ship = {
 						name = random
-						design = "Love sauce destroyer"
+						design = "Ai-chan destroyer"
 					}
 				}
 				while = {
@@ -240,14 +240,14 @@ aichan_mercenary3 = {
 					count = 20
 					create_ship = {
 						name = random
-						design = "Love sauce whiteboard frigate"
+						design = "Ai-chan whiteboard frigate"
 					}
 				}
 				while = {
 					count = 10
 					create_ship = {
 						name = random
-						design = "Love sauce destroyer"
+						design = "Ai-chan destroyer"
 					}
 				}
 				while = {
@@ -261,7 +261,7 @@ aichan_mercenary3 = {
 					count = 5
 					create_ship = {
 						name = random
-						design = "Love sauce whiteboard battleship"
+						design = "Ai-chan whiteboard battleship"
 					}
 				}
 				settings = {
@@ -325,14 +325,14 @@ aichan_mercenary4 = {
 					count = 20
 					create_ship = {
 						name = random
-						design = "Love sauce whiteboard frigate"
+						design = "Ai-chan whiteboard frigate"
 					}
 				}
 				while = {
 					count = 10
 					create_ship = {
 						name = random
-						design = "Love sauce destroyer"
+						design = "Ai-chan destroyer"
 					}
 				}
 				while = {
@@ -346,7 +346,7 @@ aichan_mercenary4 = {
 					count = 5
 					create_ship = {
 						name = random
-						design = "Love sauce battleship"
+						design = "Ai-chan battleship"
 					}
 				}
 				settings = {
@@ -411,28 +411,28 @@ aichan_mercenary5 = {
 					count = 20
 					create_ship = {
 						name = random
-						design = "Love sauce whiteboard frigate"
+						design = "Ai-chan whiteboard frigate"
 					}
 				}
 				while = {
 					count = 10
 					create_ship = {
 						name = random
-						design = "Love sauce destroyer"
+						design = "Ai-chan destroyer"
 					}
 				}
 				while = {
 					count = 10
 					create_ship = {
 						name = random
-						design = "Love sauce whiteboard cruiser"
+						design = "Ai-chan whiteboard cruiser"
 					}
 				}
 				while = {
 					count = 5
 					create_ship = {
 						name = random
-						design = "Love sauce battleship"
+						design = "Ai-chan battleship"
 					}
 				}
 				settings = {
@@ -1229,7 +1229,7 @@ aichan_general0 = {
 aichan_coed_kill = {
 	optimize_memory
 	create_species = {
-		name = Love sauce individual
+		name = "Ai-chan individual"
 		class = MACHINE
 		portrait = "aichan1"
 	}
