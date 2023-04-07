@@ -1,0 +1,72 @@
+honkai648_schicksal = {
+	name = "Mandate of Heaven"
+	adjective = "Mandate of Heaven"
+	spawn_enabled = always
+	ignore_portrait_duplication = yes
+	
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans1"
+	
+	species = {
+		class = "VAL"
+		portrait = "valkyries1"
+		name = "Mankind"
+		plural = "Mankind"
+		adjective = "Mankind"
+		name_list = "HUMAN1"
+		trait = "trait_valkyries"
+		trait = "trait_yuri"
+		trait = "trait_parliament"
+		trait = "trait_military"
+		trait = "trait_schariac"
+	}
+	
+	
+	room = "honkai_impact_bridge2_room"
+	
+	authority = "auth_schicksal"
+	civics = { "civic_snake" "civic_anti_entropy" }
+	government = gov_schicksal
+	
+	ethic = "ethic_militarist"
+	ethic = "ethic_fanatic_materialist"
+
+	origin = "origin_fire_of_moths"
+
+	
+	planet_name = "Earth"
+	planet_class = "pc_continental"
+	initializer = "sol_system_initializer_tm"
+	system_name = "Sun"
+	
+	graphical_culture = "mammalian_01"
+	city_graphical_culture = "mammalian_01"
+	
+	empire_flag = {
+		icon= {
+			category = "tm"
+			file = "flag_tm1.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"blue"
+			"blue"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Bishop of Schrödinger"
+		gender = female
+		portrait = "valkyries1"
+		texture = 15
+		hair = 0
+		clothes = 0
+		leader_class = ruler
+		ruler_title = "Bishop"
+		ruler_title_female = "Bishop"
+	}
+}

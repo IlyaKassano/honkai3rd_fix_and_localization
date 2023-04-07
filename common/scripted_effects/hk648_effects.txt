@@ -1,0 +1,337 @@
+	
+#舰长开局卫队
+create_captain_forces = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			effect = {
+				set_owner = root
+				while = {
+					count = 5
+					create_army_transport = {
+						ship_name = random
+						#graphical_culture = "root"
+						army_name = Drone
+						army_type = "titan_army_s"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 40
+					angle = random
+				}	
+				set_fleet_flag = hk648_captain
+			}
+		}
+	}
+	
+	capital_scope = {
+		create_fleet = {
+			effect = {
+				set_owner = root						
+				while = {
+					count = 4
+					create_ship = {
+						name = random
+						design = "Vulcan gun battleship"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 40
+					angle = random
+				}	
+				assign_leader = event_target:hk648_captain
+				set_fleet_flag = hk648_captain
+			}
+			settings = {
+				can_upgrade = yes	
+			}
+		}
+	}
+}
+
+#叛军舰队X20
+hk_rebel_ship_201 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			effect = {
+				set_owner = root						
+				while = {
+					count = 25
+					create_ship = {
+						name = random
+						design = "NAME_Dagger"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 40
+					angle = random
+				}	
+				assign_leader = event_target:jz
+			}
+			settings = {
+				can_upgrade = no
+				can_disband = no
+				can_change_leader = no
+				can_change_composition = no
+				uses_naval_capacity = no
+			}
+		}
+	}
+}
+
+hk_rebel_ship_202 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			effect = {
+				set_owner = root						
+				while = {
+					count = 25
+					create_ship = {
+						name = random
+						design = "NAME_Dagger"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 40
+					angle = random
+				}	
+			}
+			settings = {
+				can_upgrade = no
+				can_disband = no
+				can_change_composition = no	
+				uses_naval_capacity = no
+			}
+		}
+	}
+}
+
+#叛军
+create_hk648_rebel = {
+	optimize_memory
+	create_country = {
+		name = "Mandate of Heaven"
+		type = hk648_rebel
+		flag = {
+			icon= {
+				category = "tm"
+				file = "flag_tm1.dds"
+			}
+			background= {
+				category = "backgrounds"
+				file = "00_solid.dds"
+			}
+			colors={
+				"blue"
+				"blue"
+				"null"
+				"null"
+			}
+		}
+		species = last_created_species
+		effect = {
+			establish_communications_no_message = root.owner
+			save_global_event_target_as = hk648_rebel
+		}
+	}
+}
+
+#逆熵机甲部队
+create_hk_rebel1 = {
+	optimize_memory
+	event_target:hk648_rebel = {
+		ROOT = {
+			while = { 
+				count = 4
+				create_army = {
+					name = "Titan"
+					owner = event_target:hk648_rebel
+					species = Valkyrie
+					type = "titan_army"
+				}
+			}
+		}
+	}
+}
+#天命女武神部队
+create_hk_rebel2 = {
+	optimize_memory
+	event_target:hk648_rebel = {
+		ROOT = {
+			while = { 
+				count = 10
+				create_army = {
+					name = "Valkyrie troops"
+					owner = event_target:hk648_rebel
+					species = Valkyrie
+					type = "valkyrie2_army"
+				}
+			}
+		}
+	}
+}
+
+hk_rebel_ship = {
+	optimize_memory
+	every_owned_fleet = {
+		limit = {
+			NOT = {	
+				is_ship_size = starbase_starport 
+				is_ship_size = starbase_starhold
+				is_ship_size = starbase_starfortress
+				is_ship_size = starbase_citadel
+				is_ship_size = colossus
+				has_fleet_flag = hk648_captain 
+			}
+		}
+		set_owner = event_target:hk648_rebel
+	}
+}
+
+create_k423 = {
+	optimize_memory
+	create_leader = {
+		class = admiral
+		species = VALKYRIES
+		name = "Kiana"
+		traits = {
+			trait = leader_trait_k423
+		}
+		skill = 10
+	}
+	last_created_leader = {  
+		set_age = 18
+		set_is_female = yes
+		change_species = owner_species
+		change_leader_portrait = species
+	}
+	set_country_flag = leader_k423
+}
+
+create_yy = {
+	optimize_memory
+	create_leader = {
+		class = admiral
+		species = VALKYRIES
+		name = "Bud coat"
+		traits = {
+			trait = leader_trait_raiden
+		}
+		skill = 10
+	}
+	last_created_leader = {  
+		set_age = 19
+		set_is_female = yes
+		change_species = owner_species
+		change_leader_portrait = species
+	}
+	set_country_flag = leader_yy
+}
+
+create_blny = {
+	optimize_memory
+	create_leader = {
+		class = admiral
+		species = VALKYRIES
+		name = "Bronia"
+		traits = {
+			trait = leader_trait_blny
+		}
+		skill = 10
+	}
+	last_created_leader = {  
+		set_age = 16
+		set_is_female = yes
+		change_species = owner_species
+		change_leader_portrait = species
+	}
+	set_country_flag = leader_blny
+}
+
+create_lt = {
+	optimize_memory
+	create_leader = {
+		class = admiral
+		species = VALKYRIES
+		name = "Rita"
+		traits = {
+			trait = leader_trait_lt
+		}
+		skill = 10
+	}
+	last_created_leader = {  
+		set_age = 21
+		set_is_female = yes
+		change_species = owner_species
+		change_leader_portrait = species
+	}
+	set_country_flag = leader_lt
+}
+
+create_lsly = {
+	optimize_memory
+	create_leader = {
+		class = admiral
+		species = VALKYRIES
+		name = "Rosalia"
+		traits = {
+			trait = leader_trait_lsly
+		}
+		skill = 10
+	}
+	last_created_leader = {  
+		set_age = 15
+		set_is_female = yes
+		change_species = owner_species
+		change_leader_portrait = species
+	}
+}
+
+create_lly = {
+	optimize_memory
+	create_leader = {
+		class = admiral
+		species  = VALKYRIES
+		name = "Lilia"
+		traits = {
+			trait = leader_trait_lly
+		}
+		skill = 10
+	}
+	last_created_leader = {  
+		set_age = 15
+		set_is_female = yes
+		change_species = owner_species
+		change_leader_portrait = species
+	}
+}
+
+create_jz = {
+	optimize_memory
+	create_leader = {
+		class = admiral
+		species = VALKYRIES
+		name = "Himeko"
+		traits = {
+			trait = leader_trait_jz
+		}
+		skill = 10
+	}
+	last_created_leader = {  
+		set_age = 16
+		set_is_female = yes
+		add_trait = leader_trait_sh3
+		change_species = owner_species
+		change_leader_portrait = species
+	}
+	last_created_leader = {
+		save_global_event_target_as = jz
+	}
+	set_country_flag = leader_jz
+}

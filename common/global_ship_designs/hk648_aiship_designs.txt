@@ -1,0 +1,698 @@
+#####ai特供战舰#####
+#加速器最高五，暗物质
+#传感器最高四
+#殖民船#
+ship_design = {
+	name = "Honkai colonial ship"
+	ship_size = colonizer
+
+	section = {
+		template = "DEFAULT_COLONIZATION_SECTION"
+		slot = "mid"
+	}
+	required_component="HYPER_DRIVE_3"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SENSOR_4"
+}
+#科研船#
+ship_design = {
+	name = "Collapse of scientific research ships"
+	ship_size = science
+
+	section = {
+		template = "DEFAULT_SCIENCESHIP_SECTION"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "blackai_sarmor1"
+		}	
+		component = {
+			slot = "SMALL_UTILITY_2"
+			template = "blackai_shield1"
+		}		
+	}
+
+	required_component = "SHIP_THRUSTER_5"
+	required_component = "SENSOR_4"
+	required_component = "hk648_mnbz1"
+	required_component = "hk648_xsyq"
+}
+#工程船#
+ship_design = {
+	name = "Collapsed engineering ships"
+	ship_size = constructor
+	section = {
+		template = "DEFAULT_CONSTRUCTION_SECTION"
+		slot = "mid"
+	
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "blackai_sarmor1"
+		}	
+		component = {
+			slot = "SMALL_UTILITY_2"
+			template = "blackai_shield1"
+		}		
+	}
+	required_component = "SHIP_THRUSTER_5"
+	required_component = "SENSOR_4"
+	required_component = "hk648_mnbz1"
+	required_component = "hk648_xsyq"
+	
+}
+###加特林战舰###
+#开局给一队，五年后常规给，需要一级以上强化#
+ship_design = {
+	name = "Vulcan gun battleship"
+	ship_size = corvette
+	
+	section = {
+		template = "CORVETTE_MID_S3"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "hk648_jtl"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "hk648_jtl"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "hk648_jtl"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "blackai_shield1"
+		}
+		component = {
+			slot = "SMALL_UTILITY_2"
+			template = "blackai_shield1"
+		}
+		component = {
+			slot = "SMALL_UTILITY_3"
+			template = "blackai_sarmor1"
+		}		
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+	}
+	
+	required_component="hk648_mnbz1"
+	required_component="SHIP_THRUSTER_2"
+	required_component="SENSOR_2"
+	required_component = "hk648_xsyq"
+	required_component="aichan_computer1"
+}
+
+###超限加特林战舰###
+#40年后常规给，需要三级强化#
+
+ship_design = {
+	name = "Oversized Vulcan guns battleship"
+	ship_size = corvette
+	
+	section = {
+		template = "CORVETTE_MID_S3"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "hk648_cxjtl"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "hk648_cxjtl"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "hk648_cxjtl"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "aichan_shield1"
+		}
+		component = {
+			slot = "SMALL_UTILITY_2"
+			template = "aichan_shield1"
+		}
+		component = {
+			slot = "SMALL_UTILITY_3"
+			template = "aichan_sarmor1"
+		}		
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+	}
+	
+	required_component="hk648_ccmnbz1"
+	required_component="SHIP_THRUSTER_5"
+	required_component="SENSOR_4"
+	required_component = "hk648_gjxsyq"
+	required_component="aichan648_computer1"
+}
+
+
+###爱酱炮战舰###
+#五年开始给驱逐舰，需要一级以上强化，十年巡洋舰，十五年战列舰，需要二级以下强化#
+#驱逐舰，护甲为爱酱系列护甲#
+ship_design = {
+	name = "Love the sauce cannon destroyer"
+	ship_size = destroyer
+	
+	section = {
+		template = "DESTROYER_BOW_L1"
+		slot = "bow"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "aichan_cannon3"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "blackai_sarmor1"
+		}	
+		component = {
+			slot = "SMALL_UTILITY_2"
+			template = "blackai_sarmor1"
+		}	
+		component = {
+			slot = "SMALL_UTILITY_3"
+			template = "blackai_sarmor1"
+		}	
+		component = {
+			slot = "SMALL_UTILITY_4"
+			template = "blackai_shield1"
+		}	
+		component = {
+			slot = "SMALL_UTILITY_5"
+			template = "blackai_shield1"
+		}	
+		component = {
+			slot = "SMALL_UTILITY_6"
+			template = "blackai_shield1"
+		}	
+	}
+	section = {
+		template = "DESTROYER_STERN_M1"
+		slot = "stern"
+		
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "aichan_cannon2"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+	}
+	required_component="hk648_mnbz2"
+	required_component="SHIP_THRUSTER_2"
+	required_component="SENSOR_2"
+	required_component = "hk648_xsyq"
+	required_component="aichan_computer2"
+}
+#巡洋舰，护甲为爱酱系列护甲#
+ship_design = {
+	name = "Love sauce cannon cruiser"
+	ship_size = cruiser
+	
+	section = {
+		template = "CRUISER_BOW_L1"
+		slot = "bow"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "aichan_cannon3"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "blackai_shield2"
+		}	
+		component = {
+			slot = "MEDIUM_UTILITY_2"
+			template = "blackai_shield2"
+		}	
+		component = {
+			slot = "MEDIUM_UTILITY_3"
+			template = "blackai_shield2"
+		}	
+		component = {
+			slot = "MEDIUM_UTILITY_4"
+			template = "blackai_shield2"
+		}	
+	}
+	section = {
+		template = "CRUISER_MID_L1M1"
+		slot = "mid"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "aichan_cannon3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "aichan_cannon2"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "blackai_sarmor2"
+		}	
+		component = {
+			slot = "MEDIUM_UTILITY_2"
+			template = "blackai_sarmor2"
+		}	
+		component = {
+			slot = "MEDIUM_UTILITY_3"
+			template = "blackai_sarmor2"
+		}	
+		component = {
+			slot = "MEDIUM_UTILITY_4"
+			template = "blackai_sarmor2"
+		}	
+	}
+	section = {
+		template = "CRUISER_STERN_M1"
+		slot = "stern"
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "aichan_cannon2"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "aichan_energy"
+		}
+	}
+	required_component="hk648_mnbz3"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SENSOR_4"
+	required_component = "hk648_xsyq"
+	required_component="aichan_computer4"
+}
+
+#战列舰，护甲为爱酱系列护甲#
+ship_design = {
+	name = "Love sauce cannon battleship"
+	ship_size = battleship
+	section = {
+		template = "BATTLESHIP_BOW_L2"
+		slot = "bow"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "aichan_cannon3"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "aichan_cannon3"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "blackai_sarmor3"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "hk648_xzy"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "blackai_sarmor3"
+		}	
+	}
+	
+	section = {
+		template = "BATTLESHIP_MID_L3"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "aichan_cannon3"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "aichan_cannon3"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "aichan_cannon3"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "blackai_shield3"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "hk648_xzy"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "blackai_shield3"
+		}	
+	}
+	
+	section = {
+		template = "BATTLESHIP_STERN_L1"
+		slot = "stern"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "aichan_cannon3"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "aichan_energy"
+		}
+	}
+	required_component="hk648_mnbz4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SENSOR_4"
+	required_component = "hk648_xsyq"
+	required_component="aichan_computer4"
+}
+
+###爱酱之钥战舰###
+#十年开始给巡洋舰，十五年战列舰，需要二级以上强化#
+#巡洋舰，护甲为黑白核系列装甲#
+ship_design = {
+	name = "Love-chan key cruiser"
+	ship_size = cruiser
+	
+	section = {
+		template = "CRUISER_BOW_L1"
+		slot = "bow"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "aichan_zlzy3"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "hk648_black2"
+		}	
+		component = {
+			slot = "MEDIUM_UTILITY_2"
+			template = "hk648_black2"
+		}	
+		component = {
+			slot = "MEDIUM_UTILITY_3"
+			template = "hk648_black2"
+		}	
+		component = {
+			slot = "MEDIUM_UTILITY_4"
+			template = "hk648_black2"
+		}	
+	}
+	section = {
+		template = "CRUISER_MID_L1M1"
+		slot = "mid"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "aichan_zlzy3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "aichan_zlzy2"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "hk648_white2"
+		}	
+		component = {
+			slot = "MEDIUM_UTILITY_2"
+			template = "hk648_white2"
+		}	
+		component = {
+			slot = "MEDIUM_UTILITY_3"
+			template = "hk648_white2"
+		}	
+		component = {
+			slot = "MEDIUM_UTILITY_4"
+			template = "hk648_white2"
+		}	
+	}
+	section = {
+		template = "CRUISER_STERN_M1"
+		slot = "stern"
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "aichan_zlzy2"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "aichan_energy"
+		}
+	}
+	required_component="hk648_mnbz3"
+	required_component="SHIP_THRUSTER_5"
+	required_component="SENSOR_4"
+	required_component = "hk648_gjxsyq"
+	required_component="aichan648_computer4"
+}
+
+#战列舰，护甲为绿核系列装甲#
+ship_design = {
+	name = "Ai-chan Key Battleship"
+	ship_size = battleship
+	section = {
+		template = "BATTLESHIP_BOW_M2S4"
+		slot = "bow"
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "hk648_19c"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "hk648_xzy"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "hk648_xzy"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "aichan_sarmor3"
+		}	
+	}
+	
+	section = {
+		template = "BATTLESHIP_MID_L3"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "aichan_zlzy3"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "aichan_zlzy3"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "aichan_zlzy3"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "hk648_xzy"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "hk648_xzy"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "aichan_shield3"
+		}	
+	}
+	
+	section = {
+		template = "BATTLESHIP_STERN_L1"
+		slot = "stern"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "aichan_zlzy3"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "aichan_energy"
+		}
+	}
+	required_component="hk648_ccmnbz4"
+	required_component="SHIP_THRUSTER_5"
+	required_component="SENSOR_4"
+	required_component = "hk648_gjxsyq"
+	required_component="aichan648_computer4"
+}
+###真理之境战舰###
+#三十五年开始给战列舰，需要三级强化#
+#战列舰，护甲为相转移装甲#
+ship_design = {
+	name = "Realm of Truth battleship"
+	ship_size = battleship
+	section = {
+		template = "BATTLESHIP_BOW_M2S4"
+		slot = "bow"
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "hk648_19cx"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "hk648_xzy"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "hk648_xzy"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "aichan_648"
+		}	
+	}
+	
+	section = {
+		template = "BATTLESHIP_MID_L3"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "hk648_zlzj3"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "hk648_zlzj3"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "hk648_zlzj3"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "aichan_648"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "hk648_xzy"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "hk648_xzy"
+		}	
+	}
+	
+	section = {
+		template = "BATTLESHIP_STERN_L1"
+		slot = "stern"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "hk648_zlzj3"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "aichan_energy"
+		}
+	}
+	required_component="hk648_ccmnbz4"
+	required_component="SHIP_THRUSTER_5"
+	required_component="SENSOR_4"
+	required_component = "hk648_gjxsyq"
+	required_component="aichan648_computer4"
+}
+
+###真理之爱战舰###
+#三十五年后，给少量战舰，需要三级强化#
+#战列舰，护甲为爱酱水晶甲#
+ship_design = {
+	name = "Battleship of Truth Love"
+	ship_size = battleship
+	section = {
+		template = "BATTLESHIP_BOW_M2S4"
+		slot = "bow"
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "aichan_648"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "aichan_648"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "aichan_648"
+		}	
+	}
+	
+	section = {
+		template = "BATTLESHIP_MID_L3"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "aichan_zlzj3"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "aichan_zlzj3"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "aichan_zlzj3"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "aichan_648"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "aichan_648"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "aichan_648"
+		}	
+	}
+	
+	section = {
+		template = "BATTLESHIP_STERN_L1"
+		slot = "stern"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "aichan_zlzj3"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "aichan_energy"
+		}
+	}
+	required_component="hk648_ccmnbz4"
+	required_component="SHIP_THRUSTER_5"
+	required_component="SENSOR_4"
+	required_component = "hk648_gjxsyq"
+	required_component="aichan648_computer4"
+}

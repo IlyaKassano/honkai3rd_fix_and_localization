@@ -1,0 +1,230 @@
+ship_design = {
+	name = "ravenⅢType of battleship"
+	ship_size = battleship
+	section = {
+		template = "BATTLESHIP_BOW_M2S4"
+		slot = "bow"
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "hkunkonw_x_dps600"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "honkai_hp10000"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "honkai_hp10000"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "honkai_hp10000"
+		}	
+	}
+	
+	section = {
+		template = "BATTLESHIP_MID_L3"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "hkunkonw_l_dps300"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "hkunkonw_l_dps300"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "hkunkonw_l_dps300"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "honkai_hp10000"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "honkai_hp10000"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "honkai_hp10000"
+		}	
+	}
+	
+	section = {
+		template = "BATTLESHIP_STERN_L1"
+		slot = "stern"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "hkunkonw_l_dps300"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "aichan_energy"
+		}
+	}
+	required_component="hk648_ccmnbz4"
+	required_component="SHIP_THRUSTER_5"
+	required_component="SENSOR_4"
+	required_component="hk648_gjxsyq"
+	required_component="aichan648_computer4"
+}
+
+ship_design = {
+	name = "ravenⅡType of battleship"
+	ship_size = battleship
+	section = {
+		template = "BATTLESHIP_BOW_M2S4"
+		slot = "bow"
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "hkunkonw_x_dps400"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "honkai_hp5000"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "honkai_hp5000"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "honkai_hp5000"
+		}	
+	}
+	
+	section = {
+		template = "BATTLESHIP_MID_L3"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "hkunkonw_l_dps200"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "hkunkonw_l_dps200"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "hkunkonw_l_dps200"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "honkai_hp5000"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "honkai_hp5000"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "honkai_hp5000"
+		}	
+	}
+	
+	section = {
+		template = "BATTLESHIP_STERN_L1"
+		slot = "stern"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "hkunkonw_l_dps200"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "aichan_energy"
+		}
+	}
+	required_component="hk648_ccmnbz4"
+	required_component="SHIP_THRUSTER_5"
+	required_component="SENSOR_4"
+	required_component="hk648_gjxsyq"
+	required_component="aichan648_computer4"
+}
+
+ship_design = {
+	name = "ravenⅠType of battleship"
+	ship_size = battleship
+	section = {
+		template = "BATTLESHIP_BOW_M2S4"
+		slot = "bow"
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "hkunkonw_x_dps160"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "honkai_hp1000"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "honkai_hp1000"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "honkai_hp1000"
+		}	
+	}
+	
+	section = {
+		template = "BATTLESHIP_MID_L3"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "hkunkonw_l_dps80"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "hkunkonw_l_dps80"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "hkunkonw_l_dps80"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "honkai_hp1000"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "honkai_hp1000"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "honkai_hp1000"
+		}	
+	}
+	
+	section = {
+		template = "BATTLESHIP_STERN_L1"
+		slot = "stern"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "hkunkonw_l_dps80"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "aichan_energy"
+		}
+	}
+	required_component="hk648_ccmnbz4"
+	required_component="SHIP_THRUSTER_5"
+	required_component="SENSOR_4"
+	required_component="hk648_gjxsyq"
+	required_component="aichan648_computer4"
+}

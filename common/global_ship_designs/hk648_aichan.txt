@@ -1,0 +1,524 @@
+
+
+ship_design = {
+	name = "Love sauce frigate"
+	ship_size = corvette
+	
+	section = {
+		template = "CORVETTE_MID_S3"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "aichan_cannon1"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "aichan_cannon1"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "aichan_cannon1"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "blackai_shield1"
+		}
+		component = {
+			slot = "SMALL_UTILITY_2"
+			template = "blackai_shield1"
+		}
+		component = {
+			slot = "SMALL_UTILITY_3"
+			template = "blackai_sarmor1"
+		}		
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+	}
+	
+	required_component="hk648_mnbz1"
+	required_component="SHIP_THRUSTER_2"
+	required_component="SENSOR_2"
+	required_component = "hk648_xsyq"
+	required_component="aichan_computer1"
+}
+ship_design = {
+	name = "Love sauce whiteboard frigate"
+	ship_size = corvette
+	
+	section = {
+		template = "CORVETTE_MID_S3"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_GUN_01"
+			template = ""
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = ""
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = ""
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "blackai_shield1"
+		}
+		component = {
+			slot = "SMALL_UTILITY_2"
+			template = "blackai_shield1"
+		}
+		component = {
+			slot = "SMALL_UTILITY_3"
+			template = "blackai_sarmor1"
+		}		
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+	}
+	
+	required_component="hk648_mnbz1"
+	required_component="SHIP_THRUSTER_2"
+	required_component="SENSOR_2"
+	required_component = "hk648_xsyq"
+	required_component="aichan_computer1"
+}
+
+ship_design = {
+	name = "Love sauce destroyer"
+	ship_size = destroyer
+	
+	section = {
+		template = "DESTROYER_BOW_L1"
+		slot = "bow"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "aichan_cannon3"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "blackai_sarmor1"
+		}	
+		component = {
+			slot = "SMALL_UTILITY_2"
+			template = "blackai_sarmor1"
+		}	
+		component = {
+			slot = "SMALL_UTILITY_3"
+			template = "blackai_sarmor1"
+		}	
+		component = {
+			slot = "SMALL_UTILITY_4"
+			template = "blackai_shield1"
+		}	
+		component = {
+			slot = "SMALL_UTILITY_5"
+			template = "blackai_shield1"
+		}	
+		component = {
+			slot = "SMALL_UTILITY_6"
+			template = "blackai_shield1"
+		}	
+	}
+	section = {
+		template = "DESTROYER_STERN_M1"
+		slot = "stern"
+		
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "aichan_cannon2"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+	}
+	required_component="hk648_mnbz2"
+	required_component="SHIP_THRUSTER_2"
+	required_component="SENSOR_2"
+	required_component = "hk648_xsyq"
+	required_component="aichan_computer2"
+}
+
+ship_design = {
+	name = "Love sauce whiteboard destroyer"
+	ship_size = destroyer
+	
+	section = {
+		template = "DESTROYER_BOW_L1"
+		slot = "bow"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = ""
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "blackai_sarmor1"
+		}	
+		component = {
+			slot = "SMALL_UTILITY_2"
+			template = "blackai_sarmor1"
+		}	
+		component = {
+			slot = "SMALL_UTILITY_3"
+			template = "blackai_sarmor1"
+		}	
+		component = {
+			slot = "SMALL_UTILITY_4"
+			template = "blackai_shield1"
+		}	
+		component = {
+			slot = "SMALL_UTILITY_5"
+			template = "blackai_shield1"
+		}	
+		component = {
+			slot = "SMALL_UTILITY_6"
+			template = "blackai_shield1"
+		}	
+	}
+	section = {
+		template = "DESTROYER_STERN_M1"
+		slot = "stern"
+		
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = ""
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+	}
+	required_component="hk648_mnbz2"
+	required_component="SHIP_THRUSTER_2"
+	required_component="SENSOR_2"
+	required_component = "hk648_xsyq"
+	required_component="aichan_computer2"
+}
+
+ship_design = {
+	name = "Cruiser Ai-chan"
+	ship_size = cruiser
+	
+	section = {
+		template = "CRUISER_BOW_L1"
+		slot = "bow"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "aichan_cannon3"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "blackai_shield2"
+		}	
+		component = {
+			slot = "MEDIUM_UTILITY_2"
+			template = "blackai_shield2"
+		}	
+		component = {
+			slot = "MEDIUM_UTILITY_3"
+			template = "blackai_shield2"
+		}	
+		component = {
+			slot = "MEDIUM_UTILITY_4"
+			template = "blackai_shield2"
+		}	
+	}
+	section = {
+		template = "CRUISER_MID_L1M1"
+		slot = "mid"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "aichan_cannon3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "aichan_cannon2"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "blackai_sarmor2"
+		}	
+		component = {
+			slot = "MEDIUM_UTILITY_2"
+			template = "blackai_sarmor2"
+		}	
+		component = {
+			slot = "MEDIUM_UTILITY_3"
+			template = "blackai_sarmor2"
+		}	
+		component = {
+			slot = "MEDIUM_UTILITY_4"
+			template = "blackai_sarmor2"
+		}	
+	}
+	section = {
+		template = "CRUISER_STERN_M1"
+		slot = "stern"
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "aichan_cannon2"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "aichan_energy"
+		}
+	}
+	required_component="hk648_mnbz3"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SENSOR_4"
+	required_component = "hk648_xsyq"
+	required_component="aichan_computer4"
+}
+
+ship_design = {
+	name = "Love sauce whiteboard cruiser"
+	ship_size = cruiser
+	
+	section = {
+		template = "CRUISER_BOW_L1"
+		slot = "bow"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = ""
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "blackai_shield2"
+		}	
+		component = {
+			slot = "MEDIUM_UTILITY_2"
+			template = "blackai_shield2"
+		}	
+		component = {
+			slot = "MEDIUM_UTILITY_3"
+			template = "blackai_shield2"
+		}	
+		component = {
+			slot = "MEDIUM_UTILITY_4"
+			template = "blackai_shield2"
+		}	
+	}
+	section = {
+		template = "CRUISER_MID_L1M1"
+		slot = "mid"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = ""
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = ""
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "blackai_sarmor2"
+		}	
+		component = {
+			slot = "MEDIUM_UTILITY_2"
+			template = "blackai_sarmor2"
+		}	
+		component = {
+			slot = "MEDIUM_UTILITY_3"
+			template = "blackai_sarmor2"
+		}	
+		component = {
+			slot = "MEDIUM_UTILITY_4"
+			template = "blackai_sarmor2"
+		}	
+	}
+	section = {
+		template = "CRUISER_STERN_M1"
+		slot = "stern"
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = ""
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "aichan_energy"
+		}
+	}
+	required_component="hk648_mnbz3"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SENSOR_4"
+	required_component = "hk648_xsyq"
+	required_component="aichan_computer4"
+}
+
+ship_design = {
+	name = "Love sauce battleship"
+	ship_size = battleship
+	section = {
+		template = "BATTLESHIP_BOW_L2"
+		slot = "bow"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "aichan_cannon3"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "aichan_cannon3"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "blackai_sarmor3"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "blackai_sarmor3"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "blackai_sarmor3"
+		}	
+	}
+	
+	section = {
+		template = "BATTLESHIP_MID_L3"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "aichan_cannon3"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "aichan_cannon3"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "aichan_cannon3"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "blackai_shield3"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "blackai_shield3"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "blackai_shield3"
+		}	
+	}
+	
+	section = {
+		template = "BATTLESHIP_STERN_L1"
+		slot = "stern"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "aichan_cannon3"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "aichan_energy"
+		}
+	}
+	required_component="hk648_mnbz4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SENSOR_4"
+	required_component = "hk648_xsyq"
+	required_component="aichan_computer4"
+}
+
+ship_design = {
+	name = "Love sauce whiteboard battleship"
+	ship_size = battleship
+	section = {
+		template = "BATTLESHIP_BOW_L2"
+		slot = "bow"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = ""
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = ""
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "blackai_sarmor3"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "blackai_sarmor3"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "blackai_sarmor3"
+		}	
+	}
+	
+	section = {
+		template = "BATTLESHIP_MID_L3"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = ""
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = ""
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = ""
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "blackai_shield3"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "blackai_shield3"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "blackai_shield3"
+		}	
+	}
+	
+	section = {
+		template = "BATTLESHIP_STERN_L1"
+		slot = "stern"
+		component = {
+			slot = ""
+			template = "aichan_cannon3"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "aichan_energy"
+		}
+	}
+	required_component="hk648_mnbz4"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SENSOR_4"
+	required_component = "hk648_xsyq"
+	required_component="aichan_computer4"
+}

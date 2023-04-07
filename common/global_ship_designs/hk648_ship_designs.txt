@@ -1,0 +1,1792 @@
+
+#第四神之键#
+ship_design = {
+	name = "The fourth key of the gods"
+	ship_size = colossus
+	
+	section = {
+		template = "SHIP_COLOSSUS_SECTION"
+		slot = "ship"
+		
+		component = {
+			slot = "PLANET_KILLER_GUN_01"
+			template = "divine_key_4th"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "hk648_xzy"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "hk648_xzy"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "hk648_xzy"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "hk648_xzy"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "hk648_xzy"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "hk648_xzy"
+		}
+	}
+	required_component = "hk648_ccmnbz5"
+	required_component = "hk648_gjxsyq"
+	required_component = "aichan648_computer7"
+	required_component = "SHIP_THRUSTER_5"
+	required_component = "SENSOR_4"
+	
+}
+		
+		
+#一级爱酱#
+#爱衣·休伯利安#
+ship_design = {
+	name = "Love clothes·Hyperion"
+	ship_size = hk648_aichan
+	
+	#前#
+	section = {
+		template = "ai_chane_1"
+		slot = "bow"
+		
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "SMALL_LARGE_01"
+			template = "aichan_zlzj1"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+	}
+	
+	#中#
+	section = {
+		template = "ai_chane_2"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "SMALL_LARGE_01"
+			template = "aichan_zlzj1"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+	}
+	
+	#后#
+	section = {
+		template = "ai_chane_3"
+		slot = "stern"
+		
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "SMALL_LARGE_01"
+			template = "aichan_zlzj1"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+	}
+	required_component = "hk648_ccmnbz_ai"
+	required_component = "hk648_gjxsyq"
+	required_component = "aichan648_computer_ai"
+	required_component = "ai_chan_thruster"
+	required_component = "SENSOR_4"
+}
+
+#中级爱酱#
+ship_design = {
+	name = "Love clothes·Hyperion changed"
+	ship_size = hk648_aichan
+	
+	section = {
+		template = "ai_chane_12"
+		slot = "bow"
+		
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_03"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_04"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_05"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "aichan_energy"
+		}
+	}
+	
+	#中#
+	section = {
+		template = "ai_chane_22"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_03"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_04"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_05"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "aichan_energy"
+		}
+	}
+	
+	#后#
+	section = {
+		template = "ai_chane_32"
+		slot = "stern"
+		
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_03"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_04"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_05"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "aichan_energy"
+		}
+	}
+	required_component = "hk648_ccmnbz_ai"
+	required_component = "hk648_gjxsyq"
+	required_component = "aichan648_computer_ai_lv2"
+	required_component = "ai_chan_thruster"
+	required_component = "SENSOR_4"
+	
+}
+
+#高级爱酱#
+ship_design = {
+	name = "Love clothes·Hyperion II change"
+	ship_size = hk648_aichan
+	
+	section = {
+		template = "ai_chane_13"
+		slot = "bow"
+		
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_11"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_12"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_13"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_14"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_16"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_17"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_18"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_03"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_04"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_05"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_06"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_07"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_08"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_09"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_10"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_11"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_12"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_13"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_14"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_15"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_16"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_17"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_18"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_19"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_20"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_3"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_4"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_5"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_6"
+			template = "aichan_energy"
+		}
+	}
+	
+	#中#
+	section = {
+		template = "ai_chane_22"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_03"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_04"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_05"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "aichan_energy"
+		}
+	}
+	
+	#后#
+	section = {
+		template = "ai_chane_32"
+		slot = "stern"
+		
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_03"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_04"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "EXTRA_LARGE_05"
+			template = "hk648_19ai"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "aichan_energy"
+		}
+	}
+	required_component = "hk648_ccmnbz_ai"
+	required_component = "hk648_gjxsyq"
+	required_component = "aichan648_computer_ai_lv3"
+	required_component = "ai_chan_thruster"
+	required_component = "SENSOR_4"
+	
+}
+
+ship_design = {
+	name = "Love clothes·Hyperion Ultimate Edition"
+	ship_size = hk648_aichan
+	
+	section = {
+		template = "ai_chane_13"
+		slot = "bow"
+		
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_11"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_12"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_13"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_14"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_16"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_17"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_18"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_03"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_04"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_05"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_06"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_07"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_08"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_09"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_10"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_11"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_12"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_13"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_14"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_15"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_16"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_17"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_18"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_19"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_20"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_3"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_4"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_5"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_6"
+			template = "aichan_energy"
+		}
+	}
+	
+	#中#
+	section = {
+		template = "ai_chane_22"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_03"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_04"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_05"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "aichan_energy"
+		}
+	}
+	
+	#后#
+	section = {
+		template = "ai_chane_32"
+		slot = "stern"
+		
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "aichan_648_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_03"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_04"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "EXTRA_LARGE_05"
+			template = "hk648_19ai_plus"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "aichan_energy"
+		}
+	}
+	required_component = "hk648_ccmnbz_ai"
+	required_component = "hk648_gjxsyq"
+	required_component = "aichan648_computer_ai_lv4"
+	required_component = "ai_chan_thruster"
+	required_component = "SENSOR_4"
+	
+}
+		
+
+#爱酱舞台#
+ship_design = {
+	name = "Love to shake dew·Love"
+	ship_size = hk648_aichan
+	
+	#前#
+	section = {
+		template = "ai_chane_11"
+		slot = "bow"
+		
+		component = {
+			slot = "SMALL_LARGE_01"
+			template = "hk648_aichan_1"
+		}
+		component = {
+			slot = "SMALL_LARGE_02"
+			template = "hk648_aichan_2"
+		}
+		component = {
+			slot = "SMALL_LARGE_03"
+			template = "hk648_aichan_3"
+		}
+		component = {
+			slot = "SMALL_LARGE_04"
+			template = "hk648_aichan_3"
+		}
+		component = {
+			slot = "SMALL_LARGE_05"
+			template = "hk648_aichan_1"
+		}
+		component = {
+			slot = "SMALL_LARGE_06"
+			template = "hk648_aichan_2"
+		}
+		component = {
+			slot = "SMALL_LARGE_07"
+			template = "hk648_aichan_3"
+		}
+		component = {
+			slot = "SMALL_LARGE_08"
+			template = "hk648_aichan_1"
+		}
+		component = {
+			slot = "SMALL_LARGE_09"
+			template = "hk648_aichan_2"
+		}
+		component = {
+			slot = "SMALL_LARGE_010"
+			template = "hk648_aichan_3"
+		}
+		component = {
+			slot = "SMALL_LARGE_11"
+			template = "hk648_aichan_12"
+		}
+		component = {
+			slot = "SMALL_LARGE_12"
+			template = "hk648_aichan_22"
+		}
+		component = {
+			slot = "SMALL_LARGE_13"
+			template = "hk648_aichan_32"
+		}
+		component = {
+			slot = "SMALL_LARGE_14"
+			template = "hk648_aichan_32"
+		}
+		component = {
+			slot = "SMALL_LARGE_15"
+			template = "hk648_aichan_12"
+		}
+		component = {
+			slot = "SMALL_LARGE_16"
+			template = "hk648_aichan_22"
+		}
+		component = {
+			slot = "SMALL_LARGE_17"
+			template = "hk648_aichan_32"
+		}
+		component = {
+			slot = "SMALL_LARGE_18"
+			template = "hk648_aichan_12"
+		}
+		component = {
+			slot = "SMALL_LARGE_19"
+			template = "hk648_aichan_22"
+		}
+		component = {
+			slot = "SMALL_LARGE_020"
+			template = "hk648_aichan_32"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "aichan_648"
+		}
+	}
+	
+	section = {
+		template = "ai_chane_21"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_LARGE_01"
+			template = "hk648_aichan_1"
+		}
+		component = {
+			slot = "SMALL_LARGE_02"
+			template = "hk648_aichan_2"
+		}
+		component = {
+			slot = "SMALL_LARGE_03"
+			template = "hk648_aichan_3"
+		}
+		component = {
+			slot = "SMALL_LARGE_04"
+			template = "hk648_aichan_1"
+		}
+		component = {
+			slot = "SMALL_LARGE_05"
+			template = "hk648_aichan_2"
+		}
+		component = {
+			slot = "SMALL_LARGE_06"
+			template = "hk648_aichan_3"
+		}
+		component = {
+			slot = "SMALL_LARGE_07"
+			template = "hk648_aichan_1"
+		}
+		component = {
+			slot = "SMALL_LARGE_08"
+			template = "hk648_aichan_2"
+		}
+		component = {
+			slot = "SMALL_LARGE_09"
+			template = "hk648_aichan_3"
+		}
+		component = {
+			slot = "SMALL_LARGE_010"
+			template = "hk648_aichan_2"
+		}
+		component = {
+			slot = "SMALL_LARGE_11"
+			template = "hk648_aichan_12"
+		}
+		component = {
+			slot = "SMALL_LARGE_12"
+			template = "hk648_aichan_22"
+		}
+		component = {
+			slot = "SMALL_LARGE_13"
+			template = "hk648_aichan_32"
+		}
+		component = {
+			slot = "SMALL_LARGE_14"
+			template = "hk648_aichan_12"
+		}
+		component = {
+			slot = "SMALL_LARGE_15"
+			template = "hk648_aichan_22"
+		}
+		component = {
+			slot = "SMALL_LARGE_16"
+			template = "hk648_aichan_32"
+		}
+		component = {
+			slot = "SMALL_LARGE_17"
+			template = "hk648_aichan_12"
+		}
+		component = {
+			slot = "SMALL_LARGE_18"
+			template = "hk648_aichan_22"
+		}
+		component = {
+			slot = "SMALL_LARGE_19"
+			template = "hk648_aichan_32"
+		}
+		component = {
+			slot = "SMALL_LARGE_020"
+			template = "hk648_aichan_22"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "aichan_648"
+		}
+	}
+	section = {
+		template = "ai_chane_31"
+		slot = "stern"
+		
+		component = {
+			slot = "SMALL_LARGE_01"
+			template = "hk648_aichan_1"
+		}
+		component = {
+			slot = "SMALL_LARGE_02"
+			template = "hk648_aichan_2"
+		}
+		component = {
+			slot = "SMALL_LARGE_03"
+			template = "hk648_aichan_3"
+		}
+		component = {
+			slot = "SMALL_LARGE_04"
+			template = "hk648_aichan_1"
+		}
+		component = {
+			slot = "SMALL_LARGE_05"
+			template = "hk648_aichan_2"
+		}
+		component = {
+			slot = "SMALL_LARGE_06"
+			template = "hk648_aichan_3"
+		}
+		component = {
+			slot = "SMALL_LARGE_07"
+			template = "hk648_aichan_1"
+		}
+		component = {
+			slot = "SMALL_LARGE_08"
+			template = "hk648_aichan_2"
+		}
+		component = {
+			slot = "SMALL_LARGE_09"
+			template = "hk648_aichan_3"
+		}
+		component = {
+			slot = "SMALL_LARGE_010"
+			template = "hk648_aichan_1"
+		}
+		component = {
+			slot = "SMALL_LARGE_11"
+			template = "hk648_aichan_12"
+		}
+		component = {
+			slot = "SMALL_LARGE_12"
+			template = "hk648_aichan_22"
+		}
+		component = {
+			slot = "SMALL_LARGE_13"
+			template = "hk648_aichan_32"
+		}
+		component = {
+			slot = "SMALL_LARGE_14"
+			template = "hk648_aichan_12"
+		}
+		component = {
+			slot = "SMALL_LARGE_15"
+			template = "hk648_aichan_22"
+		}
+		component = {
+			slot = "SMALL_LARGE_16"
+			template = "hk648_aichan_32"
+		}
+		component = {
+			slot = "SMALL_LARGE_17"
+			template = "hk648_aichan_12"
+		}
+		component = {
+			slot = "SMALL_LARGE_18"
+			template = "hk648_aichan_22"
+		}
+		component = {
+			slot = "SMALL_LARGE_19"
+			template = "hk648_aichan_32"
+		}
+		component = {
+			slot = "SMALL_LARGE_020"
+			template = "hk648_aichan_12"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "aichan_648"
+		}
+	}
+	
+	required_component = "hk648_ccmnbz_ai"
+	required_component = "hk648_gjxsyq"
+	required_component = "aichan648_computer_idol_ai"
+	required_component = "ai_chan_thruster"
+	required_component = "SENSOR_4"
+}
+
+#爱酱导弹
+ship_design = {
+	name = "Love clothes·Hyperion（Romantic）"
+	ship_size = hk648_aichan
+	
+	#前#
+	section = {
+		template = "ai_chane_11"
+		slot = "bow"
+		
+		component = {
+			slot = "SMALL_LARGE_01"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_02"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_03"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_04"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_05"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_06"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_07"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_08"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_09"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_010"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_11"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_12"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_13"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_14"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_15"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_16"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_17"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_18"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_19"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_020"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "aichan_648"
+		}
+	}
+	
+	section = {
+		template = "ai_chane_21"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_LARGE_01"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_02"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_03"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_04"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_05"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_06"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_07"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_08"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_09"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_010"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_11"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_12"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_13"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_14"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_15"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_16"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_17"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_18"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_19"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_020"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "aichan_648"
+		}
+	}
+	section = {
+		template = "ai_chane_31"
+		slot = "stern"
+		
+		component = {
+			slot = "SMALL_LARGE_01"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_02"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_03"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_04"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_05"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_06"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_07"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_08"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_09"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_010"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_11"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_12"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_13"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_14"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_15"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_16"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_17"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_18"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_19"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "SMALL_LARGE_020"
+			template = "hk648_aichan_aircraft"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "aichan_energy"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "aichan_648"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "aichan_648"
+		}
+	}
+	
+	required_component = "hk648_ccmnbz_ai"
+	required_component = "hk648_gjxsyq"
+	required_component = "aichan648_computer_aichan_missile"
+	required_component = "ai_chan_thruster"
+	required_component = "SENSOR_4"
+}

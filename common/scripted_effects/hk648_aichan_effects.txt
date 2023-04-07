@@ -1,0 +1,1252 @@
+
+#欠钱不还
+aichan_angry_1 = {
+	optimize_memory
+	remove_aichan_governor0 = yes
+	remove_aichan_admiral0 = yes
+	remove_aichan_general0 = yes
+	remove_aichan_scientist0 = yes
+}
+
+
+#索要分红趋势
+start_situation_aichan_dividends = {
+	optimize_memory
+	start_situation = {
+		type = aichan_dividends
+		target = root
+	}
+}
+#创建爱酱佣兵总部
+aichan_Station_create = {
+	optimize_memory
+	random_country = {
+		limit = { is_ai = no }
+		capital_scope = {
+			save_event_target_as = player_captial_planet
+		}
+	}
+	create_fleet = {
+		settings = { spawn_debris = no }
+		effect = {
+			set_owner = event_target:aichan_country
+			create_ship = {
+				name = random
+				design = "NAME_Mercenary_Enclave_Station_5"
+				graphical_culture = prev
+			}
+			set_location = {
+				target = event_target:player_captial_planet
+				distance = 20
+			}
+		}
+	}
+	country_event = {
+		id = hk648_aichan.8021
+		days = 2880
+	}
+}
+
+#雇佣舰队1-5
+aichan_mercenary1 = {
+	optimize_memory
+	random_system_within_border = {
+		limit = {
+			NOR = {
+				any_fleet_in_system = {
+				is_ship_size = enclave_mercenary_station
+				}
+				has_star_flag = enclave
+			}
+		}
+		save_event_target_as = aichan_merenary_system_1
+	}
+	create_leader = {
+		class = admiral
+		gender = female
+		species = event_target:aichan_drone
+		name = "Mercenary sauce"
+		event_leader = yes
+		skill = 25
+		set_age = 0
+		traits = {
+			trait = leader_trait_aichan_033
+		}
+	}
+	root = {
+		create_fleet = {
+			effect = {
+				set_owner = root						
+				while = {
+					count = 20
+					create_ship = {
+						name = random
+						design = "Love sauce frigate"
+					}
+				}
+				while = {
+					count = 10
+					create_ship = {
+						name = random
+						design = "Love sauce destroyer"
+					}
+				}
+				while = {
+					count = 3
+					create_ship = {
+						name = random
+						design = "Cruiser Ai-chan"
+					}
+				}
+				settings = {
+					can_upgrade = no
+					can_disband = no
+					can_change_leader = no
+					can_change_composition = no
+					uses_naval_capacity = no
+					spawn_debris = no
+				}
+				assign_leader = last_created_leader
+				set_location = event_target:aichan_merenary_system_1
+			}
+			settings = {
+				can_upgrade = no	
+			}
+		}
+	}
+	last_created_fleet = {
+		add_modifier = {
+			modifier = aichan_mercenary_fleet
+		}
+		fleet_event = { id = enclave.21 }
+	}
+	event_target:mercenary_enclave_country = {
+		country_event = { id = enclave.275 }
+		set_country_flag = aichan_mercenary
+		#爱酱查账
+		start_situation = {
+			type = aichan_dividends_audit
+			target = root
+		}
+	}
+}
+
+aichan_mercenary2 = {
+	optimize_memory
+	random_system_within_border = {
+		limit = {
+			NOR = {
+				any_fleet_in_system = {
+				is_ship_size = enclave_mercenary_station
+				}
+				has_star_flag = enclave
+			}
+		}
+		save_event_target_as = aichan_merenary_system_1
+	}
+	create_leader = {
+		class = admiral
+		gender = female
+		species = event_target:aichan_drone
+		name = "Mercenary sauce"
+		event_leader = yes
+		skill = 25
+		set_age = 0
+		traits = {
+			trait = leader_trait_aichan_033
+		}
+	}
+	root = {
+		create_fleet = {
+			effect = {
+				set_owner = root						
+				while = {
+					count = 20
+					create_ship = {
+						name = random
+						design = "Love sauce destroyer"
+					}
+				}
+				while = {
+					count = 5
+					create_ship = {
+						name = random
+						design = "Cruiser Ai-chan"
+					}
+				}
+				settings = {
+					can_upgrade = no
+					can_disband = no
+					can_change_leader = no
+					can_change_composition = no
+					uses_naval_capacity = no
+					spawn_debris = no
+				}
+				assign_leader = last_created_leader
+				set_location = event_target:aichan_merenary_system_1
+			}
+			settings = {
+				can_upgrade = no	
+			}
+		}
+	}
+	last_created_fleet = {
+		add_modifier = {
+			modifier = aichan_mercenary_fleet
+		}
+		fleet_event = { id = enclave.21 }
+	}
+	event_target:mercenary_enclave_country = {
+		country_event = { id = enclave.275 }
+		set_country_flag = aichan_mercenary
+		#爱酱查账
+		start_situation = {
+			type = aichan_dividends_audit
+			target = root
+		}
+	}
+}
+
+aichan_mercenary3 = {
+	optimize_memory
+	random_system_within_border = {
+		limit = {
+			NOR = {
+				any_fleet_in_system = {
+				is_ship_size = enclave_mercenary_station
+				}
+				has_star_flag = enclave
+			}
+		}
+		save_event_target_as = aichan_merenary_system_1
+	}
+	create_leader = {
+		class = admiral
+		gender = female
+		species = event_target:aichan_drone
+		name = "Mercenary sauce"
+		event_leader = yes
+		skill = 25
+		set_age = 0
+		traits = {
+			trait = leader_trait_aichan_033
+		}
+	}
+	root = {
+		create_fleet = {
+			effect = {
+				set_owner = root						
+				while = {
+					count = 20
+					create_ship = {
+						name = random
+						design = "Love sauce whiteboard frigate"
+					}
+				}
+				while = {
+					count = 10
+					create_ship = {
+						name = random
+						design = "Love sauce destroyer"
+					}
+				}
+				while = {
+					count = 5
+					create_ship = {
+						name = random
+						design = "Cruiser Ai-chan"
+					}
+				}
+				while = {
+					count = 5
+					create_ship = {
+						name = random
+						design = "Love sauce whiteboard battleship"
+					}
+				}
+				settings = {
+					can_upgrade = no
+					can_disband = no
+					can_change_leader = no
+					can_change_composition = no
+					uses_naval_capacity = no
+					spawn_debris = no
+				}
+				assign_leader = last_created_leader
+				set_location = event_target:aichan_merenary_system_1
+			}
+			settings = {
+				can_upgrade = no	
+			}
+		}
+	}
+	last_created_fleet = {
+		add_modifier = {
+			modifier = aichan_mercenary_fleet
+		}
+		fleet_event = { id = enclave.21 }
+	}
+	event_target:mercenary_enclave_country = {
+		country_event = { id = enclave.275 }
+		set_country_flag = aichan_mercenary
+	}
+}
+
+aichan_mercenary4 = {
+	optimize_memory
+	random_system_within_border = {
+		limit = {
+			NOR = {
+				any_fleet_in_system = {
+				is_ship_size = enclave_mercenary_station
+				}
+				has_star_flag = enclave
+			}
+		}
+		save_event_target_as = aichan_merenary_system_1
+	}
+	create_leader = {
+		class = admiral
+		gender = female
+		species = event_target:aichan_drone
+		name = "Mercenary sauce"
+		event_leader = yes
+		skill = 25
+		set_age = 0
+		traits = {
+			trait = leader_trait_aichan_033
+		}
+	}
+	root = {
+		create_fleet = {
+			effect = {
+				set_owner = root						
+				while = {
+					count = 20
+					create_ship = {
+						name = random
+						design = "Love sauce whiteboard frigate"
+					}
+				}
+				while = {
+					count = 10
+					create_ship = {
+						name = random
+						design = "Love sauce destroyer"
+					}
+				}
+				while = {
+					count = 5
+					create_ship = {
+						name = random
+						design = "Cruiser Ai-chan"
+					}
+				}
+				while = {
+					count = 5
+					create_ship = {
+						name = random
+						design = "Love sauce battleship"
+					}
+				}
+				settings = {
+					can_upgrade = no
+					can_disband = no
+					can_change_leader = no
+					can_change_composition = no
+					uses_naval_capacity = no
+					spawn_debris = no
+				}
+				assign_leader = last_created_leader
+				set_location = event_target:aichan_merenary_system_1
+			}
+			settings = {
+				can_upgrade = no	
+			}
+		}
+	}
+	last_created_fleet = {
+		add_modifier = {
+			modifier = aichan_mercenary_fleet
+		}
+		fleet_event = { id = enclave.21 }
+	}
+	event_target:mercenary_enclave_country = {
+		country_event = { id = enclave.275 }
+		set_country_flag = aichan_mercenary
+	}
+	
+}
+
+aichan_mercenary5 = {
+	optimize_memory
+	random_system_within_border = {
+		limit = {
+			NOR = {
+				any_fleet_in_system = {
+				is_ship_size = enclave_mercenary_station
+				}
+				has_star_flag = enclave
+			}
+		}
+		save_event_target_as = aichan_merenary_system_1
+	}
+	create_leader = {
+		class = admiral
+		gender = female
+		species = event_target:aichan_drone
+		name = "Mercenary sauce"
+		event_leader = yes
+		skill = 25
+		set_age = 0
+		traits = {
+			trait = leader_trait_aichan_033
+		}
+	}
+	root = {
+		create_fleet = {
+			effect = {
+				set_owner = root						
+				while = {
+					count = 20
+					create_ship = {
+						name = random
+						design = "Love sauce whiteboard frigate"
+					}
+				}
+				while = {
+					count = 10
+					create_ship = {
+						name = random
+						design = "Love sauce destroyer"
+					}
+				}
+				while = {
+					count = 10
+					create_ship = {
+						name = random
+						design = "Love sauce whiteboard cruiser"
+					}
+				}
+				while = {
+					count = 5
+					create_ship = {
+						name = random
+						design = "Love sauce battleship"
+					}
+				}
+				settings = {
+					can_upgrade = no
+					can_disband = no
+					can_change_leader = no
+					can_change_composition = no
+					uses_naval_capacity = no
+					spawn_debris = no
+				}
+				assign_leader = last_created_leader
+				set_location = event_target:aichan_merenary_system_1
+			}
+			settings = {
+				can_upgrade = no	
+			}
+		}
+	}
+	last_created_fleet = {
+		add_modifier = {
+			modifier = aichan_mercenary_fleet
+		}
+		fleet_event = { id = enclave.21 }
+	}
+	event_target:mercenary_enclave_country = {
+		country_event = { id = enclave.275 }
+		set_country_flag = aichan_mercenary
+	}
+}
+
+#十三包菜子个体
+#救世菜菜
+create_aichan_13_01 = {
+	optimize_memory
+	create_leader = {
+		class = admiral
+		gender = female
+		species = event_target:aichan_drone
+		name = "Salvation dishes"
+		event_leader = yes
+		skill = 25
+		set_age = 0
+		traits = {
+			trait = leader_trait_aichan_13_01
+		}
+	}
+	last_created_leader = { 
+		save_global_event_target_as = aichan_13_01
+	}
+}
+
+#鏖灭菜菜
+create_aichan_13_06 = {
+	optimize_memory
+	create_leader = {
+		class = admiral
+		gender = female
+		species = event_target:aichan_drone
+		name = "Kill the vegetables"
+		event_leader = yes
+		skill = 25
+		set_age = 0
+		traits = {
+			trait = leader_trait_aichan_13_06
+		}
+	}
+	last_created_leader = { 
+		save_global_event_target_as = aichan_13_06
+	}
+}
+
+#空梦菜菜
+create_aichan_13_13 = {
+	optimize_memory
+	create_leader = {
+		class = governor
+		gender = female
+		species = event_target:aichan_drone
+		name = "Empty dream vegetable dish"
+		event_leader = yes
+		skill = 25
+		set_age = 0
+		traits = {
+			trait = leader_trait_aichan_13_13
+		}
+	}
+	last_created_leader = { 
+		save_global_event_target_as = aichan_13_13
+	}
+}
+
+#爱酱子个体舰长#
+aichan_admiral = {
+	optimize_memory
+	if = {
+		limit = { has_country_flag = aichan0_lv3 }
+		create_leader = {
+			class = admiral
+			gender = female
+			species = event_target:aichan_drone
+			name = "爱酱子个体LV.3"
+			event_leader = yes
+			skill = 25
+			set_age = 0
+			traits = {
+				trait = leader_trait_aichan_033
+			}
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = aichan0_lv2 }
+		create_leader = {
+			class = admiral
+			gender = female
+			species = event_target:aichan_drone
+			name = "爱酱子个体LV.2"
+			event_leader = yes
+			skill = 15
+			set_age = 0
+			traits = {
+				trait = leader_trait_aichan_032
+			}
+		}
+	}
+	else = {
+		create_leader = {
+			class = admiral
+			gender = female
+			species = event_target:aichan_drone
+			name = "爱酱子个体LV.1"
+			event_leader = yes
+			skill = 8
+			set_age = 0
+			traits = {
+				trait = leader_trait_aichan_031
+			}
+		}
+	}
+}
+
+#爱酱舰长本体#
+aichan_admiral0 = {
+	optimize_memory
+	#定位#
+	if = {
+		limit = { has_country_flag = aichan_general }
+		if = {
+			limit = {
+				any_owned_army = {
+					army_type = aichan_army
+					exists = planet
+				}
+			}
+			random_owned_army = {
+				limit = { army_type = aichan_army }
+				planet = { save_event_target_as = aichan_location }
+			}
+		}
+		else = {
+			random_owned_army = {
+				limit = { army_type = aichan_army }
+				fleet = { save_event_target_as = aichan_location }
+			}
+		}
+	}
+	else = {
+		capital_scope = { save_event_target_as = aichan_location }
+	}
+	#删除#
+	if = {
+		limit = { has_country_flag = aichan_general }
+		event_target:aichan_general = {
+			kill_leader = { show_notification = no } 
+		}
+	}
+	if = {
+		limit = { has_country_flag = aichan_general }
+		remove_country_flag = aichan_general
+		every_owned_army = {
+			limit = { army_type = aichan_army }
+			remove_army = yes
+		}
+	}
+	if = {
+		limit = { has_country_flag = aichan_scientist }
+		remove_country_flag = aichan_scientist
+		event_target:aichan_scientist = {
+			kill_leader = { show_notification = no } 
+		}
+	}	
+	else_if = {
+		limit = { has_country_flag = aichan_governor }
+		remove_country_flag = aichan_governor
+		event_target:aichan_governor = {
+			kill_leader = { show_notification = no } 
+		}
+	}	
+	
+	
+	remove_modifier = leader_trait_aichan2_cost
+	remove_modifier = leader_trait_aichan22_cost
+	remove_modifier = leader_trait_aichan23_cost
+	#领袖#
+	set_country_flag = aichan_admiral
+	if = { 
+		limit = { has_country_flag = aichan_ship_lv3 }
+		create_leader = {
+			class = admiral
+			gender = female
+			species = event_target:aichan
+			name = "G爱衣·Hyperion!"
+			event_leader = yes
+			skill = 75
+			set_age = 0
+			traits = {
+				trait = leader_trait_aichan33
+			}
+		}
+	}
+	else_if = { 
+		limit = { has_country_flag = aichan_ship_lv2 }
+		create_leader = {
+			class = admiral
+			gender = female
+			species = event_target:aichan
+			name = "G爱衣·Hyperion!"
+			event_leader = yes
+			skill = 50
+			set_age = 0
+			traits = {
+				trait = leader_trait_aichan32
+			}
+		}
+	}
+	else = {
+		create_leader = {
+			class = admiral
+			gender = female
+			species = event_target:aichan
+			name = "G爱衣·Hyperion!"
+			event_leader = yes
+			skill = 25
+			set_age = 0
+			traits = {
+				trait = leader_trait_aichan3
+			}
+		}
+	}
+	last_created_leader = { 
+		save_global_event_target_as = aichan_admiral
+	}
+	#战舰#
+	if = { 
+		#爱酱lv4
+		limit = { has_country_flag = aichan_ship_lv4 }
+		capital_scope = {
+			create_fleet = {
+				name = "G爱酱舰队!"
+				effect = {
+					set_owner = root						
+					create_ship = {
+						name = "G爱衣·Hyperion!"
+						design = "Love clothes·Hyperion Ultimate Edition"
+					}
+					set_location = event_target:aichan_location
+					assign_leader = last_created_leader
+					save_global_event_target_as = aichan_warship
+				}
+				settings = {
+					can_upgrade = no
+					can_disband = no
+					can_change_leader = no
+					can_change_composition = no
+					uses_naval_capacity = no
+					spawn_debris = no
+				}
+			}
+		}
+	}
+	else_if = { 
+		#爱酱lv3
+		limit = { has_country_flag = aichan_ship_lv3 }
+		capital_scope = {
+			create_fleet = {
+				name = "G爱酱舰队!"
+				effect = {
+					set_owner = root						
+					create_ship = {
+						name = "G爱衣·Hyperion!"
+						design = "Love clothes·Hyperion II change"
+					}
+					set_location = event_target:aichan_location
+					assign_leader = last_created_leader
+					save_global_event_target_as = aichan_warship
+				}
+				settings = {
+					can_upgrade = no
+					can_disband = no
+					can_change_leader = no
+					can_change_composition = no
+					uses_naval_capacity = no
+					spawn_debris = no
+				}
+			}
+		}
+	}
+	else_if = { 
+		#爱酱lv2
+		limit = { has_country_flag = aichan_ship_lv2 }
+		capital_scope = {
+			create_fleet = {
+				name = "G爱酱舰队!"
+				effect = {
+					set_owner = root						
+					create_ship = {
+						name = "G爱衣·Hyperion!"
+						design = "Love clothes·Hyperion changed"
+					}
+					set_location = event_target:aichan_location
+					assign_leader = last_created_leader
+					save_global_event_target_as = aichan_warship
+				}
+				settings = {
+					can_upgrade = no
+					can_disband = no
+					can_change_leader = no
+					can_change_composition = no
+					uses_naval_capacity = no
+					spawn_debris = no
+				}
+			}
+		}
+	}
+	else = { 
+		capital_scope = {
+			create_fleet = {
+				name = "G爱酱舰队!"
+				effect = {
+					set_owner = root						
+					create_ship = {
+						name = "G爱衣·Hyperion!"
+						design = "Love clothes·Hyperion"
+					}
+					set_location = event_target:aichan_location
+					assign_leader = last_created_leader
+					save_global_event_target_as = aichan_warship
+				}
+				settings = {
+					can_upgrade = no
+					can_disband = no
+					can_change_leader = no
+					can_change_composition = no
+					uses_naval_capacity = no
+					spawn_debris = no
+				}
+			}
+		}
+	}
+}
+
+#爱酱大舞台#
+aichen_idol = {
+	optimize_memory
+	capital_scope = {
+		save_event_target_as = aichan_location
+		create_fleet = {
+			name = "G爱酱舰队!"
+			effect = {
+				set_owner = root						
+				create_ship = {
+					name = "G爱衣·Hyperion!"
+					design = "Love to shake dew·Love"
+				}
+				set_location = event_target:aichan_location
+				save_global_event_target_as = aichan_warship
+			}
+			settings = {
+				can_upgrade = no
+				can_disband = no
+				can_change_leader = no
+				can_change_composition = no
+				uses_naval_capacity = no
+				spawn_debris = no
+			}
+		}
+	}
+}
+#爱酱导弹船
+aichen_missile = {
+	optimize_memory
+	capital_scope = {
+		save_event_target_as = aichan_location
+		create_fleet = {
+			name = "G爱酱舰队!"
+			effect = {
+				set_owner = root						
+				create_ship = {
+					name = "G爱衣·Hyperion!"
+					design = "Love clothes·Hyperion（Romantic）"
+				}
+				set_location = event_target:aichan_location
+				save_global_event_target_as = aichan_warship
+			}
+			settings = {
+				can_upgrade = no
+				can_disband = no
+				can_change_leader = no
+				can_change_composition = no
+				uses_naval_capacity = no
+				spawn_debris = no
+			}
+		}
+	}
+}
+
+#取消休伯利安
+remove_aichan_admiral0 = {
+	optimize_memory
+	if = {
+		limit = { has_country_flag = aichan_admiral }
+		event_target:aichan_admiral = {
+			kill_leader = { show_notification = no } 
+		}
+	}
+	if = {
+		limit = { has_country_flag = aichan_admiral }
+		remove_country_flag = aichan_admiral
+		event_target:aichan_warship = { delete_fleet = this }
+	}	
+}
+
+#取消爱酱战体#
+remove_aichan_general0 = {
+	optimize_memory
+	if = {
+		limit = { has_country_flag = aichan_general }
+		event_target:aichan_general = {
+			kill_leader = { show_notification = no } 
+		}
+	}
+	if = {
+		limit = { has_country_flag = aichan_general }
+		remove_country_flag = aichan_general
+		every_owned_army = {
+			limit = { army_type = aichan_army }
+			remove_army = yes
+		}
+	}
+}
+	
+#爱酱总督#
+aichan_governor0 = {
+	optimize_memory
+	if = {
+		limit = { has_country_flag = aichan_admiral }
+		event_target:aichan_admiral = {
+			kill_leader = { show_notification = no } 
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = aichan_general }
+		event_target:aichan_general = {
+			kill_leader = { show_notification = no } 
+		}
+	}
+	if = {
+		limit = { has_country_flag = aichan_admiral }
+		remove_country_flag = aichan_admiral
+		event_target:aichan_warship = { delete_fleet = this }
+	}	
+	else_if = {
+		limit = { has_country_flag = aichan_general }
+		remove_country_flag = aichan_general
+		every_owned_army = {
+			limit = { army_type = aichan_army }
+			remove_army = yes
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = aichan_scientist }
+		remove_country_flag = aichan_scientist
+		event_target:aichan_scientist = {
+			kill_leader = { show_notification = no } 
+		}
+	}	
+	remove_modifier = aichan_admiral_cost
+	remove_modifier = leader_trait_aichan2_cost
+	remove_modifier = leader_trait_aichan22_cost
+	remove_modifier = leader_trait_aichan23_cost
+	set_country_flag = aichan_governor
+	if = {
+		limit = { has_country_flag = aichan_lv3 }
+		create_leader = {
+			class = governor
+			gender = female
+			species = event_target:aichan
+			name = "G爱酱!"
+			event_leader = yes
+			skill = 75
+			set_age = 0
+			traits = {
+				trait = leader_trait_aichan13
+			}
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = aichan_lv2 }
+		create_leader = {
+			class = governor
+			gender = female
+			species = event_target:aichan
+			name = "G爱酱!"
+			event_leader = yes
+			skill = 50
+			set_age = 0
+			traits = {
+				trait = leader_trait_aichan12
+			}
+		}
+	}
+	else = {
+		create_leader = {
+			class = governor
+			gender = female
+			species = event_target:aichan
+			name = "G爱酱!"
+			event_leader = yes
+			skill = 25
+			set_age = 0
+			traits = {
+				trait = leader_trait_aichan1
+			}
+		}
+	}
+	last_created_leader = { 
+		save_global_event_target_as = aichan_governor
+	}
+}
+
+remove_aichan_governor0 = {
+	optimize_memory
+	if = {
+		limit = { has_country_flag = aichan_governor }
+		remove_country_flag = aichan_governor
+		event_target:aichan_governor = {
+			kill_leader = { show_notification = no } 
+		}
+	}	
+}
+
+#爱酱科学家#
+aichan_scientist0 = {
+	optimize_memory
+	#消除领袖
+	if = {
+		limit = { has_country_flag = aichan_admiral }
+		event_target:aichan_admiral = {
+			kill_leader = { show_notification = no } 
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = aichan_general }
+		event_target:aichan_general = {
+			kill_leader = { show_notification = no } 
+		}
+	}
+	if = {
+		limit = { has_country_flag = aichan_admiral }
+		remove_country_flag = aichan_admiral
+		event_target:aichan_warship = { delete_fleet = this }
+	}	
+	else_if = {
+		limit = { has_country_flag = aichan_general }
+		remove_country_flag = aichan_general
+		every_owned_army = {
+			limit = { army_type = aichan_army }
+			remove_army = yes
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = aichan_governor }
+		remove_country_flag = aichan_governor
+		event_target:aichan_governor = {
+			kill_leader = { show_notification = no } 
+		}
+	}	
+	#创建领袖
+	set_country_flag = aichan_scientist
+	if = {
+		limit = { has_country_flag = aichan_lv3 }
+		create_leader = {
+			class = scientist
+			gender = female
+			species = event_target:aichan
+			name = "G爱酱!"
+			event_leader = yes
+			skill = 75
+			set_age = 0
+			traits = {
+				trait = leader_trait_aichan23
+			}
+		}
+		add_modifier = {
+			modifier = leader_trait_aichan23_cost
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = aichan_lv2 }
+		create_leader = {
+			class = scientist
+			gender = female
+			species = event_target:aichan
+			name = "G爱酱!"
+			event_leader = yes
+			skill = 50
+			set_age = 0
+			traits = {
+				trait = leader_trait_aichan22
+			}
+		}
+		add_modifier = {
+			modifier = leader_trait_aichan22_cost
+		}
+	}
+	else = {
+		create_leader = {
+			class = scientist
+			gender = female
+			species = event_target:aichan
+			name = "G爱酱!"
+			event_leader = yes
+			skill = 25
+			set_age = 0
+			traits = {
+				trait = leader_trait_aichan2
+			}
+		}
+		add_modifier = {
+			modifier = leader_trait_aichan2_cost
+		}
+	}
+	last_created_leader = { 
+		save_global_event_target_as = aichan_scientist
+	}
+	remove_modifier = aichan_admiral_cost
+}
+
+remove_aichan_scientist0 = {
+	optimize_memory
+	if = {
+		limit = { has_country_flag = aichan_scientist }
+		remove_country_flag = aichan_scientist
+		event_target:aichan_scientist = {
+			kill_leader = { show_notification = no } 
+		}
+	}	
+	remove_modifier = leader_trait_aichan2_cost
+	remove_modifier = leader_trait_aichan22_cost
+	remove_modifier = leader_trait_aichan23_cost
+}
+
+#爱酱子个体陆军将领#
+aichan_general = {
+	optimize_memory
+	if = { 
+		limit = { has_country_flag = aichan0_lv3 }
+		create_leader = {
+			class = general
+			gender = female
+			species = event_target:aichan_drone
+			name = "爱酱子个体LV.3"
+			event_leader = yes
+			skill = 25
+			set_age = 0
+			traits = {
+				trait = leader_trait_aichan_043
+			}
+		}
+	}
+	else_if = { 
+		limit = { has_country_flag = aichan0_lv2 }
+		create_leader = {
+			class = general
+			gender = female
+			species = event_target:aichan_drone
+			name = "爱酱子个体LV.2"
+			event_leader = yes
+			skill = 15
+			set_age = 0
+			traits = {
+				trait = leader_trait_aichan_042
+			}
+		}
+	}
+	else = { 
+		create_leader = {
+			class = general
+			gender = female
+			species = event_target:aichan_drone
+			name = "爱酱子个体LV.1"
+			event_leader = yes
+			skill = 5
+			set_age = 0
+			traits = {
+				trait = leader_trait_aichan_041
+			}
+		}
+	}
+}
+
+#爱酱本体陆军将领#
+aichan_general0 = {
+	optimize_memory
+	#定位#
+	if = {
+		limit = { has_country_flag = aichan_admiral }
+		event_target:aichan_warship = { save_event_target_as = aichan_location }
+	}
+	else = {
+		capital_scope = { save_event_target_as = aichan_location }
+	}
+	#删除#
+	if = {
+		limit = { has_country_flag = aichan_admiral }
+		event_target:aichan_admiral = {
+			kill_leader = { show_notification = no } 
+		}
+	}
+	if = {
+		limit = { has_country_flag = aichan_admiral }
+		remove_country_flag = aichan_admiral
+		event_target:aichan_warship = { delete_fleet = this }
+	}	
+	else_if = {
+		limit = { has_country_flag = aichan_scientist }
+		remove_country_flag = aichan_scientist
+		event_target:aichan_scientist = {
+			kill_leader = { show_notification = no } 
+		}
+	}	
+	else_if = {
+		limit = { has_country_flag = aichan_governor }
+		remove_country_flag = aichan_governor
+		event_target:aichan_governor = {
+			kill_leader = { show_notification = no } 
+		}
+	}	
+	remove_modifier = aichan_admiral_cost
+	remove_modifier = leader_trait_aichan2_cost
+	remove_modifier = leader_trait_aichan22_cost
+	remove_modifier = leader_trait_aichan23_cost
+	set_country_flag = aichan_general
+	#领袖#
+	create_leader = {
+		class = general
+		gender = female
+		species = event_target:aichan
+		name = "G超级爱酱!"
+		event_leader = yes
+		skill = 10
+		set_age = 0
+		traits = {
+			trait = leader_trait_aichan4
+		}
+	}
+	last_created_leader = { 
+		save_global_event_target_as = aichan_general
+	}
+	#陆军#
+	create_fleet = {
+		name = "G爱酱战体!"
+		effect = {
+			set_owner = root
+			create_army_transport = {
+				ship_name = "G爱酱运输船!"
+				#graphical_culture = "root"
+				army_name = "G爱酱战体!"
+				army_type = "aichan_army"
+			}
+			set_location = event_target:aichan_location
+			assign_leader = last_created_leader
+		}
+		settings = {
+			can_disband = no
+			can_change_leader = yes
+			can_change_composition = no
+			uses_naval_capacity = no
+			spawn_debris = yes
+		}
+	}
+}
+
+#爱酱代码杀#
+aichan_coed_kill = {
+	optimize_memory
+	create_species = {
+		name = Love sauce individual
+		class = MACHINE
+		portrait = "aichan1"
+	}
+	last_created_species = {
+		save_global_event_target_as = aichan_drone
+	}
+	change_dominant_species = { species = event_target:aichan_drone }
+	every_owned_pop = {
+		change_species = owner_species
+	}
+	every_owned_planet = {
+		limit = {
+			is_capital = no
+		}
+		change_pc = pc_ai
+	}
+	every_owned_fleet = {
+		delete_fleet = this
+	}
+}

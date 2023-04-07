@@ -1,0 +1,1081 @@
+#崩坏爆发#
+#低级崩坏预警#
+honkai_lv1_warning = {
+	optimize_memory
+	set_planet_flag = honkai_planet
+	if = {
+		limit = { 
+			has_planet_flag = honkai_warning_yes
+		}
+		planet_event = { 
+			id = hk648_honkai.30001 
+			days = 180
+			random = 179
+		}
+	}
+	else = {
+		honkai_lv1_1 = yes
+	}			
+}
+#中级崩坏预警#
+honkai_lv2_warning = {
+	optimize_memory
+	if = {
+		limit = { mid_game_years_passed >= 0 }
+		set_planet_flag = honkai_planet
+		if = {
+			limit = { 
+				has_planet_flag = honkai_warning_yes
+			}
+			planet_event = { 
+				id = hk648_honkai.30002
+				days = 180
+				random = 179
+			}
+		}
+		else = {
+			honkai_lv2_1 = yes
+		}	
+	}
+	else = {
+		honkai_lv1_warning = yes
+	}
+}
+#高级崩坏预警#
+honkai_lv3_warning = {
+	optimize_memory
+	if = {
+		limit = { end_game_years_passed >= 0 }
+		set_planet_flag = honkai_planet
+		if = {
+			limit = { 
+				has_planet_flag = honkai_warning_yes
+			}
+			planet_event = { 
+				id = hk648_honkai.30003
+				days = 180
+				random = 179
+			}
+		}
+		else = {
+			honkai_lv3_1 = yes
+		}
+	}
+	else = {
+		honkai_lv2_warning = yes
+	}
+}
+#超级崩坏预警#
+honkai_lv4_warning = {
+	optimize_memory
+	set_planet_flag = honkai_planet
+	if = {
+		limit = { 
+			has_planet_flag = honkai_warning_yes
+		}
+		planet_event = { 
+			id = hk648_honkai.30004
+			days = 10
+			random = 1
+		}
+	}
+	else = {
+		planet_event = { 
+			id = hk648_honkai.2010
+			days = 180
+			random = 179
+		}
+	}			
+}
+#低级崩坏爆发#
+honkai_lv1 = {
+	optimize_memory
+	random_list = {
+		1 = { 
+			planet_event = { 
+				id = hk648_honkai.2001 
+				days = 100
+				random = 30
+			} 
+		}
+		1 = { 
+			planet_event = { 
+				id = hk648_honkai.2002 
+				days = 100
+				random = 30
+			}
+		}
+		1 = { 
+			planet_event = { 
+				id = hk648_honkai.2003 
+				days = 100
+				random = 30
+			}
+		}
+	}	
+}		
+honkai_lv1_1 = {
+	optimize_memory
+	random_list = {
+		1 = { 
+			planet_event = { 
+				id = hk648_honkai.2001 
+				days = 180
+				random = 179
+			} 
+		}
+		1 = { 
+			planet_event = { 
+				id = hk648_honkai.2002 
+				days = 180
+				random = 179
+			}
+		}
+		1 = { 
+			planet_event = { 
+				id = hk648_honkai.2003 
+				days = 180
+				random = 179
+			}
+		}
+	}	
+}		
+#中级崩坏爆发#	
+honkai_lv2 = {
+	optimize_memory
+	random_list = {
+		3 = { 
+			planet_event = { 
+				id = hk648_honkai.2004 
+				days = 100
+				random = 30
+			} 
+		}
+		3 = { 
+			planet_event = { 
+				id = hk648_honkai.2005 
+				days = 100
+				random = 30
+			}
+		}
+		2 = { 
+			planet_event = { 
+				id = hk648_honkai.2006 
+				days = 100
+				random = 30
+			}
+		}
+	}	
+}	
+honkai_lv2_1 = {
+	optimize_memory
+	random_list = {
+		3 = { 
+			planet_event = { 
+				id = hk648_honkai.2004 
+				days = 180
+				random = 179
+			} 
+		}
+		3 = { 
+			planet_event = { 
+				id = hk648_honkai.2005 
+				days = 180
+				random = 179
+			}
+		}
+		2 = { 
+			planet_event = { 
+				id = hk648_honkai.2006 
+				days = 180
+				random = 179
+			}
+		}
+	}	
+}	
+#高级崩坏爆发#	
+honkai_lv3 = {
+	optimize_memory
+	random_list = {
+		50 = { 
+			planet_event = { 
+				id = hk648_honkai.2007
+				days = 100
+				random = 30
+			} 
+		}
+		35 = { 
+			planet_event = { 
+				id = hk648_honkai.2008 
+				days = 100
+				random = 30
+			}
+		}
+		15 = { 
+			planet_event = { 
+				id = hk648_honkai.2009 
+				days = 100
+				random = 30
+			}
+		}
+	}	
+}	
+honkai_lv3_1 = {
+	optimize_memory
+	random_list = {
+		50 = { 
+			planet_event = { 
+				id = hk648_honkai.2007
+				days = 180
+				random = 179
+			} 
+		}
+		35 = { 
+			planet_event = { 
+				id = hk648_honkai.2008 
+				days = 180
+				random = 179
+			}
+		}
+		15 = { 
+			planet_event = { 
+				id = hk648_honkai.2009 
+				days = 180
+				random = 179
+			}
+		}
+	}	
+}	
+
+
+####陆军####
+#突进级X10#
+honkai_tj10 = {
+	optimize_memory
+	event_target:honkai_country = {
+		ROOT = {
+			while = { 
+				count = 10
+				create_army = {
+					name = "Honkai Beast"
+					owner = event_target:honkai_country
+					species = event_target:hk_Beast
+					type = "tj_honkai_Beast"
+				}
+			}
+		}
+	}
+}
+
+#骑士级#
+honkai_qs = {
+	optimize_memory
+	event_target:honkai_country = {
+		ROOT = {
+			while = { count = 1
+				create_army = {
+					name = "Honkai Beast"
+					owner = event_target:honkai_country
+					species = event_target:hk_Beast
+					type = "qs_honkai_Beast"
+				}
+			}
+		}
+	}
+}
+honkai_qs10 = {
+	optimize_memory
+	event_target:honkai_country = {
+		ROOT = {
+			while = { count = 10
+				create_army = {
+					name = "Honkai Beast"
+					owner = event_target:honkai_country
+					species = event_target:hk_Beast
+					type = "qs_honkai_Beast"
+				}
+			}
+		}
+	}
+}
+
+#弩炮级#
+honkai_np = {
+	optimize_memory
+	event_target:honkai_country = {
+		ROOT = {
+			while = { count = 1
+				create_army = {
+					name = "Honkai Beast"
+					owner = event_target:honkai_country
+					species = event_target:hk_Beast
+					type = "np_honkai_Beast"
+				}
+			}
+		}
+	}
+}
+honkai_np10 = {
+	optimize_memory
+	event_target:honkai_country = {
+		ROOT = {
+			while = { count = 10
+				create_army = {
+					name = "Honkai Beast"
+					owner = event_target:honkai_country
+					species = event_target:hk_Beast
+					type = "np_honkai_Beast"
+				}
+			}
+		}
+	}
+}
+
+#战车级#
+honkai_zc = {
+	optimize_memory
+	event_target:honkai_country = {
+		ROOT = {
+			while = { count = 1
+				create_army = {
+					name = "Honkai Beast"
+					owner = event_target:honkai_country
+					species = event_target:hk_Beast
+					type = "zc_honkai_Beast"
+				}
+			}
+		}
+	}
+}
+honkai_zc10 = {
+	optimize_memory
+	event_target:honkai_country = {
+		ROOT = {
+			while = { count = 10
+				create_army = {
+					name = "Honkai Beast"
+					owner = event_target:honkai_country
+					species = event_target:hk_Beast
+					type = "zc_honkai_Beast"
+				}
+			}
+		}
+	}
+}
+
+#浮游级#
+honkai_fy = {
+	optimize_memory
+	event_target:honkai_country = {
+		ROOT = {
+			while = { count = 1
+				create_army = {
+					name = "Honkai Beast"
+					owner = event_target:honkai_country
+					species = event_target:hk_Beast
+					type = "fy_honkai_Beast"
+				}
+			}
+		}
+	}
+}
+
+#潮汐级#
+honkai_cx = {
+	optimize_memory
+	event_target:honkai_country = {
+		ROOT = {
+			while = { count = 1
+				create_army = {
+					name = "Honkai Beast"
+					owner = event_target:honkai_country
+					species = event_target:hk_Beast
+					type = "cx_honkai_Beast"
+				}
+			}
+		}
+	}
+}
+
+#圣殿级#
+honkai_sd = {
+	optimize_memory
+	event_target:honkai_country = {
+		ROOT = {
+			while = { count = 1
+				create_army = {
+					name = "Honkai Beast"
+					owner = event_target:honkai_country
+					species = event_target:hk_Beast
+					type = "sd_honkai_Beast"
+				}
+			}
+		}
+	}
+}
+
+#督军级#
+honkai_dj = {
+	optimize_memory
+	event_target:honkai_country = {
+		ROOT = {
+			while = { count = 1
+				create_army = {
+					name = "Honkai Beast"
+					owner = event_target:honkai_country
+					species = event_target:hk_Beast
+					type = "dj_honkai_Beast"
+				}
+			}
+		}
+	}
+}
+
+#崩坏帝王#
+honkai_bhdw = {
+	optimize_memory
+	event_target:honkai_country = {
+		ROOT = {
+			while = { count = 1
+				create_army = {
+					name = "Honkai Beast"
+					owner = event_target:honkai_country
+					species = event_target:hk_Beast
+					type = "bhdw_honkai_Beast"
+				}
+			}
+		}
+	}
+}
+
+#冰猪#
+honkai_bz = {
+	optimize_memory
+	event_target:honkai_country = {
+		ROOT = {
+			while = { count = 1
+				create_army = {
+					name = "Honkai Beast"
+					owner = event_target:honkai_country
+					species = event_target:hk_Beast
+					type = "bz_honkai_Beast"
+				}
+			}
+		}
+	}
+}
+
+#劳模猪#
+honkai_lmz = {
+	optimize_memory
+	event_target:honkai_country = {
+		ROOT = {
+			while = { count = 1
+				create_army = {
+					name = "Honkai Beast"
+					owner = event_target:honkai_country
+					species = event_target:hk_Beast
+					type = "lmz_honkai_Beast"
+				}
+			}
+		}
+	}
+}
+
+#红阿湿波#
+honkai_hasb = {
+	optimize_memory
+	event_target:honkai_country = {
+		ROOT = {
+			while = { count = 1
+				create_army = {
+					name = "Honkai Beast"
+					owner = event_target:honkai_country
+					species = event_target:hk_Beast
+					type = "hasb_honkai_Beast"
+				}
+			}
+		}
+	}
+}
+
+#蓝阿湿波#
+honkai_lasb = {
+	optimize_memory
+	event_target:honkai_country = {
+		ROOT = {
+			while = { count = 1
+				create_army = {
+					name = "Honkai Beast"
+					owner = event_target:honkai_country
+					species = event_target:hk_Beast
+					type = "lasb_honkai_Beast"
+				}
+			}
+		}
+	}
+}
+
+#阿湿波#
+honkai_asb = {
+	optimize_memory
+	event_target:honkai_country = {
+		ROOT = {
+			while = { count = 1
+				create_army = {
+					name = "Honkai Beast"
+					owner = event_target:honkai_country
+					species = event_target:hk_Beast
+					type = "asb_honkai_Beast"
+				}
+			}
+		}
+	}
+}
+
+#贝贝龙#
+honkai_bbl = {
+	optimize_memory
+	event_target:honkai_country = {
+		ROOT = {
+			while = { count = 1
+				create_army = {
+					name = "Honkai Beast"
+					owner = event_target:honkai_country
+					species = event_target:hk_Beast
+					type = "bbl_honkai_Beast"
+				}
+			}
+		}
+	}
+}
+
+#特拉洛克#
+honkai_tllk = {
+	optimize_memory
+	event_target:honkai_country = {
+		ROOT = {
+			while = { count = 1
+				create_army = {
+					name = "Honkai Beast"
+					owner = event_target:honkai_country
+					species = event_target:hk_Beast
+					type = "tllk_honkai_Beast"
+				}
+			}
+		}
+	}
+}
+
+#蚩尤#
+honkai_cy = {
+	optimize_memory
+	event_target:honkai_country = {
+		ROOT = {
+			while = { count = 1
+				create_army = {
+					name = "Honkai Beast"
+					owner = event_target:honkai_country
+					species = event_target:hk_Beast
+					type = "cy_honkai_Beast"
+				}
+			}
+		}
+	}
+}
+
+#####星系级崩坏兽#####
+#2.5k
+honkai_2.5k = {
+	optimize_memory
+	event_target:honkai_country = {
+		while = { count = 1
+			create_fleet = {
+				name = "Honkai Beasts"
+				effect = {
+					set_owner = event_target:honkai_country
+					while = {
+						count = 1
+						random_list = {
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "2.5k2"
+								}
+							}
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "2.5k3"
+								}
+							}
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "2.5k4"
+								}
+							}
+						}
+					}
+					set_location = event_target:honkai_planet_1
+				}
+			}
+		}
+	}
+}
+
+#5k
+honkai_5k = {
+	optimize_memory
+	event_target:honkai_country = {
+		while = { count = 1
+			create_fleet = {
+				name = "Honkai Beasts"
+				effect = {
+					set_owner = event_target:honkai_country
+					while = {
+						count = 1
+						random_list = {
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "5k2"
+								}
+							}
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "5k3"
+								}
+							}
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "5k4"
+								}
+							}
+						}
+					}
+					set_location = event_target:honkai_planet_1
+				}
+			}
+		}
+	}
+}
+
+#10k
+honkai_10k = {
+	optimize_memory
+	event_target:honkai_country = {
+		while = { count = 1
+			create_fleet = {
+				name = "Honkai Beasts"
+				effect = {
+					set_owner = event_target:honkai_country
+					while = {
+						count = 1
+						random_list = {
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "10k2"
+								}
+							}
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "10k3"
+								}
+							}
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "10k4"
+								}
+							}
+						}
+					}
+					set_location = event_target:honkai_planet_1
+				}
+			}
+		}
+	}
+}
+
+#20k
+honkai_20k = {
+	optimize_memory
+	event_target:honkai_country = {
+		while = { count = 1
+			create_fleet = {
+				name = "Honkai Beasts"
+				effect = {
+					set_owner = event_target:honkai_country
+					while = {
+						count = 1
+						random_list = {
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "20k1"
+								}
+							}
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "20k2"
+								}
+							}
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "20k3"
+								}
+							}
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "20k4"
+								}
+							}
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "20k8"
+								}
+							}
+						}
+					}
+					set_location = event_target:honkai_planet_1
+				}
+			}
+		}
+	}
+}
+#50k
+honkai_50k = {
+	optimize_memory
+	event_target:honkai_country = {
+		while = { count = 1
+			create_fleet = {
+				name = "Honkai Beasts"
+				effect = {
+					set_owner = event_target:honkai_country
+					while = {
+						count = 1
+						random_list = {
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "50k1"
+								}
+							}
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "50k2"
+								}
+							}
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "50k3"
+								}
+							}
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "50k4"
+								}
+							}
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "50k8"
+								}
+							}
+						}
+					}
+					set_location = event_target:honkai_planet_1
+				}
+			}
+		}
+	}
+}
+
+#150k
+honkai_150k = {
+	optimize_memory
+	event_target:honkai_country = {
+		while = { count = 1
+			create_fleet = {
+				name = "Honkai Beasts"
+				effect = {
+					set_owner = event_target:honkai_country
+					while = {
+						count = 1
+						random_list = {
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "150k5"
+								}
+							}
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "150k6"
+								}
+							}
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "150k8"
+								}
+							}
+						}
+					}
+					set_location = event_target:honkai_planet_1
+				}
+			}
+		}
+	}
+}
+
+#250k
+honkai_250k = {
+	optimize_memory
+	event_target:honkai_country = {
+		while = { count = 1
+			create_fleet = {
+				name = "Honkai Beasts"
+				effect = {
+					set_owner = event_target:honkai_country
+					while = {
+						count = 1
+						random_list = {
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "250k5"
+								}
+							}
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "250k6"
+								}
+							}
+						}
+					}
+					set_location = event_target:honkai_planet_1
+				}
+			}
+		}
+	}
+}
+
+#500k
+honkai_500k = {
+	optimize_memory
+	event_target:honkai_country = {
+		while = { count = 1
+			create_fleet = {
+				name = "Honkai Beasts"
+				effect = {
+					set_owner = event_target:honkai_country
+					while = {
+						count = 1
+						random_list = {
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "500k5"
+								}
+							}
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "500k6"
+								}
+							}
+						}
+					}
+					set_location = event_target:honkai_planet_1
+				}
+			}
+		}
+	}
+}
+
+#1m
+honkai_1m = {
+	optimize_memory
+	event_target:honkai_country = {
+		while = { count = 1
+			create_fleet = {
+				name = "Honkai Beasts"
+				effect = {
+					set_owner = event_target:honkai_country
+					while = {
+						count = 2
+						random_list = {
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "500k5"
+								}
+							}
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "500k6"
+								}
+							}
+						}
+					}
+					set_location = event_target:honkai_planet_1
+				}
+			}
+		}
+	}
+}
+
+#2.5m
+honkai_2.5m = {
+	optimize_memory
+	event_target:honkai_country = {
+		while = { 
+			count = 5
+			create_fleet = {
+				name = "Honkai Beasts"
+				effect = {
+					set_owner = event_target:honkai_country
+					while = {
+						count = 1
+						random_list = {
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "500k5"
+								}
+							}
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "500k6"
+								}
+							}
+						}
+					}
+					set_location = event_target:honkai_planet_1
+				}
+			}
+		}
+	}
+}
+
+#5m
+honkai_5m = {
+	optimize_memory
+	event_target:honkai_country = {
+		while = { 
+			count = 5
+			create_fleet = {
+				name = "Honkai Beasts"
+				effect = {
+					set_owner = event_target:honkai_country
+					while = {
+						count = 2
+						random_list = {
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "500k5"
+								}
+							}
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "500k6"
+								}
+							}
+						}
+					}
+					set_location = event_target:honkai_planet_1
+				}
+			}
+		}
+	}
+}
+
+#10m
+honkai_10m = {
+	optimize_memory
+	event_target:honkai_country = {
+		while = { 
+			count = 7
+			create_fleet = {
+				name = "Honkai Beasts"
+				effect = {
+					set_owner = event_target:honkai_country
+					while = {
+						count = 3
+						random_list = {
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "500k5"
+								}
+							}
+							1 = {
+								create_ship = {
+									name = "Honkai Beast"
+									design = "500k6"
+								}
+							}
+						}
+					}
+					set_location = event_target:honkai_planet_1
+				}
+			}
+		}
+	}
+}
+
+#律者降临#
+#空之律者#
+honkai_2nd_herrscher = {
+	optimize_memory
+	event_target:honkai_country = {
+		create_fleet = {
+			name = "The Second Lawyer"
+			effect = {
+				set_owner = event_target:honkai_country
+				create_ship = {
+					name = "The Second Lawyer"
+					design = "The Second Lawyer"
+				}
+				set_location = event_target:player_capital_hk
+			}
+		}
+	}
+}
+#识之律者#
+honkai_8th_herrscher = {
+	optimize_memory
+	event_target:ravens_country = {
+		create_fleet = {
+			name = "H识之律者!"
+			effect = {
+				set_owner = event_target:ravens_country
+				create_ship = {
+					name = "H识之律者!"
+					design = "H识之律者!"
+				}
+				save_global_event_target_as = 8th_herrscher_warship
+				set_location = event_target:player_capital_hk
+			}
+		}
+	}
+}

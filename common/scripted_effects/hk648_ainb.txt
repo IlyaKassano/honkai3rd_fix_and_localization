@@ -1,0 +1,585 @@
+#给船#
+#殖民船#
+
+hk648_colonizer = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			name = "Colonial ships"
+			effect = {
+				set_owner = root						
+				create_ship = {
+					name = "Colonial ships"
+					design = "Honkai colonial ship"
+				}
+				set_location = {
+					target = prev
+					distance = 80
+					angle = random
+				}	
+			}
+			settings = {
+				can_upgrade = no
+				can_disband = yes
+				can_change_leader = yes
+				can_change_composition = no
+				uses_naval_capacity = no
+				spawn_debris = yes
+			}
+		}
+	}
+}
+#陆军#
+hk648_titan = {
+	optimize_memory
+	create_fleet = {
+		effect = {
+			set_owner = root
+			while = {
+				count = 20
+				create_army_transport = {
+					ship_name = random
+					#graphical_culture = "root"
+					army_name = random
+					army_type = "titan_army"
+				}
+			}
+			set_location = {
+				target = prev
+				distance = 40
+				angle = random
+			}	
+		}
+	}
+}
+#工程船和科研船#
+ai_0 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			effect = {
+				set_owner = root	
+				create_ship = {
+					name = random
+					design = "Collapse of scientific research ships"
+				}
+				set_location = {
+					target = prev
+					distance = 40
+					angle = random
+				}	
+			}
+		}
+		create_fleet = {
+			effect = {
+				set_owner = root	
+				create_ship = {
+					name = random
+					design = "Collapsed engineering ships"
+				}
+				set_location = {
+					target = prev
+					distance = 40
+					angle = random
+				}	
+			}
+		}
+	}
+}
+#一级强化第一次补给#
+ai_1st_1 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			effect = {
+				set_owner = root						
+				while = {
+					count = 20
+					create_ship = {
+						name = random
+						design = "Vulcan gun battleship"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 40
+					angle = random
+				}
+			}
+			settings = {
+				can_upgrade = no	
+			}
+		}
+	}
+}
+#后期#
+ai_1st30_1 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			
+			effect = {
+				set_owner = root						
+				while = {
+					count = 20
+					create_ship = {
+						name = random
+						design = "Vulcan gun battleship"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 40
+					angle = random
+				}	
+			}
+			settings = {
+				can_upgrade = no	
+			}
+		}
+	}
+}
+
+#三级强化后期护卫舰#
+ai_1st30_3 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			
+			effect = {
+				set_owner = root						
+				while = {
+					count = 20
+					create_ship = {
+						name = random
+						design = "Oversized Vulcan guns battleship"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 40
+					angle = random
+				}	
+			
+			}
+			settings = {
+				can_upgrade = no	
+			}
+		}
+	}
+}
+#一级强化第二次补给#
+ai_2ed_1 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			
+			effect = {
+				set_owner = root						
+				while = {
+					count = 10
+					create_ship = {
+						name = random
+						design = "Love the sauce cannon destroyer"
+					}
+				}
+				while = {
+					count = 10
+					create_ship = {
+						name = random
+						design = "Vulcan gun battleship"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 40
+					angle = random
+				}	
+				
+			}
+			settings = {
+				can_upgrade = no	
+			}
+		}
+	}
+}
+#一级强化第三次补给#
+ai_3rd_1 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			
+			effect = {
+				set_owner = root						
+				while = {
+					count = 5
+					create_ship = {
+						name = random
+						design = "Love sauce cannon cruiser"
+					}
+				}
+				while = {
+					count = 10
+					create_ship = {
+						name = random
+						design = "Love the sauce cannon destroyer"
+					}
+				}
+				while = {
+					count = 20
+					create_ship = {
+						name = random
+						design = "Vulcan gun battleship"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 40
+					angle = random
+				}	
+				
+			}
+			settings = {
+				can_upgrade = no	
+			}
+		}
+	}
+}
+####第四次补给####
+#一级强化#
+ai_4th_1 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			
+			effect = {
+				set_owner = root						
+				while = {
+					count = 20
+					create_ship = {
+						name = random
+						design = "Love sauce cannon battleship"
+					}
+				}
+				while = {
+					count = 5
+					create_ship = {
+						name = random
+						design = "Love sauce cannon cruiser"
+					}
+				}
+				while = {
+					count = 5
+					create_ship = {
+						name = random
+						design = "Love the sauce cannon destroyer"
+					}
+				}
+				while = {
+					count = 10
+					create_ship = {
+						name = random
+						design = "Vulcan gun battleship"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 40
+					angle = random
+				}	
+				
+			}
+			settings = {
+				can_upgrade = no	
+			}
+		}
+	}
+}
+#二级强化#
+ai_4th_2 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			
+			effect = {
+				set_owner = root						
+				while = {
+					count = 25
+					create_ship = {
+						name = random
+						design = "Love sauce cannon battleship"
+					}
+				}
+				while = {
+					count = 10
+					create_ship = {
+						name = random
+						design = "Love-chan key cruiser"
+					}
+				}
+				while = {
+					count = 5
+					create_ship = {
+						name = random
+						design = "Love the sauce cannon destroyer"
+					}
+				}
+				while = {
+					count = 10
+					create_ship = {
+						name = random
+						design = "Vulcan gun battleship"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 40
+					angle = random
+				}	
+				
+			}
+			settings = {
+				can_upgrade = no	
+			}
+		}
+	}
+}
+#三级强化#
+ai_4th_3 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			
+			effect = {
+				set_owner = root						
+				while = {
+					count = 30
+					create_ship = {
+						name = random
+						design = "Ai-chan Key Battleship"
+					}
+				}
+				while = {
+					count = 3
+					create_ship = {
+						name = random
+						design = "Love-chan key cruiser"
+					}
+				}
+				while = {
+					count = 1
+					create_ship = {
+						name = random
+						design = "Love the sauce cannon destroyer"
+					}
+				}
+				while = {
+					count = 10
+					create_ship = {
+						name = random
+						design = "Vulcan gun battleship"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 40
+					angle = random
+				}	
+				
+			}
+			settings = {
+				can_upgrade = no	
+			}
+		}
+	}
+}
+####第五次补给####
+#一级强化
+ai_5th_1 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			
+			effect = {
+				set_owner = root						
+				while = {
+					count = 20
+					create_ship = {
+						name = random
+						design = "Love sauce cannon battleship"
+					}
+				}
+				while = {
+					count = 20
+					create_ship = {
+						name = random
+						design = "Love sauce cannon cruiser"
+					}
+				}
+				while = {
+					count = 5
+					create_ship = {
+						name = random
+						design = "Love the sauce cannon destroyer"
+					}
+				}
+				while = {
+					count = 5
+					create_ship = {
+						name = random
+						design = "Vulcan gun battleship"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 40
+					angle = random
+				}	
+				
+			}
+			settings = {
+				can_upgrade = no	
+			}
+		}
+	}
+}
+#二级强化
+ai_5th_2 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			
+			effect = {
+				set_owner = root						
+				while = {
+					count = 30
+					create_ship = {
+						name = random
+						design = "Ai-chan Key Battleship"
+					}
+				}
+				while = {
+					count = 10
+					create_ship = {
+						name = random
+						design = "Love-chan key cruiser"
+					}
+				}
+				while = {
+					count = 5
+					create_ship = {
+						name = random
+						design = "Love the sauce cannon destroyer"
+					}
+				}
+				while = {
+					count = 5
+					create_ship = {
+						name = random
+						design = "Vulcan gun battleship"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 40
+					angle = random
+				}	
+				
+			}
+			settings = {
+				can_upgrade = no	
+			}
+		}
+	}
+}
+#三级强化
+ai_5th_3 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			
+			effect = {
+				set_owner = root						
+				while = {
+					count = 45
+					create_ship = {
+						name = random
+						design = "Realm of Truth battleship"
+					}
+				}
+				while = {
+					count = 1
+					create_ship = {
+						name = random
+						design = "Love-chan key cruiser"
+					}
+				}
+				while = {
+					count = 1
+					create_ship = {
+						name = random
+						design = "Love the sauce cannon destroyer"
+					}
+				}
+				while = {
+					count = 5
+					create_ship = {
+						name = random
+						design = "Vulcan gun battleship"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 40
+					angle = random
+				}	
+				
+			}
+			settings = {
+				can_upgrade = no	
+			}
+		}
+	}
+}
+#三级强化第六次补给#
+ai_6th_3 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			
+			effect = {
+				set_owner = root						
+				while = {
+					count = 59
+					create_ship = {
+						name = random
+						design = "Battleship of Truth Love"
+					}
+				}
+				while = {
+					count = 1
+					create_ship = {
+						name = random
+						design = "Realm of Truth battleship"
+					}
+				}
+				while = {
+					count = 10
+					create_ship = {
+						name = random
+						design = "Oversized Vulcan guns battleship"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 40
+					angle = random
+				}	
+				
+			}
+			settings = {
+				can_upgrade = no	
+			}
+		}
+	}
+}

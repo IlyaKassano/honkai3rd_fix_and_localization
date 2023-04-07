@@ -1,0 +1,459 @@
+
+ravenⅠ_battleship_1 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			name = "Purchased fleet"
+			effect = {
+				set_owner = root
+				while = {
+					count = 1
+					create_ship = {
+						name = "Black Raven battleshipⅠ"
+						design = "ravenⅠType of battleship"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 80
+					angle = random
+				}
+			}
+			settings = {
+				can_upgrade = no
+				can_change_composition = no
+				uses_naval_capacity = yes
+				spawn_debris = no
+				is_boss = yes
+			}
+		}
+	}
+}
+ravenⅠ_battleship_5 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			name = "Purchased fleet"
+			effect = {
+				set_owner = root
+				while = {
+					count = 5
+					create_ship = {
+						name = "Black Raven battleshipⅠ"
+						design = "ravenⅠType of battleship"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 80
+					angle = random
+				}
+			}
+			settings = {
+				can_upgrade = no
+				can_change_composition = no
+				uses_naval_capacity = yes
+				spawn_debris = no
+				is_boss = yes
+			}
+		}
+	}
+}
+ravenⅠ_battleship_10 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			name = "Purchased fleet"
+			effect = {
+				set_owner = root
+				while = {
+					count = 10
+					create_ship = {
+						name = "Black Raven battleshipⅠ"
+						design = "ravenⅠType of battleship"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 80
+					angle = random
+				}
+			}
+			settings = {
+				can_upgrade = no
+				can_change_composition = no
+				uses_naval_capacity = yes
+				spawn_debris = no
+				is_boss = yes
+			}
+		}
+	}
+}
+ravenⅠ_battleship_50 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			name = "Purchased fleet"
+			effect = {
+				set_owner = root
+				while = {
+					count = 50
+					create_ship = {
+						name = "Black Raven battleshipⅠ"
+						design = "ravenⅠType of battleship"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 80
+					angle = random
+				}
+			}
+			settings = {
+				can_upgrade = no
+				can_change_composition = no
+				uses_naval_capacity = yes
+				spawn_debris = no
+				is_boss = yes
+			}
+		}
+	}
+}
+
+ravenⅡ_battleship_1 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			name = "Purchased fleet"
+			effect = {
+				set_owner = root
+				while = {
+					count = 1
+					create_ship = {
+						name = "Black Raven battleshipⅡ"
+						design = "ravenⅡType of battleship"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 80
+					angle = random
+				}
+			}
+			settings = {
+				can_upgrade = no
+				can_change_composition = no
+				uses_naval_capacity = yes
+				spawn_debris = no
+				is_boss = yes
+			}
+		}
+	}
+}
+ravenⅡ_battleship_5 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			name = "Purchased fleet"
+			effect = {
+				set_owner = root
+				while = {
+					count = 5
+					create_ship = {
+						name = "Black Raven battleshipⅡ"
+						design = "ravenⅡType of battleship"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 80
+					angle = random
+				}
+			}
+			settings = {
+				can_upgrade = no
+				can_change_composition = no
+				uses_naval_capacity = yes
+				spawn_debris = no
+				is_boss = yes
+			}
+		}
+	}
+}
+ravenⅡ_battleship_10 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			name = "Purchased fleet"
+			effect = {
+				while = {
+					set_owner = root
+					count = 10
+					create_ship = {
+						name = "Black Raven battleshipⅡ"
+						design = "ravenⅡType of battleship"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 80
+					angle = random
+				}
+			}
+			settings = {
+				can_upgrade = no
+				can_change_composition = no
+				uses_naval_capacity = yes
+				spawn_debris = no
+				is_boss = yes
+			}
+		}
+	}
+}
+ravenⅡ_battleship_50 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			name = "Purchased fleet"
+			effect = {
+				while = {
+					set_owner = root
+					count = 50
+					create_ship = {
+						name = "Black Raven battleshipⅡ"
+						design = "ravenⅡType of battleship"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 80
+					angle = random
+				}
+			}
+			settings = {
+				can_upgrade = no
+				can_change_composition = no
+				uses_naval_capacity = yes
+				spawn_debris = no
+				is_boss = yes
+			}
+		}
+	}
+}
+
+ravenⅢ_battleship_1 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			name = "Purchased fleet"
+			effect = {
+				set_owner = root
+				while = {
+					count = 1
+					create_ship = {
+						name = "Black Raven battleshipⅢ"
+						design = "ravenⅢType of battleship"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 80
+					angle = random
+				}
+			}
+			settings = {
+				can_upgrade = no
+				can_change_composition = no
+				uses_naval_capacity = yes
+				spawn_debris = no
+				is_boss = yes
+			}
+		}
+	}
+}
+ravenⅢ_battleship_5 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			name = "Purchased fleet"
+			effect = {
+				set_owner = root
+				while = {
+					count = 5
+					create_ship = {
+						name = "Black Raven battleshipⅢ"
+						design = "ravenⅢType of battleship"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 80
+					angle = random
+				}
+			}
+			settings = {
+				can_upgrade = no
+				can_change_composition = no
+				uses_naval_capacity = yes
+				spawn_debris = no
+				is_boss = yes
+			}
+		}
+	}
+}
+ravenⅢ_battleship_10 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			name = "Purchased fleet"
+			effect = {
+				set_owner = root
+				while = {
+					count = 10
+					create_ship = {
+						name = "Black Raven battleshipⅢ"
+						design = "ravenⅢType of battleship"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 80
+					angle = random
+				}
+			}
+			settings = {
+				can_upgrade = no
+				can_change_composition = no
+				uses_naval_capacity = yes
+				spawn_debris = no
+				is_boss = yes
+			}
+		}
+	}
+}
+ravenⅢ_battleship_50 = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			name = "Purchased fleet"
+			effect = {
+				set_owner = root
+				while = {
+					count = 50
+					create_ship = {
+						name = "Black Raven battleshipⅢ"
+						design = "ravenⅢType of battleship"
+					}
+				}
+				set_location = {
+					target = prev
+					distance = 80
+					angle = random
+				}
+			}
+			settings = {
+				can_upgrade = no
+				can_change_composition = no
+				uses_naval_capacity = yes
+				spawn_debris = no
+				is_boss = yes
+			}
+		}
+	}
+}
+
+ravenⅠ_battleship_employ = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			name = "Hire the fleet"
+			effect = {
+				set_owner = root
+				while = {
+					count = 50
+					create_ship = {
+						name = "Black Raven battleshipⅠ"
+						design = "ravenⅠType of battleship"
+					}
+				}
+				save_global_event_target_as = employ_warship
+				set_location = {
+					target = prev
+					distance = 80
+					angle = random
+				}
+			}
+			settings = {
+				can_upgrade = no
+				can_change_composition = no
+				uses_naval_capacity = yes
+				spawn_debris = no
+				is_boss = yes
+			}
+		}
+	}
+}
+
+ravenⅡ_battleship_employ = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			name = "Hire the fleet"
+			effect = {
+				set_owner = root
+				while = {
+					count = 50
+					create_ship = {
+						name = "Black Raven battleshipⅡ"
+						design = "ravenⅡType of battleship"
+					}
+				}
+				save_global_event_target_as = employ_warship
+				set_location = {
+					target = prev
+					distance = 80
+					angle = random
+				}
+			}
+			settings = {
+				can_upgrade = no
+				can_change_composition = no
+				uses_naval_capacity = yes
+				spawn_debris = no
+				is_boss = yes
+			}
+		}
+	}
+}
+
+ravenⅢ_battleship_employ = {
+	optimize_memory
+	capital_scope = {
+		create_fleet = {
+			name = "Hire the fleet"
+			effect = {
+				set_owner = root
+				while = {
+					count = 50
+					create_ship = {
+						name = "Black Raven battleshipⅢ"
+						design = "ravenⅢType of battleship"
+					}
+				}
+				save_global_event_target_as = employ_warship
+				set_location = {
+					target = prev
+					distance = 80
+					angle = random
+				}
+			}
+			settings = {
+				can_upgrade = no
+				can_change_composition = no
+				uses_naval_capacity = yes
+				spawn_debris = no
+				is_boss = yes
+			}
+		}
+	}
+}
