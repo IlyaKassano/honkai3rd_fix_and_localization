@@ -1,0 +1,73 @@
+##########领袖和日常##########
+
+#为了世界上的美好而战#
+ap_fight_for_wrld = {
+	potential = {
+		has_authority = auth_schicksal
+		NOT = {
+			has_ascension_perk = ap_fight_for_wrld
+		}
+	}
+	possible = {
+		has_technology = tech_hk648_1
+		exists = event_target:aichan
+		num_ascension_perks > 2
+		has_country_flag = time2
+	}
+	
+	modifier = {
+		country_unity_produces_mult = 0.25
+		pop_government_ethic_attraction = 0.5
+		country_command_limit_add = 150
+		country_naval_cap_mult = 0.5
+		starbase_shipyard_build_speed_mult = 0.75
+		starbase_shipyard_build_cost_mult = -0.1
+	}
+	
+	on_enabled = {
+		hidden_effect = {
+			country_event = {
+				id = hk648_star.1000
+				days = 35
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 0
+	}
+}
+
+#量子之海#
+ap_dirac_sea = {
+	potential = {
+		has_authority = auth_schicksal
+		NOT = {
+			has_ascension_perk = ap_dirac_sea
+		}
+	}
+	possible = {
+		has_ascension_perk = ap_fight_for_wrld
+	}
+	
+	modifier = {
+		ship_ftl_jumpdrive_range_mult = 0.5
+		ship_jumpdrive_cooldown_mult = -0.15
+	}
+	
+	on_enabled = {
+		custom_tooltip = "We will connect the Eye of the Abyss to the Quantum Sea through a special study。"
+		hidden_effect = {
+			country_event = { id = hk648_leader.2001 }
+		}
+	}
+	
+	ai_weight = {
+		factor = 0
+	}
+}
+
+		
+	
+	
+	

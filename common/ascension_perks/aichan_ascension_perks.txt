@@ -1,0 +1,185 @@
+#爱酱飞升#
+#爱酱世界第一可爱#
+ap_aichan_NO1 = {
+	potential = { 
+		has_authority =auth_schicksal
+		NOT = {
+			has_ascension_perk = ap_aichan_NO1
+		}
+	}
+	possible = {
+		has_technology = tech_aichan_tbox1
+		NOT = { has_country_flag = aichan_angry }
+	}
+	
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.25
+		pop_government_ethic_attraction = 0.25
+		pop_happiness = 0.15
+		
+		pop_environment_tolerance = 0.01
+		all_technology_research_speed = 0.01
+		country_base_influence_produces_add = 1
+		army_damage_mult = 0.01
+		army_health = 0.01
+		army_morale_damage_mult = 0.01
+		army_morale =0.01
+		army_collateral_damage_mult = 0.01
+		armies_upkeep_mult = -0.01
+		planet_jobs_produces_mult = 0.01
+		planet_jobs_energy_produces_mult = 0.01
+		planet_jobs_minerals_produces_mult = 0.01
+		planet_jobs_food_produces_mult = 0.01
+		planet_jobs_consumer_goods_produces_mult = 0.01
+		planet_jobs_alloys_produces_mult = 0.01
+		planet_jobs_engineering_research_produces_mult = 0.01
+		planet_jobs_physics_research_produces_mult = 0.01
+		planet_jobs_society_research_produces_mult = 0.01
+		ship_shield_mult = 0.01
+		ship_armor_mult = 0.01
+		ship_shield_reduction = -0.01
+		ship_armor_reduction = -0.01
+		ship_hull_regen_add_perc = 1
+		ship_armor_regen_add_perc = 1
+		ship_shield_regen_add_perc = 1
+		ship_shield_penetration_mult = 0.01
+		ship_armor_penetration_mult = 0.01
+		weapon_type_energy_weapon_damage_mult = 0.01
+		weapon_type_energy_weapon_fire_rate_mult = 0.01
+		ship_windup_mult = -0.01
+		ship_ftl_jumpdrive_range_mult = 0.01
+		ship_jumpdrive_cooldown_mult = -0.01
+		ship_weapon_damage = 0.01
+		ship_weapon_range_mult = 0.01
+		ship_fire_rate_mult = 0.01
+		ship_speed_mult = 0.01
+		ship_hull_mult = 0.01
+		planet_building_build_speed_mult = 0.01
+		all_technology_research_speed = 0.01
+		empire_size_districts_mult = -0.01
+		empire_size_systems_mult = -0.01
+		empire_size_colonies_mult = -0.01
+		empire_size_pops_mult = -0.01
+		planet_stability_add = 1
+		pop_growth_speed = 0.01
+		starbase_shipyard_build_speed_mult = 0.01
+		starbase_shipyard_build_cost_mult = -0.01
+		country_command_limit_add = 1
+		country_naval_cap_add = 1
+		
+	}
+	
+	ai_weight = {
+		factor = 0
+	}
+}
+
+#爱酱武装#
+ap_aichan_arm = {
+	potential = {
+		has_authority = auth_schicksal
+		NOT = {
+			has_ascension_perk = ap_aichan_arm
+		}
+	}
+	possible = {
+		has_technology = tech_aichan_permissions1
+		NOT = { has_country_flag = aichan_angry }
+	}
+	
+
+	modifier = {
+		weapon_type_energy_weapon_damage_mult = 0.05
+		all_technology_research_speed = 0.05
+		starbase_shipyard_build_speed_mult = 0.10
+		starbase_shipyard_build_cost_mult = -0.10
+	}
+	
+	on_enabled = {
+		custom_tooltip = "YUnlock the Ai-chan Research module!"
+		add_research_option = tech_aichan_tbox2
+		hidden_effect = {
+			country_event = { id = hk648_aichan.0017 }
+		}
+	}
+	
+	ai_weight = {
+		factor = 0
+	}
+}
+
+#黑爱武装#
+ap_blackai_arm = {
+	potential = {
+		has_authority = auth_schicksal
+		NOT = {
+			has_ascension_perk = ap_blackai_arm
+		}
+	}
+	possible = {
+		has_technology = tech_aichan_permissions2
+		NOT = { has_country_flag = aichan_angry }
+	}
+	
+	modifier = {
+		country_alloys_produces_mult = 0.1
+		weapon_type_energy_weapon_damage_mult = 0.1
+		weapon_type_energy_weapon_fire_rate_mult = 0.1
+		starbase_shipyard_build_speed_mult = 0.25
+	}
+	
+	on_enabled = {
+		custom_tooltip = "YUnlock the Ai-chan Army form!"
+		add_research_option = tech_blackai_tbox
+		hidden_effect = {
+			set_country_flag = aichan0_lv1
+			country_event = { id = hk648_aichan.0011 }
+		}
+	}
+	
+	ai_weight = {
+		factor = 0
+	}
+}
+
+#自律作战单位A1#
+ap_aichan_A1 = {
+	potential = {
+		has_authority = auth_schicksal
+		NOT = {
+			has_ascension_perk = ap_aichan_A1
+		}
+	}
+	possible = {
+		has_technology = tech_aichan_permissions3
+		NOT = { has_country_flag = aichan_angry }
+	}
+	
+	modifier = {
+		country_alloys_produces_mult = 0.15
+		country_command_limit_add = 300
+		country_naval_cap_add = 4000
+		starbase_shipyard_build_speed_mult = 0.5
+		weapon_type_energy_weapon_damage_mult = 0.1
+		weapon_type_energy_weapon_fire_rate_mult = 0.1
+	}
+	on_enabled = {
+		custom_tooltip = "YUnlock the Ai-chan Battleship form!"
+		add_research_option = tech_aichan_A1 
+		hidden_effect = {
+			set_country_flag = aichan_ship_lv1
+			country_event = { id = hk648_super_wepons.1011 }
+			country_event = { id = hk648_aichan.0008 }
+		}
+	}
+	
+	ai_weight = {
+		factor = 0
+	}
+}
+
+
+	
+	
+	
+	
