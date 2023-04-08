@@ -1439,7 +1439,7 @@ country_event = {
 				remove_ship_flag = hk648_divine_key_11th_plus_ship
 			}
 		}
-		response_text = "Okay boss! No problem boss!"
+		response_text = "Okay captain! No problem captain!"
 	}
 	
 	option = {
