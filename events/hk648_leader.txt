@@ -837,20 +837,7 @@ country_event = {
 	trigger = { has_authority = auth_schicksal }
 	
 	immediate = {
-		random_list = {
-			1 = { country_event = { id = hk648_leader.20031 } }
-			1 = { country_event = { id = hk648_leader.20041 } }
-			1 = { country_event = { id = hk648_leader.20051 } }
-			1 = { country_event = { id = hk648_leader.20061 } }
-			1 = { country_event = { id = hk648_leader.20071 } }
-			1 = { country_event = { id = hk648_leader.20081 } }
-			1 = { country_event = { id = hk648_leader.20091 } }
-			1 = { country_event = { id = hk648_leader.20101 } }
-			1 = { country_event = { id = hk648_leader.20111 } }
-			1 = { country_event = { id = hk648_leader.20121 } }
-			1 = { country_event = { id = hk648_leader.20131 } }
-			1 = { country_event = { id = hk648_leader.28721 } }
-		}
+		country_event = { id = hk648_leader.20031 }
 	}
 }
 
@@ -1718,9 +1705,6 @@ country_event = {
 		else_if = {
 			limit = { NOT = { has_country_flag = leader_a872 } }
 			country_event = { id = hk648_leader.2872 }
-		}
-		else = {
-			country_event = { id = hk648_leader.20031 }
 		}
 	}
 }
