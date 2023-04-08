@@ -1,0 +1,2773 @@
+##############################防御组建##############################
+##########黑爱护盾##########
+utility_component_template = {
+	key = "blackai_shield1"
+	size = small
+	icon = "GFX_blackai_shield"
+	icon_frame = 1
+	prerequisites = { "tech_blackai_shield" }
+	component_set = "blackai_shield"
+	upgrades_to = "hk648_white1"
+	
+	power = -50
+	modifier = {
+		ship_shield_add = 750
+		ship_shield_regen_add_static = 8
+	}
+	resources = { 
+		category = ship_components
+		cost = {
+			alloys = 25
+			honkai648_energy = 12.5
+		}
+		upkeep = {
+			alloys = 0.025
+			honkai648_energy = 0.0125
+			energy = 0.02
+		}
+	}
+	
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "blackai_shield2"
+	size = medium
+	icon = "GFX_blackai_shield"
+	icon_frame = 1
+	prerequisites = { "tech_blackai_shield" }
+	component_set = "blackai_shield"
+	upgrades_to = "hk648_white2"
+	
+	power = -100
+	modifier = {
+		ship_shield_add = 1200
+		ship_shield_regen_add_static = 15
+	}
+	resources = { 
+		category = ship_components
+		cost = {
+			alloys = 50
+			honkai648_energy = 25
+		}
+		upkeep = {
+			alloys = 0.05
+			honkai648_energy = 0.025
+			energy = 0.02
+		}
+	}
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "blackai_shield3"
+	size = large
+	icon = "GFX_blackai_shield"
+	icon_frame = 1
+	prerequisites = { "tech_blackai_shield" }
+	component_set = "blackai_shield"
+	upgrades_to = "hk648_white3"
+	
+	power = -200
+	modifier = {
+		ship_shield_add = 2000
+		ship_shield_regen_add_static = 25
+	}
+	resources = { 
+		category = ship_components
+		cost = {
+			alloys = 100
+			honkai648_energy = 50
+		}
+		upkeep = {
+			alloys = 0.1
+			honkai648_energy = 0.05
+			energy = 0.05
+		}
+	}
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+##########黑爱装甲##########
+utility_component_template = {
+	key = "blackai_sarmor1"
+	size = small
+	icon = "GFX_blackai_sarmor"
+	icon_frame = 1
+	prerequisites = { "tech_blackai_sarmor" }
+	component_set = "blackai_sarmor"
+	upgrades_to = "hk648_black1"
+	
+	power = 0
+	modifier = {
+		ship_armor_add = 750
+		ship_armor_regen_add_static = 8
+	}
+	resources = { 
+		category = ship_components
+		cost = {
+			alloys = 25
+			honkai648_energy = 12.5
+		}
+		upkeep = {
+			alloys = 0.025
+			honkai648_energy = 0.0125
+			energy = 0.0125
+		}
+	}
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "blackai_sarmor2"
+	size = medium
+	icon = "GFX_blackai_sarmor"
+	icon_frame = 1
+	prerequisites = { "tech_blackai_sarmor" }
+	component_set = "blackai_sarmor"
+	upgrades_to = "hk648_black2"
+	
+	power = 0
+	modifier = {
+		ship_armor_add = 1200
+		ship_armor_regen_add_static = 15
+	}
+	resources = { 
+		category = ship_components
+		cost = {
+			alloys = 50
+			honkai648_energy = 25
+		}
+		upkeep = {
+			alloys = 0.05
+			honkai648_energy = 0.025
+			energy = 0.025
+		}
+	}
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "blackai_sarmor3"
+	size = large
+	icon = "GFX_blackai_sarmor"
+	icon_frame = 1
+	prerequisites = { "tech_blackai_sarmor" }
+	component_set = "blackai_sarmor"
+	upgrades_to = "hk648_black3"
+	
+	
+	power = 0
+	modifier = {
+		ship_armor_add = 2000
+		ship_armor_regen_add_static = 25
+	}
+	resources = { 
+		category = ship_components
+		cost = {
+			alloys = 100
+			honkai648_energy = 50
+		}
+		upkeep = {
+			alloys = 0.1
+			honkai648_energy = 0.05
+			energy = 0.05
+		}
+	}
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+##########绿核护盾##########
+utility_component_template = {
+	key = "aichan_shield1"
+	size = small
+	icon = "GFX_aichan_shield"
+	icon_frame = 1
+	prerequisites = { "tech_aichan_shield" }
+	component_set = "aichan_shield"
+	
+	power = -75
+	modifier = {
+		ship_shield_add = 2000
+		ship_shield_regen_add_static = 30
+	}
+	resources = { 
+		category = ship_components
+		cost = {
+			alloys = 75
+			honkai648_energy = 37.5
+		}
+		upkeep = {
+			alloys = 0.075
+			honkai648_energy = 0.375
+			energy = 0.0375
+		}
+	}
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "aichan_shield2"
+	size = medium
+	icon = "GFX_aichan_shield"
+	icon_frame = 1
+	prerequisites = { "tech_aichan_shield" }
+	component_set = "aichan_shield"
+	
+	power = -150
+	modifier = {
+		ship_shield_add = 3000
+		ship_shield_regen_add_static = 50
+	}
+	resources = { 
+		category = ship_components
+		cost = {
+			alloys = 150
+			honkai648_energy = 0.25
+		}
+		upkeep = {
+			alloys = 0.15
+			honkai648_energy = 0.01
+			energy = 0.075
+		}
+	}
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "aichan_shield3"
+	size = large
+	icon = "GFX_aichan_shield"
+	icon_frame = 1
+	prerequisites = { "tech_aichan_shield" }
+	component_set = "aichan_shield"
+	
+	power = -300
+	modifier = {
+		ship_shield_add = 5000
+		ship_shield_regen_add_static = 100
+	}
+	resources = { 
+		category = ship_components
+		cost = {
+			alloys = 300
+			honkai648_energy = 150
+		}
+		upkeep = {
+			alloys = 0.3
+			honkai648_energy = 0.15
+			energy = 0.5
+		}
+	}
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+##########绿核装甲##########
+utility_component_template = {
+	key = "aichan_sarmor1"
+	size = small
+	icon = "GFX_aichan_sarmor"
+	icon_frame = 1
+	prerequisites = { "tech_aichan_sarmor" }
+	component_set = "aichan_sarmor"
+	
+	power = 0
+	modifier = {
+		ship_armor_add = 2000
+		ship_armor_regen_add_static = 30
+	}
+	resources = { 
+		category = ship_components
+		cost = {
+			alloys = 75
+			honkai648_energy = 37.5
+		}
+		upkeep = {
+			alloys = 0.075
+			honkai648_energy = 0.0375
+			energy = 0.0375
+		}
+	}
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "aichan_sarmor2"
+	size = medium
+	icon = "GFX_aichan_sarmor"
+	icon_frame = 1
+	prerequisites = { "tech_aichan_sarmor" }
+	component_set = "aichan_sarmor"
+	
+	power = 0
+	modifier = {
+		ship_armor_add = 3000
+		ship_armor_regen_add_static = 50
+	}
+	resources = { 
+		category = ship_components
+		cost = {
+			alloys = 150
+			honkai648_energy = 75
+		}
+		upkeep = {
+			alloys = 0.15
+			honkai648_energy = 0.075
+			energy = 0.075
+		}
+	}
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "aichan_sarmor3"
+	size = large
+	icon = "GFX_aichan_sarmor"
+	icon_frame = 1
+	prerequisites = { "tech_aichan_sarmor" }
+	component_set = "aichan_sarmor"
+	
+	power = 0
+	modifier = {
+		ship_armor_add = 5000
+		ship_armor_regen_add_static = 100
+	}
+	resources = { 
+		category = ship_components
+		cost = {
+			alloys = 300
+			honkai648_energy = 150
+		}
+		upkeep = {
+			alloys = 0.3
+			honkai648_energy = 0.15
+			energy = 0.5
+		}
+	}
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+#####相转移#####
+utility_component_template = {
+	key = "hk648_xzy"
+	size = large
+	icon = "GFX_hk648_xzy"
+	icon_frame = 1
+	prerequisites = { "tech_hk648_xzy" }
+	component_set = "hk648_xzy"
+
+	
+	power = -400
+	modifier = {
+		ship_armor_add = 3000
+		ship_armor_regen_add_static = 40
+		ship_shield_add = 3000
+		ship_shield_regen_add_static = 40
+		ship_hull_add = 3000
+		ship_hull_regen_add_static = 40
+	}
+	
+	resources = { 
+		category = ship_components
+		cost = {
+			alloys = 650
+			honkai648_energy = 500
+		}
+		upkeep = {
+			alloys = 0.6
+			honkai648_energy = 0.5
+			energy = 0.2
+		}
+	}
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+			NOT = {
+				has_origin = origin_ark_moth2
+			}
+		}
+		modifier = {
+			factor = 100
+			has_origin = origin_ark_moth2
+		}
+	}
+}
+
+#####爱酱的究极水晶甲#####
+utility_component_template = {
+	key = "aichan_648"
+	size = large
+	icon = "GFX_aichan_648"
+	icon_frame = 1
+	prerequisites = { "tech_aichan_648" }
+	component_set = "aichan_648"
+	
+	power = -1000
+	modifier = {
+		ship_armor_add = 12800
+		ship_armor_regen_add_static = 300
+		ship_shield_add = 12800
+		ship_shield_regen_add_static = 300
+		ship_hull_add = 12800
+		ship_hull_regen_add_static = 300
+	}
+	resources = { 
+		category = ship_components
+		cost = {
+			alloys = 3000
+			honkai648_energy = 2000
+		}
+		upkeep = {
+			alloys = 2
+			honkai648_energy = 2.5
+			energy = 5
+		}
+	}
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+##############################舰船武器##############################
+#炫光舞台
+#红
+weapon_component_template = {
+	key = "hk648_aichan_1"
+	size = large
+	type = instant
+	icon = "GFX_hk648_jtl"
+	icon_frame = 1 
+	projectile_gfx = "hk_aichan1"
+	tags = { weapon_type_kinetic weapon_type_honkai }
+	ai_tags = { weapon_role_anti_shield }
+	
+	power = 20
+	damage = { min = 1 max = 1 }
+	windup = { min = 5 max = 5 }
+	total_fire_time = 1.0
+	hull_damage = 0.02
+	shield_damage = 0.02
+	armor_damage = 0.02
+	range = 400
+	accuracy = -10
+	tracking = -10
+	
+	resources = { 
+		category = ship_components
+		cost = {
+			unity = 10000
+		}
+		upkeep = {
+			unity = -1000
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+#红2
+weapon_component_template = {
+	key = "hk648_aichan_12"
+	size = large
+	type = instant
+	icon = "GFX_hk648_jtl"
+	icon_frame = 1 
+	projectile_gfx = "hk_aichan12"
+	tags = { weapon_type_kinetic weapon_type_honkai }
+	ai_tags = { weapon_role_anti_shield }
+	
+	power = 20
+	damage = { min = 1 max = 1 }
+	windup = { min = 5 max = 5 }
+	total_fire_time = 1.0
+	hull_damage = 0.02
+	shield_damage = 0.02
+	armor_damage = 0.02
+	range = 400
+	accuracy = -10
+	tracking = -10
+	
+	resources = { 
+		category = ship_components
+		cost = {
+			unity = 10000
+		}
+		upkeep = {
+			unity = -1000
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+#绿
+weapon_component_template = {
+	key = "hk648_aichan_2"
+	size = large
+	type = instant
+	icon = "GFX_hk648_jtl"
+	icon_frame = 1 
+	projectile_gfx = "hk_aichan2"
+	tags = { weapon_type_kinetic weapon_type_honkai }
+	ai_tags = { weapon_role_anti_shield }
+	
+	power = 20
+	damage = { min = 1 max = 1 }
+	windup = { min = 5 max = 5 }
+	total_fire_time = 1.0
+	hull_damage = 0.02
+	shield_damage = 0.02
+	armor_damage = 0.02
+	range = 400
+	accuracy = -10
+	tracking = -10
+	
+	resources = { 
+		category = ship_components
+		cost = {
+			unity = 10000
+		}
+		upkeep = {
+			unity = -1000
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+#绿2
+weapon_component_template = {
+	key = "hk648_aichan_22"
+	size = large
+	type = instant
+	icon = "GFX_hk648_jtl"
+	icon_frame = 1 
+	projectile_gfx = "hk_aichan22"
+	tags = { weapon_type_kinetic weapon_type_honkai }
+	ai_tags = { weapon_role_anti_shield }
+	
+	power = 20
+	damage = { min = 1 max = 1 }
+	windup = { min = 5 max = 5 }
+	total_fire_time = 1.0
+	hull_damage = 0.02
+	shield_damage = 0.02
+	armor_damage = 0.02
+	range = 400
+	accuracy = -10
+	tracking = -10
+	
+	resources = { 
+		category = ship_components
+		cost = {
+			unity = 10000
+		}
+		upkeep = {
+			unity = -1000
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+#蓝
+weapon_component_template = {
+	key = "hk648_aichan_3"
+	size = large
+	type = instant
+	icon = "GFX_hk648_jtl"
+	icon_frame = 1 
+	projectile_gfx = "hk_aichan3"
+	tags = { weapon_type_kinetic weapon_type_honkai }
+	ai_tags = { weapon_role_anti_shield }
+	
+	power = 20
+	damage = { min = 1 max = 1 }
+	windup = { min = 5 max = 5 }
+	total_fire_time = 1.0
+	hull_damage = 0.02
+	shield_damage = 0.02
+	armor_damage = 0.02
+	range = 400
+	accuracy = -10
+	tracking = -10
+	
+	resources = { 
+		category = ship_components
+		cost = {
+			unity = 10000
+		}
+		upkeep = {
+			unity = -1000
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+#蓝2
+weapon_component_template = {
+	key = "hk648_aichan_32"
+	size = large
+	type = instant
+	icon = "GFX_hk648_jtl"
+	icon_frame = 1 
+	projectile_gfx = "hk_aichan32"
+	tags = { weapon_type_kinetic weapon_type_honkai }
+	ai_tags = { weapon_role_anti_shield }
+	
+	power = 20
+	damage = { min = 1 max = 1 }
+	windup = { min = 5 max = 5 }
+	total_fire_time = 1.0
+	hull_damage = 0.02
+	shield_damage = 0.02
+	armor_damage = 0.02
+	range = 400
+	accuracy = -10
+	tracking = -10
+	
+	resources = { 
+		category = ship_components
+		cost = {
+			unity = 10000
+		}
+		upkeep = {
+			unity = -1000
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+##########爱酱火箭##########
+#废案#
+weapon_component_template = {
+	key = "aichan_rocket"
+	size = torpedo
+	entity = "turret_torpedo_entity"
+	icon = "GFX_aichan_rocket"
+	icon_frame = 1
+	type = missile
+	prerequisites = { "tech_aichan_rocket" }
+	component_set = "aichan_rocket"
+	projectile_gfx = "large_torpedo_03"
+	tags = { weapon_type_explosive weapon_type_honkai }
+	ai_tags = { weapon_role_anti_shield }
+	
+	power = -20
+	damage = { min = 300 max = 500 }
+	windup = { min = 0.00 max = 0.00 }
+	total_fire_time = 40
+	hull_damage = 2.28
+	shield_damage = 1.648
+	shield_penetration = 0.648
+	armor_damage = 1.648
+	armor_penetration = 0.648
+	range = 500
+	accuracy = 1
+	tracking = 1
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 25
+			honkai648_energy = 12.5
+		}
+		upkeep = {
+			alloys = 0.02
+			honkai648_energy = 0.0125
+			energy = 0.01
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+#爱酱炮#
+weapon_component_template = {
+	key = "aichan_cannon1"
+	size = small
+	type = instant
+	icon = "GFX_aichan_cannon"
+	icon_frame = 1 
+	prerequisites = { "tech_aichan_cannon" }
+	component_set = "aichan_cannon"
+	projectile_gfx = "xray_laser_s"
+	tags = { weapon_type_energy weapon_type_honkai weapon_type_aichan }
+	ai_tags = { weapon_role_anti_armor }
+	
+	power = -25
+	damage = { min = 75 max = 125 }
+	windup = { min = 30 max = 50 }
+	total_fire_time = 10.0
+	hull_damage = 1.324
+	shield_damage = 1.324
+	shield_penetration = 0.324
+	armor_damage = 1.324
+	armor_penetration = 0.324
+	range = 50
+	accuracy = 0.95
+	tracking = 0.8
+	
+	resources = { 
+		category = ship_components
+		cost = {
+			alloys = 30
+			honkai648_energy = 15
+		}
+		upkeep = {
+			alloys = 0.03
+			honkai648_energy = 0.015
+			energy = 0.02
+		}
+	}
+	
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "aichan_cannon2"
+	size = medium
+	type = instant
+	icon = "GFX_aichan_cannon"
+	icon_frame = 1 
+	prerequisites = { "tech_aichan_cannon" }
+	component_set = "aichan_cannon"
+	projectile_gfx = "xray_laser_m"
+	tags = { weapon_type_energy weapon_type_honkai weapon_type_aichan }
+	ai_tags = { weapon_role_anti_armor }
+	
+	power = -50
+	damage = { min = 165 max = 210 }
+	windup = { min = 30 max = 50 }
+	total_fire_time = 10.0
+	hull_damage = 1.324
+	shield_damage = 1.324
+	shield_penetration = 0.324
+	armor_damage = 1.324
+	armor_penetration = 0.324
+	range = 100
+	accuracy = 0.95
+	tracking = 0.4
+	
+	resources = { 
+		category = ship_components
+		cost = {
+			alloys = 50
+			honkai648_energy = 25
+		}
+		upkeep = {
+			alloys = 0.05
+			honkai648_energy = 0.025
+			energy = 0.02
+		}
+	}
+	
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "aichan_cannon3"
+	size = large
+	type = instant
+	icon = "GFX_aichan_cannon"
+	icon_frame = 1 
+	prerequisites = { "tech_aichan_cannon" }
+	component_set = "aichan_cannon"
+	projectile_gfx = "xray_laser_l"
+	tags = { weapon_type_energy weapon_type_honkai weapon_type_aichan }
+	ai_tags = { weapon_role_anti_armor }
+	
+	power = -75
+	damage = { min = 330 max = 420 }
+	windup = { min = 30 max = 50 }
+	total_fire_time = 10.0
+	hull_damage = 1.324
+	shield_damage = 1.324
+	shield_penetration = 0.324
+	armor_damage = 1.324
+	armor_penetration = 0.324
+	range = 120
+	accuracy = 0.95
+	tracking = 0.4
+	
+	resources = { 
+		category = ship_components
+		cost = {
+			alloys = 75
+			honkai648_energy = 37.5
+		}
+		upkeep = {
+			alloys = 0.075
+			honkai648_energy = 0.0375
+			energy = 0.02
+		}
+	}
+	
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+#爱酱之钥#
+weapon_component_template = {
+	key = "aichan_zlzy1"
+	size = small
+	type = instant
+	icon = "GFX_aichan_zlzy"
+	icon_frame = 1 
+	prerequisites = { "tech_aichan_zlzy" }
+	component_set = "aichan_zlzy"
+	projectile_gfx = "hk648_zlza0"
+	tags = { weapon_type_energy weapon_type_honkai weapon_type_aichan }
+	ai_tags = { weapon_role_anti_armor }
+	upgrades_to = "hk648_zlzj1"
+	
+	power = -50
+	damage = { min = 107.54 max = 153.47 }
+	windup = { min = 30 max = 50 }
+	total_fire_time = 10.0
+	shield_penetration = 0.324
+	armor_penetration = 0.324
+	shield_damage = 1.4
+	armor_damage = 1.4
+	hull_damage = 1.4
+	range = 50
+	accuracy = 0.95
+	tracking = 0.8
+	
+	resources = { 
+		category = ship_components
+		cost = {
+			alloys = 60
+			honkai648_energy = 45
+		}
+		upkeep = {
+			alloys = 0.06
+			honkai648_energy = 0.045
+			energy = 0.25
+		}
+	}
+	
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "aichan_zlzy2"
+	size = medium
+	type = instant
+	icon = "GFX_aichan_zlzy"
+	icon_frame = 1 
+	prerequisites = { "tech_aichan_zlzy" }
+	component_set = "aichan_zlzy"
+	projectile_gfx = "hk648_zlza1"
+	tags = { weapon_type_energy weapon_type_honkai weapon_type_aichan }
+	ai_tags = { weapon_role_anti_armor }
+	upgrades_to = "hk648_zlzj2"
+	
+	power = -100
+	damage = { min = 210.47 max = 305.42 }
+	windup = { min = 30 max = 50 }
+	total_fire_time = 10.0
+	shield_penetration = 0.324
+	armor_penetration = 0.324
+	shield_damage = 1.4
+	armor_damage = 1.4
+	hull_damage = 1.4
+	range = 100
+	accuracy = 0.95
+	tracking = 0.4
+	
+	resources = { 
+		category = ship_components
+		cost = {
+			alloys = 150
+			honkai648_energy = 90
+		}
+		upkeep = {
+			alloys = 0.15
+			honkai648_energy = 0.09
+			energy = 0.3
+		}
+	}
+	
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "aichan_zlzy3"
+	size = large
+	type = instant
+	icon = "GFX_aichan_zlzy"
+	icon_frame = 1 
+	prerequisites = { "tech_aichan_zlzy" }
+	component_set = "aichan_zlzy"
+	projectile_gfx = "hk648_zlza2"
+	tags = { weapon_type_energy weapon_type_honkai weapon_type_aichan }
+	ai_tags = { weapon_role_anti_armor }
+	upgrades_to = "hk648_zlzj3"
+	
+	power = -200
+	damage = { min = 417.04 max = 614.54 }
+	windup = { min = 30 max = 50 }
+	total_fire_time = 10.0
+	shield_penetration = 0.324
+	armor_penetration = 0.324
+	shield_damage = 1.4
+	armor_damage = 1.4
+	hull_damage = 1.4
+	range = 200
+	accuracy = 0.95
+	tracking = 0.2
+	
+	resources = { 
+		category = ship_components
+		cost = {
+			alloys = 300
+			honkai648_energy = 240
+		}
+		upkeep = {
+			alloys = 0.3
+			honkai648_energy = 0.24
+			energy = 1.1
+		}
+	}
+	
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+##############################其他组件##############################
+#爱酱供电器A#
+utility_component_template = {
+	key = "aichan_energy"
+	size = aux
+	icon = "GFX_aichan_energy"
+	icon_frame = 1
+	prerequisites = { "tech_aichan_energy" }
+	component_set = "aichan_energy"
+	
+	power = 328
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 300
+			honkai648_energy = 300
+		}
+	}
+	
+
+	modifier = {
+		ship_speed_mult = 0.5
+		ship_shield_mult = 0.15
+		weapon_type_energy_weapon_damage_mult = 0.15
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+###############作战电脑###############
+#####包菜精作战电脑#####
+#蜂拥#
+utility_component_template = {
+	key = "aichan_computer1"
+	size = small
+	icon = "GFX_hk648_aichan_computer"
+	icon_frame = 1
+	power = -50
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 25
+			honkai648_energy = 10
+		}
+	}
+	upgrades_to = "aichan648_computer1"
+	class_restriction = { shipclass_military }
+	size_restriction = { corvette crisis_corvette }
+	component_set = "combat_computers"
+	ship_behavior = "swarm"
+	prerequisites = { "tech_blackai_c" }
+
+	modifier = {
+		ship_evasion_mult = 0.5
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+#警戒#
+utility_component_template = {
+	key = "aichan_computer2"
+	size = small
+	icon = "GFX_hk648_aichan_computer"
+	icon_frame = 1
+	power = -50
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 25
+			honkai648_energy = 10
+		}
+	}
+	upgrades_to = "aichan648_computer2"
+	class_restriction = { shipclass_military }
+	size_restriction = { corvette destroyer cruiser crisis_corvette crisis_destroyer crisis_cruiser }
+	component_set = "combat_computers"
+	ship_behavior = "picket"
+	prerequisites = { "tech_blackai_c" }
+
+	modifier = {
+		ship_evasion_mult = 0.15
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.25
+		ship_tracking_add = 45
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+#线列#
+utility_component_template = {
+	key = "aichan_computer3"
+	size = small
+	icon = "GFX_hk648_aichan_computer"
+	icon_frame = 1
+	power = -50
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 25
+			honkai648_energy = 10
+		}
+	}
+	upgrades_to = "aichan648_computer3"
+	class_restriction = { shipclass_military }
+	size_restriction = { destroyer cruiser battleship crisis_destroyer crisis_cruiser }
+	component_set = "combat_computers"
+	ship_behavior = "hk648xl"
+	prerequisites = { "tech_blackai_c" }
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.25
+		ship_accuracy_add = 25
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+#炮击#
+utility_component_template = {
+	key = "aichan_computer4"
+	size = small
+	icon = "GFX_hk648_aichan_computer"
+	icon_frame = 1
+	power = -50
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 25
+			honkai648_energy = 10
+		}
+	}
+	upgrades_to = "aichan648_computer4"
+	class_restriction = { shipclass_military shipclass_starbase }
+	size_restriction = { destroyer cruiser battleship titan juggernaut crisis_destroyer crisis_cruiser star_eater }
+	component_set = "combat_computers"
+	ship_behavior = "hk648pj"
+	prerequisites = { "tech_blackai_c" }
+
+	modifier = {
+	
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.15
+		ship_weapon_damage = 0.15
+		ship_weapon_range_mult = 0.1
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+#平台#
+utility_component_template = {
+	key = "aichan_computer5"
+	size = small
+	icon = "GFX_hk648_aichan_computer"
+	icon_frame = 1
+	power = -50
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 25
+			honkai648_energy = 10
+		}
+	}
+	upgrades_to = "aichan648_computer5"
+	class_restriction = { shipclass_military_station }
+	component_set = "combat_computers"
+	ship_behavior = "platform"
+	prerequisites = { "tech_blackai_c" }
+
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.25
+		ship_tracking_add = 25
+		ship_accuracy_add = 20
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+#航母#
+utility_component_template = {
+	key = "aichan_computer6"
+	size = small
+	icon = "GFX_hk648_aichan_computer"
+	icon_frame = 1
+	power = -50
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 25
+			honkai648_energy = 10
+		}
+	}
+	upgrades_to = "aichan648_computer6"
+	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
+	size_restriction = { cruiser battleship juggernaut titan star_eater }
+	component_set = "combat_computers"
+	ship_behavior = "hk648hm"
+	prerequisites = { "tech_blackai_c" }
+
+	ship_modifier = {
+		ship_engagement_range_mult = 1.5
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+#巨像#
+utility_component_template = {
+	key = "aichan_computer7"
+	size = small
+	icon = "GFX_hk648_aichan_computer"
+	icon_frame = 1
+	power = -50
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 25
+			honkai648_energy = 10
+		}
+	}
+	upgrades_to = "aichan648_computer7"
+	class_restriction = { shipclass_military_special }
+	size_restriction = { colossus }
+	component_set = "combat_computers"
+	ship_behavior = "colossus"
+	prerequisites = { "tech_blackai_c" }
+
+	modifier = {
+		ship_evasion_mult = 32.4
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+#####爱酱作战电脑#####
+#崩坏专用#
+utility_component_template = {
+	key = "honkai_computer"
+	size = small
+	icon = "GFX_hk648_aichan648_computer"
+	icon_frame = 1
+	power = 100
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 50
+			honkai648_energy = 25
+		}
+	}
+	class_restriction = { shipclass_military }
+	size_restriction = { hk648_honkai }
+	component_set = "combat_computers"
+	ship_behavior = "hk648_honkai"
+
+	modifier = {
+		ship_evasion_mult = 1
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.5
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+utility_component_template = {
+	key = "herrscher_computer"
+	size = small
+	icon = "GFX_hk648_aichan648_computer"
+	icon_frame = 1
+	power = 100
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 50
+			honkai648_energy = 25
+		}
+	}
+	class_restriction = { shipclass_military }
+	size_restriction = { hk648_honkai }
+	component_set = "combat_computers"
+	ship_behavior = "hk648_herrscher"
+
+	modifier = {
+		ship_evasion_mult = 1
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.5
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+#蜂拥#
+utility_component_template = {
+	key = "aichan648_computer1"
+	size = small
+	icon = "GFX_hk648_aichan648_computer"
+	icon_frame = 1
+	power = -100
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 50
+			honkai648_energy = 25
+		}
+	}
+	class_restriction = { shipclass_military }
+	size_restriction = { corvette crisis_corvette }
+	component_set = "combat_computers"
+	ship_behavior = "swarm"
+	prerequisites = { "tech_aichan_c" }
+
+	modifier = {
+		ship_evasion_mult = 1
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.5
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+#警戒#
+utility_component_template = {
+	key = "aichan648_computer2"
+	size = small
+	icon = "GFX_hk648_aichan648_computer"
+	icon_frame = 1
+	power = -150
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 75
+			honkai648_energy = 30
+		}
+	}
+	class_restriction = { shipclass_military }
+	size_restriction = { corvette destroyer cruiser crisis_corvette crisis_destroyer crisis_cruiser }
+	component_set = "combat_computers"
+	ship_behavior = "picket"
+	prerequisites = { "tech_aichan_c" }
+
+	modifier = {
+		ship_evasion_mult = 0.3
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.5
+		ship_tracking_add = 9
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+#线列#
+utility_component_template = {
+	key = "aichan648_computer3"
+	size = small
+	icon = "GFX_hk648_aichan648_computer"
+	icon_frame = 1
+	power = -150
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 75
+			honkai648_energy = 30
+		}
+	}
+	class_restriction = { shipclass_military }
+	size_restriction = { destroyer cruiser battleship crisis_destroyer crisis_cruiser }
+	component_set = "combat_computers"
+	ship_behavior = "hk648xl"
+	prerequisites = { "tech_aichan_c" }
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.5
+		ship_accuracy_add = 50
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+#炮击#
+utility_component_template = {
+	key = "aichan648_computer4"
+	size = small
+	icon = "GFX_hk648_aichan648_computer"
+	icon_frame = 1
+	power = -200
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 100
+			honkai648_energy = 50
+		}
+	}
+	class_restriction = { shipclass_military shipclass_starbase }
+	size_restriction = { destroyer cruiser battleship titan juggernaut crisis_destroyer crisis_cruiser star_eater }
+	component_set = "combat_computers"
+	ship_behavior = "hk648pj"
+	prerequisites = { "tech_aichan_c" }
+
+	modifier = {
+	
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.3
+		ship_weapon_damage = 0.3
+		ship_weapon_range_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+#爱酱本尊，爱衣休伯利安主脑#
+#一级
+utility_component_template = {
+	key = "aichan648_computer_ai"
+	size = small
+	icon = "GFX_hk648_aichan648_computer"
+	icon_frame = 1
+	power = -200
+	class_restriction = { shipclass_military shipclass_starbase }
+	size_restriction = { hk648_aichan }
+	component_set = "combat_computers"
+	ship_behavior = "hk648pj"
+	prerequisites = { "tech_aichan_c" }
+
+	modifier = {
+		ship_weapon_range_mult = 1
+	}
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 648000000
+			honkai648_energy = 648000000
+		}
+		upkeep = {
+			energy = 2500
+		}
+	}
+	
+	
+	hostile_aura = {
+		name = "aura_ship_subspace_snare"
+		radius = 500
+		apply_on = fleets
+		
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = ai_hyperion_buff
+			priority = 1
+		}
+		
+		modifier = {
+			ship_shield_penetration_mult = -1.5
+			ship_armor_penetration_mult = -1.5
+			ship_weapon_range_mult = -0.75
+		}
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+	friendly_aura = {
+		name = "aura_moonlight_throne_ship_weapon"
+		system_wide = yes
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = ai_hyperion_buff2
+			priority = 1
+		}
+
+		modifier = {
+			ship_hull_regen_add_perc = 1
+			ship_armor_regen_add_perc = 1
+			ship_shield_regen_add_perc = 1
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 1
+		ship_weapon_damage = 1
+		ship_weapon_range_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+#二级
+utility_component_template = {
+	key = "aichan648_computer_ai_lv2"
+	size = small
+	icon = "GFX_hk648_aichan648_computer"
+	icon_frame = 1
+	power = -200
+	class_restriction = { shipclass_military shipclass_starbase }
+	size_restriction = { hk648_aichan }
+	component_set = "combat_computers"
+	ship_behavior = "hk648pj"
+	prerequisites = { "tech_aichan_c" }
+
+	modifier = {
+		ship_weapon_range_mult = 1
+	}
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 648000000
+			honkai648_energy = 648000000
+		}
+		upkeep = {
+			energy = 7500
+		}
+	}
+	
+	
+	hostile_aura = {
+		name = "aura_ship_subspace_snare"
+		radius = 500
+		apply_on = fleets
+		
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = ai_hyperion_buff
+			priority = 1
+		}
+		
+		modifier = {
+			ship_shield_penetration_mult = -1.5
+			ship_armor_penetration_mult = -1.5
+			ship_weapon_range_mult = -0.75
+		}
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+	friendly_aura = {
+		name = "aura_moonlight_throne_ship_weapon"
+		system_wide = yes
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = ai_hyperion_buff2
+			priority = 1
+		}
+
+		modifier = {
+			ship_hull_regen_add_perc = 1.5
+			ship_armor_regen_add_perc = 1
+			ship_shield_regen_add_perc = 1
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 1
+		ship_weapon_damage = 1
+		ship_weapon_range_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+#三级
+utility_component_template = {
+	key = "aichan648_computer_ai_lv3"
+	size = small
+	icon = "GFX_hk648_aichan648_computer"
+	icon_frame = 1
+	power = -200
+	class_restriction = { shipclass_military shipclass_starbase }
+	size_restriction = { hk648_aichan }
+	component_set = "combat_computers"
+	ship_behavior = "hk648pj"
+	prerequisites = { "tech_aichan_c" }
+
+	modifier = {
+		ship_weapon_range_mult = 1
+	}
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 648000000
+			honkai648_energy = 648000000
+		}
+		upkeep = {
+			energy = 15000
+		}
+	}
+	
+	
+	hostile_aura = {
+		name = "aura_ship_subspace_snare"
+		radius = 500
+		apply_on = fleets
+		
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = ai_hyperion_buff
+			priority = 1
+		}
+		
+		modifier = {
+			ship_shield_penetration_mult = -1.5
+			ship_armor_penetration_mult = -1.5
+			ship_weapon_range_mult = -0.75
+		}
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+	friendly_aura = {
+		name = "aura_moonlight_throne_ship_weapon"
+		system_wide = yes
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = ai_hyperion_buff2
+			priority = 1
+		}
+
+		modifier = {
+			ship_hull_regen_add_perc = 3
+			ship_armor_regen_add_perc = 1
+			ship_shield_regen_add_perc = 1
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 1
+		ship_weapon_damage = 1
+		ship_weapon_range_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+#四级
+utility_component_template = {
+	key = "aichan648_computer_ai_lv4"
+	size = small
+	icon = "GFX_hk648_aichan648_computer"
+	icon_frame = 1
+	power = -200
+	class_restriction = { shipclass_military shipclass_starbase }
+	size_restriction = { hk648_aichan }
+	component_set = "combat_computers"
+	ship_behavior = "hk648pj"
+	prerequisites = { "tech_aichan_c" }
+
+	modifier = {
+		ship_weapon_range_mult = 1
+	}
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 648000000
+			honkai648_energy = 648000000
+		}
+		upkeep = {
+			energy = 30000
+		}
+		custom_tooltip = aichan648_computer_ai_lv4.desc
+	}
+	
+	
+	hostile_aura = {
+		name = "aura_ship_subspace_snare"
+		radius = 500
+		apply_on = fleets
+		
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = ai_hyperion_buff
+			priority = 1
+		}
+		
+		modifier = {
+			ship_shield_penetration_mult = -1.5
+			ship_armor_penetration_mult = -1.5
+			ship_weapon_range_mult = -0.75
+		}
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+	friendly_aura = {
+		name = "aura_moonlight_throne_ship_weapon"
+		system_wide = yes
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = ai_hyperion_buff2
+			priority = 1
+		}
+
+		modifier = {
+			ship_hull_regen_add_perc = 5
+			ship_armor_regen_add_perc = 1
+			ship_shield_regen_add_perc = 1
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 1
+		ship_weapon_damage = 1
+		ship_weapon_range_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+#爱酱偶像电脑
+utility_component_template = {
+	key = "aichan648_computer_idol_ai"
+	size = small
+	icon = "GFX_hk648_aichan648_computer"
+	icon_frame = 1
+	power = -200
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 100
+			honkai648_energy = 50
+		}
+	}
+	class_restriction = { shipclass_military shipclass_starbase }
+	size_restriction = { hk648_aichan }
+	component_set = "combat_computers"
+	ship_behavior = "hk648_honkai"
+	prerequisites = { "tech_aichan_c" }
+
+	modifier = {
+		ship_weapon_range_mult = 1
+	}
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 648000000
+			honkai648_energy = 648000000
+		}
+		upkeep = {
+			energy = 2500
+		}
+	}
+	
+	
+	hostile_aura = {
+		name = "aura_ship_subspace_snare"
+		radius = 500
+		apply_on = fleets
+		
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = ai_hyperion_buff
+			priority = 1
+		}
+		
+		modifier = {
+			ship_shield_penetration_mult = -1.5
+			ship_armor_penetration_mult = -1.5
+			ship_weapon_range_mult = -0.75
+		}
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 1
+		ship_weapon_damage = 1
+		ship_weapon_range_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+#爱酱导弹电脑（兼航母）
+utility_component_template = {
+	key = "aichan648_computer_aichan_missile"
+	size = small
+	icon = "GFX_hk648_aichan648_computer"
+	icon_frame = 1
+	power = -200
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 648000000
+			honkai648_energy = 648000000
+		}
+		upkeep = {
+			energy = 2500
+		}
+	}
+	class_restriction = { shipclass_military shipclass_starbase }
+	size_restriction = { hk648_aichan }
+	component_set = "combat_computers"
+	ship_behavior = "hk648_aichan_missile"
+	prerequisites = { "tech_aichan_c" }
+
+	modifier = {
+		ship_weapon_range_mult = 1
+	}
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 648000000
+			honkai648_energy = 648000000
+		}
+		upkeep = {
+			energy = 2500
+		}
+	}
+	
+	
+	hostile_aura = {
+		name = "aura_ship_subspace_snare"
+		radius = 500
+		apply_on = fleets
+		
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = ai_hyperion_buff
+			priority = 1
+		}
+		
+		modifier = {
+			ship_shield_penetration_mult = -1.5
+			ship_armor_penetration_mult = -1.5
+			ship_weapon_range_mult = -1.5
+		}
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 1
+		ship_weapon_damage = 1
+		ship_weapon_range_mult = 1
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+#平台#
+utility_component_template = {
+	key = "aichan648_computer5"
+	size = small
+	icon = "GFX_hk648_aichan648_computer"
+	icon_frame = 1
+	power = -100
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 50
+			honkai648_energy = 25
+		}
+	}
+	class_restriction = { shipclass_military_station }
+	component_set = "combat_computers"
+	ship_behavior = "platform"
+	prerequisites = { "tech_aichan_c" }
+
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.5
+		ship_tracking_add = 50
+		ship_accuracy_add = 40
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+#航母#
+utility_component_template = {
+	key = "aichan648_computer6"
+	size = small
+	icon = "GFX_hk648_aichan648_computer"
+	icon_frame = 1
+	power = -150
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 75
+			honkai648_energy = 20
+		}
+	}
+	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
+	size_restriction = { cruiser battleship juggernaut titan star_eater }
+	component_set = "combat_computers"
+	ship_behavior = "hk648hm"
+	prerequisites = { "tech_aichan_c" }
+
+	ship_modifier = {
+		ship_engagement_range_mult = 3
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+#巨像#
+utility_component_template = {
+	key = "aichan648_computer7"
+	size = small
+	icon = "GFX_hk648_aichan648_computer"
+	icon_frame = 1
+	power = -100
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 50
+			honkai648_energy = 20
+		}
+	}
+	class_restriction = { shipclass_military_special }
+	size_restriction = { colossus }
+	component_set = "combat_computers"
+	ship_behavior = "colossus"
+	prerequisites = { "tech_aichan_c" }
+
+	modifier = {
+		ship_evasion_mult = 64.8
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+
+#####爱衣·休伯利安特供#####
+#加速器#
+utility_component_template = {
+	key = "ai_chan_thruster"
+	size = small
+	icon = "GFX_ship_part_thruster_5"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_base_speed_mult = 1.25
+		ship_evasion_add = 20
+	}
+
+	component_set = "thruster_components"
+	size_restriction = { hk648_aichan }
+	
+	hostile_aura = {
+		name = "aura_ship_subspace_snare"
+		radius = 500
+		apply_on = fleets
+		
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = aichan_debuff
+			priority = 1
+		}
+		
+		modifier = {
+			ship_shield_penetration_mult = -1
+			ship_armor_penetration_mult = -1
+			ship_emergency_ftl_min_days_mult = 1
+			ship_disengage_chance_mult = -1
+		}
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+#歼星者19AI——改#
+weapon_component_template = {
+	key = "hk648_19ai_plus"
+	size = extra_large
+	type = instant
+	icon = "GFX_hk648_19ai"
+	icon_frame = 1 
+	projectile_gfx = "hk648_zlza4"
+	tags = { weapon_type_energy weapon_type_honkai weapon_type_aichan }
+	ai_tags = { weapon_role_artillery }
+	
+	power = -1000
+	damage = { min = 59110 max = 70490 }
+	windup = { min = 70 max = 110 }
+	total_fire_time = 10.0
+	hull_damage = 3.56
+	shield_damage = 3.56
+	shield_penetration = 1
+	armor_damage = 3.56
+	armor_penetration = 1
+	range = 256
+	accuracy = 1
+	tracking = 1
+	
+	resources = { 
+		category = ship_components
+		cost = {
+			alloys = 1000
+			honkai648_energy = 925
+		}
+		upkeep = {
+			alloys = 0.7
+			honkai648_energy = 0.925
+			energy = 15
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+######爱酱的不科学护甲#####
+utility_component_template = {
+	key = "aichan_648_plus"
+	size = large
+	icon = "GFX_aichan_648"
+	icon_frame = 1
+	
+	power = -1000
+	modifier = {
+		ship_armor_add = 128000
+		ship_armor_regen_add_static = 6000
+		ship_shield_add = 128000
+		ship_shield_regen_add_static = 6000
+		ship_hull_add = 128000
+		ship_hull_regen_add_static = 6000
+	}
+	resources = { 
+		category = ship_components
+		cost = {
+			alloys = 2000
+			honkai648_energy = 2000
+		}
+		upkeep = {
+			alloys = 2
+			honkai648_energy = 2.5
+			energy = 15
+		}
+	}
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+##爱酱导弹
+weapon_component_template = {
+	key = "hk648_aichan_missile"
+	size = large
+	icon = "GFX_ship_part_swarmer_missile_1"
+	icon_frame = 1
+	type = missile
+	projectile_gfx = "aichan_missiles"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	
+	entity = "turret_torpedo_entity"
+	
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 6480
+		}
+	}
+	power = -64
+	damage = { min = 16 max = 25 }
+	windup = { min = 0.01 max = 5 }
+	total_fire_time = 0.01
+	range = 400
+	accuracy = 1.0
+	tracking = 1
+	shield_penetration = 1
+	armor_penetration = 0
+	shield_damage = 1.4
+	armor_damage = 1.4
+	hull_damage = 1.4
+	
+	
+	missile_speed = 15
+	missile_evasion = 1
+	missile_shield = 300
+	missile_armor = 300
+	missile_health = 300
+	missile_retarget_range = 300
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}
+
+#爱酱飞机#
+strike_craft_component_template = {
+	key = "hk648_aichan_aircraft"
+	size = large
+	entity = "bomber_entity"
+	weapon_type = point_defence
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 200
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+	power = -10
+	count = 50
+	regeneration_per_day = 25
+	launch_time = 0.0001
+	
+	damage = { min = 50 max = 100 }
+	cooldown = 1
+	range = 160
+	accuracy = 1.0
+	tracking = 1.0
+	shield_penetration = 0
+	armor_penetration = 0
+	shield_damage = 2.28
+	armor_damage = 2.28
+	hull_damage = 2.28
+	
+	health = 300
+	armor = 300
+	shield = 450
+	evasion = 1
+	speed = 1500
+	rotation_speed = 0.8
+	acceleration = 0.8
+	
+	ship_behavior = "fighters_behavior"
+	
+	projectile_gfx = "hk648_zlza_f"
+	
+	icon = "GFX_ship_part_strike_craft_fighter_3"
+	icon_frame = 1
+	tags = { weapon_type_strike_craft }
+	ai_tags = { weapon_role_point_defense }
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+			is_country_type = default
+			has_monthly_income = { resource = honkai648_energy value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+		}
+	}
+}

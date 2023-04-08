@@ -1,0 +1,56 @@
+
+#逐火之蛾基地#
+d_fire_of_moths = {
+	is_for_colonizable = yes
+
+	category = deposit_cat_energy
+	
+	planet_modifier = {
+		job_honkai648_fans_add = 2
+		job_honkai648_experts_add = 5
+		job_honkai648_cook_add = 2
+		job_honkai648_cook01_add = 2
+		job_honkai648_cook02_add = 2
+		job_honkai648_foundry_add = 4
+		job_honkai648_researcher_add = 2
+		job_honkai648_valkyrja_add = 2
+		job_honkai648_artisan_add = 2
+	}
+	
+	drop_weight = {
+		weight = 4
+	}
+}
+
+#浮空城
+d_floating_island = {
+	is_for_colonizable = yes
+	triggered_planet_modifier = {
+		potential = {
+			planet_size < 10
+		}
+		modifier = {
+			PLANET_MAX_DISTRICTS_ADD = 6
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			planet_size >= 10
+			planet_size < 20
+		}
+		modifier = {
+			PLANET_MAX_DISTRICTS_ADD = 12
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			planet_size >= 20
+		}
+		modifier = {
+			PLANET_MAX_DISTRICTS_ADD = 18
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}

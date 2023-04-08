@@ -1,0 +1,923 @@
+#爱酱系列科技#
+##############################爱酱t1科技##############################
+#爱酱科技箱1#
+tech_aichan_tbox1 = {
+	cost = 3000
+	area = physics
+	category = {computing}
+	tier = 1
+	potential = {
+		has_authority = auth_schicksal
+		NOT = { has_country_flag = aichan_angry }
+	}
+	
+	modifier = {
+		all_technology_research_speed = 0.1
+	}
+	
+	weight = 1000
+	weight_modifier = {
+		factor = 0
+	}
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#绿色偶像理论
+tech_hk648_idol_ai = {
+	cost = 5000
+	area = society
+	category = {statecraft}
+	prerequisites = {"tech_hk648_idol"}
+	tier = 2
+	potential = {
+		has_authority = auth_schicksal
+		has_ascension_perk = ap_aichan_NO1
+	}
+	
+	is_dangerous = yes
+	
+	modifier = {
+		country_unity_produces_mult = 0.1
+		planet_jobs_food_produces_mult = -0.1
+	}
+	
+	weight = 150
+	weight_modifier = {
+		modifier = {
+			factor = 10
+			years_passed > 5
+		}
+	}
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#第二代爱酱装甲#
+tech_aichan_armor2 = {
+	cost = 3000
+	area = engineering
+	category = {industry}
+	tier = 2
+	prerequisites = {"tech_valkyrie_armor2" "tech_aichan_tbox1"}
+	potential = {
+		has_authority = auth_schicksal
+		NOT = { has_country_flag = aichan_angry }
+	}
+	
+	modifier = {
+		pop_environment_tolerance = 0.05
+	}
+	
+	weight = 200
+	weight_modifier = {
+		modifier = {
+			factor = 3
+			has_technology = tech_valkyrie_armor3
+		}
+		modifier = {
+			factor = 5
+			has_technology = tech_valkyrie_armor4
+		}
+	}
+	ai_weight = {
+		factor 1000
+	}
+}
+
+#爱酱工作室#
+tech_aichan_studio ={
+	cost = 2500
+	area = society
+	category = {statecraft}
+	tier = 2
+	prerequisites = {"tech_aichan_tbox1" "tech_colonial_bureaucracy"}
+	potential = {
+		has_authority = auth_schicksal
+		NOT = { has_country_flag = aichan_angry }
+	}
+	
+	modifier = {
+	}
+	
+	weight = 200
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			has_technology = tech_colonial_bureaucracy
+		}
+		modifier = {
+			factor = 4
+			has_technology = tech_galactic_bureaucracy
+		}
+	}
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+
+
+
+
+#爱酱权限1#
+tech_aichan_permissions1 = {
+	cost = 12800
+	area = physics
+	category = {computing}
+	tier = 3
+	prerequisites = {
+		"tech_aichan_armor2"
+		"tech_aichan_studio"
+		"tech_self_aware_logic"
+		"tech_droid_workers"
+	}
+	potential = { 
+		has_authority =auth_schicksal 
+		NOT = { has_country_flag = aichan_angry }
+	}
+	
+	modifier = {
+		empire_size_districts_mult = -0.015
+		empire_size_systems_mult = -0.015
+		empire_size_colonies_mult = -0.015
+		empire_size_pops_mult = -0.015
+	}
+	
+	weight = 1000
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+##############################爱酱t2科技##############################
+#爱酱科技箱2#
+tech_aichan_tbox2 = {
+	cost = 12800
+	area = physics
+	category = {computing}
+	tier = 3
+	potential = { 
+		has_authority = auth_schicksal
+		NOT = { has_country_flag = aichan_angry }
+		OR = { 
+			has_ascension_perk = ap_aichan_arm
+			is_ai = yes
+		}
+	}
+	
+	modifier = {
+		all_technology_research_speed = 0.2
+	}
+	
+	weight = 10000
+	ai_weight = {
+		factor = 10000
+	}
+}
+
+#武装人偶#
+tech_aichan_elf_w = {
+	cost = 10000
+	area = engineering
+	category = {industry}
+	tier = 3
+	is_dangerous = yes
+	prerequisites = {"tech_aichan_tbox2"}
+	potential = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = aichan_angry }
+	}
+	
+	
+	modifier = {
+		custom_tooltip = tech_aichan_elf_w.tooltip
+	}
+	
+	weight = 100
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#爱酱偷来的科技1#
+tech_robomodding_m_aichan = {
+	cost = @tier2cost1
+	area = engineering
+	tier = 1
+	category = { industry }
+	prerequisites = { "tech_aichan_elf_w" "tech_robomodding" }
+	weight = @tier2weight1
+
+	feature_flags = {
+		modify_robots
+	}
+
+	modifier = {
+		MACHINE_species_trait_points_add = 2
+		custom_tooltip = tech_robomodding_m_aichan.tooltip
+	}
+
+	potential = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = aichan_angry }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+	}
+}
+
+#作战型武装人偶
+tech_aichan_elf_w2 = {
+	cost = 10000
+	area = society
+	category = { military_theory }
+	tier = 3
+	prerequisites = {"tech_aichan_elf_w"}
+	potential = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = aichan_angry }
+	}
+	
+	modifier = {
+		custom_tooltip = tech_aichan_elf_w2.tooltip
+	}
+	
+	weight = 50
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#手办级人偶#
+tech_aichan_elf_b = {
+	cost = 10000
+	area = society
+	category = {new_worlds}
+	tier = 3
+	prerequisites = {"tech_aichan_elf_w"}
+	potential = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = aichan_angry }
+	}
+	
+	modifier = {
+		MACHINE_species_trait_points_add = 3
+	}
+	
+	weight = 100
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#第三代爱酱装甲#
+tech_aichan_armor3 = {
+	cost = 7500
+	area = engineering
+	category = {industry}
+	tier = 3
+	potential = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = aichan_angry }
+	}
+	prerequisites = { "tech_aichan_tbox2" "tech_valkyrie_armor3"}
+	
+	modifier = {
+		planet_jobs_produces_mult = 0.05
+	}
+	
+	weight = 120
+	weight_modifier = {
+		modifier = {
+			factor = 3
+			has_technology = tech_valkyrie_armor4
+		}
+	}
+	ai_weight = {
+		factor = 10000
+	}	
+}
+
+#爱酱权限2#
+tech_aichan_permissions2 = {
+	cost = 25000
+	area = physics
+	category = {computing}
+	potential = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = aichan_angry }
+	}
+	prerequisites = {
+		"tech_aichan_armor3"
+		"tech_aichan_cannon"
+		"tech_aichan_energy"
+		"tech_aichan_elf_b"
+		"tech_aichan_elf_w"
+		"tech_aichan_elf_w2"
+	}
+	tier = 4
+	
+	modifier = {
+		empire_size_districts_mult = -0.025
+		empire_size_systems_mult = -0.025
+		empire_size_colonies_mult = -0.025
+		empire_size_pops_mult = -0.025
+	}
+	
+	weight = 1000
+	ai_weight = {
+		factor = 1000
+	}
+}
+#####爱酱t2装备#####
+#爱酱炮#
+tech_aichan_cannon = {
+	cost = 15000
+	area = physics
+	category = {particles}
+	tier = 3
+	potential = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = aichan_angry }
+	}
+	prerequisites = { "tech_aichan_tbox2" }
+	
+	weight = 12000
+	weight_modifier = {
+		modifier = {
+			factor = 3
+			has_technology = tech_lasers_5
+		}
+	}
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#爱酱供电器#
+tech_aichan_energy = {
+	cost = 10000
+	area = physics
+	category = {field_manipulation}
+	tier = 3
+	potential = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = aichan_angry }
+	}
+	prerequisites = { "tech_aichan_tbox2" }
+	
+	weight = 130
+	weight_modifier = {
+		modifier = {
+			factor = 3
+			has_technology = tech_reactor_boosters_2
+		}
+		modifier = {
+			factor = 5
+			has_technology = tech_reactor_boosters_3
+		}
+	}
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#尚方宝剑#
+tech_fish_sword = {
+	cost = 10000
+	area = society
+	category = {military_theory}
+	tier = 3
+	potential = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = aichan_angry }
+	}
+	prerequisites = { "tech_aichan_tbox2" }
+	
+	weight = 130
+	weight_modifier = {
+		modifier = {
+			factor = 1.5
+			has_technology = tech_reactor_boosters_2
+		}
+		modifier = {
+			factor = 5
+			has_technology = tech_aichan_energy
+		}
+	}
+	ai_weight = {
+		factor = 1000
+	}
+}
+	
+##############################爱酱t3科技##############################
+#黑爱科技箱#
+tech_blackai_tbox = {
+	cost = 25000
+	area = physics
+	category = {computing}
+	tier = 4
+	potential = { 
+		has_authority = auth_schicksal
+		OR = { 
+			has_ascension_perk = ap_blackai_arm
+			is_ai = yes
+		}
+	}
+	
+	modifier = {
+		all_technology_research_speed = 0.3
+	}
+	
+	weight = 10000
+	ai_weight = {
+		factor = 10000
+	}
+}
+
+#爱酱第四代装甲#
+tech_aichan_armor4 = {
+	cost = 20000
+	area = engineering
+	category = {industry}
+	tier = 4
+	potential = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = aichan_angry }
+	}
+	prerequisites = { "tech_blackai_tbox" "tech_valkyrie_armor4" }
+	
+	modifier = {
+		pop_environment_tolerance = 0.1
+		planet_jobs_produces_mult = 0.1
+		ship_shield_mult = 0.1
+		weapon_type_energy_weapon_damage_mult = 0.1
+	}
+	
+	weight = 100
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#科研人偶#
+tech_aichan_elf_t = {
+	cost = 35000
+	area = physics
+	category = {computing}
+	tier = 4
+	prerequisites = { "tech_blackai_tbox" }
+	potential = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = aichan_angry }
+	}
+	
+	modifier = {
+		custom_tooltip = tech_aichan_elf_t.tooltip
+	}
+	
+	weight = 75
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#爱酱偷来的科技2#
+tech_binary_motivators_aichan = {
+	cost = @tier3cost1
+	area = engineering
+	tier = 3
+	category = { industry }
+	prerequisites = { "tech_aichan_elf_t" "tech_robomodding_m_aichan" }
+	weight = @tier3weight1
+
+	gateway = robotics
+
+	modifier = {
+		MACHINE_species_trait_points_add = 2
+		custom_tooltip = tech_binary_motivators_aichan.tooltip
+	}
+
+	potential = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = aichan_angry }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+				has_level > 2
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+#黑爱工作室#
+tech_blackai_studio = {
+	cost = 7500
+	area = society
+	category = {statecraft}
+	potential = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = aichan_angry }
+	}
+	prerequisites = { "tech_blackai_tbox" }
+	tier = 3
+	
+	modifier = {
+	}
+
+	weight = 100
+	ai_weight = {
+		factor = 100
+	}
+}
+
+#爱酱权限3#
+tech_aichan_permissions3 = {
+	cost = 40000
+	area = physics
+	category = {computing}
+	potential = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = aichan_angry }
+	}
+	prerequisites = {
+		"tech_aichan_armor4"
+		"tech_blackai_sarmor"
+		"tech_blackai_studio"
+		"tech_blackai_shield"
+		"tech_blackai_c"
+		"tech_aichan_elf_t"
+	}
+	tier = 5
+	
+	modifier = {
+		empire_size_districts_mult = -0.025
+		empire_size_systems_mult = -0.025
+		empire_size_colonies_mult = -0.025
+		empire_size_pops_mult = -0.025
+	}
+	
+	weight = 1000
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#####爱酱t3装备#####
+#黑爱装甲#
+tech_blackai_sarmor = {
+	cost = 20000
+	area = engineering
+	category = {materials}
+	potential = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = aichan_angry }
+	}
+	prerequisites = { "tech_blackai_tbox" "tech_ship_armor_5" }
+	tier = 4
+	
+	weight = 100
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#黑爱护盾#
+tech_blackai_shield = {
+	cost = 20000
+	area = physics
+	category = {field_manipulation}
+	potential = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = aichan_angry }
+	}
+	prerequisites = { "tech_blackai_tbox" "tech_shields_5" }
+	tier = 4
+	
+	weight = 100
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#黑爱电脑#
+tech_blackai_c = {
+	cost = 20000
+	area = physics
+	category = {computing}
+	potential = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = aichan_angry }
+	}
+	prerequisites = { "tech_blackai_tbox" }
+	tier = 4
+	
+	weight = 100
+	ai_weight = {
+		factor = 1000
+	}
+}
+#咸鱼立场#
+tech_salted_fish = {
+	cost = 50000
+	area = society
+	category = {military_theory}
+	tier = 5
+	potential = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = aichan_angry }
+	}
+	prerequisites = { "tech_blackai_tbox" }
+	
+	weight = 35
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+##############################爱酱t4科技##############################
+#自律作战单位A1#
+tech_aichan_A1 = {
+	cost = 40000
+	area = physics
+	category = {computing}
+	potential = { 
+		has_authority = auth_schicksal
+		OR = { 
+			has_ascension_perk = ap_aichan_A1 
+			is_ai = yes
+		}
+	}
+	tier = 5
+	
+	modifier = {
+		all_technology_research_speed = 0.25
+		planet_jobs_engineering_research_produces_mult = 0.25
+		planet_jobs_society_research_produces_mult = 0.25
+		planet_jobs_physics_research_produces_mult = 0.25
+	}
+	
+	weight = 10000
+	ai_weight = {
+		factor = 10000
+	}
+}
+
+#高级人偶特质#
+tech_aichan_elf_plus = {
+	cost = 75000
+	area = engineering
+	category = {industry}
+	tier = 5
+	prerequisites = { "tech_aichan_A1" }
+	potential = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = aichan_angry }
+	}
+	
+	modifier = {
+		custom_tooltip = tech_aichan_elf_plus.tooltip
+		
+	}
+	
+	
+	weight = 150
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#爱酱偷来的科技3#
+tech_nanite_assemblers_aichan = {
+	cost = @tier4cost1
+	area = engineering
+	tier = 4
+	category = { industry }
+	prerequisites = { "tech_binary_motivators_aichan" "tech_aichan_elf_plus" }
+	is_rare = yes
+	weight = @tier4weight1
+
+	modifier = {
+		MACHINE_species_trait_points_add = 2
+		custom_tooltip = tech_nanite_assemblers_aichan.tooltip
+	}
+
+	potential = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = aichan_angry }
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.20
+			NOR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_maniacal"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_industry"
+				}
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = tech_nanite_assemblers }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+
+#####爱酱t4装备#####
+#爱酱射线#
+tech_aichan_ray = {
+	cost = 20000
+	area = physics
+	category = {particles}
+	potential = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = aichan_angry }
+	}
+	prerequisites = { "tech_aichan_A1" }
+	tier = 5
+	
+	weight = 75
+	weight_modifier = {
+		modifier = {
+			factor = 1.5
+			has_technology = tech_energy_lance_2
+		}
+		modifier = {
+			factor = 1.5
+			has_technology = tech_arc_emitter_2
+		}
+	}
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#绿核护盾#
+tech_aichan_shield = {
+	cost = 50000
+	area = physics
+	category = {field_manipulation}
+	potential = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = aichan_angry }
+	}
+	prerequisites = { "tech_aichan_A1" "tech_hk648_white" }
+	tier = 5
+	
+	weight = 75
+	weight_modifier = {
+		modifier = { 
+			factor = 1.5
+			has_technology = tech_hk648_xzy
+		}
+	}
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#绿核装甲#
+tech_aichan_sarmor = {
+	cost = 50000
+	area = engineering
+	category = {materials}
+	potential = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = aichan_angry }
+	}
+	prerequisites = { "tech_aichan_A1" "tech_hk648_black" }
+	tier = 5
+	
+	weight = 75
+	weight_modifier = {
+		modifier = { 
+			factor = 1.5
+			has_technology = tech_hk648_xzy
+		}
+	}
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+
+
+#爱酱之钥#
+tech_aichan_zlzy = {
+	cost = 50000
+	area = physics
+	category = {particles}
+	potential = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = aichan_angry }
+	}
+	prerequisites = { "tech_aichan_A1" "tech_hk648_zlzy" }
+	tier = 5
+	
+	weight = 75
+	weight_modifier = {
+		modifier = {
+			factor = 1.5
+			has_technology = tech_energy_lance_2
+		}
+		modifier = {
+			factor = 1.5
+			has_technology = tech_arc_emitter_2
+		}
+	}
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#爱酱电脑#
+tech_aichan_c = {
+	cost = 50000
+	area = physics
+	category = {computing}
+	potential = { 
+		has_authority = auth_schicksal 
+		NOT = { has_country_flag = aichan_angry }
+	}
+	prerequisites = { "tech_aichan_A1" }
+	tier = 5
+	
+	weight = 75
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+
+

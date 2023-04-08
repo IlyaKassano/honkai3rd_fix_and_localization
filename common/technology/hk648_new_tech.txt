@@ -1,0 +1,568 @@
+###崩坏共通科技###
+
+#偶像理论
+tech_hk648_idol = {
+	cost = 5000
+	area = society
+	category = {statecraft}
+	tier = 2
+	potential = {
+		has_authority = auth_schicksal
+		has_ascension_perk = ap_fight_for_wrld
+	}
+	
+	modifier = {
+		country_unity_produces_mult = 0.1
+		army_damage_mult = -0.05
+		army_health = -0.05
+	}
+	
+	weight = 150
+	weight_modifier = {
+		modifier = {
+			factor = 10
+			years_passed >5
+		}
+        }
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#第二代女武神装甲#
+tech_valkyrie_armor2 = {
+	cost = 3000
+	area = engineering
+	category = {industry}
+	prerequisites = {"tech_powered_exoskeletons"}
+	tier = 1
+	potential = {
+		has_authority = auth_schicksal
+	}
+	
+	modifier = {
+		army_damage_mult = 0.05
+		army_health =0.05
+	}
+	
+	weight = 150
+	weight_modifier = {
+		modifier = {
+			factor = 10
+			years_passed >5
+		}
+        }
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#第三代女武神装甲#
+tech_valkyrie_armor3 = {
+	cost = 7500
+	area = engineering
+	category = {industry}
+	prerequisites = { "tech_valkyrie_armor2" "tech_cold_fusion_power"}
+	tier = 2
+	potential = {
+		has_authority = auth_schicksal
+	}
+	
+	modifier = {
+		pop_environment_tolerance = 0.05
+		army_damage_mult = 0.05
+		army_health =0.05
+	}
+	
+	weight = 150
+	weight_modifier = {
+		modifier = {
+			factor = 3
+			has_technology = tech_antimatter_power
+		}
+		modifier = {
+			factor = 8
+			has_technology = tech_zero_point_power
+		}
+	}
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#弑神装甲#
+tech_valkyrie_armor4 = {
+	cost = 30000
+	area = engineering
+	category = {industry}
+	tier = 4
+	prerequisites = {"tech_valkyrie_armor3" "tech_zero_point_power"}
+	potential = {
+		has_authority = auth_schicksal
+	}
+	
+	modifier = {
+		pop_environment_tolerance = 0.2
+		army_damage_mult = 0.4
+		army_health =0.4
+		planet_jobs_produces_mult = 0.15
+		ship_shield_mult = 0.15
+		weapon_type_energy_weapon_damage_mult = 0.15
+	}
+	
+	weight = 65
+	weight_modifier = {
+		modifier = {
+			factor = 3
+			has_technology = tech_hk648_1
+		}
+		modifier = {
+			factor = 5
+			has_technology = tech_hk648_2
+		}
+	}
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#泰坦军团#
+tech_titan_armies = {
+	cost = 4000
+	area = engineering
+	category = {industry}
+	tier = 1
+	prerequisites = {"tech_valkyrie_armor2"}
+	potential = {
+		has_authority = auth_schicksal
+	}
+	
+	weight = 100
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#泰坦施工队#
+tech_titan_sgd = {
+	cost = 4000
+	area = engineering
+	category = {industry}
+	tier = 1
+	prerequisites = {"tech_assembly_pattern"}
+	potential = {
+		has_authority = auth_schicksal
+	}
+	
+	modifier = {
+		planet_building_build_speed_mult = 0.5
+	}
+	
+	weight = 100
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#攻略律者#
+tech_herrscher_love = {
+	cost = 32800
+	area = society
+	category = {new_worlds}
+	tier = 1
+	potential = {
+		has_authority = auth_schicksal
+	}
+	
+	#暂时没写事件部分，所以没写完
+	weight = 0
+	ai_weight = {
+		factor = 0
+	}
+}
+
+#剑道训练室#
+tech_jdxls = {
+	cost = 2500
+	area = society
+	category = {military_theory}
+	tier = 2
+	potential = {
+		has_authority = auth_schicksal
+	}
+	prerequisites = {
+		"tech_hk648_1"
+		"tech_volatile_motes"
+		"tech_exotic_gases"
+		"tech_rare_crystals"
+	}
+	
+
+	weight = 250
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#高级剑道训练室#
+tech_jdxls648 = {
+	cost = 7500
+	area = society
+	category = {military_theory}
+	tier = 3
+	potential = {
+		has_authority = auth_schicksal
+	}
+	prerequisites = {
+		"tech_hk648_2"
+		"tech_jdxls"
+	}
+	
+
+	weight = 100
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#崩坏炉#
+tech_bhl = {
+	cost = 3000
+	area = physics
+	is_dangerous = yes
+	category = {field_manipulation}
+	tier = 2
+	potential = {
+		has_authority = auth_schicksal
+	}
+	prerequisites = {
+		"tech_hk648_1"
+	}
+	
+
+	weight = 2500
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#高级崩坏炉#
+tech_bhl648 = {
+	cost = 9000
+	area = physics
+	is_dangerous = yes
+	category = {field_manipulation}
+	tier = 3
+	potential = {
+		has_authority = auth_schicksal
+	}
+	prerequisites = {
+		"tech_hk648_2"
+		"tech_bhl"
+	}
+	
+
+	weight = 2500
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#天命科学院#
+tech_tmkxy = {
+	cost = 2500
+	area = physics
+	category = {computing}
+	tier = 3
+	potential = {
+		has_authority = auth_schicksal
+	}
+	prerequisites = {
+		"tech_hk648_1"
+		"tech_basic_science_lab_2"
+	}
+	
+
+	weight = 250
+	ai_weight = {
+		factor = 1000
+	}
+}
+#高级天命科学院#
+tech_tmkxy648 = {
+	cost = 7500
+	area = physics
+	category = {computing}
+	tier = 3
+	potential = {
+		has_authority = auth_schicksal
+	}
+	prerequisites = {
+		"tech_hk648_2"
+		"tech_tmkxy"
+	}
+	
+
+	weight = 100
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#崩坏精炼厂#
+tech_bhjlc = {
+	cost = 2500
+	area = engineering
+	category = {industry}
+	tier = 2
+	potential = {
+		has_authority = auth_schicksal
+	}
+	prerequisites = {
+		"tech_hk648_1"
+		"tech_alloys_1"
+	}
+	
+
+	weight = 100
+	ai_weight = {
+		factor = 1000
+	}
+}
+#高级崩坏精炼厂#
+tech_bhjlc648 = {
+	cost = 7500
+	area = engineering
+	category = {industry}
+	tier = 3
+	potential = {
+		has_authority = auth_schicksal
+	}
+	prerequisites = {
+		"tech_hk648_2"
+		"tech_bhjlc"
+	}
+	
+
+	weight = 100
+	ai_weight = {
+		factor = 1000
+	}
+}
+#祈祷室#
+tech_qds = {
+	cost = 2500
+	area = society
+	category = {statecraft}
+	tier = 2
+	potential = {
+		has_authority = auth_schicksal
+		OR = {
+			has_technology = tech_holographic_rituals
+			has_technology = tech_heritage_site
+		}
+	}
+	prerequisites = {
+		"tech_hk648_1"
+	}
+	
+
+	weight = 100
+	ai_weight = {
+		factor = 1000
+	}
+}
+#高级祈祷室#
+tech_qds648 = {
+	cost = 7500
+	area = society
+	category = {statecraft}
+	tier = 3
+	potential = {
+		has_authority = auth_schicksal
+	}
+	prerequisites = {
+		"tech_hk648_2"
+		"tech_qds"
+	}
+	
+
+	weight = 100
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#资源仓库
+tech_hk648resource_silo_1 = {
+	cost = 2500
+	area = engineering
+	category = {statecraft}
+	tier = 2
+	potential = {
+		has_authority = auth_schicksal
+	}
+	prerequisites = {
+		"tech_basic_industry"
+	}
+
+	weight = 100
+	ai_weight = {
+		factor = 1000
+	}
+}
+tech_hk648resource_silo_2 = {
+	cost = 10000
+	area = engineering
+	category = {statecraft}
+	tier = 5
+	potential = {
+		has_authority = auth_schicksal
+		has_country_flag = r_2nd_herrscher_y
+	}
+	prerequisites = {
+		"tech_hk648resource_silo_1"
+	}
+
+	weight = 100
+	ai_weight = {
+		factor = 1000
+	}
+}
+#消费品1
+tech_hk648factories_1 = {
+	cost = 2500
+	area = engineering
+	category = {industry}
+	tier = 2
+	potential = {
+		has_authority = auth_schicksal
+	}
+	prerequisites = {
+		"tech_luxuries_1"
+	}
+
+	weight = 100
+	ai_weight = {
+		factor = 1000
+	}
+}
+tech_hk648factories_2 = {
+	cost = 7500
+	area = engineering
+	category = {statecraft}
+	tier = 3
+	potential = {
+		has_authority = auth_schicksal
+	}
+	prerequisites = {
+		"tech_luxuries_2"
+		"tech_hk648factories_1"
+		"tech_hk648_1"
+	}
+
+	weight = 100
+	ai_weight = {
+		factor = 1000
+	}
+}
+tech_hk648factories_3 = {
+	cost = 15000
+	area = engineering
+	category = {statecraft}
+	tier = 5
+	potential = {
+		has_authority = auth_schicksal
+	}
+	prerequisites = {
+		"tech_hk648factories_2"
+		"tech_hk648_2"
+	}
+
+	weight = 100
+	ai_weight = {
+		factor = 1000
+	}
+}
+#浮空城技术#
+tech_honkai_floating_island = {
+	cost = 20000
+	area = engineering
+	category = industry
+	tier = 5
+	potential = {
+		has_authority = auth_schicksal
+	}
+	prerequisites = {
+		"tech_hk648_2"
+		"tech_housing_2"
+	}
+	modifier = {
+		custom_tooltip = tech_honkai_floating_island.1
+	}
+	
+	weight = 100
+	ai_weight = {
+		factor = 1000
+	}
+}
+#百手巨人初型
+tech_hk648_bsjr = {
+	area = engineering
+	tier = 5
+	cost = 25000
+	category = { particles }
+	prerequisites = { "tech_battleships" "tech_hk648_1" }
+	potential = {
+		has_authority = auth_schicksal
+	}
+	weight = 0
+	ai_weight = {
+		factor = 0
+	}
+}
+#百手巨人终型
+tech_hk648_bsjr_z = {
+	area = engineering
+	tier = 5
+	cost = 50000
+	category = { particles }
+	prerequisites = { "tech_hk648_bsjr" }
+	potential = {
+		has_authority = auth_schicksal
+	}
+	weight = 0
+	ai_weight = {
+		factor = 0
+	}
+}
+#独眼巨人初型
+tech_hk648_dyjr = {
+	area = engineering
+	tier = 5
+	cost = 15000
+	category = { particles }
+	prerequisites = { "tech_battleships" "tech_hk648_1" }
+	potential = {
+		has_authority = auth_schicksal
+	}
+	weight = 0
+	ai_weight = {
+		factor = 0
+	}
+}
+#独眼巨人终型
+tech_hk648_dyjr_z = {
+	area = engineering
+	tier = 5
+	cost = 30000
+	category = { particles }
+	prerequisites = { "tech_hk648_dyjr" }
+	potential = {
+		has_authority = auth_schicksal
+	}
+	weight = 0
+	ai_weight = {
+		factor = 0
+	}
+}

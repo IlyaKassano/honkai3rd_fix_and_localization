@@ -1,0 +1,91 @@
+
+#崩坏难度设定#
+honkai_impact = {
+	length = 0
+	potential = { has_authority = auth_schicksal  }
+	
+	effect = {
+		country_event = { id = hk648_honkai.5000 }
+	}
+}
+
+#校长的选择#
+headmaster_st = {
+	length = 0
+	potential = { has_modifier = st_freya }
+	resources = {
+		category = edicts
+		cost = {
+			influence = 100
+		}
+	}
+	effect = {
+		country_event = { id = hk648_star.1001 }
+	}
+}
+
+shjh648 = {
+	length = 0
+	resources = {
+		category = edicts
+		cost = {
+			influence = 200
+		}
+	}
+	
+	allow = { NOT = { has_country_flag = shjh_during_the_research } }
+	potential = { has_ascension_perk = ap_hkshjh }
+	
+	effect = {
+		set_country_flag = shjh_during_the_research
+		country_event = { id = hk648_pop.1002 }
+	}
+}
+
+rhzs648 = {
+	length = 0
+	resources = {
+		category = edicts
+		cost = {
+			influence = 200
+		}
+	}
+	
+	allow = { 
+		NOT = { has_country_flag = rhzs_during_the_research } 
+	}
+	potential = { 
+		has_ascension_perk = ap_hkshjh 
+		NOT = { has_country_flag = rhzs_x }
+	}
+	
+	effect = {
+		set_country_flag = rhzs_during_the_research
+		country_event = { id = hk648_pop.2002 }
+	}
+}
+
+#启动超限计划#
+cxjh648 = {
+	length = 0
+	potential = { has_country_flag = cxjh0 }
+	
+	effect = {
+		remove_country_flag = cxjh0
+		country_event = { id = hk648_super_wepons.1002 }
+	}
+}
+
+
+
+
+
+#销毁崩坏能#
+honkai648_energy = {
+	length = 0
+	potential = { has_ascension_perk = ap_honkai1 }	
+	
+	effect = {
+		country_event = { id = hk648_honkai.7000 }
+	}
+}

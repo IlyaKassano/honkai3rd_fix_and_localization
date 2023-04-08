@@ -1,0 +1,591 @@
+
+##################################武器##################################
+#####歼星者系列#####
+#歼星者19C#
+tech_hk648_19c = {
+	area = physics
+	tier = 4
+	cost = 15000
+	category = { particles }
+	prerequisites = { "tech_battleships" "tech_hk648_1" }
+	potential = {
+		has_authority = auth_schicksal
+		OR = {
+			has_technology = tech_energy_lance_1
+			has_technology = tech_arc_emitter_1
+			has_technology = tech_mass_accelerator_1
+		}
+	}
+	
+	weight = 200
+	ai_weight = {
+		factor = 1000
+	}
+}
+#歼星者19CX#
+tech_hk648_19cx = {
+	area = physics
+	tier = 5
+	cost = 30000
+	category = { particles }
+	prerequisites = { "tech_hk648_19c" }
+	potential = {
+		has_authority = auth_schicksal
+	}
+	
+	weight = 0
+	ai_weight = {
+		factor = 1000
+	}
+}
+#歼星者19AI#
+tech_hk648_19ai = {
+	area = physics
+	tier = 5
+	cost = 100000
+	category = { particles }
+	potential = {
+		has_authority = auth_schicksal
+	}
+	
+	weight = 0
+	ai_weight = {
+		factor = 1000
+	}
+}
+#####真理之钥系列#####
+#真理之钥#
+tech_hk648_zlzy = { 
+	area = physics
+	tier = 1
+	cost = 10000
+	category = { particles }
+	
+	start_tech = no
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	prerequisites = { "tech_lasers_5" "tech_hk648_2" }
+	
+	potential = {
+		has_authority = auth_schicksal
+	}
+	
+	weight = 200
+	ai_weight = {
+		factor = 1000
+	}
+}
+#真理之境启示#
+tech_hk648_zlzj = {
+	area = physics
+	tier = 5
+	cost = 30000
+	category = { particles }
+	prerequisites = { "tech_hk648_zlzy" }
+	potential = {
+		has_authority = auth_schicksal
+	}
+	
+	weight = 0
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#真理之爱包菜#
+tech_aichan_zlzj = {
+	area = physics
+	tier = 5
+	cost = 100000
+	category = { particles }
+	potential = {
+		has_authority = auth_schicksal
+	}
+	
+	weight = 0
+	ai_weight = {
+		factor = 1000
+	}
+}
+#####加特林系列#####
+#加特林#
+tech_hk648_jtl = { 
+	area = engineering
+	tier = 1
+	cost = 10000
+	category = { propulsion }
+	
+	start_tech = no
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	prerequisites = { "tech_autocannons_1" "tech_hk648_1" }
+	
+	potential = {
+		has_authority = auth_schicksal
+	}
+	
+	weight = 1000
+	ai_weight = {
+		factor = 1000
+	}
+}
+#超限火神炮#
+tech_hk648_cxjtl = {
+	area = engineering
+	tier = 5
+	cost = 30000
+	category = { propulsion }
+	prerequisites = { "tech_hk648_jtl" }
+	potential = {
+		has_authority = auth_schicksal
+	}
+	
+	weight = 0
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#####量子毁灭者系列#####
+#量子毁灭者#
+tech_hk648_lzhmz = { 
+	area = physics
+	tier = 1
+	cost = 10000
+	category = { particles }
+	
+	start_tech = no
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	prerequisites = { "tech_lasers_3" "tech_hk648_1" }
+	
+	potential = {
+		has_authority = auth_schicksal
+	}
+	
+	weight = 1000
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#量子毁灭者ⅠⅠ型#
+tech_hk648_lzhmz2 = {
+	area = physics
+	tier = 5
+	cost = 30000
+	category = { particles }
+	prerequisites = { "tech_hk648_lzhmz" }
+	potential = {
+		has_authority = auth_schicksal
+	}
+	
+	weight = 0
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+
+#爱酱射线#
+tech_hk648_ai_chan = { 
+	area = physics
+	tier = 1
+	cost = 20000
+	category = { particles }
+	
+	start_tech = no
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	prerequisites = { "tech_lasers_5" "tech_hk648_2" }
+	
+	potential = {
+		has_authority = auth_schicksal
+	}
+	
+	weight = 0
+	ai_weight = {
+		factor = 0
+	}
+}
+
+##################################组件##################################
+#超限装甲#
+#相转移#
+tech_hk648_xzy = { 
+	area = physics
+	tier = 1
+	cost = 30000
+	category = { particles }
+	
+	start_tech = no
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	prerequisites = { "tech_hk648_black"  "tech_hk648_white" "tech_hk648_2" }
+	
+	potential = {
+		has_authority = auth_schicksal
+	}
+	
+	weight = 0
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+#爱酱的究极水晶甲#
+tech_aichan_648 = {
+	cost = 100000
+	area = physics
+	category = {field_manipulation}
+	potential = { has_authority = auth_schicksal }
+	tier = 1
+	
+	weight = 0
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tech_hk648_black = { 
+	area = engineering
+	tier = 1
+	cost = 25000
+	category = { materials }
+	
+	start_tech = no
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	prerequisites = { "tech_shields_5" "tech_hk648_1" }
+	
+	potential = {
+		has_authority = auth_schicksal
+	}
+	
+	weight = 1000
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tech_hk648_white = { 
+	area = physics
+	tier = 1
+	cost = 25000
+	category = { particles }
+	
+	start_tech = no
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	prerequisites = { "tech_shields_5" "tech_hk648_1" }
+	
+	potential = {
+		has_authority = auth_schicksal
+	}
+	
+	weight = 1000
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+
+##################################核心##################################
+tech_hk648_mnbz = { 
+	area = physics
+	tier = 1
+	cost = 10000
+	category = { particles }
+	
+	start_tech = no
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	prerequisites = { "tech_zero_point_power" "tech_hk648_1" }
+	
+	potential = {
+		has_authority = auth_schicksal
+	}
+	
+	weight = 1000
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tech_hk648_ccmnbz = { 
+	area = physics
+	tier = 1
+	cost = 25000
+	category = { particles }
+	
+	start_tech = no
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	prerequisites = { "tech_hk648_mnbz"  "tech_hk648_2" }
+	
+	potential = {
+		has_authority = auth_schicksal
+	}
+	
+	weight = 1000
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tech_hk648_xsyq = { 
+	area = physics
+	tier = 1
+	cost = 10000
+	category = { particles }
+	
+	start_tech = no
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	prerequisites = { "tech_hyper_drive_2" "tech_hk648_1"}
+	
+	potential = {
+		has_authority = auth_schicksal
+	}
+	
+	weight = 1000
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tech_hk648_gjxsyq = { 
+	area = physics
+	tier = 1
+	cost = 20000
+	category = { particles }
+	
+	start_tech = no
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	prerequisites = { "tech_hk648_xsyq" "tech_hk648_2" }
+	
+	potential = {
+		has_authority = auth_schicksal
+	}
+	
+	weight = 1000
+	ai_weight = {
+		factor = 1000
+	}
+}
+##################################飞升##################################
+tech_hk648_1 = { 
+	area = society
+	tier = 1
+	cost = 10000
+	category = { statecraft }
+	
+	start_tech = no
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	
+	potential = {
+		has_authority = auth_schicksal
+		OR = {
+			has_ascension_perk = ap_honkai1
+			is_ai = yes
+		}
+	}
+	
+	weight = 10000
+	ai_weight = {
+		factor = 0
+	}
+}
+
+tech_hk648_2 = { 
+	area = society
+	tier = 1
+	cost = 30000
+	category = { statecraft }
+	
+	start_tech = no
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	
+	potential = {
+		has_authority = auth_schicksal
+		OR = {
+			has_ascension_perk = ap_honkai2
+			is_ai = yes
+		}
+	}
+	
+	weight = 10000
+	ai_weight = {
+		factor = 0
+	}
+}
+
+#神之键
+tech_divine_key = { 
+	area = physics
+	tier = 1
+	cost = 100000
+	category = { particles }
+	
+	is_reverse_engineerable = no
+	
+	potential = {
+		has_authority = auth_schicksal
+		OR = {
+			has_ascension_perk = ap_honkai2
+			is_ai = yes
+		}
+	}
+	
+	weight = 0
+	weight_modifier = {
+		factor = 0
+	}
+	ai_weight = {
+		factor = 0
+	}
+}
+
+tech_hk648_no_research = {
+	area = physics
+	tier = 1
+	cost = 9999999
+	category = { particles }
+	
+	start_tech = no
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	prerequisites = { "tech_thrusters_3" }
+	
+	potential = {
+		has_authority = auth_schicksal
+	}
+	
+	weight = 0
+	ai_weight = {
+		factor = 0
+	}
+}
+tech_hk648_hkjj = { 
+	area = physics
+	tier = 1
+	cost = 20000
+	category = { particles }
+	
+	start_tech = no
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	prerequisites = { "tech_thrusters_3" }
+	
+	potential = {
+		has_authority = auth_schicksal
+	}
+	
+	weight = 0
+	ai_weight = {
+		factor = 0
+	}
+}
+
+#第十一神之键（犹大
+tech_divine_key_11th = {
+	cost = 200000
+	area = physics
+	category = {particles}
+	tier = 5
+	potential = { has_authority = auth_schicksal }
+	prerequisites = { "tech_divine_key" }
+	
+	weight = 0
+	ai_weight = {
+		factor = 0
+	}
+}
+#超限犹大
+tech_divine_key_11th_plus  = {
+	cost = 300000
+	area = physics
+	category = {particles}
+	tier = 5
+	potential = { has_authority = auth_schicksal }
+	prerequisites = { "tech_divine_key" }
+	
+	weight = 0
+	ai_weight = {
+		factor = 0
+	}
+}
+
+#第十二神之键德丽傻病毒
+tech_divine_key_12th = {
+	cost = 100000
+	area = society
+	category = {psionics}
+	tier = 5
+	potential = { has_authority = auth_schicksal }
+	prerequisites = { "tech_divine_key" }
+	
+	weight = 0
+	ai_weight = {
+		factor = 0
+	}
+}
+
+#堕落帝国临时科技
+tech_hk648_moth = {
+	area = physics
+	tier = 1
+	cost = 9999999
+	category = { particles }
+	
+	start_tech = no
+	is_rare = yes
+	is_dangerous = no
+	is_reverse_engineerable = no
+	prerequisites = {  "tech_hk648_2"}
+	
+	
+	potential = {
+		has_origin = origin_ark_moth2
+	}
+	
+	weight = 1000
+	ai_weight = {
+	}
+}
+
+#星环#崩坏加成
+tech_hk648_remote_release = {
+	area = physics
+	tier = 4
+	cost = 20000
+	category = { particles }
+	prerequisites = { "tech_hk648_2" }
+	potential = {
+		has_authority = auth_schicksal
+		has_technology = tech_mineral_purification_2
+	}
+	
+	weight = 100
+	ai_weight = {
+		factor = 1000
+	}
+}

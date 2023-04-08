@@ -1,0 +1,343 @@
+
+#1-防御				GFX_army_type_defensive
+#2-进攻				GFX_army_type_assault
+#3-拳头				GFX_army_type_rebel
+#4-安卓				GFX_army_type_robot
+#5-三道杠			GFX_army_type_primitive
+#7-克隆人			GFX_army_type_gene_warrior
+#6-基因				GFX_army_type_clone
+#8-异形骷髅头		GFX_army_type_xenomorph
+#9-灵能				GFX_army_type_psionic
+#10-奴隶			GFX_army_type_slave
+#11-高达			GFX_army_type_machine_assault
+#12-防御高达		GFX_army_type_machine_defensive
+#13-亡灵骷髅头		GFX_army_type_undead
+#14-斯巴达头盔		GFX_army_type_imperia
+#第二代女武神军团#
+valkyrie2_defense_army = {
+	defensive = yes
+	is_pop_spawned = yes
+	damage = 3.5
+	health = 3.5
+	morale = 10
+	morale_damage = 1
+	collateral_damage = 1
+	war_exhaustion = 0.5
+	time = 90
+	icon = GFX_army_type_psionic
+	pop_limited = yes
+	resources = {
+		category = armies
+		cost = {
+			minerals =150
+			honkai648_energy = 1
+		}
+		upkeep = {
+			unity = -0.5
+		}
+	}
+	
+	show_tech_unlock_if = {
+		has_authority =auth_schicksal
+	}
+	
+	potential = {
+		from = {
+			OR = {
+				has_trait = trait_hksh 
+				has_trait = trait_valkyries
+			}
+			NOT = {
+				has_trait = trait_hkrobot
+			}
+		}
+	}
+}
+valkyrie2_army = {
+	damage = 2.5
+	health = 2.5
+	morale = 5
+	morale_damage = 1
+	collateral_damage = 1
+	war_exhaustion = 0.5
+	time = 90
+	
+	icon = GFX_army_type_psionic
+	
+	pop_limited = yes
+	
+	
+	resources = {
+		category = armies
+		cost = {
+			minerals =150
+			honkai648_energy = 1
+		}
+		upkeep = {
+			energy = 1
+			honkai648_energy = 0.05
+		}
+	}
+	
+	prerequisites = { "tech_valkyrie_armor2" }
+	
+	show_tech_unlock_if = {
+		has_authority =auth_schicksal
+	}
+	
+	potential = {
+		from = {
+			OR = {
+				has_trait = trait_hksh 
+				has_trait = trait_valkyries
+			}
+			NOT = {
+				has_trait = trait_hkrobot
+			}
+		}
+	}
+}
+
+#泰坦机甲军团#
+titan_army = {
+	damage = 5
+	health = 10
+	has_morale = no
+	morale_damage = 1
+	collateral_damage = 1
+	war_exhaustion = 0
+	time = 60
+	
+	icon = GFX_hk648_titan
+	
+	pop_limited = no
+	
+	resources = {
+		category = armies
+		cost = {
+			minerals =250
+			alloys = 25
+			honkai648_energy = 2
+		}
+		upkeep = {
+			energy = 3
+			alloys = 0.2
+			honkai648_energy = 0.1
+		}
+	}
+	
+	prerequisites = { "tech_titan_armies" }
+	
+	potential = {
+		from = {
+			NOT = {
+				has_trait = trait_hkrobot
+			}
+		}
+	}
+	
+	show_tech_unlock_if = {
+		has_authority =auth_schicksal
+	}
+}
+
+titan_army_s = {
+	damage = 10
+	health = 15
+	has_morale = no
+	morale_damage = 1
+	collateral_damage = 1
+	war_exhaustion = 0
+	time = 60
+	
+	icon = GFX_hk648_titan
+	
+	pop_limited = no
+	
+	resources = {
+		category = armies
+		cost = {
+			minerals =250
+			alloys = 25
+			honkai648_energy = 2
+		}
+		upkeep = {
+			energy = 3
+			alloys = 0.2
+			honkai648_energy = 0.1
+		}
+	}
+	
+	potential = {
+		always = no
+	}
+	
+	show_tech_unlock_if = {
+		has_authority =auth_schicksal
+	}
+}
+
+
+#武装人偶军团#
+elf_army = {
+	damage = 1.5
+	health = 1.5
+	has_morale = no
+	morale_damage = 1
+	collateral_damage = 1
+	war_exhaustion = 0
+	time = 5
+	
+	icon = GFX_army_type_robot
+	
+	pop_limited = no
+	
+	potential = {
+		from = {
+			has_trait = trait_hkrobot
+		}
+	}
+	
+	resources = {
+		category = armies
+		cost = {
+			minerals =50
+			alloys = 5
+			honkai648_energy = 0.1
+		}
+		upkeep = {
+			energy = 0.1
+			alloys = 0.005
+		}
+	}
+	
+	prerequisites = { "tech_aichan_elf_w" }
+	
+	show_tech_unlock_if = {
+		has_authority =auth_schicksal
+	}
+}
+
+#第三代女武神军团#
+valkyrie3_army = {
+	damage = 6
+	health = 8
+	morale = 10
+	morale_damage = 1
+	collateral_damage = 1
+	war_exhaustion = 0.5
+	time = 90
+	
+	icon = GFX_army_type_psionic
+	
+	pop_limited = yes
+	
+	resources = {
+		category = armies
+		cost = {
+			minerals =300
+			honkai648_energy = 3
+		}
+		upkeep = {
+			energy = 1.5
+			honkai648_energy = 0.3
+		}
+	}
+	
+	prerequisites = { "tech_valkyrie_armor3" }
+	
+	show_tech_unlock_if = {
+		has_authority =auth_schicksal
+	}
+	
+	potential = {
+		from = {
+			OR = {
+				has_trait = trait_hksh 
+				has_trait = trait_valkyries
+			}
+			NOT = {
+				has_trait = trait_hkrobot
+			}
+		}
+	}
+}
+
+#第四代女武神军团，弑神装甲#
+valkyrie4_army = {
+	damage = 25
+	health = 40
+	morale = 40
+	morale_damage = 1
+	collateral_damage = 1
+	war_exhaustion = 0.5
+	time = 400
+	
+	icon = GFX_army_type_psionic
+	
+	pop_limited = yes
+	
+	resources = {
+		category = armies
+		cost = {
+			minerals =1000
+			honkai648_energy = 10
+		}
+		upkeep = {
+			energy = 2.5
+			honkai648_energy = 0.5
+		}
+	}
+	
+	prerequisites = { "tech_valkyrie_armor4" }
+	
+	show_tech_unlock_if = {
+		has_authority =auth_schicksal
+	}
+	
+	potential = {
+		from = {
+			OR = {
+				has_trait = trait_hksh 
+				has_trait = trait_valkyries
+			}
+			NOT = {
+				has_trait = trait_hkrobot
+			}
+		}
+	}
+}
+
+#爱酱战体#
+aichan_army = {
+	damage = 75
+	health = 300
+	has_morale = no
+	morale_damage = 1
+	collateral_damage = 1
+	war_exhaustion = 0
+	time = 200
+	
+	icon = GFX_aichan_ship
+	
+	pop_limited = yes
+	
+	resources = {
+		category = armies
+		cost = {
+			minerals =1000
+			honkai648_energy = 10
+		}
+		upkeep = {
+			energy = 1500
+		}
+	}
+	
+	show_tech_unlock_if = {
+		has_authority =auth_schicksal
+	}
+	
+	potential = {
+		always = no
+	}
+}

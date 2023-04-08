@@ -1,0 +1,378 @@
+
+@dividend_base_rate = 0.417 # 20 years to completion with no other modifiers.
+@dividend_hire_rate = 0.417 # Adds an extra month of progress if the fleet is hired.
+@dividend_non_patron_hire_rate = 0.833 # Adds two extra months of progress if the fleet is hired by a non-patron.
+@dividend_rank_rate = 0.167 # Adds an extra two months of progress at Rank 5.
+@dividend_resolution_rate = 0.208 # Adds an extra half a month of progress with every GalCom resolution.
+@dividend_financial_trouble_rate = -2.085 # Subtracts five months of progress during financial troubles.
+@dividend_lord_of_war_rate = 1.043 # Adds an extra two and a half months of progress if the Patron has Lord of War.
+
+#武力1
+hk648_military_force_situations_1 = {
+	picture = GFX_evt_hk648_time3_10021
+	complete_icon_frame = GFX_situation_outcome_frame_blue
+	complete_icon = GFX_situation_outcome_meh
+	
+	begin_event_chain = {
+		event_chain = "hk648_captain_usurper"
+		target = ROOT
+	}
+	
+	#结束后
+	on_progress_complete = {
+		#custom_tooltip = 
+		owner = {
+			country_event = { id = hk648_time3.10031 }
+		}
+		
+	}
+	on_fail = {
+		log_error = "mercenary_dividends situation failed, this is not meant to happen"
+		destroy_situation = this
+	}
+	
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_red
+			custom_tooltip = stage_unknown_effects
+			end = 50
+		}
+		
+		stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_red
+			custom_tooltip = stage_unknown_effects
+			end = 100
+			on_first_enter = {
+				owner = {
+					country_event = { id = hk648_time3.1002 }
+				}
+			}
+		}
+	}
+	
+	#每月增长
+	monthly_progress = {
+		#total: 100 Can use decimals to fine tune progress
+		base = 20
+	}
+	
+	approach = { #Actually, the player will never see this Situations. Just adding one in in case one is required
+		name = approach_revolt_do_nothing
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		on_select = {
+			custom_tooltip = deficit_approach_do_nothing_tooltip
+		}
+	}
+}
+
+#武力2
+hk648_military_force_situations_2 = {
+	picture = GFX_evt_hk648_time3_10041
+	complete_icon_frame = GFX_situation_outcome_frame_blue
+	complete_icon = GFX_situation_outcome_meh
+	begin_event_chain = {
+		event_chain = "hk648_captain_usurper"
+		target = ROOT
+	}
+	
+	#结束后
+	on_progress_complete = {
+		#custom_tooltip = 
+		owner = {
+			country_event = { id = hk648_time3.10051 }
+		}
+	}
+	on_fail = {
+		log_error = "mercenary_dividends situation failed, this is not meant to happen"
+		destroy_situation = this
+	}
+	
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_red
+			custom_tooltip = stage_unknown_effects
+			end = 50
+		}
+		
+		stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_red
+			custom_tooltip = stage_unknown_effects
+			end = 100
+			on_first_enter = {
+				owner = {
+					country_event = { id = hk648_time3.1004 }
+				}
+			}
+		}
+	}
+	
+	#每月增长
+	monthly_progress = {
+		#total: 100 Can use decimals to fine tune progress
+		base = 14.286
+	}
+	
+	approach = { #Actually, the player will never see this Situations. Just adding one in in case one is required
+		name = approach_revolt_do_nothing
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		on_select = {
+			custom_tooltip = deficit_approach_do_nothing_tooltip
+		}
+	}
+}
+
+hk648_military_force_situations_3 = {
+	picture = GFX_evt_hk648_time3_1006
+	complete_icon_frame = GFX_situation_outcome_frame_blue
+	complete_icon = GFX_situation_outcome_meh
+	begin_event_chain = {
+		event_chain = "hk648_captain_usurper"
+		target = ROOT
+	}
+	
+	#结束后
+	on_progress_complete = {
+		#custom_tooltip = 
+		owner = {
+			country_event = { id = hk648_time3.1007 }
+		}
+	}
+	on_fail = {
+		log_error = "mercenary_dividends situation failed, this is not meant to happen"
+		destroy_situation = this
+	}
+	
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_red
+			custom_tooltip = stage_unknown_effects
+			end = 50
+		}
+		
+		stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_red
+			custom_tooltip = stage_unknown_effects
+			end = 100
+			on_first_enter = {
+				owner = {
+					country_event = { id = hk648_time3.1006 }
+				}
+			}
+		}
+	}
+	
+	#每月增长
+	monthly_progress = {
+		#total: 100 Can use decimals to fine tune progress
+		base = 16.67
+	}
+	
+	approach = { #Actually, the player will never see this Situations. Just adding one in in case one is required
+		name = approach_revolt_do_nothing
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		on_select = {
+			custom_tooltip = deficit_approach_do_nothing_tooltip
+		}
+	}
+}
+
+#奥托谈判
+hk648_fake_otto_situations_1 = {
+	picture = GFX_evt_hk648_time3_1009
+	complete_icon_frame = GFX_situation_outcome_frame_blue
+	complete_icon = GFX_situation_outcome_meh
+	begin_event_chain = {
+		event_chain = "hk648_captain_usurper"
+		target = ROOT
+	}
+	
+	#结束后
+	on_progress_complete = {
+		#custom_tooltip = 
+		owner = {
+			country_event = { id = hk648_time3.10091 }
+		}
+	}
+	on_fail = {
+		log_error = "mercenary_dividends situation failed, this is not meant to happen"
+		destroy_situation = this
+	}
+	
+	stages = {
+		high_level = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_blue
+			end = 100
+		}
+	}
+	
+	#每月增长
+	monthly_progress = {
+		#total: 100 Can use decimals to fine tune progress
+		base = 1.667
+	}
+	
+	approach = { #Actually, the player will never see this Situations. Just adding one in in case one is required
+		name = approach_revolt_do_nothing
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		on_select = {
+			custom_tooltip = deficit_approach_do_nothing_tooltip
+		}
+	}
+}
+
+hk648_fake_otto_situations_2 = {
+	picture = GFX_evt_hk648_time3_1010
+	complete_icon_frame = GFX_situation_outcome_frame_blue
+	complete_icon = GFX_situation_outcome_meh
+	
+	begin_event_chain = {
+		event_chain = "hk648_captain_usurper"
+		target = ROOT
+	}
+	
+	#结束后
+	on_progress_complete = {
+		#custom_tooltip = 
+		owner = {
+			country_event = { id = hk648_time3.1010 }
+		}
+	}
+	on_fail = {
+		log_error = "mercenary_dividends situation failed, this is not meant to happen"
+		destroy_situation = this
+	}
+	
+	stages = {
+		high_level = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_blue
+			end = 100
+		}
+	}
+	
+	#每月增长
+	monthly_progress = {
+		#total: 100 Can use decimals to fine tune progress
+		base = 1.667
+	}
+	
+	approach = { #Actually, the player will never see this Situations. Just adding one in in case one is required
+		name = approach_revolt_do_nothing
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		on_select = {
+			custom_tooltip = deficit_approach_do_nothing_tooltip
+		}
+	}
+}
+
+#德莉莎
+hk648_teriri1_1 = {
+	picture = GFX_evt_hk648_time3_1012
+	complete_icon_frame = GFX_situation_outcome_frame_blue
+	complete_icon = GFX_situation_outcome_meh
+	
+	begin_event_chain = {
+		event_chain = "hk648_captain_usurper"
+		target = ROOT
+	}
+	
+	#结束后
+	on_progress_complete = {
+		#custom_tooltip = 
+		owner = {
+			country_event = { id = hk648_time3.10121 }
+		}
+	}
+	on_fail = {
+		log_error = "mercenary_dividends situation failed, this is not meant to happen"
+		destroy_situation = this
+	}
+	
+	stages = {
+		high_level = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_blue
+			end = 100
+		}
+	}
+	
+	#每月增长
+	monthly_progress = {
+		#total: 100 Can use decimals to fine tune progress
+		base = 1.667
+	}
+	
+	approach = { #Actually, the player will never see this Situations. Just adding one in in case one is required
+		name = approach_revolt_do_nothing
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		on_select = {
+			custom_tooltip = deficit_approach_do_nothing_tooltip
+		}
+	}
+}
+
+hk648_teriri1_2 = {
+	picture = GFX_evt_hk648_leader.20012
+	complete_icon_frame = GFX_situation_outcome_frame_blue
+	complete_icon = GFX_situation_outcome_meh
+	
+	begin_event_chain = {
+		event_chain = "hk648_captain_usurper"
+		target = ROOT
+	}
+	
+	#结束后
+	on_progress_complete = {
+		#custom_tooltip = 
+		owner = {
+			country_event = { id = hk648_time3.1013 }
+		}
+	}
+	on_fail = {
+		log_error = "mercenary_dividends situation failed, this is not meant to happen"
+		destroy_situation = this
+	}
+	
+	stages = {
+		high_level = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_blue
+			end = 100
+		}
+	}
+	
+	#每月增长
+	monthly_progress = {
+		#total: 100 Can use decimals to fine tune progress
+		base = 1.667
+	}
+	
+	approach = { #Actually, the player will never see this Situations. Just adding one in in case one is required
+		name = approach_revolt_do_nothing
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		on_select = {
+			custom_tooltip = deficit_approach_do_nothing_tooltip
+		}
+	}
+}
