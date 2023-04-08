@@ -669,7 +669,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "Confirm purchase（installment purchase）"
+		name = "Confirm purchase (installment purchase)"
 		give_technology = { tech = tech_divine_key  }
 		allow = {
 			custom_tooltip = {

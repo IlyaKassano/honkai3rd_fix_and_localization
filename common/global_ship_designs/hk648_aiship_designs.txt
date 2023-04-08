@@ -621,7 +621,7 @@ ship_design = {
 #三十五年后，给少量战舰，需要三级强化#
 #战列舰，护甲为爱酱水晶甲#
 ship_design = {
-	name = "Battleship of Truth Love"
+	name = "Battleship of Truth Ai"
 	ship_size = battleship
 	section = {
 		template = "BATTLESHIP_BOW_M2S4"

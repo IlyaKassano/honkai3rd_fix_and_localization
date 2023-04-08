@@ -49,11 +49,11 @@
     signets_of_deliverance_b2_yes: "§YSavior's Triumph§! has been activated."
 
     #Signets of Decimation
-    signets_of_decimation_1: "Sword Edge · Sword Mound · Sword Scar"
+    signets_of_decimation_1: "Sword Edge Sword Mound Sword Scar"
     signets_of_decimation_response_1: "The lower the naval capacity used, the higher the damage caused by the warship. Every unused §Y25%§! naval capacity increases the damage by §Y50%§!."
-    signets_of_decimation_1_25: "§YSword Edge · Sword Mound · Sword Scar§! has been activated."
-    signets_of_decimation_1_50: "§YSword Edge · Sword Mound · Sword Scar§! has been activated."
-    signets_of_decimation_1_75: "§YSword Edge · Sword Mound · Sword Scar§! has been activated."
+    signets_of_decimation_1_25: "§YSword Edge Sword Mound Sword Scar§! has been activated."
+    signets_of_decimation_1_50: "§YSword Edge Sword Mound Sword Scar§! has been activated."
+    signets_of_decimation_1_75: "§YSword Edge Sword Mound Sword Scar§! has been activated."
   
     signets_of_decimation_2: "Crimson Bone, Crimson Blood, Crimson Refinement"
     signets_of_decimation_response_2: "The lower the naval capacity used, the higher the energy and kinetic damage caused by the warship. Every §Y25%§! unused naval capacity increases damage by §Y40%§!."
@@ -143,13 +143,13 @@
     signets_of_reverie_1_250: "§YCat's Teachings§! Activated"
     signets_of_reverie_1_125: "§YCat's Teachings§! Activated"
 
-    ####################19K··23#####################
+    ####################19K  23#####################
     #Pre-event#
     19k23_2.1.name: "Pre-event Title"
     19k23_2.1.desc: "Pre-event Description"
     19k23_2.1a: "Pre-event Option"
     #Phase 0#
-    19k23_asylum: "19··K23 Asylum"
+    19k23_asylum: "19  K23 Asylum"
     19k230_desc: "A mysterious cavity was discovered on a floating island in Siberia, and its unnaturally regular shape led people to believe that it was not a natural formation. To investigate the sudden appearance of the mysterious cavity, Theresa Apocalypse, an S-rank Valkyrie, was dispatched by Schicksal with the assistance of a scientist. "
     #Phase 1#
     19k23.1.name: "Ancient Civilization Ruins"
@@ -161,7 +161,7 @@
     19k232-3: "Wake Up the Girl"
     #Phase 3#
     19k23.3.name: "Autonomous Combat Unit A1"
-    19k23.3.desc: "The mysterious girl claims to be an autonomous combat unit called A1, created by the ancient civilization to protect the 'world's last key' in 19··K23 Asylum. She believes that Theresa, who possesses the Key of God, does not have the responsibility and faith commensurate with this enormous power, and warns Theresa, who insists on entering the ruins. Obviously, Theresa does not take the warning seriously, and a battle is about to begin. "
+    19k23.3.desc: "The mysterious girl claims to be an autonomous combat unit called A1, created by the ancient civilization to protect the 'world's last key' in 19  K23 Asylum. She believes that Theresa, who possesses the Key of God, does not have the responsibility and faith commensurate with this enormous power, and warns Theresa, who insists on entering the ruins. Obviously, Theresa does not take the warning seriously, and a battle is about to begin. "
     19k233-4: "Prepare for Battle"
     #Phase Four#
     19k23.4.name: "Intense Battle"
@@ -237,14 +237,14 @@
     hk648_signets_of_decimation: "Mad King's Reminiscence"
     hk648_signets_of_decimation_desc: "Here lies the seal of decimation."
 
-    hk648_signets_of_decimation.1.aa: "Sword Edge · Sword Tomb · Sword Scar"
-    hk648_signets_of_decimation.1.ba: "Crimson Bone · Crimson Blood · Crimson Refinement"
-    hk648_signets_of_decimation.1.ca: "Fanatic · Madman · Rant"
-    hk648_signets_of_decimation.2.da: "Fate · Fate Misfortune · Fate Carving"
-    hk648_signets_of_decimation.3.ea: "Unforgettable · Unfeeling · Nowhere to Return"
-    hk648_signets_of_decimation.4.aa: "Decimating Warrior · Decimating Scissors · Decimating Beheading · Decimation"
-    hk648_signets_of_decimation.5.aa: "Hometown · Homeland · Old Friends · Old Comrades"
-    hk648_signets_of_decimation.5.ba: "No Death · No Life · No Destruction · No Existence"
+    hk648_signets_of_decimation.1.aa: "Sword Edge Sword Tomb Sword Scar"
+    hk648_signets_of_decimation.1.ba: "Crimson Bone Crimson Blood Crimson Refinement"
+    hk648_signets_of_decimation.1.ca: "Fanatic Madman Rant"
+    hk648_signets_of_decimation.2.da: "Fate Fate Misfortune Fate Carving"
+    hk648_signets_of_decimation.3.ea: "Unforgettable Unfeeling Nowhere to Return"
+    hk648_signets_of_decimation.4.aa: "Decimating Warrior Decimating Scissors Decimating Beheading Decimation"
+    hk648_signets_of_decimation.5.aa: "Hometown Homeland Old Friends Old Comrades"
+    hk648_signets_of_decimation.5.ba: "No Death No Life No Destruction No Existence"
  
     hk648_signets_of_decimation.1.name: "Signets of Decimation"
     hk648_signets_of_decimation.1.desc: "Accept anger, hatred, struggle, and destruction, and use them to forge the painful scars."

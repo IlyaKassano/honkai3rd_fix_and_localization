@@ -1,7 +1,7 @@
 ﻿l_english:
   ####################Ai-chan Exclusive################
     hk648_aichan: "Ai-chan Flagship"
-    ai_hyperion: "§GAi-yi·Hyperion§!"
+    ai_hyperion: "§GAi-yi Hyperion§!"
     aichan_army: "Ai-chan Army"
     aichan_scientist_cost: "Ai-chan Research Salary"
     aichan_admiral_cost: "Ai-chan Battle Salary"
@@ -142,9 +142,9 @@
     hk648_aichan.0010.body_upgrade: "Upgrade Ai-chan's body"
     hk648_aichan.0010.body_upgrade.r1: "Thank you, Boss! Boss is so generous!"
     hk648_aichan.0010.body_upgrade.r2: "Thank you, Boss! Ai-chan's admiration for Boss is like the unceasing flow of the river or the overwhelming flood of the Yellow River!"
-    hk648_aichan.0010.hyperion: "Build Ai-Yi · Hyperion-class warship"
+    hk648_aichan.0010.hyperion: "Build Ai-Yi Hyperion-class warship"
     hk648_aichan.0010.hyperion.r: "Thank you, Boss"
-    hk648_aichan.0010.hyperion_upgrade: "Upgrade Ai-Yi · Hyperion-class warship"
+    hk648_aichan.0010.hyperion_upgrade: "Upgrade Ai-Yi Hyperion-class warship"
     hk648_aichan.0010.hyperion_upgrade.r1: "Thank you, Boss! Boss is so generous!"
     hk648_aichan.0010.hyperion_upgrade.r2: "Thank you, Boss! Ai-chan's admiration for Boss is like the unceasing flow of the river or the overwhelming flood of the Yellow River!"
     hk648_aichan.0010.aichan_individual_upgrade: "Upgrade Aichan's individual capabilities"

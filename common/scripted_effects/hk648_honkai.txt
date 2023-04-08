@@ -1049,12 +1049,12 @@ honkai_2nd_herrscher = {
 	optimize_memory
 	event_target:honkai_country = {
 		create_fleet = {
-			name = "The Second Lawyer"
+			name = "Second Herrscher"
 			effect = {
 				set_owner = event_target:honkai_country
 				create_ship = {
-					name = "The Second Lawyer"
-					design = "The Second Lawyer"
+					name = "Second Herrscher"
+					design = "Second Herrscher"
 				}
 				set_location = event_target:player_capital_hk
 			}

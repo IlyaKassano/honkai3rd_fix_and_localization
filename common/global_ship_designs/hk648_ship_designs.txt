@@ -1,7 +1,7 @@
 
 #第四神之键#
 ship_design = {
-	name = "The fourth key of the gods"
+	name = "The fourth Divine Key"
 	ship_size = colossus
 	
 	section = {
@@ -47,9 +47,9 @@ ship_design = {
 		
 		
 #一级爱酱#
-#爱衣·休伯利安#
+#爱衣 休伯利安#
 ship_design = {
-	name = "Love clothes·Hyperion"
+	name = "Ai clothes Hyperion"
 	ship_size = hk648_aichan
 	
 	#前#
@@ -177,7 +177,7 @@ ship_design = {
 
 #中级爱酱#
 ship_design = {
-	name = "Love clothes·Hyperion changed"
+	name = "Ai clothes Hyperion changed"
 	ship_size = hk648_aichan
 	
 	section = {
@@ -365,7 +365,7 @@ ship_design = {
 
 #高级爱酱#
 ship_design = {
-	name = "Love clothes·Hyperion II change"
+	name = "Ai clothes Hyperion II change"
 	ship_size = hk648_aichan
 	
 	section = {
@@ -676,7 +676,7 @@ ship_design = {
 }
 
 ship_design = {
-	name = "Love clothes·Hyperion Ultimate Edition"
+	name = "Ai clothes Hyperion Ultimate Edition"
 	ship_size = hk648_aichan
 	
 	section = {
@@ -989,7 +989,7 @@ ship_design = {
 
 #爱酱舞台#
 ship_design = {
-	name = "Love to shake dew·Love"
+	name = "Ai to shake dew Ai"
 	ship_size = hk648_aichan
 	
 	#前#
@@ -1391,7 +1391,7 @@ ship_design = {
 
 #爱酱导弹
 ship_design = {
-	name = "Love clothes·Hyperion（Romantic）"
+	name = "Ai clothes Hyperion (Romantic)"
 	ship_size = hk648_aichan
 	
 	#前#
