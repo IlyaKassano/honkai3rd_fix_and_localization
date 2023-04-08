@@ -1,0 +1,1376 @@
+###爱酱特效，除了爱酱炮之外都用0-4共五级###
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "hk648_zlza_f"
+	color = { 0.1 	 1.0 	0.1 	1.0 }
+	hit_entity = "perdition_beam_hit_entity"
+	shield_hit_entity = "perdition_beam_shield_hit_entity"
+	muzzle_flash_entity = "perdition_beam_muzzle_entity"
+	windup_entity = "perdition_beam_windup_entity"
+	
+	#beam specific data
+	width = 0.25
+	texture_scroll_speed = 5.5
+	texture_tiling = 40.0
+	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.25
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.65 5.0
+			1.0 0.0
+		}
+		duration = 0.75
+	}
+	texture = "gfx/models/combat_items/laser_diffuse2.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 2.8
+		delay = 0.1
+	}
+}
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "hk648_zlza0"
+	color = { 0.1 	 1.0 	0.1 	1.0 }
+	hit_entity = "perdition_beam_hit_entity"
+	shield_hit_entity = "perdition_beam_shield_hit_entity"
+	muzzle_flash_entity = "perdition_beam_muzzle_entity"
+	windup_entity = "perdition_beam_windup_entity"
+	
+	#beam specific data
+	width = 1.0
+	texture_scroll_speed = 5.5
+	texture_tiling = 40.0
+	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.25
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.65 5.0
+			1.0 0.0
+		}
+		duration = 0.75
+	}
+	texture = "gfx/models/combat_items/laser_diffuse2.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 2.8
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "hk648_zlza1"
+	color = { 0.1 	 1.0 	0.1 	1.0 }
+	hit_entity = "perdition_beam_hit_entity"
+	shield_hit_entity = "perdition_beam_shield_hit_entity"
+	muzzle_flash_entity = "perdition_beam_muzzle_entity"
+	windup_entity = "perdition_beam_windup_entity"
+	
+	#beam specific data
+	width = 2.0
+	texture_scroll_speed = 5.5
+	texture_tiling = 40.0
+	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.65 5.0
+			1.0 0.0
+		}
+		duration = 0.75
+	}
+	texture = "gfx/models/combat_items/laser_diffuse2.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 2.8
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "hk648_zlza2"
+	color = { 0.1 	 1.0 	0.1 	1.2 }
+	hit_entity = "perdition_beam_hit_entity"
+	shield_hit_entity = "perdition_beam_shield_hit_entity"
+	muzzle_flash_entity = "perdition_beam_muzzle_entity"
+	windup_entity = "perdition_beam_windup_entity"
+	
+	#beam specific data
+	width = 4.0
+	texture_scroll_speed = 2.5
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		100.0
+			0.4		5.0
+			0.6		0.0
+			1.0 	0.0
+		}
+		duration = 2.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		100.0
+			0.4		5.0
+			0.6		0.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/energy_lance_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "hk648_zlza3"
+	color = { 0.1 	 1.0 	0.1 	1.5 }
+	hit_entity = "perdition_beam_hit_entity"
+	shield_hit_entity = "perdition_beam_shield_hit_entity"
+	muzzle_flash_entity = "perdition_beam_muzzle_entity"
+	windup_entity = "perdition_beam_windup_entity"
+	
+	#beam specific data
+	width = 10.0
+	texture_scroll_speed = 1.0
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.7		5.0
+			1.0 	0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.4		5.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/ion_cannon_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "hk648_zlza4"
+	color = { 0.1 	 1.0 	0.1 	5 }
+	hit_entity = "perdition_beam_hit_entity"
+	shield_hit_entity = "perdition_beam_shield_hit_entity"
+	muzzle_flash_entity = "perdition_beam_muzzle_entity"
+	windup_entity = "perdition_beam_windup_entity"
+	
+	#beam specific data
+	width = 30.0
+	texture_scroll_speed = 1.0
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.7		5.0
+			1.0 	0.0
+		}
+		duration = 5
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.4		5.0
+			1.0 	0.0
+		}
+		duration = 3
+	}
+	texture = "gfx/models/combat_items/ion_cannon_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+#common for all types of projectiles
+projectile_gfx_beam = {
+	name = "hk648_zlzj0"
+	color = { 0.1 	 1.0 	0.1 	1.0 }
+	hit_entity = "perdition_beam_hit_entity"
+	shield_hit_entity = "perdition_beam_shield_hit_entity"
+	muzzle_flash_entity = "perdition_beam_muzzle_entity"
+	windup_entity = "perdition_beam_windup_entity"
+	
+	#beam specific data
+	width = 1.0
+	texture_scroll_speed = 2.5
+	texture_tiling = 80.0
+	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 2.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.75
+	}
+	texture = "gfx/models/combat_items/laser_diffuse2.dds"
+	
+	shield_impact = {
+		size = medium
+		loop_duration = 1.95
+		delay = 0.1
+	}
+}
+
+#歼星者19c的特效，直接搬的泰坦改，共两级#
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "jxz19c1"
+	color = { 1.0 	 0.7 	0.4 	1.5 }
+	hit_entity = "perdition_beam_hit_entity"
+	shield_hit_entity = "perdition_beam_shield_hit_entity"
+	muzzle_flash_entity = "perdition_beam_muzzle_entity"
+	windup_entity = "perdition_beam_windup_entity"
+	
+	#beam specific data
+	width = 8
+	texture_scroll_speed = 1.0
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.7		5.0
+			1.0 	0.0
+		}
+		duration = 4
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.4		5.0
+			1.0 	0.0
+		}
+		duration = 2
+	}
+	texture = "gfx/models/combat_items/ion_cannon_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "jxz19c2"
+	color = { 1.0 	 0.7 	0.4 	3.0 }
+	hit_entity = "perdition_beam_hit_entity"
+	shield_hit_entity = "perdition_beam_shield_hit_entity"
+	muzzle_flash_entity = "perdition_beam_muzzle_entity"
+	windup_entity = "perdition_beam_windup_entity"
+	
+	#beam specific data
+	width = 13.0
+	texture_scroll_speed = 1.0
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.7		5.0
+			1.0 	0.0
+		}
+		duration = 5
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.4		5.0
+			1.0 	0.0
+		}
+		duration = 3
+	}
+	texture = "gfx/models/combat_items/ion_cannon_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+#天火圣裁
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "hk648_destruction"
+	color = { 1.0 	 0.7 	0.4 	3.0 }
+	hit_entity = "perdition_beam_hit_entity"
+	shield_hit_entity = "perdition_beam_shield_hit_entity"
+	muzzle_flash_entity = "perdition_beam_muzzle_entity"
+	windup_entity = "perdition_beam_windup_entity"
+	
+	#beam specific data
+	width = 15.0
+	texture_scroll_speed = 1.0
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.7		5.0
+			1.0 	0.0
+		}
+		duration = 5
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.4		5.0
+			1.0 	0.0
+		}
+		duration = 3
+	}
+	texture = "gfx/models/combat_items/ion_cannon_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+#裁决
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "hk648_sanction1"
+	color = { 0.75 	 1 	0.89 	1.0 }
+	hit_entity = "perdition_beam_hit_entity"
+	shield_hit_entity = "perdition_beam_shield_hit_entity"
+	muzzle_flash_entity = "perdition_beam_muzzle_entity"
+	windup_entity = "perdition_beam_windup_entity"
+	
+	#beam specific data
+	width = 2.0
+	texture_scroll_speed = 5.5
+	texture_tiling = 40.0
+	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.65 5.0
+			1.0 0.0
+		}
+		duration = 0.75
+	}
+	texture = "gfx/models/combat_items/laser_diffuse2.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 2.8
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "hk648_sanction2"
+	color = { 0.75 	 1 	0.89 	1.0 }
+	hit_entity = "perdition_beam_hit_entity"
+	shield_hit_entity = "perdition_beam_shield_hit_entity"
+	muzzle_flash_entity = "perdition_beam_muzzle_entity"
+	windup_entity = "perdition_beam_windup_entity"
+	
+	#beam specific data
+	width = 4.0
+	texture_scroll_speed = 2.5
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		100.0
+			0.4		5.0
+			0.6		0.0
+			1.0 	0.0
+		}
+		duration = 2.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		100.0
+			0.4		5.0
+			0.6		0.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/energy_lance_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "hk648_sanction3"
+	color = { 0.75 	 1 	0.89 	1.0 }
+	hit_entity = "perdition_beam_hit_entity"
+	shield_hit_entity = "perdition_beam_shield_hit_entity"
+	muzzle_flash_entity = "perdition_beam_muzzle_entity"
+	windup_entity = "perdition_beam_windup_entity"
+	
+	#beam specific data
+	width = 7
+	texture_scroll_speed = 1.0
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.7		5.0
+			1.0 	0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.4		5.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/ion_cannon_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+#车钥匙特效，0-3共四级##真理之境
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "hk648_zlzj1"
+	color = { 0.2 	 0.5 	1.0 	1.0 }
+	hit_entity = "perdition_beam_hit_entity"
+	shield_hit_entity = "perdition_beam_shield_hit_entity"
+	muzzle_flash_entity = "perdition_beam_muzzle_entity"
+	windup_entity = "perdition_beam_windup_entity"
+	
+	#beam specific data
+	width = 2.0
+	texture_scroll_speed = 5.5
+	texture_tiling = 40.0
+	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.65 5.0
+			1.0 0.0
+		}
+		duration = 0.75
+	}
+	texture = "gfx/models/combat_items/laser_diffuse2.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 2.8
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "hk648_zlzj2"
+	color = { 0.2 	 0.5 	1.0 	1.0 }
+	hit_entity = "perdition_beam_hit_entity"
+	shield_hit_entity = "perdition_beam_shield_hit_entity"
+	muzzle_flash_entity = "perdition_beam_muzzle_entity"
+	windup_entity = "perdition_beam_windup_entity"
+	
+	#beam specific data
+	width = 4.0
+	texture_scroll_speed = 2.5
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		100.0
+			0.4		5.0
+			0.6		0.0
+			1.0 	0.0
+		}
+		duration = 2.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		100.0
+			0.4		5.0
+			0.6		0.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/energy_lance_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "hk648_zlzj3"
+	color = { 0.2 	 0.5 	1.0 	1.0 }
+	hit_entity = "perdition_beam_hit_entity"
+	shield_hit_entity = "perdition_beam_shield_hit_entity"
+	muzzle_flash_entity = "perdition_beam_muzzle_entity"
+	windup_entity = "perdition_beam_windup_entity"
+	
+	#beam specific data
+	width = 7
+	texture_scroll_speed = 1.0
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.7		5.0
+			1.0 	0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.4		5.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/ion_cannon_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+#月光王座
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "hk648_moonlight_throne"
+	color = { 0.2 	 0.5 	1.0 	5.0 }
+	hit_entity = "perdition_beam_hit_entity"
+	shield_hit_entity = "perdition_beam_shield_hit_entity"
+	muzzle_flash_entity = "perdition_beam_muzzle_entity"
+	windup_entity = "perdition_beam_windup_entity"
+	
+	#beam specific data
+	width = 17
+	texture_scroll_speed = 1.0
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.7		5.0
+			1.0 	0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.4		5.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/ion_cannon_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+#火神炮
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "hk_jtl"
+	color = { 0.2 	0.5 	1.0 	5.0 }
+	hit_entity = "stormfire_auto_cannons_small_hit_entity"
+	shield_hit_entity = "stormfire_auto_cannons_small_shield_hit_entity"
+	muzzle_flash_entity = "stormfire_auto_cannons_small_muzzle_entity"
+	
+	#beam specific data
+	width = 6
+	texture_scroll_speed = 25.5
+	texture_tiling = 12.0
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.2		1.0
+			0.9		1.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.2		1.0
+			0.9		1.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/auto_cannon_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 1.5
+		delay = 0.0
+	}
+}
+
+#烟花#
+	#机炮子弹
+	#texture = "gfx/models/combat_items/auto_cannon_diffuse.dds"
+	
+	#普通光束
+	#texture = "gfx/models/combat_items/ion_cannon_diffuse.dds"
+	
+	#光束（光柱全高亮）
+	#texture = "gfx/models/combat_items/nemesis_01_ion_cannon_diffuse_laser.dds"
+	
+	#光束（光柱中心高亮，外围颜色）
+	#texture = "gfx/models/combat_items/laser_diffuse.dds"
+	
+	#泰坦光束（光柱有螺线缠绕）
+	#texture = "gfx/models/combat_items/titan_laser_diffuse.dds"
+	
+	#裂解器特效，暗虚线
+	#texture = "gfx/models/combat_items/elder_tiyanki_secondary_weapon_beam.dds"
+	
+	#普通光束
+	#texture = "gfx/models/combat_items/laser_diffuse2.dds"
+	
+	#暗线
+	#texture = "gfx/models/combat_items/disruptor_diffuse.dds"
+	
+	#虚线，但稍微亮一点
+	#texture = "gfx/models/combat_items/space_whale_cloud_beam.dds"
+	
+	#地爆天星（其实还是光束，反正我看不出区别）
+	#texture = "gfx/models/combat_items/shatter_planet_laser.dds"
+	
+	#安乐天使，特别暗特别细的光束
+	#texture = "gfx/models/combat_items/shield_planet_laser.dds"
+	
+	#中子灭杀，散射非常严重的光束
+	#texture = "gfx/models/combat_items/neutron_planet_laser.dds"
+	
+	#比较模糊的光束
+	#texture = "gfx/models/combat_items/god_ray_laser.dds"
+	
+	#亮暗交替的暗线
+	#texture = "gfx/models/combat_items/assimilator_diffuse.dds"
+	
+	#亮暗交替的光束
+	#texture = "gfx/models/combat_items/deluge_laser.dds"
+	
+	#亮暗交替的光束
+	#texture = "gfx/models/combat_items/star_eater_beam_diffuse.dds"
+	
+	#电弧
+	#texture = "gfx/models/combat_items/arc_emitter_diffuse.dds"
+	
+	#亮暗交替的光束
+	#texture = "gfx/models/combat_items/energy_lance_diffuse.dds"
+	
+#红
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "hk_aichan1"
+	color = { 1.0 	0.3 	0.3 	20 }
+	hit_entity = "stormfire_auto_cannons_small_hit_entity"
+	shield_hit_entity = "stormfire_auto_cannons_small_shield_hit_entity"
+	muzzle_flash_entity = "stormfire_auto_cannons_small_muzzle_entity"
+	
+	#beam specific data
+	width = 15
+	texture_scroll_speed = 50
+	texture_tiling = 10
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.2		5.0
+			0.9		5.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			
+			0.02	0.0
+			0.06	0.0
+			0.10	1.0
+			
+			0.13	0.0
+			0.16	1.0
+			0.18	0.0
+			0.20	1.0
+			0.22	0.0
+			0.24	1.0
+			
+			0.26	1.0
+			0.28	0.0
+			0.30	1.0
+			0.32	0.0
+			0.34	1.0
+			0.36	0.0
+			
+			0.40	1.0
+			0.43	0.0
+			0.48	0.0
+			
+			0.5		0.0
+			
+			0.52	0.0
+			0.56	0.0
+			0.60	0.0
+			
+			0.63	0.0
+			0.66	0.0
+			0.68	0.0
+			0.70	0.0
+			0.72	0.0
+			0.74	0.0
+			
+			0.76	0.0
+			0.78	0.0
+			0.80	0.0
+			0.82	0.0
+			0.84	0.0
+			0.86	0.0
+			
+			0.90	0.0
+			0.93	0.0
+			0.98	0.0
+			
+			1.0		0.0
+		}
+		duration = 100
+	}
+	texture = "gfx/models/combat_items/auto_cannon_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 1.5
+		delay = 0.0
+	}
+}
+#红2
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "hk_aichan12"
+	color = { 1.0 	0.3 	0.3 	20 }
+	hit_entity = "stormfire_auto_cannons_small_hit_entity"
+	shield_hit_entity = "stormfire_auto_cannons_small_shield_hit_entity"
+	muzzle_flash_entity = "stormfire_auto_cannons_small_muzzle_entity"
+	
+	#beam specific data
+	width = 15
+	texture_scroll_speed = 50
+	texture_tiling = 30
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.2		5.0
+			0.9		5.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			
+			0.02	0.0
+			0.06	0.0
+			0.10	0.0
+			
+			0.13	0.0
+			0.16	0.0
+			0.18	0.0
+			0.20	0.0
+			0.22	0.0
+			0.24	0.0
+			
+			0.26	0.0
+			0.28	0.0
+			0.30	0.0
+			0.32	0.0
+			0.34	0.0
+			0.36	0.0
+			
+			0.40	0.0
+			0.43	0.0
+			0.48	0.0
+			
+			0.5		0.0
+			
+			0.52	0.0
+			0.56	0.0
+			0.60	1.0
+			
+			0.63	0.0
+			0.66	1.0
+			0.68	0.0
+			0.70	1.0
+			0.72	0.0
+			0.74	1.0
+			
+			0.76	1.0
+			0.78	0.0
+			0.80	1.0
+			0.82	0.0
+			0.84	1.0
+			0.86	0.0
+			
+			0.90	1.0
+			0.93	0.0
+			0.98	0.0
+			
+			1.0		0.0
+		}
+		duration = 100
+	}
+	texture = "gfx/models/combat_items/auto_cannon_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 1.5
+		delay = 0.0
+	}
+}
+#绿
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "hk_aichan2"
+	color = { 0.3 	1.0 	0.3 	20 }
+	hit_entity = "stormfire_auto_cannons_small_hit_entity"
+	shield_hit_entity = "stormfire_auto_cannons_small_shield_hit_entity"
+	muzzle_flash_entity = "stormfire_auto_cannons_small_muzzle_entity"
+	
+	#beam specific data
+	width = 15
+	texture_scroll_speed = 50
+	texture_tiling = 10
+	
+	
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.2		1.0
+			0.9		1.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			
+			0.02	1.0
+			0.06	0.0
+			0.10	0.0
+			
+			0.13	0.0
+			0.16	1.0
+			0.18	0.0
+			0.20	1.0
+			0.22	0.0
+			0.24	1.0
+			
+			0.26	1.0
+			0.28	1.0
+			0.30	1.0
+			0.32	1.0
+			0.34	1.0
+			0.36	1.0
+			
+			0.40	0.0
+			0.43	0.0
+			0.48	1.0
+			
+			0.5		0.0
+			
+			0.52	0.0
+			0.56	0.0
+			0.60	0.0
+			
+			0.63	0.0
+			0.66	0.0
+			0.68	0.0
+			0.70	0.0
+			0.72	0.0
+			0.74	0.0
+			
+			0.76	0.0
+			0.78	0.0
+			0.80	0.0
+			0.82	0.0
+			0.84	0.0
+			0.86	0.0
+			
+			0.90	0.0
+			0.93	0.0
+			0.98	0.0
+			
+			1.0		0.0
+		}
+		duration = 100
+	}
+	texture = "gfx/models/combat_items/auto_cannon_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 1.5
+		delay = 0.0
+	}
+}
+#绿2
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "hk_aichan22"
+	color = { 0.3 	1.0 	0.3 	20 }
+	hit_entity = "stormfire_auto_cannons_small_hit_entity"
+	shield_hit_entity = "stormfire_auto_cannons_small_shield_hit_entity"
+	muzzle_flash_entity = "stormfire_auto_cannons_small_muzzle_entity"
+	
+	#beam specific data
+	width = 15
+	texture_scroll_speed = 50
+	texture_tiling = 20
+	
+	
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.2		1.0
+			0.9		1.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			
+			0.02	0.0
+			0.06	0.0
+			0.10	0.0
+			
+			0.13	0.0
+			0.16	0.0
+			0.18	0.0
+			0.20	0.0
+			0.22	0.0
+			0.24	0.0
+			
+			0.26	0.0
+			0.28	0.0
+			0.30	0.0
+			0.32	0.0
+			0.34	0.0
+			0.36	0.0
+			
+			0.40	0.0
+			0.43	0.0
+			0.48	0.0
+			
+			0.5		0.0
+			
+			0.52	1.0
+			0.56	0.0
+			0.60	0.0
+			
+			0.63	0.0
+			0.66	1.0
+			0.68	0.0
+			0.70	1.0
+			0.72	0.0
+			0.74	1.0
+			
+			0.76	1.0
+			0.78	1.0
+			0.80	1.0
+			0.82	1.0
+			0.84	1.0
+			0.86	1.0
+			
+			0.90	0.0
+			0.93	0.0
+			0.98	1.0
+			
+			1.0		0.0
+		}
+		duration = 100
+	}
+	texture = "gfx/models/combat_items/auto_cannon_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 1.5
+		delay = 0.0
+	}
+}
+#蓝
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "hk_aichan3"
+	color = { 0.2 	0.5 	1.0 	20 }
+	hit_entity = "stormfire_auto_cannons_small_hit_entity"
+	shield_hit_entity = "stormfire_auto_cannons_small_shield_hit_entity"
+	muzzle_flash_entity = "stormfire_auto_cannons_small_muzzle_entity"
+	
+	#beam specific data
+	width = 15
+	texture_scroll_speed = 50
+	texture_tiling = 10
+	
+	
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.2		1.0
+			0.9		1.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			
+			0.02	0.0
+			0.06	1.0
+			0.10	0.0
+			
+			0.13	1.0
+			0.16	1.0
+			0.18	1.0
+			0.20	1.0
+			0.22	1.0
+			0.24	1.0
+			
+			0.26	1.0
+			0.28	0.0
+			0.30	1.0
+			0.32	0.0
+			0.34	1.0
+			0.36	0.0
+			
+			0.40	0.0
+			0.43	1.0
+			0.48	0.0
+			
+			0.5		0.0
+			
+			0.52	0.0
+			0.56	0.0
+			0.60	0.0
+			
+			0.63	0.0
+			0.66	0.0
+			0.68	0.0
+			0.70	0.0
+			0.72	0.0
+			0.74	0.0
+			
+			0.76	0.0
+			0.78	0.0
+			0.80	0.0
+			0.82	0.0
+			0.84	0.0
+			0.86	0.0
+			
+			0.90	0.0
+			0.93	0.0
+			0.98	0.0
+			
+			1.0		0.0
+		}
+		duration = 100
+	}
+	texture = "gfx/models/combat_items/auto_cannon_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 1.5
+		delay = 0.0
+	}
+}
+#蓝2
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "hk_aichan32"
+	color = { 0.2 	0.5 	1.0 	20 }
+	hit_entity = "stormfire_auto_cannons_small_hit_entity"
+	shield_hit_entity = "stormfire_auto_cannons_small_shield_hit_entity"
+	muzzle_flash_entity = "stormfire_auto_cannons_small_muzzle_entity"
+	
+	#beam specific data
+	width = 15
+	texture_scroll_speed = 50
+	texture_tiling = 40
+	
+	
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.2		1.0
+			0.9		1.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			
+			0.02	0.0
+			0.06	0.0
+			0.10	0.0
+			
+			0.13	0.0
+			0.16	0.0
+			0.18	0.0
+			0.20	0.0
+			0.22	0.0
+			0.24	0.0
+			
+			0.26	0.0
+			0.28	0.0
+			0.30	0.0
+			0.32	0.0
+			0.34	0.0
+			0.36	0.0
+			
+			0.40	0.0
+			0.43	0.0
+			0.48	0.0
+			
+			0.5		0.0
+			
+			0.52	0.0
+			0.56	1.0
+			0.60	0.0
+			
+			0.63	1.0
+			0.66	1.0
+			0.68	1.0
+			0.70	1.0
+			0.72	1.0
+			0.74	1.0
+			
+			0.76	1.0
+			0.78	0.0
+			0.80	1.0
+			0.82	0.0
+			0.84	1.0
+			0.86	0.0
+			
+			0.90	0.0
+			0.93	1.0
+			0.98	0.0
+			
+			1.0		0.0
+		}
+		duration = 100
+	}
+	texture = "gfx/models/combat_items/auto_cannon_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 1.5
+		delay = 0.0
+	}
+}
+#红
+
+#绿
+
+#蓝
+
+
+#导弹
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "aichan_missiles"
+	color = { 1.0 	1.0 	1.0 	10.0 }
+	hit_entity = "hk648_aichan_missiles_hit_entity"
+	shield_hit_entity = "hk648_aichan_missiles_shield_hit_entity"
+	muzzle_flash_entity = "swarmer_missiles_muzzle_flash_entity"
+	
+	#missile specific data
+	entity = "hk648_aichan_missiles_entity"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
